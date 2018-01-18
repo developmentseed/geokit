@@ -1,8 +1,6 @@
 # GeoArea
 
-Command line tool to get the area from a polygon gejson file.
-
-The default output is in KM2!
+Command line tool to get the area from a polygon geojson file, the default output is in KM2!
 
 ## Install
 
