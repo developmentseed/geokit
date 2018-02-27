@@ -22,6 +22,7 @@ geokit area <input.geojson>
 
 ```
 
+
 ### Bbox to featurecollection
 
 - Convert bbox to feature collection: bbox extent in minX, minY, maxX, maxY order
@@ -29,7 +30,7 @@ geokit area <input.geojson>
 ```
 geokit bbox2fc --bbox="0, 0, 10, 10" > output.geojson
 
-``
+```
 
 
 ### Buffer
