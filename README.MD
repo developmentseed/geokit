@@ -1,6 +1,6 @@
-# GeoArea
+# geokit
 
-Command line tool to get the area from a polygon geojson file, the default output is in KM2!
+Command line tool for basic operations through geojson files!
 
 ## Install
 
@@ -13,7 +13,40 @@ npm link
 
 ## Usage
 
-```
-geoarea file.geojson
+#### Area
+
+- Get the area polygon geojson file in KM2.
 
 ```
+geokit area <input.geojson>
+
+```
+
+### Bbox to featurecollection
+
+- Convert bbox to feature collection: bbox extent in minX, minY, maxX, maxY order
+
+```
+geokit bbox2fc --bbox="0, 0, 10, 10" > output.geojson
+
+``
+
+
+### Buffer
+
+- Create buffer in lineStrings features.
+
+```
+geokit buffer  <input.geojson> --unit=meters --radius=10000  > output.geojson
+
+```
+
+
+### Clip
+
+Clip geojson file.
+
+```
+geokit clip map.geojson boundaries.geojson > o.geojson
+```
+
