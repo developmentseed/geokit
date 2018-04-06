@@ -51,3 +51,14 @@ Clip geojson file.
 geokit clip map.geojson boundaries.geojson > o.geojson
 ```
 
+
+
+### Distance
+
+Get distance of geojson file, applicable only for LineString, and MultiLineString
+
+```
+geokit distance imput.geojson
+
+```
+

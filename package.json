@@ -7,11 +7,14 @@
     "geokit": "index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --single-quote --write --print-width 120  *.js src/*.js"
   },
   "author": "rub2106@gmail.com",
   "dependencies": {
     "@turf/turf": "^5.1.6",
     "minimist": "^1.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.11.1"
   }
 }
