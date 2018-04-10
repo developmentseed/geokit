@@ -6,6 +6,7 @@ const bbox2fc = require('./src/bbox2fc');
 const buffer = require('./src/buffer');
 const clip = require('./src/clip');
 const distance = require('./src/distance');
+const line2polygon = require('./src/line2polygon');
 
 var action = argv._[0];
 var file = argv._[1];
@@ -24,6 +25,9 @@ switch (action) {
     break;
   case 'distance':
     distance(file);
+    break;
+  case 'line2polygon':
+    line2polygon(file);
     break;
   default:
     console.log('unknown command');

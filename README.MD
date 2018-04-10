@@ -62,3 +62,10 @@ geokit distance imput.geojson
 
 ```
 
+
+### Line 2 polygon
+
+```
+ geokit line2polygon input.geojson   > output.geojson
+ ```
+
