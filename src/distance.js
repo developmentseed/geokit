@@ -1,6 +1,6 @@
 const fs = require('fs');
 const turf = require('@turf/turf');
-module.exports = function function_name(file) {
+module.exports = function(file) {
   var distance = 0;
   var geojson = JSON.parse(fs.readFileSync(file).toString());
   if (geojson.features) {
