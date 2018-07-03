@@ -8,9 +8,10 @@ const clip = require('./src/clip');
 const distance = require('./src/distance');
 const line2polygon = require('./src/line2polygon');
 const bbox = require('./src/bbox');
-
-var action = argv._[0];
-var file = argv._[1];
+const fc2frows = require('./src/fc2frows');
+const fc2csv = require('./src/fc2csv');
+const action = argv._[0];
+const file = argv._[1];
 switch (action) {
   case 'area':
     area(file);
@@ -32,6 +33,12 @@ switch (action) {
     break;
   case 'bbox':
     bbox(file);
+    break;
+  case 'fc2frows':
+    fc2frows(file);
+    break;
+  case 'fc2csv':
+    fc2csv(file);
     break;
   default:
     console.log('unknown command');

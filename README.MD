@@ -66,6 +66,14 @@ geokit distance imput.geojson
 ### Line 2 polygon
 
 ```
- geokit line2polygon input.geojson   > output.geojson
+ geokit line2polygon input.geojson > output.geojson
+ ```
+
+
+
+### Set each feature into a row in files from Feature collection
+
+```
+ geokit fc2frows input.geojson > output.json
  ```
 

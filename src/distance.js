@@ -14,7 +14,7 @@ module.exports = function(file) {
         }
       }
     });
-    console.log(distance + ' MK');
+    console.log(distance + ' KM');
   } else {
     console.log('Check if the geojson file is valid');
   }
