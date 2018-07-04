@@ -70,10 +70,17 @@ geokit distance imput.geojson
  ```
 
 
-
 ### Set each feature into a row in files from Feature collection
 
 ```
  geokit fc2frows input.geojson > output.json
  ```
 
+### Feature collection to CSV
+
+This funcionality will add a `osm_download_link` column  in the csv.
+
+
+```
+geokit fc2csv polygons.geojson  > csv.csv
+```

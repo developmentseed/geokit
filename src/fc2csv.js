@@ -11,7 +11,7 @@ module.exports = function (file) {
     for (let i = 0; i < geojson.features.length; i++) {
         const feature = geojson.features[i];
         const bbox = turf.bbox(geojson.features[i]);
-        geojson.features[i].properties.osm_download_link = `${config.josmRemote}/zoom?left=${bbox[0]}&bottom=${bbox[1]}&right=${bbox[2]}&top=${bbox[3]}`;
+        geojson.features[i].properties.osm_download_link = `${config.josmRemote}/load_and_zoom?left=${bbox[0]}&bottom=${bbox[1]}&right=${bbox[2]}&top=${bbox[3]}`;
         headers = _.unique([].concat(_.keys(geojson.features[i].properties)));
         properties.push(geojson.features[i].properties);
     }
