@@ -4,7 +4,7 @@ const path = require('path');
 const cmd = require('../index.js');
 const file = path.join(__dirname, '/fixtures/monaco.geojson');
 test('Area', function (t) {
-  // t.plan(1);
+  t.plan(1);
   logInterceptor();
   cmd.area(file);
   let logs = logInterceptor.end();
