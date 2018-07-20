@@ -7,7 +7,8 @@
     "geokit": "index.js"
   },
   "scripts": {
-    "format": "prettier --single-quote --write --print-width 120  *.js src/*.js"
+    "format": "prettier --single-quote --write --print-width 120  *.js src/*.js",
+    "test": "NODE_ENV=test tape test/*.test.js | tap-spec"
   },
   "author": "rub2106@gmail.com",
   "dependencies": {
@@ -17,6 +18,9 @@
     "underscore": "^1.9.1"
   },
   "devDependencies": {
-    "prettier": "^1.11.1"
+    "log-interceptor": "^1.0.1",
+    "prettier": "^1.11.1",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
   }
 }
