@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 const argv = require('minimist')(process.argv.slice(2));
 const area = require('./src/area');
 const bbox2fc = require('./src/bbox2fc');
@@ -12,6 +11,7 @@ const fc2frows = require('./src/fc2frows');
 const fc2csv = require('./src/fc2csv');
 const action = argv._[0];
 const file = argv._[1];
+
 switch (action) {
   case 'area':
     area(file);
