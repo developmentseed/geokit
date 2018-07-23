@@ -43,10 +43,3 @@ switch (action) {
   default:
     console.log('unknown command');
 }
-
-module.exports={
-  area,
-  distance,
-  bbox,
-  bbox2fc
-}
