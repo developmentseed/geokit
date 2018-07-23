@@ -45,5 +45,6 @@ switch (action) {
 }
 
 module.exports={
-  area
+  area,
+  distance
 }
