@@ -1,12 +1,12 @@
 const test = require('tape');
 const logInterceptor = require('log-interceptor');
 const path = require('path');
-const cmd = require('../index.js');
+const cmdBbox = require('../src/bbox.js');
 const file = path.join(__dirname, '/fixtures/monaco.geojson');
 test('Bbox', function (t) {
     t.plan(2);
     logInterceptor();
-    cmd.bbox(file);
+    cmdBbox(file);
     let logs = logInterceptor.end();
     const bbox = JSON.parse(logs[0]);
     t.equal(bbox.length, 4, 'Array size 4');
