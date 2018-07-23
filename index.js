@@ -9,6 +9,7 @@ const line2polygon = require('./src/line2polygon');
 const bbox = require('./src/bbox');
 const fc2frows = require('./src/fc2frows');
 const fc2csv = require('./src/fc2csv');
+const filterbyprop = require('./src/filterbyprop');
 const action = argv._[0];
 const file = argv._[1];
 
@@ -39,6 +40,9 @@ switch (action) {
     break;
   case 'fc2csv':
     fc2csv(file);
+    break;
+  case 'filterbyprop':
+    filterbyprop(file, argv.prop);
     break;
   default:
     console.log('unknown command');
