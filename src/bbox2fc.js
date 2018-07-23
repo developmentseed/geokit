@@ -1,4 +1,3 @@
-const fs = require('fs');
 const turf = require('@turf/turf');
 module.exports = function(bbox) {
   bbox = bbox.split(',').map(function(item) {
