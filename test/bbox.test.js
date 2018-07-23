@@ -3,7 +3,7 @@ const logInterceptor = require('log-interceptor');
 const path = require('path');
 const cmd = require('../index.js');
 const file = path.join(__dirname, '/fixtures/monaco.geojson');
-test('Area', function (t) {
+test('Bbox', function (t) {
     t.plan(2);
     logInterceptor();
     cmd.bbox(file);

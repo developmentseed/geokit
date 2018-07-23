@@ -47,5 +47,6 @@ switch (action) {
 module.exports={
   area,
   distance,
-  bbox
+  bbox,
+  bbox2fc
 }

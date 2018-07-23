@@ -4,6 +4,6 @@ module.exports = function(bbox) {
   bbox = bbox.split(',').map(function(item) {
     return parseFloat(item);
   });
-  var poly = turf.bboxPolygon(bbox);
+  const poly = turf.bboxPolygon(bbox);
   console.log(JSON.stringify(turf.featureCollection([poly])));
 };
