@@ -5,8 +5,8 @@ Command line tool for basic operations through geojson files!
 ## Install
 
 ```
-git clone https://github.com/Rub21/geoarea.git
-cd geoarea/
+git clone git@github.com:Rub21/geokit.git
+cd geokit/
 npm link
 
 ```
@@ -84,3 +84,20 @@ This funcionality will add a `osm_download_link` column  in the csv.
 ```
 geokit fc2csv polygons.geojson  > csv.csv
 ```
+
+### Filter features by property
+
+This funcionality will filter features by property and will generate a new geojson file with the filtered objects.
+
+ ```
+geokit filterbyprop <input.geojson> --prop building=* > output.geojson
+ ```
+
+### Count features by property
+
+This funcionality will count features by property.
+
+ ```
+geokit countfeature <input.geojson> --prop building=* 
+ ```
+ 
