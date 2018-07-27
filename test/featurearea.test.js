@@ -5,7 +5,7 @@ const path = require('path');
 const cmdAreaF = require('../src/featurearea.js');
 const file = path.join(__dirname, '/fixtures/area.geojson');
 const outputfile = JSON.parse(fs.readFileSync(path.join(__dirname, '/fixtures/output.geojson')));
-test('AreaF', function(t) {
+test('AreaF', function (t) {
 	t.plan(1);
 	logInterceptor();
 	cmdAreaF(file);
