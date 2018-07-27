@@ -8,10 +8,7 @@ test('Line2polygon', function (t) {
   logInterceptor();
   cmdLine2polygon(file);
   let logs = logInterceptor.end();
-
   const fc = JSON.parse(logs[0]);
   t.equal(fc.features[0].geometry.type, 'Polygon', 'ok Polygon type');  
   t.end();
 });
-
-

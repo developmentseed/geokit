@@ -1,9 +1,9 @@
 const fs = require('fs');
 const turf = require('@turf/turf');
-module.exports = function (file) {
+module.exports = function(file) {
   let output = turf.featureCollection([]);
   const geojson = JSON.parse(fs.readFileSync(file).toString());
-  geojson.features.forEach(function (line) {
+  geojson.features.forEach(function(line) {
     if (line.geometry.type === 'LineString') {
       let polygon = turf.lineToPolygon(line);
       polygon.properties = line.properties;
