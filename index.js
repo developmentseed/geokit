@@ -12,6 +12,7 @@ const fc2csv = require('./src/fc2csv');
 const filterbyprop = require('./src/filterbyprop');
 const countfeature = require('./src/countfeature');
 const featurearea = require('./src/featurearea');
+const filterbygeo = require('./src/filterbygeo');
 const action = argv._[0];
 const file = argv._[1];
 
@@ -26,7 +27,7 @@ switch (action) {
     buffer(file, argv.unit, argv.radius);
     break;
   case 'clip':
-    clip(file, argv._[2]);
+    clip(file, argv._[1]);
     break;
   case 'distance':
     distance(file);
@@ -51,6 +52,9 @@ switch (action) {
     break;
   case 'featurearea':
     featurearea(file);
+    break;
+  case 'filterbygeo':
+    filterbygeo(file, argv.type);
     break;
   default:
     console.log('unknown command');
