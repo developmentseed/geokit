@@ -1,10 +1,10 @@
 const fs = require('fs');
 const turf = require('@turf/turf');
-module.exports = function (file) {
+module.exports = function(file) {
   let distance = 0;
   const geojson = JSON.parse(fs.readFileSync(file).toString());
   if (geojson.features) {
-    geojson.features.forEach(function (feature) {
+    geojson.features.forEach(function(feature) {
       if (feature.geometry.type === 'LineString') {
         distance += SegmentDistance(feature);
       } else if (feature.geometry.type === 'MultiLineString') {
