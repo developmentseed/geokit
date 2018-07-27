@@ -10,6 +10,8 @@ const bbox = require('./src/bbox');
 const fc2frows = require('./src/fc2frows');
 const fc2csv = require('./src/fc2csv');
 const filterbyprop = require('./src/filterbyprop');
+const countfeature = require('./src/countfeature');
+const featurearea = require('./src/featurearea');
 const action = argv._[0];
 const file = argv._[1];
 
@@ -43,6 +45,12 @@ switch (action) {
     break;
   case 'filterbyprop':
     filterbyprop(file, argv.prop);
+    break;
+  case 'countfeature':
+    countfeature(file, argv.prop);
+    break;
+  case 'featurearea':
+    featurearea(file);
     break;
   default:
     console.log('unknown command');
