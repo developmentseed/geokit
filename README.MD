@@ -107,4 +107,12 @@ This functionality will get the area of each feature (polygon) into a geojson fi
  ```
 geokit featurearea input.geojson > output.geojson  
  ```
+
+### Filter features by geometry
+
+This funcionality will filter features by geometry and will generate a new geojson file with the filtered objects.
+
+ ```
+geokit filterbygeo <input.geojson> --type type=Polygon > output.geojson
+ ```
  
