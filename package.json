@@ -7,10 +7,10 @@
     "geokit": "index.js"
   },
   "scripts": {
-    "format": "prettier --single-quote --write --print-width 120  *.js src/*.js",
+    "format": "prettier --single-quote --write --print-width 120  *.js src/*.js test/*.test.js",
     "test": "NODE_ENV=test tape test/*.test.js | tap-spec",
-    "fix": "eslint --fix test src",
-    "lint": "eslint src test lib"
+    "fix": "eslint --fix test/*.test.js src",
+    "lint": "eslint src test/*.test.js lib"
   },
   "author": "rub2106@gmail.com",
   "dependencies": {
