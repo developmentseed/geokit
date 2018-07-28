@@ -1,0 +1,41 @@
+
+{
+    "type": "FeatureCollection",
+    "generator": "JOSM",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "building": "school",
+                "name": "Trường THCS Gia Thụy"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            105.88429430000,
+                            21.04968520000
+                        ],
+                        [
+                            105.88494380000,
+                            21.05007280000
+                        ],
+                        [
+                            105.88561980000,
+                            21.04947910000
+                        ],
+                        [
+                            105.88482890000,
+                            21.04888950000
+                        ],
+                        [
+                            105.88429430000,
+                            21.04968520000
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}

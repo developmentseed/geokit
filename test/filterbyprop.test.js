@@ -3,7 +3,7 @@ const logInterceptor = require('log-interceptor');
 const path = require('path');
 const cmdFilterbyprop = require('../src/filterbyprop.js');
 const file = path.join(__dirname, '/fixtures/filterbyprop.geojson');
-test('Filterbyprop', function (t) {
+test('Filterbyprop', function(t) {
   logInterceptor();
   cmdFilterbyprop(file, 'building=*');
   let logs = logInterceptor.end();
@@ -22,4 +22,3 @@ test('Filterbyprop', function (t) {
   }
   t.end();
 });
-

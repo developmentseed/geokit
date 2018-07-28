@@ -3,7 +3,7 @@ const logInterceptor = require('log-interceptor');
 const path = require('path');
 const cmdDistance = require('../src/distance.js');
 const file = path.join(__dirname, '/fixtures/linestring.geojson');
-test('Distance', function (t) {
+test('Distance', function(t) {
   t.plan(1);
   logInterceptor();
   cmdDistance(file);
