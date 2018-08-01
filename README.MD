@@ -1,6 +1,6 @@
 # geokit
 
-[![Build Status](https://travis-ci.org/Rub21/geokit.svg?branch=master)](https://magnum.travis-ci.com/Rub21/geokit)
+[![Build Status](https://travis-ci.org/developmentseed/geokit.svg?branch=master)](https://magnum.travis-ci.com/developmentseed/geokit)
 
 Command line tool for basic operations through geojson files!
 
