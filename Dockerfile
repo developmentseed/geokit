@@ -6,7 +6,10 @@ RUN apt-get install -y wget build-essential libz-dev zlib1g-dev git curl python-
 # Install node
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs
-# Clone geokit repo
-RUN git clone https://github.com/developmentseed/geokit.git && cd geokit && npm link
-RUN mkdir -p app
+
 WORKDIR app/
+COPY . .
+# RUN rm -rf node_modules/
+RUN npm install
+RUN npm link
+CMD geokit

@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 const argv = require('minimist')(process.argv.slice(2));
+const path = require('path');
+const exec = require('executive');
+
 const area = require('./src/area');
 const bbox2fc = require('./src/bbox2fc');
 const buffer = require('./src/buffer');
@@ -52,6 +55,20 @@ switch (action) {
   case 'featurearea':
     featurearea(file);
     break;
+  //Python scripts section
+  case 'osm2new':
+    const scriptPath = path.join(__dirname, '/python-scripts/osm2new.py');
+    const cmd = ['python', scriptPath, file];
+    exec(cmd.join(' '), output);
+    break;
   default:
     console.log('unknown command');
+}
+
+function output(error, stdout, stderr){
+  if(error){
+    console.error(error);
+  }
+  // console.log(stdout);
+  // console.log(stderr);
 }
