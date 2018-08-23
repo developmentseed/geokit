@@ -12,6 +12,7 @@ const fc2csv = require('./src/fc2csv');
 const filterbyprop = require('./src/filterbyprop');
 const countfeature = require('./src/countfeature');
 const featurearea = require('./src/featurearea');
+const countbysize = require('./src/countbysize');
 const action = argv._[0];
 const file = argv._[1];
 
@@ -51,6 +52,9 @@ switch (action) {
     break;
   case 'featurearea':
     featurearea(file);
+    break;
+  case 'countbysize':
+    countbysize(file, argv.prop, argv.psize);
     break;
   default:
     console.log('unknown command');

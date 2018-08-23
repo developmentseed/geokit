@@ -102,7 +102,7 @@ This funcionality will count features by property.
  ```
 geokit countfeature <input.geojson> --prop building=* 
  ```
- ### Get area per each feature into the geojson file
+### Get area per each feature into the geojson file
 
 This functionality will get the area of each feature (polygon) into a geojson file and will generate a new geojson file with all features with an area property.
 
@@ -110,3 +110,10 @@ This functionality will get the area of each feature (polygon) into a geojson fi
 geokit featurearea input.geojson > output.geojson  
  ```
  
+### Count features by property and by area size
+
+Applicable for polygons. This functionality will count features by property and those larger than the given area size.
+
+ ```
+geokit countbysize <input.geojson> --prop landuse=farmland --psize=1000  
+ ```
