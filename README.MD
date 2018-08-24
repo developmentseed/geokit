@@ -108,4 +108,8 @@ This functionality will get the area of each feature (polygon) into a geojson fi
  ```
 geokit featurearea input.geojson > output.geojson  
  ```
- 
+### Count features by area size
+
+Applicable for polygons. This functionality will count features larger than the given area size.
+
+geokit countbysize <input.geojson> --psize=1000   
