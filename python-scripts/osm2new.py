@@ -51,5 +51,5 @@ for relation in relations:
     if member.attrib['ref'] in dict:
       member.attrib['ref'] = str(dict[member.attrib['ref']])
 xml = "<?xml version='1.0' encoding='UTF-8'?>\n"+etree.tostring(tree, encoding='utf8')
-new_file = open(osmfilename[:-4]+'_new'+osmfilename[-4:], 'w')
+new_file = open(sys.argv[2], 'w')
 new_file.write(xml)

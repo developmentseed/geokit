@@ -4,16 +4,19 @@
 
 Command line tool for basic operations through geojson files!
 
-## Install
+# Build
 
 ```
-git clone git@github.com:Rub21/geokit.git
-cd geokit/
-npm link
-
+docker build -t geokit-container .
 ```
 
-## Usage
+# Install geokit CLI by Container (Recommended)
+
+```
+alias geokitD='docker run --rm -v ${PWD}:/app geokit-container:latest geokit'
+```
+
+# Usage
 
 #### Area
 

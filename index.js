@@ -2,73 +2,66 @@
 const argv = require('minimist')(process.argv.slice(2));
 const path = require('path');
 const exec = require('executive');
-
-const area = require('./src/area');
-const bbox2fc = require('./src/bbox2fc');
-const buffer = require('./src/buffer');
-const clip = require('./src/clip');
-const distance = require('./src/distance');
-const line2polygon = require('./src/line2polygon');
-const bbox = require('./src/bbox');
-const fc2frows = require('./src/fc2frows');
-const fc2csv = require('./src/fc2csv');
-const filterbyprop = require('./src/filterbyprop');
-const countfeature = require('./src/countfeature');
-const featurearea = require('./src/featurearea');
 const action = argv._[0];
-const file = argv._[1];
+const inputFile = argv._[1];
+const outputFile = argv._[2];
+let scriptPath;
+let cmd;
 
 switch (action) {
+  //Node Apps
   case 'area':
-    area(file);
+    require('./src/area')(inputFile);
     break;
   case 'bbox2fc':
-    bbox2fc(argv.bbox);
+    require('./src/bbox2fc')(argv.bbox);
     break;
   case 'buffer':
-    buffer(file, argv.unit, argv.radius);
+    require('./src/buffer')(inputFile, argv.unit, argv.radius);
     break;
   case 'clip':
-    clip(file, argv._[2]);
+    require('./src/clip')(inputFile, argv._[2]);
     break;
   case 'distance':
-    distance(file);
+    require('./src/distance')(inputFile);
     break;
   case 'line2polygon':
-    line2polygon(file);
+    require('./src/line2polygon')(inputFile);
     break;
   case 'bbox':
-    bbox(file);
+    require('./src/bbox')(inputFile);
     break;
   case 'fc2frows':
-    fc2frows(file);
+    require('./src/fc2frows')(inputFile);
     break;
   case 'fc2csv':
-    fc2csv(file);
+    require('./src/fc2csv')(inputFile);
     break;
   case 'filterbyprop':
-    filterbyprop(file, argv.prop);
+    require('./src/filterbyprop')(inputFile, argv.prop);
     break;
   case 'countfeature':
-    countfeature(file, argv.prop);
+    require('./src/countfeature')(inputFile, argv.prop);
     break;
   case 'featurearea':
-    featurearea(file);
+    require('./src/featurearea')(inputFile);
     break;
   //Python scripts section
   case 'osm2new':
-    const scriptPath = path.join(__dirname, '/python-scripts/osm2new.py');
-    const cmd = ['python', scriptPath, file];
-    exec(cmd.join(' '), output);
+    scriptPath = path.join(__dirname, '/python-scripts/osm2new.py');
+    cmd = ['python', scriptPath, inputFile, outputFile];
+    exec(cmd.join(' '), outputFunction);
+    break;
+  case 'fixordinal':
+    scriptPath = path.join(__dirname, '/python-scripts/fix_ordinal_suffixes.py');
+    cmd = ['python', scriptPath, inputFile, outputFile];
+    exec(cmd.join(' '), outputFunction);
     break;
   default:
-    console.log('unknown command');
+    console.log('unknown command, visit: https://developmentseed/github.io/geokit-doc-seed');
 }
 
-function output(error, stdout, stderr){
-  if(error){
-    console.error(error);
-  }
-  // console.log(stdout);
-  // console.log(stderr);
+function outputFunction(error, stdout, stderr) {
+  if(error) console.log(error);
+  console.log(stdout);
 }
