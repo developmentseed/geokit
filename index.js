@@ -46,6 +46,10 @@ switch (action) {
   case 'featurearea':
     require('./src/featurearea')(inputFile);
     break;
+  case 'countbysize':
+    require('./src/countbysize')(inputFile, argv.psize);
+    break;
+
   //Python scripts section
   case 'osm2new':
     scriptPath = path.join(__dirname, '/python-scripts/osm2new.py');
