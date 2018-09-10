@@ -23,6 +23,14 @@ geokit area <input.geojson>
 
 ```
 
+### bbox of a geojson
+
+- Get the bbox of a geojson file.
+
+```
+geokit bbox <input.geojson>
+```
+
 
 ### Bbox to featurecollection
 
