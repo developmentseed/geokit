@@ -49,7 +49,9 @@ switch (action) {
   case 'countbysize':
     require('./src/countbysize')(inputFile, argv.psize);
     break;
-
+  case 'filterbygeo':
+    require('./src/filterbygeometry')(inputFile, argv.gtype);
+    break;
   //Python scripts section
   case 'osm2new':
     scriptPath = path.join(__dirname, '/python-scripts/osm2new.py');
