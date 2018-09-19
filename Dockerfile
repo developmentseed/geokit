@@ -19,9 +19,8 @@ RUN apt-get install -y \
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs
 
-WORKDIR app/
 COPY . .
 RUN rm -rf node_modules/
 RUN npm install
 RUN npm link
-CMD geokit
+WORKDIR app/
