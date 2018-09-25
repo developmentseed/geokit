@@ -61,11 +61,43 @@ switch (action) {
     cmd = ['python', scriptPath, inputFile, outputFile];
     exec(cmd.join(' '), outputFunction);
     break;
+  
+  //help  
+  case 'help':
+    usage();
+    break;
+  case '--help':
+    usage();
+    break;
   default:
-    console.log('unknown command, visit: https://developmentseed/github.io/geokit-doc-seed');
+    usage();
 }
 
 function outputFunction(error, stdout, stderr) {
   if(error) console.log(error);
   console.log(stdout);
+};
+
+function usage() {
+  console.log('Commands:');
+    console.log('  area             Get the total area in km2 of the all polygons that there are in a geojson file');
+    console.log('  bbox             Get the bbox of a geojson file');
+    console.log('  bbox2fc          Convert bbox to feature collection: bbox extent in minX, minY, maxX, maxY order');
+    console.log('  buffer           Create buffer in LineString features');
+    console.log('  clip             Clip geojson file');
+    console.log('  distance         Get the total distance in km of LineString and MultiLineString features that there are in a geojson file');
+    console.log('  line2polygon     Change the type of geometry from LineString to Polygon');
+    console.log('  fc2frows         Set each feature into a row in files from FeatureCollection');
+    console.log('  fc2csv           Add an osm_download_link column per each feature and will generate a csv file');
+    console.log('  filterbyprop     Filter features by property');
+    console.log('  countfeature     Count features by property');
+    console.log('  featurearea      Get area per each feature into the geojson file');
+    console.log('  countbysize      Count features by area size');
+    console.log('Also you can use these commands:');
+    console.log('  geojson-merge    Merge multiple geojson files into one FeatureCollection');
+    console.log('  osmtogeojson     Converts osm file to geojson format');
+    console.log('  geojsontoosm     Converts geojson file to osm format');
+    console.log('  geojson2poly     Converts geojson polygons to OpenStreetMap (OSM) poly format file');
+    console.log('  geojson-pick     Removes all but specified properties from features in a geojson FeatureCollection');
+    console.log('More details, visit our web page with all documentation --> https://developmentseed/github.io/geokit-doc-seed')
 }
