@@ -23,6 +23,7 @@ RUN npm install -g @mapbox/geojson-merge
 RUN npm install -g osmtogeojson
 RUN npm install -g geojsontoosm
 RUN npm install geojson2poly -g
+RUN npm install -g geojson-pick
 
 COPY . .
 RUN rm -rf node_modules/
