@@ -19,6 +19,11 @@ RUN apt-get install -y \
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs
 
+RUN npm install -g @mapbox/geojson-merge
+RUN npm install -g osmtogeojson
+RUN npm install -g geojsontoosm
+RUN npm install geojson2poly -g
+
 COPY . .
 RUN rm -rf node_modules/
 RUN npm install
