@@ -121,3 +121,18 @@ geokit featurearea input.geojson > output.geojson
 Applicable for polygons. This functionality will count features larger than the given area size.
 
 geokit countbysize <input.geojson> --psize=1000   
+
+
+### Filter features by geometry
+
+This is a function that helps to filter the features by one or many geometry types.
+
+```
+geokit filterbygeometry --geos <geometry types>  > ouput.geojson
+```
+
+Example: 
+
+```
+geokit filterbygeometry --geos LineString,MultiLineString > ouput.geojson
+```
