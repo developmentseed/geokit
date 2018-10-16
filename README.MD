@@ -4,9 +4,9 @@
 
 Geokit is a command-line interface (CLI) tool written in javascript, that contains all the basic functionalities for measurements, conversions and operations of geojson files.
 
-# Install geokit CLI by Container
+# Install Geokit CLI by Container
 
-Geokit is installed with docker, due several functionalities from other repositories like [awesome-geojson](https://github.com/tmcw/awesome-geojson) were incorporated to geokit functionalities.
+Geokit is installed with docker, due several functionalities from other repositories like [awesome-geojson](https://github.com/tmcw/awesome-geojson) were incorporated to Geokit functionalities.
 
 Clone the repository and build the docker image, also you can use an alias to avoid write all the command to run the Docker image.
 
@@ -136,9 +136,9 @@ geokit countbysize input.geojson --psize=1000
 
 ## Other functionalities into a Docker image:
 
-Functionalities outside geokit into a Docker image.
+Functionalities outside Geokit into a Docker image.
 
-[geojson-merge](https://github.com/mapbox/geojson-merge)
+### [geojson-merge](https://github.com/mapbox/geojson-merge)
 
 - Merges multiple geojson files into one FeatureCollection.
 
@@ -146,7 +146,7 @@ Functionalities outside geokit into a Docker image.
 geojson-merge input1.geojson input2.geojson > output.geojson
 ```
 
-[osmtogeojson](https://github.com/tyrasd/osmtogeojson)
+### [osmtogeojson](https://github.com/tyrasd/osmtogeojson)
 
 - Converts osm file to geojson format.
 
@@ -154,7 +154,7 @@ geojson-merge input1.geojson input2.geojson > output.geojson
 osmtogeojson input.osm > output.geojson
 ```
 
-[geojsontoosm](https://github.com/tyrasd/geojsontoosm)
+### [geojsontoosm](https://github.com/tyrasd/geojsontoosm)
 
 - Converts geojson file to osm format.
 
@@ -162,7 +162,7 @@ osmtogeojson input.osm > output.geojson
     geojsontoosm input.geojson > output.osm
 ```
 
-[geojson2poly](https://www.npmjs.com/package/geojson2poly)
+### [geojson2poly](https://www.npmjs.com/package/geojson2poly)
 
 - Converts geojson polygons to openstreetmap (osm) poly format file.
 
@@ -170,7 +170,7 @@ osmtogeojson input.osm > output.geojson
 geojson2poly input.geojson output.poly
 ```
 
-[geojson-pick](https://www.npmjs.com/package/geojson-pick)
+### [geojson-pick](https://www.npmjs.com/package/geojson-pick)
 
 - Removes all but specified properties from features in a geojson FeatureCollection.
 
