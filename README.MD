@@ -13,7 +13,6 @@ Clone the repository and build the docker image, also you can use an alias to av
 ```
 docker build -t geokit-container .
 alias geokit='docker run --rm -v ${PWD}:/app geokit-container:latest geokit'
-
 ```
 
 # Usage
@@ -24,7 +23,6 @@ alias geokit='docker run --rm -v ${PWD}:/app geokit-container:latest geokit'
 
 ```
 geokit area input.geojson
-
 ```
 
 ### Bbox of FeatureCollection
@@ -41,7 +39,6 @@ geokit bbox input.geojson
 
 ```
 geokit bbox2fc --bbox="0, 0, 10, 10" > output.geojson
-
 ```
 
 ### Buffer
@@ -50,7 +47,6 @@ geokit bbox2fc --bbox="0, 0, 10, 10" > output.geojson
 
 ```
 geokit buffer input.geojson --unit=meters --radius=10000  > output.geojson
-
 ```
 
 ### Clip
@@ -67,7 +63,6 @@ geokit clip input.geojson boundary.geojson > output.geojson
 
 ```
 geokit distance input.geojson
-
 ```
 
 ### Line to polygon
@@ -76,7 +71,7 @@ geokit distance input.geojson
 
 ```
  geokit line2polygon input.geojson > output.geojson
- ```
+```
 
 ### Set each feature into a row 
 
