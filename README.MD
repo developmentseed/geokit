@@ -159,7 +159,7 @@ osmtogeojson input.osm > output.geojson
 
 ### [geojson2poly](https://www.npmjs.com/package/geojson2poly)
 
-- Converts geojson polygons to openstreetmap (osm) poly format file.
+- Converts geojson polygons to OpenStreetMap (OSM) poly format file.
 
 ```
 geojson2poly input.geojson output.poly
