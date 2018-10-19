@@ -12,7 +12,6 @@
     "fix": "eslint --fix test/*.test.js src",
     "lint": "eslint src test/*.test.js lib"
   },
-  "author": "rub2106@gmail.com",
   "dependencies": {
     "@turf/turf": "^5.1.6",
     "executive": "^1.6.3",

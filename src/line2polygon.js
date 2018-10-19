@@ -8,7 +8,7 @@ module.exports = function(file) {
       let polygon = turf.lineToPolygon(object);
       polygon.properties = object.properties;
       output.features.push(polygon);
-    }else{
+    } else {
       output.features.push(object);
     }
   });
