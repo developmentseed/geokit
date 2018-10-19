@@ -1,138 +1,174 @@
-# geokit
+# Geokit
 
 [![Build Status](https://travis-ci.org/developmentseed/geokit.svg?branch=master)](https://magnum.travis-ci.com/developmentseed/geokit)
 
-Command line tool for basic operations through geojson files!
+Geokit is a command-line interface (CLI) tool written in javascript, that contains all the basic functionalities for measurements, conversions and operations of geojson files.
 
-# Install geokit CLI by Container (Recommended)
+# Install Geokit CLI by Container
+
+Geokit is installed with docker, due several functionalities from other repositories like [awesome-geojson](https://github.com/tmcw/awesome-geojson) were incorporated to Geokit functionalities.
+
+Clone the repository and build the docker image, also you can use an alias to avoid write all the command to run the Docker image.
 
 ```
 docker build -t geokit-container .
 alias geokit='docker run --rm -v ${PWD}:/app geokit-container:latest geokit'
-
 ```
 
 # Usage
 
-#### Area
+### Area
 
-- Get the area polygon geojson file in KM2.
-
-```
-geokit area <input.geojson>
+- Gets the total area in km² of Polygon and MultiPolygon features that there are in a geojson file.
 
 ```
-
-### bbox of a geojson
-
-- Get the bbox of a geojson file.
-
-```
-geokit bbox <input.geojson>
+geokit area input.geojson
 ```
 
+### Bbox of FeatureCollection
 
-### Bbox to featurecollection
+- Gets the bbox of a FeatureCollection.
 
-- Convert bbox to feature collection: bbox extent in minX, minY, maxX, maxY order
+```
+geokit bbox input.geojson
+```
+
+### Bbox to FeatureCollection
+
+- Converts a bbox to FeatureCollection. 
 
 ```
 geokit bbox2fc --bbox="0, 0, 10, 10" > output.geojson
-
 ```
-
 
 ### Buffer
 
-- Create buffer in lineStrings features.
+- Creates a buffer in LineString features for a given radius.
 
 ```
-geokit buffer  <input.geojson> --unit=meters --radius=10000  > output.geojson
-
+geokit buffer input.geojson --unit=meters --radius=10000  > output.geojson
 ```
-
 
 ### Clip
 
-Clip geojson file.
+- Gets only the features that are inside the given boundary and it deletes all features outside the boundary.
 
 ```
-geokit clip map.geojson boundaries.geojson > o.geojson
+geokit clip input.geojson boundary.geojson > output.geojson
 ```
-
-
 
 ### Distance
 
-Get distance of geojson file, applicable only for LineString, and MultiLineString
+- Gets the total distance in km of LineString and MultiLineString features that there are in a geojson file.
 
 ```
-geokit distance imput.geojson
-
+geokit distance input.geojson
 ```
 
+### Line to polygon
 
-### Line 2 polygon
+- Changes the type of geometry from LineString to Polygon.
 
 ```
  geokit line2polygon input.geojson > output.geojson
- ```
+```
 
+### Set each feature into a row 
 
-### Set each feature into a row in files from Feature collection
+- Sets each feature into a row from FeatureCollection.
 
 ```
  geokit fc2frows input.geojson > output.json
- ```
+```
 
-### Feature collection to CSV
+### FeatureCollection to CSV
 
-This funcionality will add a `osm_download_link` column  in the csv.
-
+- Adds an osm_download_link column per each feature and each link downloads the feature in JOSM.
 
 ```
-geokit fc2csv polygons.geojson  > csv.csv
+geokit fc2csv input.geojson > output.csv
 ```
 
 ### Filter features by property
 
-This funcionality will filter features by property and will generate a new geojson file with the filtered objects.
+- Filters features by given property and it will generate a new geojson file with the filtered features.
 
- ```
-geokit filterbyprop <input.geojson> --prop building=* > output.geojson
- ```
-
-### Count features by property
-
-This funcionality will count features by property.
-
- ```
-geokit countfeature <input.geojson> --prop building=* 
- ```
- ### Get area per each feature into the geojson file
-
-This functionality will get the area of each feature (polygon) into a geojson file and will generate a new geojson file with all features with an area property.
-
- ```
-geokit featurearea input.geojson > output.geojson  
- ```
-### Count features by area size
-
-Applicable for polygons. This functionality will count features larger than the given area size.
-
-geokit countbysize <input.geojson> --psize=1000   
-
+```
+geokit filterbyprop input.geojson --prop building=* > output.geojson
+```
 
 ### Filter features by geometry
 
-This is a function that helps to filter the features by one or many geometry types.
+- Filters features by given one or many geometry types and it will generate a new geojson file with the filtered features.
 
 ```
-geokit filterbygeometry --geos <geometry types>  > ouput.geojson
+geokit filterbygeometry --geos <geometry types> > ouput.geojson
 ```
 
-Example: 
+### Count features by property
+
+- Gets the total number of features that exist inside the a geojson file (according to a chosen property).
 
 ```
-geokit filterbygeometry --geos LineString,MultiLineString > ouput.geojson
+geokit countfeature input.geojson --prop building=* 
+```
+
+### Get area per each feature into the geojson file
+
+- Gets the area in hectares of each feature (polygon) into a geojson file and it will generate a new geojson file with all features plus an area property.
+
+```
+geokit featurearea input.geojson > output.geojson  
+```
+
+### Count features by area size
+
+- Counts features larger than the given area size in hectares. Applicable for polygons.
+
+```
+geokit countbysize input.geojson --psize=1000   
+```
+
+## Other functionalities into a Docker image:
+
+Functionalities outside Geokit into a Docker image.
+
+### [geojson-merge](https://github.com/mapbox/geojson-merge)
+
+- Merges multiple geojson files into one FeatureCollection.
+
+```
+geojson-merge input1.geojson input2.geojson > output.geojson
+```
+
+### [osmtogeojson](https://github.com/tyrasd/osmtogeojson)
+
+- Converts osm file to geojson format.
+
+```
+osmtogeojson input.osm > output.geojson
+```
+
+### [geojsontoosm](https://github.com/tyrasd/geojsontoosm)
+
+- Converts geojson file to osm format.
+
+```
+    geojsontoosm input.geojson > output.osm
+```
+
+### [geojson2poly](https://www.npmjs.com/package/geojson2poly)
+
+- Converts geojson polygons to OpenStreetMap (OSM) poly format file.
+
+```
+geojson2poly input.geojson output.poly
+```
+
+### [geojson-pick](https://www.npmjs.com/package/geojson-pick)
+
+- Removes all but specified properties from features in a geojson FeatureCollection.
+
+```
+geojson-pick PROPERTYNAME1 < input.geojson > output.geojson
 ```
