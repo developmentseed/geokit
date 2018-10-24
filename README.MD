@@ -181,3 +181,12 @@ geojson2poly input.geojson output.poly
 ```
 geojson-pick PROPERTYNAME1 < input.geojson > output.geojson
 ```
+
+### [dosm](https://github.com/Rub21/dosm)
+
+- Download OpenStreetMap data for a polygon
+
+
+```
+geokit dosm -d ayac.geojson --api=overpass --zoom=16
+```
