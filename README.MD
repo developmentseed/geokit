@@ -11,8 +11,17 @@ Geokit is installed with docker, due several functionalities from other reposito
 Clone the repository and build the docker image, also you can use an alias to avoid write all the command to run the Docker image.
 
 ```
-docker build -t geokit-container .
-alias geokit='docker run --rm -v ${PWD}:/app geokit-container:latest geokit'
+git clone git@github.com:developmentseed/geokit.git
+cd geokit/
+docker-compose build
+alias geokit='docker run --rm -v ${PWD}:/app geokit:latest'
+
+```
+
+or
+
+```
+docker-compose run geokit
 ```
 
 # Usage
