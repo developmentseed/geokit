@@ -1,0 +1,11 @@
+version: '3'
+services:
+  geokit:
+    image: geokit:v1
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app/data
+    env_file:
+      - ./env.sample
