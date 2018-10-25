@@ -5,6 +5,7 @@ module.exports = function(file, prop) {
   const propKey = prop.split('=')[0];
   const propValues = prop.split('=')[1].split(',');
   const geojson = JSON.parse(fs.readFileSync(file).toString());
+
   geojson.features.forEach(function(feature) {
     if (feature.properties) {
       let attr = feature.properties[propKey];
@@ -17,6 +18,11 @@ module.exports = function(file, prop) {
       }
     }
   });
-  let fc = turf.featureCollection(fcFilter[propKey]);
+
+  let features = [];
+  if (fcFilter[propKey]) {
+    features = fcFilter[propKey];
+  }
+  let fc = turf.featureCollection(features);
   console.log(JSON.stringify(fc));
 };

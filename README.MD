@@ -15,7 +15,6 @@ git clone git@github.com:developmentseed/geokit.git
 cd geokit/
 docker-compose build
 alias geokit='docker run --rm -v ${PWD}:/app geokit:latest'
-
 ```
 
 or
@@ -28,7 +27,7 @@ docker-compose run geokit
 
 ### Area
 
-- Gets the total area in km² of Polygon and MultiPolygon features that there are in a geojson file.
+- Gets the total area in km² of polygon features that there are in a geojson file.
 
 ```
 geokit area input.geojson

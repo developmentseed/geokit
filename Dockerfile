@@ -42,3 +42,4 @@ COPY . .
 RUN rm -rf node_modules/ && npm install && npm link
 WORKDIR app/
 RUN mkdir data/
+# CMD [ "geokit" ]
