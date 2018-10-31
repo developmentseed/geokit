@@ -14,7 +14,7 @@ Clone the repository and build the docker image, also you can use an alias to av
 git clone git@github.com:developmentseed/geokit.git
 cd geokit/
 docker-compose build
-alias geokit='docker run --rm -v ${PWD}:/app geokit:latest'
+alias geokit='docker run --rm -v ${PWD}:/app geokit:latest geokit'
 ```
 
 or
