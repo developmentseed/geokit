@@ -1,0 +1,26 @@
+Commands:
+- area             Gets the total area in km2 of the all polygons that there are in a geojson file.
+- bbox             Gets the bbox of a geojson file.
+- bbox2fc          Converts a bbox to FeatureCollection.
+- buffer           Creates buffer in LineString features for a given radius.
+- clip             Gets only the features that are inside the given boundary and it deletes all features outside the boundary'
+- distance         Gets the total distance in km of LineString and MultiLineString features that there are in a geojson file'
+- line2polygon     Changes the type of geometry from LineString to Polygon.
+- fc2frows         Sets each feature into a row from FeatureCollection.
+- fc2csv           Adds an osm_download_link column per each feature and each link downloads the feature in JOSM'
+- filterbyprop     Filters features by given property.
+- filterbygeometry Filters features by given one or many geometry types.
+- countfeature     Gets the total number of features that exist inside the a geojson file.
+- featurearea      Gets the area in hectares of each feature (polygon) into a geojson file.
+- countbysize      Counts features larger than the given area size in hectares.
+- point2tile       Create geojson of the tiles which cover the collections of points.
+
+Also you can use these commands
+
+- geojson-merge    Merges multiple geojson files into one FeatureCollection.
+- osmtogeojson     Converts osm file to geojson format.
+- geojsontoosm     Converts geojson file to osm format.
+- geojson2poly     Converts geojson polygons to OpenStreetMap (OSM) poly format file.
+- geojson-pick     Removes all but specified properties from features in a geojson FeatureCollection.
+
+More details, visit our web page with all documentation --> http://devseed.com/geokit-doc-seed
