@@ -52,6 +52,9 @@ switch (action) {
   case 'filterbygeometry':
     require('./src/filterbygeometry')(inputFile, argv.geos);
     break;
+  case 'deletenulls':
+    require('./src/deletenulls')(inputFile);
+    break;
   //Python scripts section
   case 'osm2new':
     scriptPath = path.join(__dirname, '/python-scripts/osm2new.py');
