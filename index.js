@@ -89,4 +89,3 @@ function outputFunction(error, stdout, stderr) {
   if (error) console.log(error);
   console.log(stdout);
 }
-
