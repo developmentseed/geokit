@@ -14,6 +14,7 @@ Commands:
 - featurearea      Gets the area in hectares of each feature (polygon) into a geojson file.
 - countbysize      Counts features larger than the given area size in hectares.
 - point2tile       Create geojson of the tiles which cover the collections of points.
+- difference       Filter the difference between two files: <File1.geojson> - <file2.geojson> --key==school_code.
 
 Also you can use these commands
 

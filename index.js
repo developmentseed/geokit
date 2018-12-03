@@ -58,7 +58,10 @@ switch (action) {
     break;
   case 'deletenulls':
     require('./src/deletenulls')(inputFile, argv.zoom);
-    break;    
+    break;
+  case 'difference':
+    require('./src/difference')(argv._[1], argv._[2], argv.key);
+    break;
   //Python scripts section
   case 'osm2new':
     scriptPath = path.join(__dirname, '/python-scripts/osm2new.py');

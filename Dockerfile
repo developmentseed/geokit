@@ -8,14 +8,13 @@ RUN apt-get install -y \
     build-essential \
     libz-dev \
     zlib1g-dev \
-    git \
     curl \
     python-pip \
     software-properties-common \
     python-software-properties \
     python-lxml \
     libboost-program-options-dev \
-    libbz2-dev zlib1g-dev \
+    libbz2-dev \
     libexpat1-dev \
     cmake \
     pandoc \
