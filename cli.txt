@@ -15,7 +15,7 @@ Commands:
 - countbysize      Counts features larger than the given area size in hectares.
 - point2tile       Create geojson of the tiles which cover the collections of points.
 - difference       Filter the difference between two files: <File1.geojson> - <file2.geojson> --key==school_code.
-
+- duplicatefeatures  Check if duplicate objects by an attribute.
 Also you can use these commands
 
 - geojson-merge    Merges multiple geojson files into one FeatureCollection.

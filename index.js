@@ -62,6 +62,9 @@ switch (action) {
   case 'difference':
     require('./src/difference')(argv._[1], argv._[2], argv.key);
     break;
+  case 'duplicatefeatures':
+    require('./src/duplicateFeatures')(argv._[1], argv.key);
+    break;
   //Python scripts section
   case 'osm2new':
     scriptPath = path.join(__dirname, '/python-scripts/osm2new.py');

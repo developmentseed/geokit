@@ -146,6 +146,12 @@ geokit difference <File1.geojson>  <file2.geojson> --key=school_code
 
 *--key*: Could be any of attribute, which is in both files.
 
+### Duplicate objects by an attribute
+
+```
+geokit duplicatefeatures <File1.geojson> --key=id
+```
+
 ## Other functionalities into a Docker image:
 
 Functionalities outside Geokit into a Docker image.
