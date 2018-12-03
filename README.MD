@@ -137,6 +137,15 @@ geokit featurearea input.geojson > output.geojson
 geokit countbysize input.geojson --psize=1000   
 ```
 
+
+### Difference between two geojson files according to an attribute
+
+```
+geokit difference <File1.geojson>  <file2.geojson> --key=school_code
+```
+
+*--key*: Could be any of attribute, which is in both files.
+
 ## Other functionalities into a Docker image:
 
 Functionalities outside Geokit into a Docker image.

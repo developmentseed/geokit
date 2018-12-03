@@ -6,10 +6,10 @@ module.exports = function(file) {
 
   for (var i = 0; i < geojson.features.length; i++) {
     _.each(geojson.features[i].properties, function(val, key) {
-      if(!val && val !== 0){
-        delete geojson.features[i].properties[key]
+      if (!val && val !== 0) {
+        delete geojson.features[i].properties[key];
       }
-    })
+    });
   }
   console.log(JSON.stringify(geojson));
 };
