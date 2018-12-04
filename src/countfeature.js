@@ -1,5 +1,4 @@
 const fs = require('fs');
-const turf = require('@turf/turf');
 module.exports = function(file, prop) {
   let totfeature = 0;
   const propKey = prop.split('=')[0];

@@ -60,10 +60,10 @@ switch (action) {
     require('./src/deletenulls')(inputFile, argv.zoom);
     break;
   case 'difference':
-    require('./src/difference')(argv._[1], argv._[2], argv.key);
+    require('./src/difference')(inputFile, argv._[2], argv.key);
     break;
   case 'duplicatefeatures':
-    require('./src/duplicateFeatures')(argv._[1], argv.key);
+    require('./src/duplicateFeatures')(inputFile, argv.key);
     break;
   //Python scripts section
   case 'osm2new':

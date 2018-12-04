@@ -1,6 +1,6 @@
 const fs = require('fs');
 const turf = require('@turf/turf');
-const config = require('./config');
+const config = require('./../config');
 const Json2csvParser = require('json2csv').Parser;
 const _ = require('underscore');
 
