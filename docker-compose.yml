@@ -1,7 +1,7 @@
 version: '3'
 services:
   geokit:
-    image: geokit:latest
+    image: developmentseed/geokit:latest
     build:
       context: ./
       dockerfile: Dockerfile
