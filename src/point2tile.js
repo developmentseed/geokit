@@ -14,8 +14,11 @@ module.exports = function(file, zoom) {
     .pipe(JSONStream.parse('features.*'))
     .pipe(
       eventStream.mapSync(function(data) {
-        const tile = buildTile(data, zoom);
-        collectionObj[tile.properties.index] = tile;
+        const tiles = buildTile(data, zoom);
+        for (let d = 0; d < tiles.features.length; d++) {
+          const tile = tiles.features[d];
+          collectionObj[tile.properties.index] = tile;
+        }
         return data;
       })
     )
@@ -35,11 +38,13 @@ function buildTile(data, zoom) {
     min_zoom: zoom,
     max_zoom: zoom
   };
-  let poly = cover.geojson(data.geometry, limits).features[0];
-  const tiles = cover.tiles(data.geometry, limits);
-  const indexes = cover.indexes(data.geometry, limits);
-  poly.properties = {};
-  poly.properties.tiles = tiles;
-  poly.properties.index = indexes[0];
-  return poly;
+  var buffer = turf.buffer(data, 0.2, { units: 'kilometers' });
+  let polys = cover.geojson(buffer.geometry, limits);
+  const tiles = cover.tiles(buffer.geometry, limits);
+  const indexes = cover.indexes(buffer.geometry, limits);
+  for (let i = 0; i < polys.features.length; i++) {
+    polys.features[i].properties.tiles = tiles[i];
+    polys.features[i].properties.index = indexes[i];
+  }
+  return polys;
 }
