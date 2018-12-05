@@ -168,6 +168,14 @@ geokit difference <File1.geojson>  <file2.geojson> --key=school_code
 geokit duplicatefeatures <File1.geojson> --key=id
 ```
 
+### Features to tiles
+
+Pass a geojson with points and get the nearest tiles to this point in a geojson file.
+
+```
+geokit point2tile <File.geojson> --zoom=17 > tiles.geojson
+```
+
 ## Other functionalities into a Docker image:
 
 Functionalities outside Geokit into a Docker image.
