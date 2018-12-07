@@ -38,7 +38,7 @@ function buildTile(data, zoom) {
     min_zoom: zoom,
     max_zoom: zoom
   };
-  var buffer = turf.buffer(data, 0.2, { units: 'kilometers' });
+  var buffer = turf.buffer(data, buffer, { units: 'meters' });
   let polys = cover.geojson(buffer.geometry, limits);
   const tiles = cover.tiles(buffer.geometry, limits);
   const indexes = cover.indexes(buffer.geometry, limits);
