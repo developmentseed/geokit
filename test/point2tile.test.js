@@ -6,7 +6,7 @@ const file = path.join(__dirname, '/fixtures/point.geojson');
 test('Point2tile', function(t) {
   t.plan(1);
   logInterceptor();
-  cmdPoint2tile(file, 17);
+  cmdPoint2tile(file, 17, 0.2);
   setTimeout(function() {
     let logs = logInterceptor.end();
     const fc = JSON.parse(logs[0]);
