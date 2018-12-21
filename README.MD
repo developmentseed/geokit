@@ -15,14 +15,14 @@ Geokit is installed with docker, due several functionalities from other reposito
 git clone git@github.com:developmentseed/geokit.git
 cd geokit/
 docker-compose build
-alias geokit='docker run --rm -v ${PWD}:/app developmentseed/geokit:latest geokit'
+alias geokit='docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:latest geokit'
 ```
 
 
 - **Building from [docker-hub](https://cloud.docker.com/u/developmentseed/repository/docker/developmentseed/geokit)**
 
 ```
-alias geokit='docker run --rm -v ${PWD}:/app developmentseed/geokit:latest geokit'
+alias geokit='docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:latest geokit'
 ```
 
 # Install for development mode
@@ -36,7 +36,7 @@ or
 
 ```
 cd geokit/
-docker run --rm -v ${PWD}:/app developmentseed/geokit:latest bash
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:latest bash
 ```
 
 # Usage
