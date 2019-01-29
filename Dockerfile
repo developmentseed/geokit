@@ -18,7 +18,10 @@ RUN apt-get install -y \
     libexpat1-dev \
     cmake \
     pandoc \
-    git
+    git \
+    default-jre \
+    default-jdk \
+    gradle
 
 # Install node
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
@@ -26,11 +29,11 @@ RUN apt-get install -y nodejs
 
 # Install Libosmium
 RUN git clone https://github.com/mapbox/protozero
-RUN cd protozero && mkdir build && cd build && cmake .. && make && make install
+RUN cd protozero && git checkout 23d48fd2a441c6e3b2852ff84a0ba398e48f74be && mkdir build && cd build && cmake .. && make && make install
 RUN git clone https://github.com/osmcode/libosmium
-RUN cd libosmium && mkdir build && cd build && cmake .. && make && make install
+RUN cd libosmium && git checkout a1f88fe44b01863a1ac84efccff54b98bb2dc886 && mkdir build && cd build && cmake .. && make && make install
 RUN git clone https://github.com/osmcode/osmium-tool
-RUN cd osmium-tool && mkdir build && cd build && cmake .. && make && make install
+RUN cd osmium-tool && git checkout ddbcb44f3ec0c1a8d729e69e3cee40d25f5a00b4 && mkdir build && cd build && cmake .. && make && make install
 
 # Other node libraries from https://github.com/node-geojson
 RUN npm install -g osmtogeojson
@@ -54,9 +57,17 @@ RUN git clone https://github.com/Rub21/dosm.git && cd dosm && npm i && npm link
 # Install osm-obj-counter
 RUN git clone https://github.com/developmentseed/osm-obj-counter.git && cd osm-obj-counter && npm i && npm link
 
+RUN git clone https://github.com/openstreetmap/osmosis.git
+WORKDIR osmosis
+RUN git checkout 9cfb8a06d9bcc948f34a6c8df31d878903d529fc
+RUN mkdir dist
+RUN ./gradlew assemble
+RUN tar -xvzf "$PWD"/package/build/distribution/*.tgz -C "$PWD"/dist/
+RUN ln -s "$PWD"/dist/bin/osmosis /usr/bin/osmosis
+RUN osmosis --version 2>&1 | grep "Osmosis Version"
+
 # Copy geokit to container
 COPY . .
 RUN rm -rf node_modules/ && npm install && npm link
-WORKDIR app/
-RUN mkdir data/
-# CMD [ "geokit" ]
+VOLUME /mnt/data
+WORKDIR /mnt/data
