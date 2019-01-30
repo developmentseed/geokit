@@ -65,6 +65,9 @@ switch (action) {
   case 'duplicatefeatures':
     require('./src/duplicateFeatures')(inputFile, argv.key);
     break;
+  case 'jsonlines2geojson':
+    require('./src/jsonlines2geojson')(inputFile);
+    break;
   //Python scripts section
   case 'osm2new':
     scriptPath = path.join(__dirname, '/python-scripts/osm2new.py');
