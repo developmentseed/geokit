@@ -21,7 +21,8 @@ RUN apt-get install -y \
     git \
     default-jre \
     default-jdk \
-    gradle
+    gradle \
+    libsqlite3-dev
 
 # Install node
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
@@ -48,7 +49,7 @@ RUN cp osmconvert /usr/bin/osmconvert
 RUN wget -O - http://m.m.i24.cc/osmfilter.c |cc -x c - -O3 -o osmfilter
 RUN cp osmfilter /usr/bin/osmfilter
 
-# install editors
+# Install editors
 RUN apt-get install -y nano vim
 
 # Install to download osm data for a polygon
@@ -57,6 +58,7 @@ RUN git clone https://github.com/Rub21/dosm.git && cd dosm && npm i && npm link
 # Install osm-obj-counter
 RUN git clone https://github.com/developmentseed/osm-obj-counter.git && cd osm-obj-counter && npm i && npm link
 
+# Installing osmosis
 RUN git clone https://github.com/openstreetmap/osmosis.git
 WORKDIR osmosis
 RUN git checkout 9cfb8a06d9bcc948f34a6c8df31d878903d529fc
@@ -66,8 +68,30 @@ RUN tar -xvzf "$PWD"/package/build/distribution/*.tgz -C "$PWD"/dist/
 RUN ln -s "$PWD"/dist/bin/osmosis /usr/bin/osmosis
 RUN osmosis --version 2>&1 | grep "Osmosis Version"
 
+# Installing minjur
+RUN mkdir /mason
+WORKDIR /mason
+RUN curl -sSfL https://github.com/mapbox/mason/archive/v0.6.0.tar.gz | \
+    tar --gunzip --extract --strip-components=1 --directory=./
+RUN ./mason install minjur 0.1.0
+RUN ./mason link minjur 0.1.0
+RUN ./mason_packages/.link/bin/minjur --version
+RUN ln ./mason_packages/.link/bin/minjur /usr/bin/minjur
+RUN ln ./mason_packages/.link/bin/minjur-mp /usr/bin/minjur-mp
+RUN ln ./mason_packages/.link/bin/minjur-generate-tilelist /usr/bin/minjur-generate-tilelist
+
+# Installing tippecanoe
+RUN git clone https://github.com/mapbox/tippecanoe.git /tmp/tippecanoe-src
+WORKDIR /tmp/tippecanoe-src
+RUN git checkout 610afc23329d3674f5bb2561bfd027653d3004a9
+RUN make && make install
+
 # Copy geokit to container
+RUN mkdir /geokit
+WORKDIR /geokit
 COPY . .
 RUN rm -rf node_modules/ && npm install && npm link
 VOLUME /mnt/data
 WORKDIR /mnt/data
+
+
