@@ -6,7 +6,7 @@ const cover = require('@mapbox/tile-cover');
 const _ = require('underscore');
 
 let collectionObj = {};
-module.exports = function(file, zoom, buffer) {
+module.exports = function(file, zoom, buffer, copyattrs) {
   var fileStream = fs.createReadStream(file, {
     encoding: 'utf8'
   });
@@ -14,7 +14,7 @@ module.exports = function(file, zoom, buffer) {
     .pipe(JSONStream.parse('features.*'))
     .pipe(
       eventStream.mapSync(function(data) {
-        const tiles = buildTile(data, zoom, buffer);
+        const tiles = buildTile(data, zoom, buffer, copyattrs);
         for (let d = 0; d < tiles.features.length; d++) {
           const tile = tiles.features[d];
           collectionObj[tile.properties.index] = tile;
@@ -33,7 +33,7 @@ module.exports = function(file, zoom, buffer) {
     });
 };
 
-function buildTile(data, zoom, buffer) {
+function buildTile(data, zoom, buffer, copyattrs) {
   var limits = {
     min_zoom: zoom,
     max_zoom: zoom
@@ -45,6 +45,9 @@ function buildTile(data, zoom, buffer) {
   for (let i = 0; i < polys.features.length; i++) {
     polys.features[i].properties.tiles = tiles[i];
     polys.features[i].properties.index = indexes[i];
+    if (copyattrs && copyattrs === 'true') {
+      polys.features[i].properties = Object.assign(polys.features[i].properties, data.properties);
+    }
   }
   return polys;
 }
