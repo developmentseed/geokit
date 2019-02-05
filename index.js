@@ -54,7 +54,7 @@ switch (action) {
     require('./src/filterbygeometry')(inputFile, argv.geos);
     break;
   case 'point2tile':
-    require('./src/point2tile')(inputFile, argv.zoom, argv.buffer);
+    require('./src/point2tile')(inputFile, argv.zoom, argv.buffer, argv.copyattrs);
     break;
   case 'deletenulls':
     require('./src/deletenulls')(inputFile, argv.zoom);

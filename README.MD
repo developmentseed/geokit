@@ -173,7 +173,7 @@ geokit duplicatefeatures <File1.geojson> --key=id
 Pass a geojson with points and get the nearest tiles to this point in a geojson file.
 
 ```
-geokit point2tile <File.geojson> --zoom=17 --buffer=0.2 > tiles.geojson
+geokit point2tile <File.geojson> --zoom=17 --buffer=0.2 --copyattrs=true > tiles.geojson
 ```
 
 ## Other functionalities into a Docker image:
