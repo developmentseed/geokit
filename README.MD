@@ -176,6 +176,18 @@ Pass a geojson with points and get the nearest tiles to this point in a geojson 
 geokit point2tile <File.geojson> --zoom=17 --buffer=0.2 --copyattrs=true > tiles.geojson
 ```
 
+
+### Tile Cover
+
+Pass a polygon and get the tiles which cover all the polygon at a certain zoom.
+From: https://github.com/mapbox/tile-cover
+
+```
+ geokit tilecover polygon.geojson --zoom=15 > tiles.geojson
+
+```
+
+
 ## Other functionalities into a Docker image:
 
 Functionalities outside Geokit into a Docker image.

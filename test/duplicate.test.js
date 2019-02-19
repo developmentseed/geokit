@@ -10,9 +10,7 @@ test('Duplicate', function(t) {
   cmdDuplicateFeatures(file1, 'id');
   setTimeout(function() {
     let logs = logInterceptor.end();
-
     const fc = JSON.parse(logs[0]);
-    console.log(logs[0]);
     t.equal(fc.features.length, 2, 'ok duplicate');
     t.end();
   }, 300);
