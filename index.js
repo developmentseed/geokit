@@ -69,7 +69,7 @@ switch (action) {
     require('./src/jsonlines2geojson')(inputFile);
     break;
   case 'tilecover':
-    require('./src/tilesCover')(inputFile, argv.zoom);
+    require('./src/tileCover')(inputFile, argv.zoom);
     break;
   //Python scripts section
   case 'osm2new':
