@@ -8,7 +8,7 @@ module.exports = function(file, unit, radius) {
     const geojson = JSON.parse(fs.readFileSync(file).toString());
     let fc = turf.featureCollection([]);
     geojson.features.forEach(function(feature) {
-      if (feature.geometry.type == 'LineString') {
+      if (feature.geometry.type == 'LineString' || feature.geometry.type == 'Point') {
         let buffered = turf.buffer(feature, radius, {
           units: unit
         });
