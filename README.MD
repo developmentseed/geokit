@@ -187,6 +187,15 @@ From: https://github.com/mapbox/tile-cover
 
 ```
 
+### Remove objects with action=delete
+
+Removes the objects with action=delete in a osm file.
+
+```
+ geokit removeactionosm input.osm output.osm
+
+```
+
 
 ## Other functionalities into a Docker image:
 
