@@ -86,6 +86,10 @@ WORKDIR /tmp/tippecanoe-src
 RUN git checkout 610afc23329d3674f5bb2561bfd027653d3004a9
 RUN make && make install
 
+# Install osmconv
+RUN git clone https://github.com/developmentseed/osm-coverage-tiles.git
+RUN cd osm-coverage-tiles && npm install && npm link
+
 # Copy geokit to container
 RUN mkdir /geokit
 WORKDIR /geokit
@@ -93,5 +97,3 @@ COPY . .
 RUN rm -rf node_modules/ && npm install && npm link
 VOLUME /mnt/data
 WORKDIR /mnt/data
-
-
