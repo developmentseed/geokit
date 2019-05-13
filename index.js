@@ -68,6 +68,9 @@ switch (action) {
   case 'jsonlines2geojson':
     require('./src/jsonlines2geojson')(inputFile);
     break;
+  case 'poly2point':
+    require('./src/poly2point')(inputFile);
+    break;
   case 'tilecover':
     require('./src/tileCover')(inputFile, argv.zoom);
     break;
