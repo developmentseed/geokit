@@ -196,6 +196,15 @@ Removes the objects with action=delete in a osm file.
 
 ```
 
+### Polygon to point 
+
+Gets the centroide of polygons an multipolygons.
+
+```
+ geokit poly2point input.geojson > output.geojson
+
+```
+
 
 ## Other functionalities into a Docker image:
 
