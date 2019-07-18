@@ -9,7 +9,11 @@ module.exports = function(file, prop) {
   geojson.features.forEach(function(feature) {
     if (feature.properties) {
       let attr = feature.properties[propKey];
-      if ((propValues[0] === '*' && feature.properties[propKey]) || propValues.indexOf(attr) > -1) {
+      if (
+        (propValues[0] === '*' && feature.properties[propKey]) ||
+        propValues.indexOf(attr) > -1 ||
+        (!attr && propValues[0] == 'null')
+      ) {
         if (fcFilter[propKey]) {
           fcFilter[propKey].push(feature);
         } else {
