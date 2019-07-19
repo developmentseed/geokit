@@ -90,6 +90,11 @@ switch (action) {
     cmd = ['python', scriptPath, inputFile, outputFile];
     exec(cmd.join(' '), outputFunction);
     break;
+  case 'addrandomid':
+    scriptPath = path.join(__dirname, '/python-scripts/add_random_id.py');
+    cmd = ['python', scriptPath, inputFile, outputFile];
+    exec(cmd.join(' '), outputFunction);
+    break;
   //help
   case 'help':
   case '--help':
