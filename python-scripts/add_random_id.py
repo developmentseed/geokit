@@ -14,6 +14,7 @@ for way in ways:
     neewTag.attrib['k']="idBuilding"
     neewTag.attrib['v']=new_id
     index = index + 1
+    way.attrib['action']='modify'
 
 for relation in relations:
     new_id = str(index) + '_' + str(uuid.uuid4().fields[-1])[:8]
@@ -21,6 +22,7 @@ for relation in relations:
     neewTag.attrib['k']="idBuilding"
     neewTag.attrib['v']=new_id
     index = index + 1
+    relation.attrib['action']='modify'
 
 xml = "<?xml version='1.0' encoding='UTF-8'?>\n"+etree.tostring(tree, encoding='utf8')
 new_file = open(sys.argv[2], 'w')
