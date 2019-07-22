@@ -3,22 +3,25 @@ import string
 import uuid
 from lxml import etree
 
-def ordinal(n):
-    if 10 <= n % 100 < 20:
-        return str(n) + 'th'
-    else:
-       return  str(n) + {1 : 'st', 2 : 'nd', 3 : 'rd'}.get(n % 10, "th")
-
 filename = sys.argv[1] if (len(sys.argv) > 1) else sys.exit("Invalid file name")
 tree = etree.parse(filename)
-tags = tree.findall(".//tag[@k='Id']")
+ways = tree.findall(".//way")
+relations = tree.findall(".//relation")
+index=0
+for way in ways:
+    new_id = str(index) + '_' + str(uuid.uuid4().fields[-1])[:8]
+    neewTag = etree.SubElement(way, "tag")
+    neewTag.attrib['k']="idBuilding"
+    neewTag.attrib['v']=new_id
+    index = index + 1
 
-for tag in tags:
-    new_id = str(uuid.uuid4().fields[-1])[:8]
-    old_id = tag.get('v')
-    tag.set("v", new_id)
-    print(old_id, new_id)
+for relation in relations:
+    new_id = str(index) + '_' + str(uuid.uuid4().fields[-1])[:8]
+    neewTag = etree.SubElement(relation, "tag")
+    neewTag.attrib['k']="idBuilding"
+    neewTag.attrib['v']=new_id
+    index = index + 1
 
 xml = "<?xml version='1.0' encoding='UTF-8'?>\n"+etree.tostring(tree, encoding='utf8')
-new_file = open(sys.argv[1], 'w')
+new_file = open(sys.argv[2], 'w')
 new_file.write(xml)
