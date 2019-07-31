@@ -12,7 +12,9 @@ module.exports = function(file, zoom) {
   const tiles = cover.tiles(poly.features[0].geometry, limits);
   const indexes = cover.indexes(poly.features[0].geometry, limits);
   for (let i = 0; i < geojson.features.length; i++) {
-    geojson.features[i].properties.id = i;
+    // Updating the id in order to support the https://github.com/developmentseed/chips-ahoy input
+    geojson.features[i].id = `(${tiles[i].join(',')})`;
+    geojson.features[i].properties.serial = i;
     geojson.features[i].properties.tiles = tiles[i];
     geojson.features[i].properties.index = indexes[i];
   }
