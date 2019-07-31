@@ -90,6 +90,9 @@ RUN make && make install
 RUN git clone https://github.com/developmentseed/osm-coverage-tiles.git
 RUN cd osm-coverage-tiles && npm install && npm link
 
+# Install csvkit
+RUN pip install csvkit
+
 # Copy geokit to container
 RUN mkdir /geokit
 WORKDIR /geokit
