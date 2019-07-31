@@ -14,7 +14,7 @@ module.exports = function(file, zoom) {
   for (let i = 0; i < geojson.features.length; i++) {
     // Updating the id in order to support the https://github.com/developmentseed/chips-ahoy input
     geojson.features[i].id = `(${tiles[i].join(',')})`;
-    geojson.features[i].properties.serial = i;
+    geojson.features[i].properties.id = i;
     geojson.features[i].properties.tiles = tiles[i];
     geojson.features[i].properties.index = indexes[i];
   }
