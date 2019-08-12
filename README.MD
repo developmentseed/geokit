@@ -191,6 +191,24 @@ From: https://github.com/mapbox/tile-cover
 
 ```
 
+### Remove objects with action=delete
+
+Removes the objects with action=delete in a osm file.
+
+```
+ geokit removeactionosm input.osm output.osm
+
+```
+
+### Polygon to point 
+
+Gets the centroide of polygons an multipolygons.
+
+```
+ geokit poly2point input.geojson > output.geojson
+
+```
+
 
 ## Other functionalities into a Docker image:
 

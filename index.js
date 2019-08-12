@@ -68,6 +68,9 @@ switch (action) {
   case 'jsonlines2geojson':
     require('./src/jsonlines2geojson')(inputFile);
     break;
+  case 'poly2point':
+    require('./src/poly2point')(inputFile);
+    break;
   case 'tilecover':
     require('./src/tileCover')(inputFile, argv.zoom);
     break;
@@ -84,6 +87,11 @@ switch (action) {
     break;
   case 'removeactionosm':
     scriptPath = path.join(__dirname, '/python-scripts/remove_acction_obj.py');
+    cmd = ['python', scriptPath, inputFile, outputFile];
+    exec(cmd.join(' '), outputFunction);
+    break;
+  case 'addrandomid':
+    scriptPath = path.join(__dirname, '/python-scripts/add_random_id.py');
     cmd = ['python', scriptPath, inputFile, outputFile];
     exec(cmd.join(' '), outputFunction);
     break;
