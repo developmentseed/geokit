@@ -139,7 +139,7 @@ geokit countfeature input.geojson --prop building=*
 
 ### Get area per each feature into the geojson file
 
-- Gets the area in hectares of each feature (polygon) into a geojson file and it will generate a new geojson file with all features plus an area property.
+- Gets the area in km² of each feature (polygon) into a geojson file and it will generate a new geojson file with all features plus an area property.
 
 ```
 geokit featurearea input.geojson > output.geojson  
@@ -147,7 +147,7 @@ geokit featurearea input.geojson > output.geojson
 
 ### Count features by area size
 
-- Counts features larger than the given area size in hectares. Applicable for polygons.
+- Counts features larger than the given area size in km². Applicable for polygons.
 
 ```
 geokit countbysize input.geojson --psize=1000   
@@ -156,13 +156,17 @@ geokit countbysize input.geojson --psize=1000
 
 ### Difference between two geojson files according to an attribute
 
-```
-geokit difference <File1.geojson>  <file2.geojson> --key=school_code
-```
-
+- Gets the difference of the objects between two geojson files according to a common attribute.
 *--key*: Could be any of attribute, which is in both files.
 
+```
+geokit difference <file1.geojson>  <file2.geojson> --key=school_code
+```
+
 ### Duplicate objects by an attribute
+
+- Gets the duplicate objects, identified by a unique attribute or primary key.
+
 
 ```
 geokit duplicatefeatures <File1.geojson> --key=id
@@ -170,7 +174,7 @@ geokit duplicatefeatures <File1.geojson> --key=id
 
 ### Features to tiles
 
-Pass a geojson with points and get the nearest tiles to this point in a geojson file.
+- Pass a geojson with points and get the nearest tiles to this point in a geojson file.
 
 ```
 geokit point2tile <File.geojson> --zoom=17 --buffer=0.2 --copyattrs=true > tiles.geojson
@@ -179,7 +183,7 @@ geokit point2tile <File.geojson> --zoom=17 --buffer=0.2 --copyattrs=true > tiles
 
 ### Tile Cover
 
-Pass a polygon and get the tiles which cover all the polygon at a certain zoom.
+- Pass a polygon and get the tiles which cover all the polygon at a certain zoom.
 From: https://github.com/mapbox/tile-cover
 
 ```

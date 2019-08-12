@@ -5,8 +5,8 @@ module.exports = function(file, polygonSize) {
   const geojson = JSON.parse(fs.readFileSync(file).toString());
   geojson.features.forEach(function(feature) {
     let area = turf.area(feature);
-    let areaha = (area / 10000).toFixed(0);
-    if (areaha >= polygonSize) {
+    let areakm = (area / 1000000).toFixed(0);
+    if (areakm >= polygonSize) {
       totalFeature = totalFeature + 1;
     }
   });
