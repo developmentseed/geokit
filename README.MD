@@ -125,8 +125,10 @@ geokit filterbyprop input.geojson --prop building=* > output.geojson
 
 - Filters features by given one or many geometry types and it will generate a new geojson file with the filtered features.
 
+*<geometry_types>:* Could be Polygon, LineString, etc.
+
 ```
-geokit filterbygeometry --geos <geometry types> > ouput.geojson
+geokit filterbygeometry input.geojson --geos <geometry_types> > ouput.geojson
 ```
 
 ### Count features by property
@@ -157,6 +159,7 @@ geokit countbysize input.geojson --psize=1000
 ### Difference between two geojson files according to an attribute
 
 - Gets the difference of the objects between two geojson files according to a common attribute.
+
 *--key*: Could be any of attribute, which is in both files.
 
 ```
@@ -169,7 +172,7 @@ geokit difference <file1.geojson>  <file2.geojson> --key=school_code
 
 
 ```
-geokit duplicatefeatures <File1.geojson> --key=id
+geokit duplicatefeatures <file1.geojson> --key=id
 ```
 
 ### Features to tiles
@@ -177,7 +180,7 @@ geokit duplicatefeatures <File1.geojson> --key=id
 - Pass a geojson with points and get the nearest tiles to this point in a geojson file.
 
 ```
-geokit point2tile <File.geojson> --zoom=17 --buffer=0.2 --copyattrs=true > tiles.geojson
+geokit point2tile <file.geojson> --zoom=17 --buffer=0.2 --copyattrs=true > tiles.geojson
 ```
 
 
@@ -191,24 +194,77 @@ From: https://github.com/mapbox/tile-cover
 
 ```
 
-### Remove objects with action=delete
+### Delete nulls
 
-Removes the objects with action=delete in a osm file.
+- Deletes the attributes that have a null value.
 
 ```
- geokit removeactionosm input.osm output.osm
+ geokit deletenulls input.geojson > output.geojson
+
+```
+
+### JSON to GeoJSON
+
+- Gets a geojson file from json file.
+
+```
+ geokit jsonlines2geojson input.json > output.geojson
 
 ```
 
 ### Polygon to point 
 
-Gets the centroide of polygons an multipolygons.
+- Gets the centroide of polygons an multipolygons.
 
 ```
  geokit poly2point input.geojson > output.geojson
 
 ```
 
+### Remove objects with action=delete
+
+- Removes the objects with action=delete in a osm file.
+
+```
+ geokit removeactionosm input.osm output.osm
+
+```
+
+### OSM file to new OSM file
+
+- Removes some attributes of each feature such as: `user`,  `version`, `timestamp`, `changeset` and `uid`. So it returns a new OSM file without these attributes. 
+
+```
+ geokit osm2new input.osm output.osm
+
+```
+
+### Fix ordinal suffixes
+
+- Fixes ordinal suffixes of the addresses.
+
+```
+ geokit fixordinal input.osm output.osm
+
+```
+
+### Add random id
+
+- Adds a random id per each feature.
+
+```
+ geokit addrandomid input.osm output.osm
+
+```
+
+### Fix points
+
+- Fixes points.
+
+```
+ geokit fixospoints input.osm output.osm
+
+```
 
 ## Other functionalities into a Docker image:
 

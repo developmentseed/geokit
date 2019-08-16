@@ -14,6 +14,9 @@ switch (action) {
   case 'area':
     require('./src/area')(inputFile);
     break;
+  case 'bbox':
+    require('./src/bbox')(inputFile);
+    break;
   case 'bbox2fc':
     require('./src/bbox2fc')(argv.bbox);
     break;
@@ -29,9 +32,6 @@ switch (action) {
   case 'line2polygon':
     require('./src/line2polygon')(inputFile);
     break;
-  case 'bbox':
-    require('./src/bbox')(inputFile);
-    break;
   case 'fc2frows':
     require('./src/fc2frows')(inputFile);
     break;
@@ -40,6 +40,9 @@ switch (action) {
     break;
   case 'filterbyprop':
     require('./src/filterbyprop')(inputFile, argv.prop);
+    break;
+  case 'filterbygeometry':
+    require('./src/filterbygeometry')(inputFile, argv.geos);
     break;
   case 'countfeature':
     require('./src/countfeature')(inputFile, argv.prop);
@@ -50,20 +53,20 @@ switch (action) {
   case 'countbysize':
     require('./src/countbysize')(inputFile, argv.psize);
     break;
-  case 'filterbygeometry':
-    require('./src/filterbygeometry')(inputFile, argv.geos);
-    break;
-  case 'point2tile':
-    require('./src/point2tile')(inputFile, argv.zoom, argv.buffer, argv.copyattrs);
-    break;
-  case 'deletenulls':
-    require('./src/deletenulls')(inputFile, argv.zoom);
-    break;
   case 'difference':
     require('./src/difference')(inputFile, argv._[2], argv.key);
     break;
   case 'duplicatefeatures':
     require('./src/duplicateFeatures')(inputFile, argv.key);
+    break;
+  case 'point2tile':
+    require('./src/point2tile')(inputFile, argv.zoom, argv.buffer, argv.copyattrs);
+    break;
+  case 'tilecover':
+    require('./src/tileCover')(inputFile, argv.zoom);
+    break;
+  case 'deletenulls':
+    require('./src/deletenulls')(inputFile);
     break;
   case 'jsonlines2geojson':
     require('./src/jsonlines2geojson')(inputFile);
@@ -71,10 +74,12 @@ switch (action) {
   case 'poly2point':
     require('./src/poly2point')(inputFile);
     break;
-  case 'tilecover':
-    require('./src/tileCover')(inputFile, argv.zoom);
-    break;
   //Python scripts section
+  case 'removeactionosm':
+    scriptPath = path.join(__dirname, '/python-scripts/remove_acction_obj.py');
+    cmd = ['python', scriptPath, inputFile, outputFile];
+    exec(cmd.join(' '), outputFunction);
+    break;
   case 'osm2new':
     scriptPath = path.join(__dirname, '/python-scripts/osm2new.py');
     cmd = ['python', scriptPath, inputFile, outputFile];
@@ -85,13 +90,13 @@ switch (action) {
     cmd = ['python', scriptPath, inputFile, outputFile];
     exec(cmd.join(' '), outputFunction);
     break;
-  case 'removeactionosm':
-    scriptPath = path.join(__dirname, '/python-scripts/remove_acction_obj.py');
+  case 'addrandomid':
+    scriptPath = path.join(__dirname, '/python-scripts/add_random_id.py');
     cmd = ['python', scriptPath, inputFile, outputFile];
     exec(cmd.join(' '), outputFunction);
     break;
-  case 'addrandomid':
-    scriptPath = path.join(__dirname, '/python-scripts/add_random_id.py');
+  case 'fixospoints':
+    scriptPath = path.join(__dirname, '/python-scripts/fix_os_points.py');
     cmd = ['python', scriptPath, inputFile, outputFile];
     exec(cmd.join(' '), outputFunction);
     break;
