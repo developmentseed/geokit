@@ -236,34 +236,6 @@ From: https://github.com/mapbox/tile-cover
 
 ```
  geokit osm2new input.osm output.osm
-
-```
-
-### Fix ordinal suffixes
-
-- Fixes ordinal suffixes of the addresses.
-
-```
- geokit fixordinal input.osm output.osm
-
-```
-
-### Add random id
-
-- Adds a random id per each feature.
-
-```
- geokit addrandomid input.osm output.osm
-
-```
-
-### Fix points
-
-- Fixes points.
-
-```
- geokit fixospoints input.osm output.osm
-
 ```
 
 ## Other functionalities into a Docker image:
