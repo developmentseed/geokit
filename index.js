@@ -74,6 +74,9 @@ switch (action) {
   case 'tilecover':
     require('./src/tileCover')(inputFile, argv.zoom);
     break;
+  case 'splitbyzoom':
+    require('./src/splitbygrid')(inputFile, argv.folder, argv.zoom);
+    break;
   //Python scripts section
   case 'osm2new':
     scriptPath = path.join(__dirname, '/python-scripts/osm2new.py');
