@@ -43,6 +43,9 @@ switch (action) {
   case 'fc2csv':
     fc2csv(file);
     break;
+  case 'dividepolygon':
+    dividepolygon(file);
+    break;
   case 'filterbyprop':
     filterbyprop(file, argv.prop);
     break;
