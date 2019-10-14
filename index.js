@@ -9,6 +9,7 @@ const line2polygon = require('./src/line2polygon');
 const bbox = require('./src/bbox');
 const fc2frows = require('./src/fc2frows');
 const fc2csv = require('./src/fc2csv');
+const divbbox = require('./src/divbbox');
 const filterbyprop = require('./src/filterbyprop');
 const countfeature = require('./src/countfeature');
 const featurearea = require('./src/featurearea');
@@ -43,8 +44,8 @@ switch (action) {
   case 'fc2csv':
     fc2csv(file);
     break;
-  case 'dividepolygon':
-    dividepolygon(file);
+  case 'divbbox':
+    divbbox(argv.bbox);
     break;
   case 'filterbyprop':
     filterbyprop(file, argv.prop);
