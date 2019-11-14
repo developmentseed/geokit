@@ -93,6 +93,9 @@ RUN cd osm-coverage-tiles && git checkout -b 63ff18169bc7bf9e6ee253f26bc2f4e855d
 # Install csvkit
 RUN pip install csvkit
 
+# Install mbtiles extractor
+RUN git clone https://github.com/mapbox/mbtiles-extracts.git && cd mbtiles-extracts && npm link
+
 # Copy geokit to container
 RUN mkdir /geokit
 WORKDIR /geokit
