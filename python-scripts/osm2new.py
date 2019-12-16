@@ -18,34 +18,35 @@ for node in nodes:
   dict[node.attrib['id']]=index
   node.attrib['id']=str(index)
   node.attrib['action']='modify'
-  del node.attrib["user"]
-  del node.attrib["version"]
-  del node.attrib["timestamp"]
-  del node.attrib["changeset"]
-  del node.attrib["uid"]
+  if "user" in node.attrib: del node.attrib["user"]
+  if "version" in node.attrib: del node.attrib["version"]
+  if "timestamp" in node.attrib: del node.attrib["timestamp"]
+  if "changeset" in node.attrib: del node.attrib["changeset"]
+  if "uid" in node.attrib: del node.attrib["uid"]
 for way in ways:
   index=index-1
   dict[way.attrib['id']]=index
   way.attrib['id']=str(index)
   way.attrib['action']='modify'
-  del way.attrib["user"]
-  del way.attrib["version"]
-  del way.attrib["timestamp"]
-  del way.attrib["changeset"]
-  del way.attrib["uid"]
+  if "user" in way.attrib: del way.attrib["user"]
+  if "version" in way.attrib: del way.attrib["version"]
+  if "timestamp" in way.attrib: del way.attrib["timestamp"]
+  if "changeset" in way.attrib: del way.attrib["changeset"]
+  if "uid" in way.attrib: del way.attrib["uid"]
   nds=way.findall(".//nd")
   for nd in nds:
-    nd.attrib['ref'] = str(dict[nd.attrib['ref']])
+    if nd.attrib['ref'] in dict:
+      nd.attrib['ref'] = str(dict[nd.attrib['ref']])
 for relation in relations:
   index=index-1
   dict[relation.attrib['id']]=index
   relation.attrib['id']=str(index)
   relation.attrib['action']='modify'
-  del relation.attrib["user"]
-  del relation.attrib["version"]
-  del relation.attrib["timestamp"]
-  del relation.attrib["changeset"]
-  del relation.attrib["uid"]
+  if "user" in relation.attrib: del relation.attrib["user"]
+  if "version" in relation.attrib: del relation.attrib["version"]
+  if "timestamp" in relation.attrib: del relation.attrib["timestamp"]
+  if "changeset" in relation.attrib: del relation.attrib["changeset"]
+  if "uid" in relation.attrib: del relation.attrib["uid"]
   members=relation.findall(".//member")
   for member in members:
     if member.attrib['ref'] in dict:

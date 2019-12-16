@@ -16,6 +16,17 @@ Commands:
 - point2tile       Create geojson of the tiles which cover the collections of points.
 - difference       Filter the difference between two files: <File1.geojson> - <file2.geojson> --key==school_code.
 - duplicatefeatures  Check if duplicate objects by an attribute.
+- point2tile       Pass a geojson with points and get the nearest tiles to this point in a geojson file.                
+- tilecover        Pass a polygon and get the tiles which cover all the polygon at a certain zoom.
+- deletenulls      Deletes the attributes that have a null value.
+- jsonlines2geojson     Gets a geojson file from json file.
+- poly2point       Gets the centroide of polygons an multipolygons.
+- removeactionosm  Removes the objects with action=delete in a osm file.
+- osm2new          Removes some attributes of each feature such as: `user`,  `version`, `timestamp`, `changeset` and `uid`. So it returns a new OSM file without these attributes.
+- fixordinal       Fixes ordinal suffixes of the addresses.
+- addrandomid      Adds a random id per each feature.
+- fixospoints      Fixes points.
+
 Also you can use these commands
 
 - geojson-merge    Merges multiple geojson files into one FeatureCollection.

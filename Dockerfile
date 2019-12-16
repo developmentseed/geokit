@@ -88,10 +88,13 @@ RUN make && make install
 
 # Install osmconv
 RUN git clone https://github.com/developmentseed/osm-coverage-tiles.git
-RUN cd osm-coverage-tiles && npm install && npm link
+RUN cd osm-coverage-tiles && git checkout -b 63ff18169bc7bf9e6ee253f26bc2f4e855d59af6 && npm install && npm link
 
 # Install csvkit
 RUN pip install csvkit
+
+# Install mbtiles extractor
+RUN git clone https://github.com/mapbox/mbtiles-extracts.git && cd mbtiles-extracts && npm link
 
 # Copy geokit to container
 RUN mkdir /geokit
