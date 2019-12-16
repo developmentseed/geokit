@@ -74,6 +74,9 @@ switch (action) {
   case 'poly2point':
     require('./src/poly2point')(inputFile);
     break;
+  case 'splitbyzoom':
+    require('./src/splitbygrid')(inputFile, argv.folder, argv.zoom);
+    break;
   //Python scripts section
   case 'removeactionosm':
     scriptPath = path.join(__dirname, '/python-scripts/remove_acction_obj.py');
