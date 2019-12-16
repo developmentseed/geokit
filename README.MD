@@ -19,7 +19,7 @@ alias geokit='docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:latest 
 ```
 
 
-- **Building from [docker-hub](https://cloud.docker.com/u/developmentseed/repository/docker/developmentseed/geokit)**
+- **Building from [docker-hub](https://hub.docker.com/r/developmentseed/geokit)**
 
 ```
 alias geokit='docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:latest geokit'
@@ -236,6 +236,14 @@ From: https://github.com/mapbox/tile-cover
 
 ```
  geokit osm2new input.osm output.osm
+```
+
+### Split a file according to zoom level
+
+- Divides the features into a geojson file according to a given zoom level (works for zoom <= 15), and it will generate geojson files into a folder.
+
+```
+ geokit splitbyzoom input.geojson --folder=foldername --zoom=10
 ```
 
 ## Other functionalities into a Docker image:
