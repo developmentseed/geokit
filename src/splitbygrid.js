@@ -3,16 +3,24 @@ var turf = require('@turf/turf');
 var _ = require('underscore');
 var cover = require('@mapbox/tile-cover');
 var rbush = require('rbush');
-module.exports = function(file, folder, zoom) {
+var mkdirp = require('mkdirp');
+var path = require('path');
+module.exports = function (file, folder, zoom) {
   var points = JSON.parse(fs.readFileSync(file, 'utf8'));
   var result = pro(points, zoom);
   var objGrid = {};
   var outputPoints = {};
-  _.each(result, function(v, k) {
+  _.each(result, function (v, k) {
     if (v && v.grid && v.features) {
       objGrid[k] = v.grid;
       outputPoints[k] = v.features;
     }
+  });
+  mkdirp(path.join(process.cwd(), folder), function (err) {
+    if (err) {
+      return console.error(err);
+    }
+    
   });
   fs.writeFileSync(
     file.split('.')[0] + '-' + zoom + '-grid.geojson',
@@ -85,7 +93,7 @@ function pro(points, zoom) {
         }
       }
     }
-    _.each(output, function(v, k) {
+    _.each(output, function (v, k) {
       if (v.features && v.features.length > 40 && z <= 15) {
         pre(turf.featureCollection(v.features), z + 1);
       } else {
