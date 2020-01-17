@@ -67,7 +67,7 @@ geokit bbox2fc --bbox="0, 0, 10, 10" > output.geojson
 
 ### Buffer
 
-- Creates a buffer in LineString features for a given radius.
+- Creates features' buffer for a given radius.
 
 ```
 geokit buffer input.geojson --unit=meters --radius=10000  > output.geojson
@@ -212,9 +212,9 @@ From: https://github.com/mapbox/tile-cover
 
 ```
 
-### Polygon to point 
+### Feature to point 
 
-- Gets the centroide of polygons an multipolygons.
+- Gets the centroide from features.
 
 ```
  geokit poly2point input.geojson > output.geojson
