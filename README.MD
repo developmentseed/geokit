@@ -214,7 +214,7 @@ From: https://github.com/mapbox/tile-cover
 
 ### Feature to point 
 
-- Gets the centroide from features.
+- Gets the centroid for each features.
 
 ```
  geokit poly2point input.geojson > output.geojson

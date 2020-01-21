@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-LABEL maintainer "devellopmentseed"
+LABEL maintainer "developmentseed"
 
 # Update Ubuntu Software repository
 RUN apt-get update
