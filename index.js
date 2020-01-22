@@ -71,8 +71,8 @@ switch (action) {
   case 'jsonlines2geojson':
     require('./src/jsonlines2geojson')(inputFile);
     break;
-  case 'poly2point':
-    require('./src/poly2point')(inputFile);
+  case 'centroid':
+    require('./src/centroid')(inputFile);
     break;
   case 'splitbyzoom':
     require('./src/splitbygrid')(inputFile, argv.folder, argv.zoom);
