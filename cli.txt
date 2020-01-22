@@ -20,7 +20,7 @@ Commands:
 - tilecover        Pass a polygon and get the tiles which cover all the polygon at a certain zoom.
 - deletenulls      Deletes the attributes that have a null value.
 - jsonlines2geojson     Gets a geojson file from json file.
-- poly2point       Gets the centroide of polygons an multipolygons.
+- centroid         Gets the centroid of the features.
 - removeactionosm  Removes the objects with action=delete in a osm file.
 - osm2new          Removes some attributes of each feature such as: `user`,  `version`, `timestamp`, `changeset` and `uid`. So it returns a new OSM file without these attributes.
 - fixordinal       Fixes ordinal suffixes of the addresses.

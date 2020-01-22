@@ -1,9 +1,9 @@
 const test = require('tape');
 const logInterceptor = require('log-interceptor');
 const path = require('path');
-const cmdPoly2point = require('../src/poly2point.js');
+const cmdPoly2point = require('../src/centroid.js');
 const file = path.join(__dirname, '/fixtures/poly2point.geojson');
-test('Poly2point', function(t) {
+test('centroid', function(t) {
   t.plan(1);
   logInterceptor();
   cmdPoly2point(file);
