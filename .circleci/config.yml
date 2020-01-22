@@ -33,17 +33,16 @@ jobs:
           key: v1-{{ .Branch }}-{{ epoch }}
           paths:
             - caches/geokit.tar
-
       - deploy:
-          name: Push docker image
+          name: Push api Docker image
           command: |
             if [ "${CIRCLE_BRANCH}" == "${PRODUCTION_BRANCH}" ]; then
-              VERSION=$(grep -m1 version package.json | awk -F: '{ print $2 }' | sed 's/[", ]//g')
+              VERSION=latest
             else
-              VERSION="$(echo $CIRCLE_BRANCH | sed 's/\//\-/g')-$(echo $CIRCLE_SHA1 | cut -c -7)"
+              VERSION="${CIRCLE_BRANCH}"
             fi
-            docker tag geokit developmentseed/geokit:${VERSION}
-            docker login -u $DOCKER_USER -p $DOCKER_PASS
+            docker tag api developmentseed/geokit:${VERSION}
+            docker login --username $DOCKER_USER --password $DOCKER_TOKEN
             docker push developmentseed/geokit:${VERSION}
 
 workflows:
