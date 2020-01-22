@@ -1,4 +1,6 @@
 FROM ubuntu:16.04
+LABEL maintainer "developmentseed"
+
 # Update Ubuntu Software repository
 RUN apt-get update
 
@@ -91,7 +93,8 @@ RUN git clone https://github.com/developmentseed/osm-coverage-tiles.git
 RUN cd osm-coverage-tiles && git checkout -b 63ff18169bc7bf9e6ee253f26bc2f4e855d59af6 && npm install && npm link
 
 # Install csvkit
-RUN pip install csvkit
+RUN pip install --upgrade pip
+RUN git clone -b 1.0.4 --depth=1 https://github.com/wireservice/csvkit.git && cd csvkit && pip install -r requirements-py2.txt && python setup.py install
 
 # Install mbtiles extractor
 RUN git clone https://github.com/mapbox/mbtiles-extracts.git && cd mbtiles-extracts && npm link
