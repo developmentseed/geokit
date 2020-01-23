@@ -3,6 +3,8 @@ jobs:
   geokit:
     docker:
       - image: docker:17.05.0-ce-git
+    environment:
+      - PRODUCTION_BRANCH: develop
     steps:
       - checkout
       - setup_remote_docker
@@ -21,7 +23,7 @@ jobs:
       - run:
           name: Build application docker image
           command: |
-            docker build --cache-from=geokit -t geokit geokit/
+            docker build --cache-from=geokit -t geokit .
 
       - run:
           name: Save docker image cache
@@ -41,7 +43,7 @@ jobs:
             else
               VERSION="${CIRCLE_BRANCH}"
             fi
-            docker tag api developmentseed/geokit:${VERSION}
+            docker tag geokit developmentseed/geokit:${VERSION}
             docker login --username $DOCKER_USER --password $DOCKER_TOKEN
             docker push developmentseed/geokit:${VERSION}
 
