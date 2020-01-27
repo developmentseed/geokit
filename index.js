@@ -71,8 +71,8 @@ switch (action) {
   case 'jsonlines2geojson':
     require('./src/jsonlines2geojson')(inputFile);
     break;
-  case 'centroid':
-    require('./src/centroid')(inputFile);
+  case 'poly2point':
+    require('./src/poly2point')(inputFile);
     break;
   case 'splitbyzoom':
     require('./src/splitbygrid')(inputFile, argv.folder, argv.zoom);
@@ -93,6 +93,16 @@ switch (action) {
     cmd = ['python', scriptPath, inputFile, outputFile];
     exec(cmd.join(' '), outputFunction);
     break;
+  case 'cvat-count-tags':
+    scriptPath = path.join(__dirname, '/python-scripts/cvat-count-tags.py');
+    cmd = ['python', scriptPath, inputFile, outputFile];
+    exec(cmd.join(' '), outputFunction);
+    break;
+  case 'cvat-xml2csv':
+    scriptPath = path.join(__dirname, '/python-scripts/cvat-xml2csv.py');
+    cmd = ['python', scriptPath, inputFile, outputFile];
+    exec(cmd.join(' '), outputFunction);
+    break;
   //help
   case 'help':
   case '--help':
@@ -102,5 +112,5 @@ switch (action) {
 
 function outputFunction(error, stdout, stderr) {
   if (error) console.log(error);
-  console.log(stdout);
+  // console.log(stdout);
 }

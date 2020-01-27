@@ -257,6 +257,20 @@ Functionalities outside Geokit into a Docker image.
 ```
 geojson-merge input1.geojson input2.geojson > output.geojson
 ```
+# XMl to CSV ([CVAT](https://github.com/opencv/cvat)'s xml dump file) 
+
+- XML to CSV  only for [CVAT](https://github.com/opencv/cvat) dump files
+
+```
+ docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:latest geokit cvat-xml2csv imput.xml
+```
+
+# Count number of tags in XML for [CVAT](https://github.com/opencv/cvat) dump files
+
+
+```
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:latest geokit cvat-count-tags imput.xml
+```
 
 ### [osmtogeojson](https://github.com/tyrasd/osmtogeojson)
 
