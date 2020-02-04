@@ -10,11 +10,9 @@ sys.setdefaultencoding('utf8')
 stats={}
 num_images=0
 
-for i in range(1, len(sys.argv)):
-    file = sys.argv[i] if (len(sys.argv) > 1) else sys.exit("Invalid file name left")
+def count(file):
     tree = etree.parse(file)
     images = tree.findall(".//image")
-    num_imagesPRE = len(images)
     boxes = tree.findall(".//box")
     for box in boxes:
         # Count for buildings
@@ -32,7 +30,12 @@ for i in range(1, len(sys.argv)):
             stats[box.attrib['label']]=stats[box.attrib['label']]+1
         else:
             stats[box.attrib['label']]=1
-    num_images = num_images+num_imagesPRE
+    return len(images)
+
+for i in range(1, len(sys.argv)):
+    num = count(sys.argv[i])
+    num_images=num_images+num
+
 
 print("Total Images:%s" %(num_images))
 for key in stats.keys():
