@@ -100,7 +100,7 @@ switch (action) {
     break;
   case 'cvat-xml2csv':
     scriptPath = path.join(__dirname, '/python-scripts/cvat-xml2csv.py');
-    cmd = ['python', scriptPath, inputFile, outputFile];
+    cmd = ['python', scriptPath, argv.full ? '--full': '', inputFile];
     exec(cmd.join(' '), outputFunction);
     break;
   //help

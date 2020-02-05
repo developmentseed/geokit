@@ -7,6 +7,7 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 
+
 def toCSV(file):
     tree = etree.parse(file)
     images = tree.findall(".//image")
@@ -17,6 +18,7 @@ def toCSV(file):
         imageName = image.attrib['name'].split("/")
         print("%s,%s,%s,%s,%s" % (image.attrib['id'], image.attrib['width'],
                                   image.attrib['height'], '/'.join(imageName[:-1]), imageName[len(imageName)-1]))
+
 
 def toCSVFull(file):
     tree = etree.parse(file)
@@ -42,8 +44,7 @@ def toCSVFull(file):
     for row in objs:
         print(','.join(row.values()))
 
-print(sys.argv)
-if(len(sys.argv)>2 and sys.argv[1] == '-f'):
+if sys.argv[1] == "--full":
     toCSVFull(sys.argv[2])
 else:
     toCSV(sys.argv[1])
