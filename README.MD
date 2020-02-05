@@ -262,8 +262,14 @@ geojson-merge input1.geojson input2.geojson > output.geojson
 - XML to CSV  only for [CVAT](https://github.com/opencv/cvat) dump files
 
 ```
- docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:latest geokit cvat-xml2csv imput.xml
+ docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:latest geokit cvat-xml2csv -f imput.xml
 ```
+The comand line will filter all the boxes on each row in each  image.
+
+*Note*
+
+Remove `-f` from the comand line to filter only the images.
+
 
 # Count number of tags in XML for [CVAT](https://github.com/opencv/cvat) dump files
 
