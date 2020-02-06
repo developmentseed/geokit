@@ -71,8 +71,8 @@ switch (action) {
   case 'jsonlines2geojson':
     require('./src/jsonlines2geojson')(inputFile);
     break;
-  case 'poly2point':
-    require('./src/poly2point')(inputFile);
+  case 'centroid':
+    require('./src/centroid')(inputFile);
     break;
   case 'splitbyzoom':
     require('./src/splitbygrid')(inputFile, argv.folder, argv.zoom);
@@ -100,7 +100,7 @@ switch (action) {
     break;
   case 'cvat-xml2csv':
     scriptPath = path.join(__dirname, '/python-scripts/cvat-xml2csv.py');
-    cmd = ['python', scriptPath, inputFile, outputFile];
+    cmd = ['python', scriptPath, argv.full ? '--full': '', inputFile];
     exec(cmd.join(' '), outputFunction);
     break;
   //help
