@@ -103,6 +103,11 @@ switch (action) {
     cmd = ['python', scriptPath, argv.full ? '--full': '', inputFile];
     exec(cmd.join(' '), outputFunction);
     break;
+  case 'downsized-imgs':
+    scriptPath = path.join(__dirname, '/python-scripts/downsized-imgs.py');
+    cmd = ['python', scriptPath, inputFile];
+    exec(cmd.join(' '), outputFunction);
+    break;
   //help
   case 'help':
   case '--help':

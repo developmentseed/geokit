@@ -270,6 +270,16 @@ The comand line will filter all the boxes on each row in each  image.
 
 Remove `--full=ok` from the comand line to filter only the images.
 
+# Downsized images
+
+Add all the images that you want to downsize in a folder, supports `jpg` files and the files will be resized to `512X512`.
+
+```
+ docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:latest geokit downsized-imgs <FOLDER>
+```
+
+The output directory:  `<FOLDER>-downsized`.
+
 
 # Count number of tags in XML for [CVAT](https://github.com/opencv/cvat) dump files
 
