@@ -100,12 +100,17 @@ switch (action) {
     break;
   case 'cvat-xml2csv':
     scriptPath = path.join(__dirname, '/python-scripts/cvat-xml2csv.py');
-    cmd = ['python', scriptPath, argv.full ? '--full': '', inputFile];
+    cmd = ['python', scriptPath, argv.full ? '--full' : '', inputFile];
     exec(cmd.join(' '), outputFunction);
     break;
   case 'downsized-imgs':
     scriptPath = path.join(__dirname, '/python-scripts/downsized-imgs.py');
     cmd = ['python', scriptPath, inputFile];
+    exec(cmd.join(' '), outputFunction);
+    break;
+  case 'cvat-npz2xml':
+    scriptPath = path.join(__dirname, '/python-scripts/cvat-npz2xml.py');
+    cmd = ['python', scriptPath, inputFile, argv.imgPath, argv.imgLabel];
     exec(cmd.join(' '), outputFunction);
     break;
   //help

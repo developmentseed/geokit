@@ -280,6 +280,11 @@ Add all the images that you want to downsize in a folder, supports `jpg` files a
 
 The output directory:  `<FOLDER>-downsized`.
 
+# NPZ file to XML cvat imput format
+
+```
+ docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:latest geokit cvat-npz2xml <labelMaker npz file>.npz --imgPath=<path of the images in CVAT> --imgLabel=tower
+```
 
 # Count number of tags in XML for [CVAT](https://github.com/opencv/cvat) dump files
 
