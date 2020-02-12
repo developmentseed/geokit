@@ -113,6 +113,11 @@ switch (action) {
     cmd = ['python', scriptPath, inputFile, argv.imgPath, argv.imgLabel];
     exec(cmd.join(' '), outputFunction);
     break;
+  case 'cvat-xml2npz':
+    scriptPath = path.join(__dirname, '/python-scripts/cvat-xml2npz.py');
+    cmd = ['python', scriptPath, inputFile];
+    exec(cmd.join(' '), outputFunction);
+    break;
   //help
   case 'help':
   case '--help':
