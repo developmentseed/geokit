@@ -286,6 +286,15 @@ The output directory:  `<FOLDER>-downsized`.
  docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:latest geokit cvat-npz2xml <labelMaker npz file>.npz --imgPath=<path of the images in CVAT> --imgLabel=tower
 ```
 
+# XML(CVAT format) to NPZ 
+
+```
+ docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:latest geokit cvat-xml2npz <cvat xml dump file>.xml
+```
+
+It will return a file with the same `xml` file name with `npz` extension.
+
+
 # Count number of tags in XML for [CVAT](https://github.com/opencv/cvat) dump files
 
 
