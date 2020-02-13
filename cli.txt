@@ -29,6 +29,7 @@ Commands:
 - cvat-xml2csv     Convert CVAT xml dump file to csv.
 - cvat-count-tags  Counts the number of images and tags in a CVAT's xml dump file 
 - downsized-imgs  Downsized jpg files to 512X512 
+- cvat-npz2xml    Convert npz file to xml format for CVAT imput.
 
 Also you can use these commands
 
