@@ -1,10 +1,19 @@
 version: '3'
 services:
-  geokit:
-    image: developmentseed/geokit:latest
+  # geokit:
+  #   image: developmentseed/geokit:latest
+  #   build:
+  #     context: ./
+  #     dockerfile: Dockerfile
+  #   volumes:
+  #     - ./:/mnt/data
+  #   env_file:
+  #     - ./env.sample
+  geokit-ml:
+    image: developmentseed/geokit-ml:latest
     build:
       context: ./
-      dockerfile: Dockerfile
+      dockerfile: Dockerfileml
     volumes:
       - ./:/mnt/data
     env_file:

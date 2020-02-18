@@ -1,0 +1,4025 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <task>
+      <id>51</id>
+      <name>Voltaire-alaska</name>
+      <size>1219</size>
+      <mode>annotation</mode>
+      <overlap>0</overlap>
+      <bugtracker></bugtracker>
+      <created>2020-02-12 15:32:58.366127+00:00</created>
+      <updated>2020-02-17 14:04:39.642167+00:00</updated>
+      <start_frame>0</start_frame>
+      <stop_frame>0</stop_frame>
+      <frame_filter></frame_filter>
+      <z_order>False</z_order>
+      <labels>
+        <label>
+          <name>tower</name>
+          <attributes>
+          </attributes>
+        </label>
+      </labels>
+      <segments>
+        <segment>
+          <id>289</id>
+          <start>0</start>
+          <stop>299</stop>
+          <url>http://35.173.182.229:8080/?id=289</url>
+        </segment>
+        <segment>
+          <id>290</id>
+          <start>300</start>
+          <stop>599</stop>
+          <url>http://35.173.182.229:8080/?id=290</url>
+        </segment>
+        <segment>
+          <id>291</id>
+          <start>600</start>
+          <stop>899</stop>
+          <url>http://35.173.182.229:8080/?id=291</url>
+        </segment>
+        <segment>
+          <id>292</id>
+          <start>900</start>
+          <stop>1199</stop>
+          <url>http://35.173.182.229:8080/?id=292</url>
+        </segment>
+        <segment>
+          <id>293</id>
+          <start>1200</start>
+          <stop>1218</stop>
+          <url>http://35.173.182.229:8080/?id=293</url>
+        </segment>
+      </segments>
+      <owner>
+        <username>devseed</username>
+        <email></email>
+      </owner>
+      <assignee></assignee>
+    </task>
+    <dumped>2020-02-17 17:19:45.984831+00:00</dumped>
+  </meta>
+  <image id="1" name="alaska/20724-76894-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="182.00" xbr="62.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="2" name="alaska/20729-76893-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="166.40" ytl="134.20" xbr="201.00" ybr="187.00">
+    </box>
+  </image>
+  <image id="3" name="alaska/20806-75873-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="46.48" ytl="123.38" xbr="89.49" ybr="178.09">
+    </box>
+  </image>
+  <image id="4" name="alaska/20807-75872-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="170.88" ytl="119.49" xbr="215.49" ybr="185.52">
+    </box>
+  </image>
+  <image id="5" name="alaska/20809-75871-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="68.90" ytl="96.40" xbr="124.45" ybr="170.62">
+    </box>
+  </image>
+  <image id="6" name="alaska/20811-75870-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="34.44" ytl="14.66" xbr="84.46" ybr="89.64">
+    </box>
+  </image>
+  <image id="7" name="alaska/20812-75869-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="191.77" ytl="0.00" xbr="256.00" ybr="90.40">
+    </box>
+  </image>
+  <image id="8" name="alaska/20814-75867-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="156.72" ytl="178.84" xbr="209.50" ybr="242.84">
+    </box>
+  </image>
+  <image id="9" name="alaska/20816-75866-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="131.17" ytl="105.66" xbr="175.71" ybr="172.05">
+    </box>
+  </image>
+  <image id="10" name="alaska/20818-75865-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="129.81" ytl="12.79" xbr="172.50" ybr="69.10">
+    </box>
+  </image>
+  <image id="11" name="alaska/20820-75863-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="204.40" ytl="0.00" xbr="243.70" ybr="39.00">
+    </box>
+  </image>
+  <image id="13" name="alaska/20822-75860-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="32.16" ytl="212.50" xbr="70.20" ybr="256.00">
+    </box>
+  </image>
+  <image id="15" name="alaska/20823-75859-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="34.91" ytl="68.63" xbr="89.10" ybr="128.50">
+    </box>
+  </image>
+  <image id="17" name="alaska/20824-75822-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="200.80" ytl="0.00" xbr="255.00" ybr="88.10">
+    </box>
+  </image>
+  <image id="19" name="alaska/20824-75828-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="209.00" ytl="101.77" xbr="255.00" ybr="176.77">
+    </box>
+  </image>
+  <image id="20" name="alaska/20824-75830-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="204.00" ytl="57.39" xbr="255.00" ybr="132.39">
+    </box>
+  </image>
+  <image id="22" name="alaska/20824-75834-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="198.00" ytl="0.00" xbr="255.00" ybr="75.00">
+    </box>
+  </image>
+  <image id="23" name="alaska/20824-75836-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="198.65" ytl="75.14" xbr="253.65" ybr="150.14">
+    </box>
+  </image>
+  <image id="24" name="alaska/20824-75838-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="192.00" ytl="111.12" xbr="255.00" ybr="186.12">
+    </box>
+  </image>
+  <image id="26" name="alaska/20824-75842-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="183.04" ytl="71.38" xbr="256.00" ybr="146.38">
+    </box>
+  </image>
+  <image id="27" name="alaska/20824-75844-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="194.22" ytl="158.89" xbr="256.00" ybr="256.00">
+    </box>
+  </image>
+  <image id="28" name="alaska/20824-75847-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="180.00" ytl="105.00" xbr="255.00" ybr="179.00">
+    </box>
+  </image>
+  <image id="29" name="alaska/20824-75849-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="185.50" ytl="93.58" xbr="247.59" ybr="145.00">
+    </box>
+  </image>
+  <image id="30" name="alaska/20824-75852-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="193.10" ytl="14.80" xbr="231.20" ybr="72.40">
+    </box>
+  </image>
+  <image id="31" name="alaska/20824-75853-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="187.70" ytl="182.18" xbr="229.10" ybr="240.18">
+    </box>
+  </image>
+  <image id="32" name="alaska/20824-75855-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="186.70" ytl="183.20" xbr="226.40" ybr="238.16">
+    </box>
+  </image>
+  <image id="33" name="alaska/20824-75857-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="64.63" ytl="138.79" xbr="138.63" ybr="213.79">
+    </box>
+    <box label="tower" occluded="0" xtl="167.92" ytl="0.00" xbr="242.92" ybr="67.22">
+    </box>
+  </image>
+  <image id="34" name="alaska/20825-75812-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="109.10" ytl="45.14" xbr="170.40" ybr="115.30">
+    </box>
+    <box label="tower" occluded="0" xtl="0.00" ytl="194.41" xbr="60.78" ybr="256.00">
+    </box>
+  </image>
+  <image id="35" name="alaska/20825-75813-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="131.77" ytl="183.11" xbr="193.07" ybr="253.27">
+    </box>
+  </image>
+  <image id="36" name="alaska/20825-75814-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="37.60" ytl="27.50" xbr="101.90" ybr="100.10">
+    </box>
+    <box label="tower" occluded="0" xtl="52.20" ytl="174.50" xbr="110.10" ybr="232.50">
+    </box>
+  </image>
+  <image id="37" name="alaska/20825-75815-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="21.90" ytl="173.30" xbr="84.42" ybr="247.17">
+    </box>
+  </image>
+  <image id="40" name="alaska/20826-75810-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="128.00" ytl="182.30" xbr="209.70" ybr="255.00">
+    </box>
+  </image>
+  <image id="42" name="alaska/20829-75807-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="82.83" ytl="25.31" xbr="157.83" ybr="100.31">
+    </box>
+  </image>
+  <image id="43" name="alaska/20830-75805-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="217.49" ytl="53.49" xbr="256.00" ybr="135.20">
+    </box>
+  </image>
+  <image id="44" name="alaska/20832-75803-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="79.26" ytl="81.60" xbr="154.26" ybr="156.60">
+    </box>
+  </image>
+  <image id="45" name="alaska/20834-75801-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="61.28" xbr="56.21" ybr="136.28">
+    </box>
+  </image>
+  <image id="46" name="alaska/20835-75800-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="17.00" ytl="0.00" xbr="92.00" ybr="44.00">
+    </box>
+  </image>
+  <image id="47" name="alaska/20836-75798-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="1.40" ytl="143.28" xbr="76.40" ybr="218.28">
+    </box>
+  </image>
+  <image id="48" name="alaska/20837-75107-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="129.00" ytl="0.00" xbr="210.20" ybr="59.10">
+    </box>
+    <box label="tower" occluded="0" xtl="100.10" ytl="152.71" xbr="175.10" ybr="225.71">
+    </box>
+  </image>
+  <image id="49" name="alaska/20837-75797-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="54.88" ytl="20.46" xbr="129.88" ybr="95.46">
+    </box>
+  </image>
+  <image id="50" name="alaska/20838-75795-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="60.00" ytl="191.40" xbr="135.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="51" name="alaska/20839-75794-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="92.19" ytl="185.56" xbr="154.10" ybr="231.29">
+    </box>
+    <box label="tower" occluded="0" xtl="65.98" ytl="90.93" xbr="127.89" ybr="136.66">
+    </box>
+  </image>
+  <image id="52" name="alaska/20840-75792-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="148.44" ytl="0.00" xbr="222.44" ybr="59.26">
+    </box>
+    <box label="tower" occluded="0" xtl="172.00" ytl="146.75" xbr="246.00" ybr="220.75">
+    </box>
+  </image>
+  <image id="53" name="alaska/20843-75789-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="123.26" ytl="0.00" xbr="198.26" ybr="69.04">
+    </box>
+  </image>
+  <image id="55" name="alaska/20846-75785-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="45.28" ytl="156.05" xbr="120.28" ybr="228.05">
+    </box>
+  </image>
+  <image id="56" name="alaska/20847-75784-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="107.43" ytl="8.18" xbr="182.43" ybr="83.18">
+    </box>
+    <box label="tower" occluded="0" xtl="77.50" ytl="91.72" xbr="152.50" ybr="166.72">
+    </box>
+  </image>
+  <image id="57" name="alaska/20848-75782-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="74.50" ytl="158.20" xbr="201.40" ybr="256.00">
+    </box>
+  </image>
+  <image id="58" name="alaska/20849-75781-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="177.02" ytl="0.00" xbr="256.00" ybr="86.50">
+    </box>
+  </image>
+  <image id="59" name="alaska/20850-75779-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="120.60" xbr="54.90" ybr="189.35">
+    </box>
+  </image>
+  <image id="60" name="alaska/20852-75777-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="172.00" ytl="77.00" xbr="246.00" ybr="152.00">
+    </box>
+  </image>
+  <image id="61" name="alaska/20854-75775-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="34.00" ytl="115.00" xbr="109.00" ybr="190.00">
+    </box>
+  </image>
+  <image id="65" name="alaska/20858-75770-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="48.88" ytl="59.79" xbr="123.88" ybr="134.79">
+    </box>
+  </image>
+  <image id="66" name="alaska/20860-75101-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="163.60" ytl="0.00" xbr="212.80" ybr="109.10">
+    </box>
+  </image>
+  <image id="68" name="alaska/20861-75766-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="50.33" ytl="122.18" xbr="98.40" ybr="197.18">
+    </box>
+  </image>
+  <image id="69" name="alaska/20862-75765-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="43.91" ytl="65.10" xbr="89.20" ybr="123.80">
+    </box>
+  </image>
+  <image id="70" name="alaska/20863-75763-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="102.30" ytl="145.70" xbr="156.50" ybr="218.50">
+    </box>
+  </image>
+  <image id="71" name="alaska/20864-75761-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="203.00" ytl="185.90" xbr="255.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="72" name="alaska/20866-75760-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="64.25" ytl="0.00" xbr="139.25" ybr="40.13">
+    </box>
+  </image>
+  <image id="73" name="alaska/20867-75758-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="87.20" ytl="150.90" xbr="130.20" ybr="222.58">
+    </box>
+  </image>
+  <image id="74" name="alaska/20869-75755-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="209.68" ytl="81.47" xbr="256.00" ybr="156.47">
+    </box>
+  </image>
+  <image id="75" name="alaska/20869-75756-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="122.85" xbr="51.65" ybr="197.85">
+    </box>
+  </image>
+  <image id="76" name="alaska/20871-75753-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="52.27" ytl="129.96" xbr="100.90" ybr="204.96">
+    </box>
+  </image>
+  <image id="77" name="alaska/20872-75752-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="31.09" ytl="89.28" xbr="86.40" ybr="164.28">
+    </box>
+  </image>
+  <image id="78" name="alaska/20873-75751-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="95.51" ytl="126.61" xbr="154.20" ybr="201.61">
+    </box>
+  </image>
+  <image id="79" name="alaska/20874-75750-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="178.53" ytl="136.18" xbr="256.00" ybr="230.70">
+    </box>
+  </image>
+  <image id="80" name="alaska/20876-75749-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="175.00" xbr="66.00" ybr="249.00">
+    </box>
+  </image>
+  <image id="81" name="alaska/20878-75747-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="178.00" ytl="169.50" xbr="255.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="82" name="alaska/20880-75746-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="70.89" ytl="154.61" xbr="121.20" ybr="220.60">
+    </box>
+  </image>
+  <image id="83" name="alaska/20882-75745-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="36.07" ytl="62.59" xbr="90.90" ybr="135.30">
+    </box>
+  </image>
+  <image id="85" name="alaska/20886-75742-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="6.38" ytl="123.24" xbr="81.38" ybr="198.24">
+    </box>
+  </image>
+  <image id="86" name="alaska/20887-75741-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="138.12" ytl="107.57" xbr="213.12" ybr="182.57">
+    </box>
+  </image>
+  <image id="87" name="alaska/20889-75740-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="143.20" ytl="23.20" xbr="218.20" ybr="98.20">
+    </box>
+  </image>
+  <image id="88" name="alaska/20892-75738-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="42.98" ytl="28.24" xbr="117.98" ybr="103.24">
+    </box>
+  </image>
+  <image id="90" name="alaska/20897-75734-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="16.10" ytl="157.14" xbr="101.20" ybr="245.30">
+    </box>
+  </image>
+  <image id="93" name="alaska/20904-75116-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="167.00" ytl="0.00" xbr="242.00" ybr="68.00">
+    </box>
+  </image>
+  <image id="94" name="alaska/20904-75729-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="119.07" ytl="85.05" xbr="194.07" ybr="160.05">
+    </box>
+  </image>
+  <image id="95" name="alaska/20907-75116-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="71.00" ybr="73.00">
+    </box>
+  </image>
+  <image id="97" name="alaska/20909-75116-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="173.00" ytl="0.00" xbr="247.00" ybr="67.00">
+    </box>
+  </image>
+  <image id="98" name="alaska/20909-75726-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="111.48" ytl="0.00" xbr="186.48" ybr="58.65">
+    </box>
+  </image>
+  <image id="99" name="alaska/20911-75116-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="177.00" ytl="0.00" xbr="251.00" ybr="71.00">
+    </box>
+  </image>
+  <image id="101" name="alaska/20914-75116-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="147.43" ytl="0.00" xbr="212.30" ybr="53.40">
+    </box>
+  </image>
+  <image id="102" name="alaska/20914-75722-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="48.26" ytl="138.18" xbr="123.26" ybr="213.18">
+    </box>
+  </image>
+  <image id="103" name="alaska/20915-75721-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="157.24" ytl="142.22" xbr="232.24" ybr="217.22">
+    </box>
+  </image>
+  <image id="104" name="alaska/20916-75116-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="79.90" ytl="0.00" xbr="136.00" ybr="53.80">
+    </box>
+  </image>
+  <image id="105" name="alaska/20917-75720-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="84.22" ytl="82.57" xbr="145.70" ybr="139.30">
+    </box>
+  </image>
+  <image id="106" name="alaska/20918-75116-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="53.50" ytl="0.00" xbr="117.02" ybr="66.89">
+    </box>
+  </image>
+  <image id="107" name="alaska/20918-75719-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="110.46" ytl="145.16" xbr="170.59" ybr="217.48">
+    </box>
+  </image>
+  <image id="108" name="alaska/20919-75116-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="190.37" ytl="163.53" xbr="256.00" ybr="237.53">
+    </box>
+  </image>
+  <image id="109" name="alaska/20919-75664-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="112.07" ytl="34.94" xbr="187.07" ybr="109.94">
+    </box>
+  </image>
+  <image id="110" name="alaska/20919-75666-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="146.00" ytl="0.00" xbr="221.00" ybr="47.00">
+    </box>
+  </image>
+  <image id="111" name="alaska/20919-75668-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="131.55" ytl="0.00" xbr="206.55" ybr="41.65">
+    </box>
+  </image>
+  <image id="112" name="alaska/20919-75669-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="127.00" ytl="125.50" xbr="202.00" ybr="200.50">
+    </box>
+  </image>
+  <image id="113" name="alaska/20919-75671-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="131.00" ytl="104.16" xbr="206.00" ybr="179.16">
+    </box>
+  </image>
+  <image id="114" name="alaska/20919-75673-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="130.30" ytl="146.81" xbr="205.30" ybr="221.81">
+    </box>
+  </image>
+  <image id="115" name="alaska/20919-75675-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="133.00" ytl="194.40" xbr="208.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="116" name="alaska/20919-75678-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="133.00" ytl="3.57" xbr="208.00" ybr="78.57">
+    </box>
+  </image>
+  <image id="117" name="alaska/20919-75680-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="132.78" ytl="124.42" xbr="207.78" ybr="199.42">
+    </box>
+  </image>
+  <image id="118" name="alaska/20919-75682-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="126.00" ytl="186.10" xbr="201.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="119" name="alaska/20919-75687-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="159.50" ytl="146.89" xbr="233.50" ybr="221.89">
+    </box>
+  </image>
+  <image id="120" name="alaska/20919-75690-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="151.00" ytl="15.00" xbr="226.00" ybr="90.00">
+    </box>
+  </image>
+  <image id="121" name="alaska/20919-75692-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="147.59" ytl="39.50" xbr="222.59" ybr="114.50">
+    </box>
+  </image>
+  <image id="122" name="alaska/20919-75694-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="149.92" ytl="83.18" xbr="224.92" ybr="158.18">
+    </box>
+  </image>
+  <image id="123" name="alaska/20919-75696-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="158.00" ytl="143.00" xbr="233.00" ybr="218.00">
+    </box>
+  </image>
+  <image id="124" name="alaska/20919-75698-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="134.10" ytl="145.27" xbr="243.41" ybr="242.90">
+    </box>
+  </image>
+  <image id="125" name="alaska/20919-75702-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="171.00" ytl="215.00" xbr="245.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="126" name="alaska/20919-75704-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="187.10" ytl="124.53" xbr="219.40" ybr="199.53">
+    </box>
+  </image>
+  <image id="127" name="alaska/20919-75706-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="154.83" ytl="3.22" xbr="210.00" ybr="66.10">
+    </box>
+  </image>
+  <image id="128" name="alaska/20919-75708-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="175.80" ytl="90.70" xbr="236.63" ybr="173.16">
+    </box>
+  </image>
+  <image id="129" name="alaska/20919-75710-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="166.67" ytl="0.00" xbr="216.10" ybr="41.44">
+    </box>
+  </image>
+  <image id="130" name="alaska/20919-75712-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="178.50" ytl="116.60" xbr="235.26" ybr="197.00">
+    </box>
+  </image>
+  <image id="131" name="alaska/20919-75715-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="173.40" ytl="31.70" xbr="237.61" ybr="118.81">
+    </box>
+  </image>
+  <image id="132" name="alaska/20919-75717-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="182.10" ytl="159.60" xbr="248.00" ybr="243.00">
+    </box>
+  </image>
+  <image id="133" name="alaska/20919-75718-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="177.00" ytl="154.70" xbr="240.22" ybr="237.48">
+    </box>
+  </image>
+  <image id="134" name="alaska/20920-75663-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.67" ytl="164.59" xbr="70.14" ybr="238.59">
+    </box>
+  </image>
+  <image id="135" name="alaska/20921-75117-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="180.60" ytl="128.92" xbr="232.67" ybr="203.92">
+    </box>
+  </image>
+  <image id="136" name="alaska/20921-75662-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="98.00" ytl="81.00" xbr="173.00" ybr="156.00">
+    </box>
+  </image>
+  <image id="137" name="alaska/20923-75118-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="66.32" ytl="45.18" xbr="112.30" ybr="120.18">
+    </box>
+  </image>
+  <image id="138" name="alaska/20923-75660-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="152.60" xbr="56.70" ybr="236.80">
+    </box>
+    <box label="tower" occluded="0" xtl="127.04" ytl="34.86" xbr="203.94" ybr="98.90">
+    </box>
+  </image>
+  <image id="139" name="alaska/20925-75119-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="196.33" ytl="96.53" xbr="236.10" ybr="153.30">
+    </box>
+  </image>
+  <image id="140" name="alaska/20925-75658-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="163.97" xbr="39.73" ybr="209.70">
+    </box>
+  </image>
+  <image id="141" name="alaska/20927-75120-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="99.24" ytl="35.59" xbr="154.00" ybr="127.40">
+    </box>
+  </image>
+  <image id="142" name="alaska/20927-75656-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="3.37" ytl="161.77" xbr="62.70" ybr="250.20">
+    </box>
+  </image>
+  <image id="143" name="alaska/20928-75655-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="103.59" ytl="78.44" xbr="178.59" ybr="153.44">
+    </box>
+  </image>
+  <image id="144" name="alaska/20929-75121-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="140.38" ytl="22.90" xbr="189.70" ybr="112.00">
+    </box>
+  </image>
+  <image id="145" name="alaska/20929-75654-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="165.60" ytl="45.00" xbr="222.70" ybr="138.87">
+    </box>
+  </image>
+  <image id="146" name="alaska/20930-75652-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="162.60" ytl="60.46" xbr="213.00" ybr="135.46">
+    </box>
+    <box label="tower" occluded="0" xtl="78.72" ytl="211.00" xbr="140.62" ybr="256.00">
+    </box>
+  </image>
+  <image id="147" name="alaska/20931-75122-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="160.90" ytl="11.24" xbr="212.00" ybr="95.70">
+    </box>
+  </image>
+  <image id="148" name="alaska/20931-75651-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="37.59" ytl="157.30" xbr="89.70" ybr="232.30">
+    </box>
+  </image>
+  <image id="149" name="alaska/20932-75650-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="126.24" xbr="50.30" ybr="201.24">
+    </box>
+  </image>
+  <image id="150" name="alaska/20933-75123-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="184.40" ytl="0.00" xbr="255.00" ybr="94.00">
+    </box>
+  </image>
+  <image id="151" name="alaska/20933-75648-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="163.00" ytl="89.36" xbr="212.41" ybr="164.36">
+    </box>
+  </image>
+  <image id="152" name="alaska/20934-75647-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="109.90" ytl="98.60" xbr="170.10" ybr="183.00">
+    </box>
+  </image>
+  <image id="153" name="alaska/20935-75124-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="148.60" ytl="0.00" xbr="215.70" ybr="84.70">
+    </box>
+  </image>
+  <image id="154" name="alaska/20935-75646-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="154.30" ytl="0.00" xbr="203.00" ybr="42.80">
+    </box>
+  </image>
+  <image id="155" name="alaska/20937-75644-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="1.62" ytl="0.00" xbr="53.10" ybr="59.20">
+    </box>
+  </image>
+  <image id="157" name="alaska/20938-75125-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="65.16" ytl="5.69" xbr="140.16" ybr="80.69">
+    </box>
+  </image>
+  <image id="158" name="alaska/20938-75642-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="21.32" ytl="136.37" xbr="96.32" ybr="211.37">
+    </box>
+  </image>
+  <image id="159" name="alaska/20938-76122-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="194.00" ytl="144.00" xbr="255.00" ybr="219.00">
+    </box>
+  </image>
+  <image id="160" name="alaska/20938-76126-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="105.00" ytl="49.00" xbr="180.00" ybr="124.00">
+    </box>
+  </image>
+  <image id="161" name="alaska/20938-76129-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="24.00" ytl="33.00" xbr="99.00" ybr="108.00">
+    </box>
+  </image>
+  <image id="162" name="alaska/20939-76113-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="180.00" ytl="0.00" xbr="254.00" ybr="60.00">
+    </box>
+  </image>
+  <image id="163" name="alaska/20939-76116-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="99.00" ytl="84.00" xbr="174.00" ybr="159.00">
+    </box>
+  </image>
+  <image id="164" name="alaska/20939-76118-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="37.47" ytl="171.24" xbr="112.47" ybr="244.24">
+    </box>
+  </image>
+  <image id="165" name="alaska/20940-75126-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="83.50" ytl="0.00" xbr="141.00" ybr="84.10">
+    </box>
+  </image>
+  <image id="166" name="alaska/20940-75752-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="15.39" ytl="152.96" xbr="83.60" ybr="227.96">
+    </box>
+  </image>
+  <image id="167" name="alaska/20940-75756-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="18.26" ytl="105.15" xbr="85.16" ybr="201.22">
+    </box>
+  </image>
+  <image id="168" name="alaska/20940-75760-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="144.90" xbr="76.80" ybr="225.00">
+    </box>
+  </image>
+  <image id="169" name="alaska/20940-75763-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="13.00" ytl="187.00" xbr="88.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="170" name="alaska/20940-75767-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="6.00" ytl="0.00" xbr="89.40" ybr="79.00">
+    </box>
+  </image>
+  <image id="171" name="alaska/20940-75770-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="22.00" ytl="107.00" xbr="97.00" ybr="182.00">
+    </box>
+  </image>
+  <image id="172" name="alaska/20940-75773-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="27.00" ytl="66.00" xbr="102.00" ybr="141.00">
+    </box>
+  </image>
+  <image id="173" name="alaska/20940-75777-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="25.00" ytl="0.00" xbr="100.00" ybr="48.00">
+    </box>
+  </image>
+  <image id="174" name="alaska/20940-75780-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="29.00" ytl="105.00" xbr="104.00" ybr="180.00">
+    </box>
+  </image>
+  <image id="178" name="alaska/20940-75794-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="23.00" ytl="118.00" xbr="98.00" ybr="192.00">
+    </box>
+  </image>
+  <image id="180" name="alaska/20940-75800-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="42.11" ytl="162.47" xbr="117.11" ybr="236.47">
+    </box>
+  </image>
+  <image id="181" name="alaska/20940-75803-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="33.00" ytl="191.70" xbr="120.40" ybr="255.00">
+    </box>
+  </image>
+  <image id="182" name="alaska/20940-75807-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="35.00" ytl="81.00" xbr="110.00" ybr="155.00">
+    </box>
+  </image>
+  <image id="183" name="alaska/20940-75810-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="42.00" ytl="149.00" xbr="116.00" ybr="224.00">
+    </box>
+  </image>
+  <image id="184" name="alaska/20940-75814-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="45.00" ytl="0.00" xbr="120.00" ybr="53.00">
+    </box>
+  </image>
+  <image id="185" name="alaska/20940-75817-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="59.79" ytl="132.68" xbr="133.79" ybr="207.68">
+    </box>
+  </image>
+  <image id="186" name="alaska/20940-75821-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="63.11" ytl="0.00" xbr="137.11" ybr="62.75">
+    </box>
+  </image>
+  <image id="187" name="alaska/20940-75824-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="57.00" ytl="51.20" xbr="150.00" ybr="147.00">
+    </box>
+  </image>
+  <image id="188" name="alaska/20940-75828-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="71.00" ytl="0.00" xbr="146.00" ybr="74.00">
+    </box>
+  </image>
+  <image id="189" name="alaska/20940-75831-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="67.00" ytl="59.30" xbr="149.30" ybr="159.00">
+    </box>
+  </image>
+  <image id="190" name="alaska/20940-75834-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="69.00" ytl="169.90" xbr="152.40" ybr="255.00">
+    </box>
+  </image>
+  <image id="191" name="alaska/20940-75838-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="74.05" ytl="75.74" xbr="149.05" ybr="150.74">
+    </box>
+  </image>
+  <image id="192" name="alaska/20940-75841-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="82.20" ytl="33.60" xbr="149.81" ybr="101.20">
+    </box>
+  </image>
+  <image id="193" name="alaska/20940-75844-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="73.18" ytl="0.00" xbr="148.18" ybr="71.39">
+    </box>
+  </image>
+  <image id="194" name="alaska/20940-75847-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="78.61" ytl="127.49" xbr="153.61" ybr="202.49">
+    </box>
+  </image>
+  <image id="195" name="alaska/20940-75850-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="82.39" ytl="152.98" xbr="157.39" ybr="226.98">
+    </box>
+  </image>
+  <image id="196" name="alaska/20940-75854-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="91.84" ytl="30.21" xbr="166.84" ybr="105.21">
+    </box>
+  </image>
+  <image id="197" name="alaska/20940-75857-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="74.88" ytl="0.00" xbr="154.40" ybr="89.40">
+    </box>
+  </image>
+  <image id="198" name="alaska/20940-75859-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="124.32" ytl="39.72" xbr="199.32" ybr="114.72">
+    </box>
+  </image>
+  <image id="202" name="alaska/20941-75751-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="56.00" ybr="73.00">
+    </box>
+  </image>
+  <image id="203" name="alaska/20941-75862-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="93.00" xbr="55.00" ybr="168.00">
+    </box>
+  </image>
+  <image id="204" name="alaska/20941-75866-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="59.95" ytl="0.00" xbr="134.95" ybr="63.40">
+    </box>
+  </image>
+  <image id="205" name="alaska/20941-75868-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="126.33" ytl="145.02" xbr="201.33" ybr="220.02">
+    </box>
+  </image>
+  <image id="207" name="alaska/20941-75947-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="183.23" ytl="205.25" xbr="256.00" ybr="256.00">
+    </box>
+  </image>
+  <image id="208" name="alaska/20941-75950-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="166.00" ytl="144.60" xbr="256.00" ybr="256.00">
+    </box>
+  </image>
+  <image id="209" name="alaska/20941-75953-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="150.09" ytl="0.00" xbr="225.09" ybr="54.05">
+    </box>
+  </image>
+  <image id="210" name="alaska/20941-75956-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="141.00" ytl="110.00" xbr="216.00" ybr="185.00">
+    </box>
+  </image>
+  <image id="211" name="alaska/20941-75963-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="182.00" ytl="150.00" xbr="255.00" ybr="225.00">
+    </box>
+  </image>
+  <image id="216" name="alaska/20941-76080-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="130.00" ytl="22.00" xbr="205.00" ybr="97.00">
+    </box>
+  </image>
+  <image id="217" name="alaska/20941-76083-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="123.33" ytl="0.00" xbr="198.33" ybr="54.19">
+    </box>
+  </image>
+  <image id="218" name="alaska/20941-76086-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="103.70" ytl="109.48" xbr="165.61" ybr="155.21">
+    </box>
+  </image>
+  <image id="221" name="alaska/20941-76096-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="2.00" ytl="107.00" xbr="77.00" ybr="182.00">
+    </box>
+  </image>
+  <image id="223" name="alaska/20942-75637-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="125.72" xbr="63.63" ybr="200.72">
+    </box>
+  </image>
+  <image id="224" name="alaska/20942-75748-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="156.00" ytl="0.00" xbr="231.00" ybr="41.00">
+    </box>
+  </image>
+  <image id="225" name="alaska/20942-75871-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="130.00" xbr="48.00" ybr="205.00">
+    </box>
+  </image>
+  <image id="226" name="alaska/20942-75875-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="73.12" ytl="110.68" xbr="148.12" ybr="185.68">
+    </box>
+  </image>
+  <image id="227" name="alaska/20942-75879-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="181.44" ytl="59.54" xbr="254.44" ybr="134.54">
+    </box>
+  </image>
+  <image id="228" name="alaska/20942-75911-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="207.37" ytl="0.00" xbr="256.00" ybr="69.72">
+    </box>
+  </image>
+  <image id="229" name="alaska/20942-75914-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="171.86" ytl="119.42" xbr="246.86" ybr="194.42">
+    </box>
+  </image>
+  <image id="230" name="alaska/20942-75917-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="167.70" ytl="136.74" xbr="223.95" ybr="202.40">
+    </box>
+  </image>
+  <image id="231" name="alaska/20942-75919-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="153.40" ytl="53.81" xbr="207.83" ybr="118.50">
+    </box>
+  </image>
+  <image id="232" name="alaska/20942-75922-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="129.00" ytl="67.42" xbr="188.09" ybr="131.20">
+    </box>
+  </image>
+  <image id="233" name="alaska/20942-75927-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="101.30" ytl="161.53" xbr="162.25" ybr="227.10">
+    </box>
+  </image>
+  <image id="234" name="alaska/20942-75930-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="63.93" ytl="99.68" xbr="126.80" ybr="174.68">
+    </box>
+  </image>
+  <image id="235" name="alaska/20942-75933-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="48.90" ytl="165.82" xbr="95.20" ybr="235.40">
+    </box>
+  </image>
+  <image id="236" name="alaska/20942-75937-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="31.80" ytl="93.52" xbr="77.80" ybr="168.52">
+    </box>
+  </image>
+  <image id="240" name="alaska/20942-75979-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="34.07" ytl="115.70" xbr="89.40" ybr="185.20">
+    </box>
+  </image>
+  <image id="243" name="alaska/20942-75988-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="98.40" ytl="192.00" xbr="154.20" ybr="255.00">
+    </box>
+  </image>
+  <image id="252" name="alaska/20942-76042-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="197.60" ytl="86.21" xbr="256.00" ybr="148.60">
+    </box>
+  </image>
+  <image id="255" name="alaska/20942-76054-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="88.00" ytl="0.00" xbr="163.00" ybr="55.00">
+    </box>
+  </image>
+  <image id="256" name="alaska/20942-76057-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="66.00" ytl="95.00" xbr="141.00" ybr="170.00">
+    </box>
+  </image>
+  <image id="257" name="alaska/20942-76060-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="43.00" ytl="38.00" xbr="118.00" ybr="113.00">
+    </box>
+  </image>
+  <image id="261" name="alaska/20943-75635-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="217.74" ytl="14.32" xbr="256.00" ybr="89.32">
+    </box>
+  </image>
+  <image id="262" name="alaska/20943-75883-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="33.00" ytl="0.00" xbr="108.00" ybr="45.00">
+    </box>
+  </image>
+  <image id="263" name="alaska/20943-75886-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="102.62" ytl="51.07" xbr="177.62" ybr="126.07">
+    </box>
+  </image>
+  <image id="264" name="alaska/20943-75894-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="68.19" ytl="52.40" xbr="121.70" ybr="115.20">
+    </box>
+  </image>
+  <image id="265" name="alaska/20943-75897-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="46.70" ytl="107.13" xbr="98.70" ybr="182.50">
+    </box>
+  </image>
+  <image id="266" name="alaska/20943-75901-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="21.80" ytl="28.05" xbr="72.50" ybr="98.80">
+    </box>
+  </image>
+  <image id="267" name="alaska/20943-75904-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="26.81" xbr="61.00" ybr="101.81">
+    </box>
+  </image>
+  <image id="271" name="alaska/20943-76027-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="66.48" ybr="61.80">
+    </box>
+  </image>
+  <image id="272" name="alaska/20943-76030-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="11.05" ytl="0.00" xbr="86.05" ybr="71.18">
+    </box>
+  </image>
+  <image id="273" name="alaska/20943-76032-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="102.00" xbr="65.00" ybr="177.00">
+    </box>
+  </image>
+  <image id="274" name="alaska/20943-76036-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="113.00" xbr="67.00" ybr="188.00">
+    </box>
+  </image>
+  <image id="277" name="alaska/20945-75128-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="190.10" ytl="107.65" xbr="256.00" ybr="200.10">
+    </box>
+  </image>
+  <image id="278" name="alaska/20945-75633-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="152.00" ytl="0.00" xbr="227.00" ybr="47.00">
+    </box>
+  </image>
+  <image id="279" name="alaska/20945-75742-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="138.63" ytl="87.50" xbr="213.63" ybr="162.50">
+    </box>
+    <box label="tower" occluded="0" xtl="77.77" ytl="216.09" xbr="151.50" ybr="256.00">
+    </box>
+  </image>
+  <image id="280" name="alaska/20946-75632-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="100.86" ytl="0.00" xbr="175.86" ybr="60.71">
+    </box>
+  </image>
+  <image id="281" name="alaska/20946-75740-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="163.98" ytl="53.28" xbr="238.98" ybr="128.28">
+    </box>
+  </image>
+  <image id="282" name="alaska/20947-75631-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="120.22" ytl="0.67" xbr="195.22" ybr="41.67">
+    </box>
+  </image>
+  <image id="283" name="alaska/20948-75129-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="98.12" ytl="152.85" xbr="158.10" ybr="256.00">
+    </box>
+  </image>
+  <image id="285" name="alaska/20949-75629-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="1.00" ytl="37.70" xbr="113.10" ybr="125.10">
+    </box>
+  </image>
+  <image id="286" name="alaska/20950-75130-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="133.34" ytl="151.82" xbr="181.70" ybr="249.30">
+    </box>
+  </image>
+  <image id="287" name="alaska/20950-75734-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="49.30" ybr="96.10">
+    </box>
+  </image>
+  <image id="288" name="alaska/20951-75627-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="29.77" ytl="84.02" xbr="87.50" ybr="181.50">
+    </box>
+  </image>
+  <image id="289" name="alaska/20951-75731-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="152.00" ytl="0.00" xbr="227.00" ybr="40.00">
+    </box>
+  </image>
+  <image id="290" name="alaska/20952-75626-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="39.22" ytl="104.89" xbr="90.80" ybr="179.89">
+    </box>
+  </image>
+  <image id="291" name="alaska/20952-75705-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="64.40" ytl="169.70" xbr="121.11" ybr="240.53">
+    </box>
+  </image>
+  <image id="293" name="alaska/20953-75702-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="208.66" ytl="0.00" xbr="256.00" ybr="56.70">
+    </box>
+  </image>
+  <image id="294" name="alaska/20953-75704-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="14.60" ytl="0.00" xbr="69.60" ybr="64.44">
+    </box>
+  </image>
+  <image id="296" name="alaska/20953-75714-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="206.00" ytl="117.00" xbr="255.00" ybr="192.00">
+    </box>
+  </image>
+  <image id="297" name="alaska/20953-75728-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="47.50" xbr="77.50" ybr="185.90">
+    </box>
+  </image>
+  <image id="298" name="alaska/20954-75132-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="31.63" xbr="66.12" ybr="106.63">
+    </box>
+  </image>
+  <image id="299" name="alaska/20954-75623-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="142.20" ytl="27.22" xbr="188.00" ybr="102.22">
+    </box>
+  </image>
+  <image id="300" name="alaska/20954-75624-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="16.48" ytl="195.30" xbr="62.45" ybr="255.00">
+    </box>
+  </image>
+  <image id="301" name="alaska/20954-75717-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="137.00" ytl="109.00" xbr="189.00" ybr="180.49">
+    </box>
+  </image>
+  <image id="302" name="alaska/20954-75725-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="124.13" ytl="106.20" xbr="199.13" ybr="181.20">
+    </box>
+  </image>
+  <image id="304" name="alaska/20955-75619-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="139.70" ytl="161.20" xbr="178.00" ybr="240.30">
+    </box>
+  </image>
+  <image id="305" name="alaska/20955-75621-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="14.70" ytl="87.78" xbr="58.90" ybr="162.78">
+    </box>
+  </image>
+  <image id="309" name="alaska/20956-75617-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="93.00" ytl="0.00" xbr="130.10" ybr="40.09">
+    </box>
+  </image>
+  <image id="310" name="alaska/20956-75618-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="20.50" ytl="0.00" xbr="57.50" ybr="44.73">
+    </box>
+  </image>
+  <image id="311" name="alaska/20956-75696-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="60.98" ytl="52.06" xbr="135.98" ybr="127.06">
+    </box>
+  </image>
+  <image id="312" name="alaska/20957-75132-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="118.07" ytl="25.64" xbr="193.07" ybr="100.64">
+    </box>
+  </image>
+  <image id="313" name="alaska/20957-75615-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="2.23" ytl="150.98" xbr="77.23" ybr="225.98">
+    </box>
+  </image>
+  <image id="314" name="alaska/20957-75692-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="199.80" ytl="160.90" xbr="255.32" ybr="232.17">
+    </box>
+  </image>
+  <image id="315" name="alaska/20958-75613-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="182.30" ytl="27.40" xbr="235.35" ybr="108.90">
+    </box>
+  </image>
+  <image id="318" name="alaska/20959-75689-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="23.59" ytl="116.72" xbr="86.94" ybr="191.72">
+    </box>
+  </image>
+  <image id="319" name="alaska/20960-75611-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.39" ytl="167.24" xbr="69.80" ybr="242.24">
+    </box>
+  </image>
+  <image id="320" name="alaska/20960-75687-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="52.80" ytl="0.00" xbr="106.72" ybr="60.11">
+    </box>
+  </image>
+  <image id="321" name="alaska/20961-75132-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="151.30" ytl="36.20" xbr="217.40" ybr="117.70">
+    </box>
+  </image>
+  <image id="322" name="alaska/20961-75610-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="59.60" ytl="82.00" xbr="100.00" ybr="157.90">
+    </box>
+  </image>
+  <image id="323" name="alaska/20962-75609-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="103.10" ytl="0.00" xbr="157.08" ybr="71.50">
+    </box>
+  </image>
+  <image id="324" name="alaska/20963-75132-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="168.40" ytl="60.60" xbr="225.18" ybr="139.83">
+    </box>
+  </image>
+  <image id="325" name="alaska/20963-75607-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="164.10" ytl="156.40" xbr="210.60" ybr="227.16">
+    </box>
+  </image>
+  <image id="326" name="alaska/20964-75606-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="206.88" ytl="61.03" xbr="256.00" ybr="129.76">
+    </box>
+  </image>
+  <image id="329" name="alaska/20966-75605-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="74.51" ybr="61.00">
+    </box>
+  </image>
+  <image id="331" name="alaska/20967-75158-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="49.80" ytl="70.20" xbr="113.98" ybr="139.86">
+    </box>
+  </image>
+  <image id="332" name="alaska/20967-75160-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="130.27" ytl="76.10" xbr="191.80" ybr="141.70">
+    </box>
+  </image>
+  <image id="333" name="alaska/20967-75162-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="204.00" ytl="0.00" xbr="256.00" ybr="80.80">
+    </box>
+  </image>
+  <image id="334" name="alaska/20967-75168-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="205.50" ytl="18.69" xbr="255.75" ybr="98.20">
+    </box>
+  </image>
+  <image id="335" name="alaska/20967-75170-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="201.78" ytl="0.00" xbr="256.00" ybr="50.21">
+    </box>
+    <box label="tower" occluded="0" xtl="161.78" ytl="63.19" xbr="235.78" ybr="138.19">
+    </box>
+  </image>
+  <image id="336" name="alaska/20967-75603-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="55.20" ytl="138.28" xbr="96.50" ybr="213.28">
+    </box>
+  </image>
+  <image id="337" name="alaska/20967-75683-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="204.62" ytl="93.94" xbr="255.62" ybr="168.94">
+    </box>
+  </image>
+  <image id="338" name="alaska/20967-75687-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="40.70" ytl="0.64" xbr="96.10" ybr="92.50">
+    </box>
+  </image>
+  <image id="339" name="alaska/20968-75132-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="30.27" ytl="34.71" xbr="91.80" ybr="109.71">
+    </box>
+  </image>
+  <image id="340" name="alaska/20968-75134-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="50.90" ytl="73.42" xbr="96.20" ybr="148.42">
+    </box>
+  </image>
+  <image id="341" name="alaska/20968-75136-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="48.40" ytl="161.80" xbr="95.70" ybr="242.87">
+    </box>
+  </image>
+  <image id="342" name="alaska/20968-75139-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="53.50" ytl="43.79" xbr="104.20" ybr="118.79">
+    </box>
+  </image>
+  <image id="343" name="alaska/20968-75141-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="38.18" ytl="175.00" xbr="104.40" ybr="246.39">
+    </box>
+  </image>
+  <image id="344" name="alaska/20968-75144-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="49.60" ytl="12.42" xbr="95.00" ybr="87.42">
+    </box>
+  </image>
+  <image id="345" name="alaska/20968-75147-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="58.30" ytl="0.00" xbr="98.30" ybr="24.94">
+    </box>
+  </image>
+  <image id="346" name="alaska/20968-75149-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="55.20" ytl="136.71" xbr="99.20" ybr="217.20">
+    </box>
+  </image>
+  <image id="347" name="alaska/20968-75152-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="53.60" ytl="47.16" xbr="101.00" ybr="131.10">
+    </box>
+  </image>
+  <image id="351" name="alaska/20968-75602-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="91.63" ytl="45.89" xbr="166.63" ybr="120.89">
+    </box>
+  </image>
+  <image id="352" name="alaska/20968-75680-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="107.26" ytl="43.36" xbr="182.26" ybr="135.97">
+    </box>
+  </image>
+  <image id="353" name="alaska/20969-75171-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="100.77" ytl="0.00" xbr="150.80" ybr="39.13">
+    </box>
+    <box label="tower" occluded="0" xtl="151.56" ytl="120.26" xbr="226.56" ybr="186.26">
+    </box>
+  </image>
+  <image id="354" name="alaska/20969-75601-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="141.50" ytl="0.00" xbr="216.50" ybr="35.65">
+    </box>
+  </image>
+  <image id="355" name="alaska/20969-75673-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="157.95" ytl="71.39" xbr="232.95" ybr="146.39">
+    </box>
+  </image>
+  <image id="356" name="alaska/20970-75599-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="48.78" ytl="118.40" xbr="123.78" ybr="193.40">
+    </box>
+  </image>
+  <image id="358" name="alaska/20970-75670-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="42.50" ytl="42.90" xbr="117.50" ybr="117.90">
+    </box>
+  </image>
+  <image id="359" name="alaska/20971-75172-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="130.80" ytl="156.80" xbr="192.30" ybr="231.80">
+    </box>
+    <box label="tower" occluded="0" xtl="125.80" ytl="21.92" xbr="184.61" ybr="95.80">
+    </box>
+  </image>
+  <image id="361" name="alaska/20971-75582-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="111.80" ytl="182.50" xbr="160.50" ybr="248.83">
+    </box>
+  </image>
+  <image id="362" name="alaska/20971-75585-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="105.81" ytl="61.74" xbr="180.81" ybr="136.74">
+    </box>
+  </image>
+  <image id="363" name="alaska/20971-75586-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="132.40" ytl="182.20" xbr="189.87" ybr="254.06">
+    </box>
+  </image>
+  <image id="365" name="alaska/20971-75592-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="148.38" ytl="0.00" xbr="207.90" ybr="46.90">
+    </box>
+  </image>
+  <image id="367" name="alaska/20971-75595-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="172.90" ytl="48.40" xbr="218.60" ybr="115.30">
+    </box>
+  </image>
+  <image id="368" name="alaska/20971-75596-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="180.80" ytl="89.40" xbr="239.98" ybr="164.42">
+    </box>
+  </image>
+  <image id="369" name="alaska/20971-75597-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="3.01" ytl="206.15" xbr="78.01" ybr="255.75">
+    </box>
+  </image>
+  <image id="371" name="alaska/20971-75663-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="92.84" ytl="63.06" xbr="167.84" ybr="138.06">
+    </box>
+  </image>
+  <image id="372" name="alaska/20972-75656-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="155.10" ytl="81.90" xbr="220.70" ybr="165.64">
+    </box>
+  </image>
+  <image id="373" name="alaska/20973-75173-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="140.04" ytl="93.22" xbr="193.50" ybr="168.22">
+    </box>
+    <box label="tower" occluded="0" xtl="98.86" ytl="196.29" xbr="173.86" ybr="256.00">
+    </box>
+  </image>
+  <image id="375" name="alaska/20973-75649-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="212.86" ytl="21.84" xbr="256.00" ybr="96.84">
+    </box>
+  </image>
+  <image id="377" name="alaska/20974-75646-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="65.77" ytl="73.70" xbr="140.77" ybr="155.50">
+    </box>
+  </image>
+  <image id="378" name="alaska/20975-75174-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="153.42" ytl="148.97" xbr="227.42" ybr="230.20">
+    </box>
+  </image>
+  <image id="380" name="alaska/20975-75638-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="175.70" ytl="145.00" xbr="231.14" ybr="218.88">
+    </box>
+  </image>
+  <image id="381" name="alaska/20975-75642-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="8.42" ytl="36.11" xbr="80.17" ybr="125.50">
+    </box>
+  </image>
+  <image id="382" name="alaska/20976-75577-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="54.09" ytl="16.74" xbr="104.80" ybr="106.68">
+    </box>
+  </image>
+  <image id="384" name="alaska/20976-75635-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="84.80" ytl="0.00" xbr="142.27" ybr="78.70">
+    </box>
+  </image>
+  <image id="385" name="alaska/20977-75570-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="58.90" ytl="40.09" xbr="110.34" ybr="109.00">
+    </box>
+  </image>
+  <image id="388" name="alaska/20977-75628-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="136.00" ytl="0.00" xbr="195.44" ybr="79.60">
+    </box>
+  </image>
+  <image id="390" name="alaska/20978-75568-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="37.50" ytl="93.85" xbr="92.94" ybr="169.50">
+    </box>
+  </image>
+  <image id="391" name="alaska/20978-75621-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="152.00" ytl="78.23" xbr="227.00" ybr="153.23">
+    </box>
+  </image>
+  <image id="392" name="alaska/20978-75624-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="26.95" ytl="125.58" xbr="95.95" ybr="200.58">
+    </box>
+  </image>
+  <image id="393" name="alaska/20979-75565-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="114.30" ytl="192.22" xbr="175.80" ybr="256.00">
+    </box>
+  </image>
+  <image id="394" name="alaska/20979-75567-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="131.37" ytl="179.88" xbr="197.00" ybr="256.00">
+    </box>
+  </image>
+  <image id="396" name="alaska/20979-75617-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="74.86" ytl="128.27" xbr="149.86" ybr="203.27">
+    </box>
+  </image>
+  <image id="397" name="alaska/20980-75177-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="44.44" ytl="89.16" xbr="119.44" ybr="164.16">
+    </box>
+  </image>
+  <image id="398" name="alaska/20980-75564-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="154.53" ytl="74.46" xbr="229.53" ybr="149.46">
+    </box>
+  </image>
+  <image id="399" name="alaska/20980-75610-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="132.19" ytl="90.25" xbr="207.19" ybr="165.25">
+    </box>
+  </image>
+  <image id="400" name="alaska/20981-75603-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="190.97" ytl="128.90" xbr="256.00" ybr="202.90">
+    </box>
+  </image>
+  <image id="401" name="alaska/20981-75607-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="63.30" ytl="0.00" xbr="111.30" ybr="63.36">
+    </box>
+  </image>
+  <image id="402" name="alaska/20982-75178-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="126.79" ytl="185.81" xbr="184.90" ybr="249.60">
+    </box>
+  </image>
+  <image id="403" name="alaska/20982-75597-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="201.58" ytl="84.19" xbr="256.00" ybr="159.19">
+    </box>
+  </image>
+  <image id="404" name="alaska/20982-75600-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="79.75" ytl="58.27" xbr="171.60" ybr="163.57">
+    </box>
+  </image>
+  <image id="405" name="alaska/20983-75561-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="39.33" ytl="97.69" xbr="114.33" ybr="172.69">
+    </box>
+  </image>
+  <image id="407" name="alaska/20983-75594-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="98.23" ytl="0.00" xbr="173.23" ybr="63.25">
+    </box>
+  </image>
+  <image id="408" name="alaska/20984-75180-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="193.53" ytl="9.40" xbr="241.53" ybr="84.40">
+    </box>
+  </image>
+  <image id="409" name="alaska/20984-75560-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="94.00" ytl="0.00" xbr="169.00" ybr="52.26">
+    </box>
+  </image>
+  <image id="410" name="alaska/20984-75588-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="102.32" ytl="72.46" xbr="177.32" ybr="147.46">
+    </box>
+  </image>
+  <image id="412" name="alaska/20986-75586-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="115.60" ytl="67.77" xbr="190.60" ybr="142.77">
+    </box>
+  </image>
+  <image id="413" name="alaska/20987-75181-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="3.07" ytl="108.50" xbr="58.50" ybr="197.70">
+    </box>
+  </image>
+  <image id="414" name="alaska/20987-75557-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="33.10" ybr="51.20">
+    </box>
+  </image>
+  <image id="415" name="alaska/20988-75555-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="63.02" ytl="61.55" xbr="113.80" ybr="135.20">
+    </box>
+  </image>
+  <image id="416" name="alaska/20988-75584-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="69.52" ytl="112.50" xbr="144.52" ybr="187.50">
+    </box>
+  </image>
+  <image id="419" name="alaska/20990-75550-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="197.00" ytl="98.00" xbr="255.00" ybr="173.00">
+    </box>
+  </image>
+  <image id="420" name="alaska/20990-75551-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="49.41" ytl="110.96" xbr="112.30" ybr="169.10">
+    </box>
+  </image>
+  <image id="421" name="alaska/20990-75582-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="142.38" ytl="55.64" xbr="196.50" ybr="130.60">
+    </box>
+  </image>
+  <image id="422" name="alaska/20991-75184-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="142.83" ytl="28.73" xbr="192.20" ybr="92.90">
+    </box>
+  </image>
+  <image id="423" name="alaska/20993-75579-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="25.60" ytl="187.22" xbr="93.00" ybr="256.00">
+    </box>
+  </image>
+  <image id="424" name="alaska/20994-75185-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="137.53" xbr="36.94" ybr="212.53">
+    </box>
+  </image>
+  <image id="425" name="alaska/20995-75577-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="44.72" ytl="173.28" xbr="99.46" ybr="247.28">
+    </box>
+  </image>
+  <image id="427" name="alaska/20997-75575-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="205.50" ytl="30.26" xbr="253.56" ybr="105.26">
+    </box>
+  </image>
+  <image id="428" name="alaska/20998-75188-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="145.90" ytl="71.50" xbr="202.00" ybr="146.50">
+    </box>
+  </image>
+  <image id="429" name="alaska/20999-75573-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="91.10" ytl="150.59" xbr="138.50" ybr="225.59">
+    </box>
+  </image>
+  <image id="430" name="alaska/21001-75190-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="99.80" ytl="0.00" xbr="147.20" ybr="63.80">
+    </box>
+  </image>
+  <image id="431" name="alaska/21001-75572-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="21.56" ytl="0.00" xbr="76.56" ybr="46.59">
+    </box>
+  </image>
+  <image id="433" name="alaska/21002-75570-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="202.79" ytl="47.57" xbr="256.00" ybr="117.20">
+    </box>
+  </image>
+  <image id="435" name="alaska/21005-75567-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="75.70" ytl="171.50" xbr="140.56" ybr="245.57">
+    </box>
+  </image>
+  <image id="436" name="alaska/21006-75193-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="186.35" ytl="55.57" xbr="256.00" ybr="130.57">
+    </box>
+  </image>
+  <image id="437" name="alaska/21006-75565-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="50.84" ytl="105.98" xbr="125.84" ybr="180.98">
+    </box>
+  </image>
+  <image id="438" name="alaska/21007-75563-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="65.36" ytl="17.53" xbr="140.36" ybr="92.53">
+    </box>
+  </image>
+  <image id="439" name="alaska/21008-75560-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="66.40" ytl="198.20" xbr="130.00" ybr="256.00">
+    </box>
+  </image>
+  <image id="440" name="alaska/21009-75194-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="27.00" ytl="159.20" xbr="86.50" ybr="248.40">
+    </box>
+  </image>
+  <image id="441" name="alaska/21009-75558-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="10.00" ytl="128.10" xbr="104.50" ybr="224.00">
+    </box>
+  </image>
+  <image id="442" name="alaska/21010-75555-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="128.50" ytl="25.30" xbr="204.19" ybr="127.89">
+    </box>
+  </image>
+  <image id="443" name="alaska/21011-75196-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="74.00" ytl="0.00" xbr="149.00" ybr="68.00">
+    </box>
+  </image>
+  <image id="445" name="alaska/21013-75197-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="141.00" ytl="73.81" xbr="216.00" ybr="148.81">
+    </box>
+  </image>
+  <image id="446" name="alaska/21013-75548-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="72.11" ytl="152.20" xbr="147.11" ybr="227.20">
+    </box>
+  </image>
+  <image id="447" name="alaska/21014-75545-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="178.78" ytl="57.81" xbr="253.78" ybr="132.81">
+    </box>
+  </image>
+  <image id="448" name="alaska/21015-75198-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="181.67" ytl="152.26" xbr="255.67" ybr="227.26">
+    </box>
+  </image>
+  <image id="449" name="alaska/21016-75542-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="37.91" ytl="0.00" xbr="112.91" ybr="64.61">
+    </box>
+  </image>
+  <image id="450" name="alaska/21017-75538-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="137.84" ytl="160.59" xbr="212.84" ybr="235.59">
+    </box>
+  </image>
+  <image id="451" name="alaska/21018-75200-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="34.33" ytl="13.20" xbr="109.33" ybr="88.20">
+    </box>
+  </image>
+  <image id="453" name="alaska/21020-75201-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="67.28" ytl="78.87" xbr="130.20" ybr="179.50">
+    </box>
+  </image>
+  <image id="454" name="alaska/21020-75532-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="93.27" ytl="0.00" xbr="166.90" ybr="76.90">
+    </box>
+  </image>
+  <image id="455" name="alaska/21021-75528-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="180.01" ytl="168.98" xbr="255.01" ybr="254.48">
+    </box>
+  </image>
+  <image id="456" name="alaska/21022-75202-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="48.10" ytl="141.00" xbr="142.00" ybr="230.80">
+    </box>
+  </image>
+  <image id="457" name="alaska/21023-75525-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="30.56" ytl="87.40" xbr="117.70" ybr="183.92">
+    </box>
+  </image>
+  <image id="458" name="alaska/21024-75203-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="58.00" ytl="183.50" xbr="135.70" ybr="255.00">
+    </box>
+  </image>
+  <image id="459" name="alaska/21024-75522-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="102.20" ytl="73.35" xbr="194.71" ybr="171.90">
+    </box>
+  </image>
+  <image id="460" name="alaska/21025-75519-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="182.19" ytl="61.20" xbr="256.00" ybr="136.20">
+    </box>
+  </image>
+  <image id="461" name="alaska/21026-75205-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="102.90" ytl="16.00" xbr="169.20" ybr="103.80">
+    </box>
+  </image>
+  <image id="462" name="alaska/21027-75516-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="4.70" ytl="32.55" xbr="82.50" ybr="139.20">
+    </box>
+  </image>
+  <image id="463" name="alaska/21028-75206-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="124.30" ytl="68.50" xbr="185.10" ybr="159.00">
+    </box>
+  </image>
+  <image id="465" name="alaska/21030-75207-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="166.10" ytl="181.00" xbr="255.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="467" name="alaska/21031-75506-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="89.95" ytl="4.40" xbr="164.95" ybr="79.40">
+    </box>
+  </image>
+  <image id="468" name="alaska/21032-75503-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="138.44" ytl="109.39" xbr="184.29" ybr="179.10">
+    </box>
+  </image>
+  <image id="469" name="alaska/21033-75209-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="57.00" ybr="70.00">
+    </box>
+  </image>
+  <image id="471" name="alaska/21034-75210-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="129.70" ytl="0.00" xbr="189.50" ybr="61.50">
+    </box>
+  </image>
+  <image id="473" name="alaska/21036-75211-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="17.86" ytl="169.09" xbr="91.86" ybr="244.09">
+    </box>
+    <box label="tower" occluded="0" xtl="173.95" ytl="67.16" xbr="247.95" ybr="142.16">
+    </box>
+  </image>
+  <image id="474" name="alaska/21036-75493-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="148.67" ytl="188.74" xbr="222.67" ybr="256.00">
+    </box>
+  </image>
+  <image id="476" name="alaska/21039-75212-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="48.86" ytl="189.49" xbr="123.86" ybr="256.00">
+    </box>
+  </image>
+  <image id="477" name="alaska/21039-75487-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="48.90" ytl="131.80" xbr="129.00" ybr="227.00">
+    </box>
+  </image>
+  <image id="478" name="alaska/21040-75484-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="137.75" ytl="71.33" xbr="212.75" ybr="146.33">
+    </box>
+  </image>
+  <image id="479" name="alaska/21041-75214-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="116.00" ytl="20.00" xbr="191.00" ybr="95.00">
+    </box>
+  </image>
+  <image id="480" name="alaska/21042-75480-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="174.50" ytl="0.00" xbr="248.50" ybr="44.23">
+    </box>
+  </image>
+  <image id="481" name="alaska/21044-75215-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="142.00" xbr="64.00" ybr="231.60">
+    </box>
+  </image>
+  <image id="482" name="alaska/21045-75474-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="76.83" ytl="108.47" xbr="151.83" ybr="183.47">
+    </box>
+  </image>
+  <image id="483" name="alaska/21046-75217-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="59.41" ytl="10.21" xbr="133.41" ybr="85.21">
+    </box>
+  </image>
+  <image id="485" name="alaska/21048-75218-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="69.51" ytl="36.39" xbr="144.51" ybr="111.39">
+    </box>
+  </image>
+  <image id="486" name="alaska/21048-75468-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="80.63" ytl="31.60" xbr="158.90" ybr="117.92">
+    </box>
+  </image>
+  <image id="487" name="alaska/21049-75465-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="135.85" ytl="167.87" xbr="210.85" ybr="241.87">
+    </box>
+  </image>
+  <image id="488" name="alaska/21050-75219-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="45.35" ytl="89.53" xbr="120.35" ybr="164.53">
+    </box>
+  </image>
+  <image id="489" name="alaska/21051-75220-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="154.99" ytl="56.17" xbr="229.99" ybr="131.17">
+    </box>
+  </image>
+  <image id="490" name="alaska/21051-75462-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="9.02" ytl="107.91" xbr="104.00" ybr="201.00">
+    </box>
+  </image>
+  <image id="491" name="alaska/21052-75460-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="43.92" ytl="43.40" xbr="125.20" ybr="127.81">
+    </box>
+  </image>
+  <image id="492" name="alaska/21053-75221-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="164.29" ytl="77.22" xbr="247.80" ybr="165.70">
+    </box>
+  </image>
+  <image id="493" name="alaska/21053-75457-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="135.32" ytl="93.22" xbr="221.60" ybr="174.70">
+    </box>
+  </image>
+  <image id="494" name="alaska/21054-75455-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="140.71" ytl="126.00" xbr="188.43" ybr="193.93">
+    </box>
+  </image>
+  <image id="496" name="alaska/21055-75453-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="71.76" ytl="67.50" xbr="153.60" ybr="150.90">
+    </box>
+  </image>
+  <image id="497" name="alaska/21056-75223-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="21.79" ytl="0.00" xbr="95.79" ybr="54.90">
+    </box>
+  </image>
+  <image id="498" name="alaska/21058-75224-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="54.16" ytl="18.12" xbr="123.90" ybr="115.20">
+    </box>
+  </image>
+  <image id="500" name="alaska/21060-75225-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="99.88" ytl="92.43" xbr="174.90" ybr="192.50">
+    </box>
+  </image>
+  <image id="502" name="alaska/21062-75226-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="163.40" ytl="183.50" xbr="241.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="503" name="alaska/21063-75435-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="22.71" ytl="0.00" xbr="106.91" ybr="88.74">
+    </box>
+  </image>
+  <image id="504" name="alaska/21065-75228-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="26.38" xbr="63.90" ybr="118.10">
+    </box>
+  </image>
+  <image id="505" name="alaska/21065-75432-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="183.40" ytl="113.50" xbr="256.00" ybr="213.84">
+    </box>
+  </image>
+  <image id="506" name="alaska/21067-75229-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="49.40" ytl="127.70" xbr="128.00" ybr="215.70">
+    </box>
+  </image>
+  <image id="508" name="alaska/21069-75230-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="134.71" xbr="74.51" ybr="221.40">
+    </box>
+  </image>
+  <image id="510" name="alaska/21070-75431-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="204.30" ytl="142.71" xbr="256.00" ybr="217.71">
+    </box>
+    <box label="tower" occluded="0" xtl="139.57" ytl="141.70" xbr="195.50" ybr="216.70">
+    </box>
+  </image>
+  <image id="513" name="alaska/21073-75233-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="78.91" ytl="16.74" xbr="134.41" ybr="84.94">
+    </box>
+  </image>
+  <image id="515" name="alaska/21074-75292-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="195.89" ytl="171.54" xbr="249.39" ybr="247.14">
+    </box>
+  </image>
+  <image id="516" name="alaska/21074-75295-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="168.09" ytl="123.75" xbr="227.37" ybr="197.81">
+    </box>
+  </image>
+  <image id="518" name="alaska/21074-75300-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="132.80" ytl="145.80" xbr="188.96" ybr="230.90">
+    </box>
+  </image>
+  <image id="519" name="alaska/21074-75302-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="118.10" ytl="70.80" xbr="179.00" ybr="150.60">
+    </box>
+  </image>
+  <image id="520" name="alaska/21074-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="113.60" ytl="78.39" xbr="163.50" ybr="146.70">
+    </box>
+  </image>
+  <image id="521" name="alaska/21074-75306-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="124.70" ytl="87.14" xbr="168.70" ybr="152.70">
+    </box>
+  </image>
+  <image id="523" name="alaska/21074-75310-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="107.00" ytl="207.00" xbr="182.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="524" name="alaska/21074-75313-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="108.86" ytl="153.40" xbr="173.80" ybr="236.80">
+    </box>
+  </image>
+  <image id="527" name="alaska/21074-75321-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="112.20" ytl="60.42" xbr="187.20" ybr="135.42">
+    </box>
+  </image>
+  <image id="528" name="alaska/21074-75324-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="113.31" ytl="23.02" xbr="188.31" ybr="98.02">
+    </box>
+  </image>
+  <image id="529" name="alaska/21074-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="114.55" ytl="98.67" xbr="189.55" ybr="173.67">
+    </box>
+  </image>
+  <image id="530" name="alaska/21075-75234-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="93.10" ytl="85.26" xbr="167.10" ybr="160.26">
+    </box>
+  </image>
+  <image id="532" name="alaska/21075-75266-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="147.84" ytl="34.99" xbr="222.84" ybr="109.99">
+    </box>
+  </image>
+  <image id="533" name="alaska/21075-75268-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="129.50" ytl="119.50" xbr="204.50" ybr="194.50">
+    </box>
+  </image>
+  <image id="534" name="alaska/21075-75271-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="113.90" ytl="0.00" xbr="184.81" ybr="68.20">
+    </box>
+  </image>
+  <image id="535" name="alaska/21075-75273-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="102.30" ytl="49.90" xbr="154.00" ybr="120.20">
+    </box>
+  </image>
+  <image id="536" name="alaska/21075-75275-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="77.50" ytl="52.30" xbr="147.42" ybr="130.65">
+    </box>
+  </image>
+  <image id="537" name="alaska/21075-75278-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="48.99" ytl="7.31" xbr="113.60" ybr="72.90">
+    </box>
+  </image>
+  <image id="538" name="alaska/21075-75280-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="30.59" ytl="198.53" xbr="105.59" ybr="256.00">
+    </box>
+  </image>
+  <image id="539" name="alaska/21075-75283-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="3.12" ytl="153.20" xbr="78.12" ybr="242.38">
+    </box>
+  </image>
+  <image id="540" name="alaska/21075-75285-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="155.40" xbr="47.50" ybr="222.80">
+    </box>
+  </image>
+  <image id="541" name="alaska/21076-75235-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="175.20" ytl="20.30" xbr="231.30" ybr="88.58">
+    </box>
+  </image>
+  <image id="542" name="alaska/21076-75236-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="155.96" ytl="15.85" xbr="221.20" ybr="84.60">
+    </box>
+  </image>
+  <image id="543" name="alaska/21076-75241-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="120.40" ytl="41.50" xbr="188.64" ybr="122.57">
+    </box>
+  </image>
+  <image id="545" name="alaska/21076-75246-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="68.00" ytl="82.08" xbr="125.50" ybr="152.40">
+    </box>
+  </image>
+  <image id="546" name="alaska/21076-75248-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="53.30" ytl="161.08" xbr="114.14" ybr="235.08">
+    </box>
+  </image>
+  <image id="547" name="alaska/21076-75255-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.90" ytl="135.83" xbr="57.90" ybr="210.83">
+    </box>
+  </image>
+  <image id="549" name="alaska/21077-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="168.10" ytl="111.20" xbr="245.20" ybr="220.20">
+    </box>
+  </image>
+  <image id="550" name="alaska/21080-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="59.00" ytl="137.00" xbr="129.60" ybr="226.80">
+    </box>
+  </image>
+  <image id="551" name="alaska/21082-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="149.00" ytl="150.40" xbr="203.80" ybr="230.16">
+    </box>
+  </image>
+  <image id="552" name="alaska/21085-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.90" ytl="160.20" xbr="49.00" ybr="243.41">
+    </box>
+  </image>
+  <image id="553" name="alaska/21086-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="10.55" ytl="146.20" xbr="71.40" ybr="234.51">
+    </box>
+  </image>
+  <image id="554" name="alaska/21089-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="19.50" ytl="123.00" xbr="73.60" ybr="256.00">
+    </box>
+  </image>
+  <image id="555" name="alaska/21091-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="126.88" xbr="48.35" ybr="221.56">
+    </box>
+  </image>
+  <image id="556" name="alaska/21093-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="111.50" ytl="106.30" xbr="163.60" ybr="201.50">
+    </box>
+  </image>
+  <image id="557" name="alaska/21095-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="191.20" ytl="88.50" xbr="255.00" ybr="177.00">
+    </box>
+  </image>
+  <image id="558" name="alaska/21097-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="166.10" ytl="100.19" xbr="241.44" ybr="177.90">
+    </box>
+  </image>
+  <image id="559" name="alaska/21099-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="98.69" ytl="93.99" xbr="148.11" ybr="168.99">
+    </box>
+  </image>
+  <image id="560" name="alaska/21101-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="29.30" ytl="95.85" xbr="82.10" ybr="170.80">
+    </box>
+  </image>
+  <image id="561" name="alaska/21104-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="91.62" xbr="28.30" ybr="156.50">
+    </box>
+  </image>
+  <image id="562" name="alaska/21105-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="185.86" ytl="88.64" xbr="238.80" ybr="191.10">
+    </box>
+  </image>
+  <image id="563" name="alaska/21108-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="148.00" ytl="94.10" xbr="216.85" ybr="185.60">
+    </box>
+  </image>
+  <image id="564" name="alaska/21111-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="93.50" xbr="72.00" ybr="189.88">
+    </box>
+  </image>
+  <image id="565" name="alaska/21113-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="192.60" ytl="96.30" xbr="256.00" ybr="194.20">
+    </box>
+  </image>
+  <image id="566" name="alaska/21116-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="78.46" ytl="100.96" xbr="139.07" ybr="186.86">
+    </box>
+  </image>
+  <image id="568" name="alaska/21119-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="95.58" xbr="41.70" ybr="177.77">
+    </box>
+  </image>
+  <image id="569" name="alaska/21121-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="203.62" ytl="115.75" xbr="255.62" ybr="190.75">
+    </box>
+  </image>
+  <image id="570" name="alaska/21124-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="200.45" ytl="121.75" xbr="255.45" ybr="196.75">
+    </box>
+  </image>
+  <image id="571" name="alaska/21127-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="42.07" ytl="94.07" xbr="117.07" ybr="194.60">
+    </box>
+  </image>
+  <image id="572" name="alaska/21130-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="31.36" ytl="77.70" xbr="101.80" ybr="207.10">
+    </box>
+  </image>
+  <image id="573" name="alaska/21133-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="88.30" xbr="57.30" ybr="202.60">
+    </box>
+  </image>
+  <image id="574" name="alaska/21134-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="186.68" ytl="90.80" xbr="255.00" ybr="195.63">
+    </box>
+  </image>
+  <image id="575" name="alaska/21136-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="96.15" ytl="75.14" xbr="134.51" ybr="181.81">
+    </box>
+  </image>
+  <image id="576" name="alaska/21137-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="189.62" ytl="68.90" xbr="256.00" ybr="199.70">
+    </box>
+  </image>
+  <image id="577" name="alaska/21139-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="143.50" ytl="78.90" xbr="218.50" ybr="208.16">
+    </box>
+  </image>
+  <image id="578" name="alaska/21142-75324-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="1.87" ytl="91.27" xbr="75.87" ybr="166.27">
+    </box>
+  </image>
+  <image id="579" name="alaska/21146-75322-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="16.95" ytl="140.47" xbr="91.95" ybr="215.47">
+    </box>
+  </image>
+  <image id="580" name="alaska/21147-75322-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.62" ytl="47.30" xbr="56.11" ybr="121.09">
+    </box>
+  </image>
+  <image id="581" name="alaska/21148-75321-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="84.40" ytl="148.00" xbr="146.32" ybr="232.20">
+    </box>
+  </image>
+  <image id="582" name="alaska/21150-75320-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="184.90" ytl="132.70" xbr="246.75" ybr="223.34">
+    </box>
+  </image>
+  <image id="583" name="alaska/21153-75319-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="1.56" ytl="141.90" xbr="52.90" ybr="225.34">
+    </box>
+  </image>
+  <image id="584" name="alaska/21154-75319-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="138.20" ytl="0.00" xbr="182.80" ybr="72.00">
+    </box>
+  </image>
+  <image id="585" name="alaska/21156-75318-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="72.56" ytl="0.00" xbr="114.18" ybr="87.08">
+    </box>
+  </image>
+  <image id="586" name="alaska/21158-75317-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="85.90" ytl="74.08" xbr="136.30" ybr="152.20">
+    </box>
+  </image>
+  <image id="587" name="alaska/21159-75316-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="115.18" ytl="188.05" xbr="183.63" ybr="256.00">
+    </box>
+  </image>
+  <image id="588" name="alaska/21160-75316-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="199.40" ytl="49.00" xbr="255.00" ybr="137.00">
+    </box>
+  </image>
+  <image id="589" name="alaska/21162-75315-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="163.70" ytl="100.10" xbr="219.94" ybr="191.80">
+    </box>
+  </image>
+  <image id="590" name="alaska/21165-75314-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="45.25" ytl="79.07" xbr="93.30" ybr="159.09">
+    </box>
+  </image>
+  <image id="591" name="alaska/21168-75313-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="5.57" xbr="39.30" ybr="103.00">
+    </box>
+  </image>
+  <image id="592" name="alaska/21170-75312-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="134.90" ytl="0.00" xbr="178.40" ybr="79.60">
+    </box>
+  </image>
+  <image id="593" name="alaska/21172-75311-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="131.90" ytl="3.30" xbr="176.40" ybr="102.54">
+    </box>
+  </image>
+  <image id="595" name="alaska/21176-75309-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="125.40" ytl="87.92" xbr="200.01" ybr="165.90">
+    </box>
+  </image>
+  <image id="596" name="alaska/21179-75308-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="24.74" ytl="63.05" xbr="83.60" ybr="142.50">
+    </box>
+  </image>
+  <image id="597" name="alaska/21180-75307-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="53.00" ytl="184.90" xbr="119.80" ybr="255.00">
+    </box>
+  </image>
+  <image id="598" name="alaska/21182-75306-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="131.00" ytl="163.40" xbr="206.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="599" name="alaska/21183-75306-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="186.90" ytl="51.40" xbr="255.90" ybr="140.40">
+    </box>
+  </image>
+  <image id="600" name="alaska/21185-75305-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="188.00" ytl="85.30" xbr="254.22" ybr="172.37">
+    </box>
+  </image>
+  <image id="601" name="alaska/21187-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="87.69" ytl="180.63" xbr="139.70" ybr="256.00">
+    </box>
+  </image>
+  <image id="602" name="alaska/21188-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="195.10" ytl="0.00" xbr="255.00" ybr="91.20">
+    </box>
+  </image>
+  <image id="603" name="alaska/21192-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="147.50" ytl="4.80" xbr="189.40" ybr="105.90">
+    </box>
+  </image>
+  <image id="604" name="alaska/21194-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="54.30" ytl="4.79" xbr="95.50" ybr="96.90">
+    </box>
+  </image>
+  <image id="605" name="alaska/21196-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="173.70" ytl="5.40" xbr="215.40" ybr="113.90">
+    </box>
+  </image>
+  <image id="606" name="alaska/21199-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="25.90" ytl="0.00" xbr="60.70" ybr="89.70">
+    </box>
+  </image>
+  <image id="607" name="alaska/21202-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="37.70" ybr="95.70">
+    </box>
+  </image>
+  <image id="608" name="alaska/21204-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="217.47" ytl="44.79" xbr="245.19" ybr="99.41">
+    </box>
+  </image>
+  <image id="609" name="alaska/21206-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="198.17" ytl="2.15" xbr="256.00" ybr="92.15">
+    </box>
+  </image>
+  <image id="610" name="alaska/21208-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="55.00" ytl="10.00" xbr="130.90" ybr="100.00">
+    </box>
+  </image>
+  <image id="611" name="alaska/21211-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="58.40" ytl="6.00" xbr="99.00" ybr="96.00">
+    </box>
+  </image>
+  <image id="612" name="alaska/21212-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="70.00" ytl="5.60" xbr="121.30" ybr="104.00">
+    </box>
+  </image>
+  <image id="613" name="alaska/21215-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="55.20" ytl="3.80" xbr="90.80" ybr="83.43">
+    </box>
+  </image>
+  <image id="614" name="alaska/21217-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="32.00" ytl="0.00" xbr="69.60" ybr="84.20">
+    </box>
+  </image>
+  <image id="615" name="alaska/21219-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="28.70" ytl="0.67" xbr="59.40" ybr="61.30">
+    </box>
+  </image>
+  <image id="616" name="alaska/21221-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="133.30" ytl="0.80" xbr="177.90" ybr="80.40">
+    </box>
+  </image>
+  <image id="617" name="alaska/21223-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="155.30" ytl="0.62" xbr="201.95" ybr="85.90">
+    </box>
+  </image>
+  <image id="619" name="alaska/21228-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="123.50" ytl="0.00" xbr="159.20" ybr="72.70">
+    </box>
+  </image>
+  <image id="622" name="alaska/21235-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="30.90" ytl="0.00" xbr="71.81" ybr="71.04">
+    </box>
+  </image>
+  <image id="624" name="alaska/21239-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="175.90" ytl="0.00" xbr="223.80" ybr="73.79">
+    </box>
+  </image>
+  <image id="625" name="alaska/21242-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="132.70" ytl="0.00" xbr="177.80" ybr="77.60">
+    </box>
+  </image>
+  <image id="626" name="alaska/21245-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="90.50" ytl="0.00" xbr="137.50" ybr="67.30">
+    </box>
+  </image>
+  <image id="627" name="alaska/21248-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="43.30" ytl="0.00" xbr="81.70" ybr="59.90">
+    </box>
+  </image>
+  <image id="628" name="alaska/21251-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="2.25" ytl="0.00" xbr="43.60" ybr="64.74">
+    </box>
+  </image>
+  <image id="629" name="alaska/21253-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="185.30" ytl="0.00" xbr="228.50" ybr="71.40">
+    </box>
+  </image>
+  <image id="630" name="alaska/21256-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="124.20" ytl="0.00" xbr="176.60" ybr="67.70">
+    </box>
+  </image>
+  <image id="631" name="alaska/21258-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="172.56" ytl="0.00" xbr="228.20" ybr="69.80">
+    </box>
+  </image>
+  <image id="632" name="alaska/21261-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="151.20" ytl="0.00" xbr="187.20" ybr="66.10">
+    </box>
+  </image>
+  <image id="635" name="alaska/21269-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="50.20" ybr="73.47">
+    </box>
+  </image>
+  <image id="636" name="alaska/21271-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="216.61" ytl="0.00" xbr="256.00" ybr="72.42">
+    </box>
+  </image>
+  <image id="637" name="alaska/21274-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="190.74" ytl="0.00" xbr="238.55" ybr="61.52">
+    </box>
+  </image>
+  <image id="638" name="alaska/21277-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="34.30" ytl="0.00" xbr="84.60" ybr="56.18">
+    </box>
+  </image>
+  <image id="639" name="alaska/21279-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="209.20" ytl="0.00" xbr="255.00" ybr="54.60">
+    </box>
+  </image>
+  <image id="640" name="alaska/21282-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="36.80" ytl="0.00" xbr="71.90" ybr="63.20">
+    </box>
+  </image>
+  <image id="641" name="alaska/21284-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="209.70" ytl="0.00" xbr="255.00" ybr="58.00">
+    </box>
+  </image>
+  <image id="642" name="alaska/21286-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="111.50" ytl="0.00" xbr="161.30" ybr="64.50">
+    </box>
+  </image>
+  <image id="643" name="alaska/21288-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="15.50" ytl="0.00" xbr="58.50" ybr="68.50">
+    </box>
+  </image>
+  <image id="644" name="alaska/21290-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="41.80" ytl="0.00" xbr="78.00" ybr="59.30">
+    </box>
+  </image>
+  <image id="645" name="alaska/21292-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="60.10" ytl="0.00" xbr="101.40" ybr="75.50">
+    </box>
+  </image>
+  <image id="646" name="alaska/21294-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="172.30" ytl="0.00" xbr="208.50" ybr="70.00">
+    </box>
+  </image>
+  <image id="647" name="alaska/21299-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="17.00" ytl="0.00" xbr="60.00" ybr="70.80">
+    </box>
+  </image>
+  <image id="648" name="alaska/21303-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="87.00" ytl="0.00" xbr="134.50" ybr="68.40">
+    </box>
+  </image>
+  <image id="649" name="alaska/21306-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="1.00" xbr="42.70" ybr="74.90">
+    </box>
+  </image>
+  <image id="650" name="alaska/21308-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="134.90" ytl="0.00" xbr="188.00" ybr="75.20">
+    </box>
+  </image>
+  <image id="651" name="alaska/21310-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="197.20" ytl="0.00" xbr="247.07" ybr="78.10">
+    </box>
+  </image>
+  <image id="652" name="alaska/21314-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="38.50" ytl="0.00" xbr="89.93" ybr="72.80">
+    </box>
+  </image>
+  <image id="653" name="alaska/21315-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="136.00" ytl="0.00" xbr="211.00" ybr="79.00">
+    </box>
+  </image>
+  <image id="654" name="alaska/21317-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="68.00" ytl="0.00" xbr="143.00" ybr="80.00">
+    </box>
+  </image>
+  <image id="655" name="alaska/21319-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="76.70" ytl="0.00" xbr="127.00" ybr="67.00">
+    </box>
+  </image>
+  <image id="656" name="alaska/21321-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="162.88" ytl="0.00" xbr="216.58" ybr="67.39">
+    </box>
+  </image>
+  <image id="657" name="alaska/21324-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="43.80" ytl="0.00" xbr="90.20" ybr="74.33">
+    </box>
+  </image>
+  <image id="658" name="alaska/21326-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="167.30" ytl="0.00" xbr="231.63" ybr="73.96">
+    </box>
+  </image>
+  <image id="659" name="alaska/21329-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="118.44" ytl="0.00" xbr="180.50" ybr="72.70">
+    </box>
+  </image>
+  <image id="660" name="alaska/21330-75304-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="156.00" ytl="0.00" xbr="217.00" ybr="73.00">
+    </box>
+  </image>
+  <image id="661" name="alaska/21332-75306-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="152.20" ytl="0.00" xbr="203.00" ybr="58.30">
+    </box>
+  </image>
+  <image id="662" name="alaska/21334-75307-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="95.70" ytl="177.90" xbr="142.10" ybr="255.00">
+    </box>
+  </image>
+  <image id="663" name="alaska/21336-75309-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="78.50" xbr="53.60" ybr="163.60">
+    </box>
+  </image>
+  <image id="664" name="alaska/21338-75311-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="27.80" ytl="110.60" xbr="73.00" ybr="191.77">
+    </box>
+  </image>
+  <image id="665" name="alaska/21340-75313-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="26.63" ytl="111.40" xbr="83.70" ybr="191.98">
+    </box>
+  </image>
+  <image id="666" name="alaska/21342-75315-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="77.80" xbr="50.70" ybr="165.16">
+    </box>
+  </image>
+  <image id="667" name="alaska/21344-75317-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="68.72" xbr="36.00" ybr="143.72">
+    </box>
+  </image>
+  <image id="668" name="alaska/21346-75319-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="72.17" xbr="45.90" ybr="147.17">
+    </box>
+  </image>
+  <image id="669" name="alaska/21348-75321-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="57.47" xbr="36.72" ybr="132.47">
+    </box>
+  </image>
+  <image id="670" name="alaska/21349-75323-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="207.23" ytl="21.47" xbr="256.00" ybr="96.43">
+    </box>
+  </image>
+  <image id="671" name="alaska/21351-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="163.74" ytl="0.00" xbr="215.70" ybr="58.79">
+    </box>
+  </image>
+  <image id="672" name="alaska/21354-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="98.47" ytl="0.00" xbr="139.20" ybr="48.60">
+    </box>
+  </image>
+  <image id="673" name="alaska/21357-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="46.50" ybr="54.90">
+    </box>
+  </image>
+  <image id="674" name="alaska/21359-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="191.70" ytl="0.00" xbr="255.00" ybr="55.60">
+    </box>
+  </image>
+  <image id="675" name="alaska/21362-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="39.00" ybr="51.90">
+    </box>
+  </image>
+  <image id="676" name="alaska/21364-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="69.67" ytl="0.00" xbr="108.70" ybr="49.40">
+    </box>
+  </image>
+  <image id="677" name="alaska/21366-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="129.50" ytl="0.00" xbr="169.67" ybr="57.96">
+    </box>
+  </image>
+  <image id="678" name="alaska/21368-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="108.60" ytl="0.00" xbr="156.10" ybr="61.90">
+    </box>
+  </image>
+  <image id="679" name="alaska/21370-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="147.23" ytl="0.00" xbr="192.50" ybr="55.20">
+    </box>
+  </image>
+  <image id="680" name="alaska/21373-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="75.72" ytl="0.00" xbr="121.50" ybr="54.00">
+    </box>
+  </image>
+  <image id="681" name="alaska/21376-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="42.00" ybr="59.40">
+    </box>
+  </image>
+  <image id="682" name="alaska/21378-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="34.80" ytl="0.00" xbr="76.10" ybr="55.90">
+    </box>
+  </image>
+  <image id="683" name="alaska/21381-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="32.70" ybr="67.10">
+    </box>
+  </image>
+  <image id="684" name="alaska/21382-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="188.23" ytl="0.00" xbr="230.20" ybr="59.00">
+    </box>
+  </image>
+  <image id="685" name="alaska/21384-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="155.42" ytl="0.00" xbr="199.00" ybr="71.50">
+    </box>
+  </image>
+  <image id="686" name="alaska/21386-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="176.98" ytl="0.00" xbr="223.30" ybr="64.50">
+    </box>
+  </image>
+  <image id="688" name="alaska/21391-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="186.00" ytl="0.00" xbr="231.40" ybr="61.50">
+    </box>
+  </image>
+  <image id="690" name="alaska/21394-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="211.00" ytl="0.00" xbr="256.00" ybr="66.50">
+    </box>
+  </image>
+  <image id="693" name="alaska/21403-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="195.20" ytl="0.00" xbr="240.40" ybr="65.70">
+    </box>
+  </image>
+  <image id="694" name="alaska/21405-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="108.18" ytl="0.00" xbr="147.20" ybr="57.30">
+    </box>
+  </image>
+  <image id="695" name="alaska/21407-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="106.00" ytl="0.00" xbr="154.60" ybr="60.40">
+    </box>
+  </image>
+  <image id="696" name="alaska/21409-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="22.39" ytl="0.00" xbr="72.10" ybr="57.70">
+    </box>
+  </image>
+  <image id="697" name="alaska/21410-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="122.10" ytl="0.00" xbr="164.60" ybr="69.90">
+    </box>
+  </image>
+  <image id="698" name="alaska/21413-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="33.40" ytl="0.00" xbr="72.50" ybr="56.80">
+    </box>
+  </image>
+  <image id="699" name="alaska/21415-75325-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="202.00" ytl="0.00" xbr="249.90" ybr="46.00">
+    </box>
+  </image>
+  <image id="700" name="alaska/21415-75326-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="198.10" ytl="24.50" xbr="255.00" ybr="85.50">
+    </box>
+  </image>
+  <image id="701" name="alaska/21415-75327-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="197.39" ytl="71.80" xbr="252.19" ybr="134.40">
+    </box>
+  </image>
+  <image id="702" name="alaska/21415-75329-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="197.30" ytl="56.00" xbr="255.00" ybr="120.30">
+    </box>
+  </image>
+  <image id="703" name="alaska/21415-75331-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="199.50" ytl="24.50" xbr="256.00" ybr="86.61">
+    </box>
+  </image>
+  <image id="704" name="alaska/21415-75332-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="198.60" ytl="163.80" xbr="255.00" ybr="219.10">
+    </box>
+  </image>
+  <image id="705" name="alaska/21415-75334-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="198.20" ytl="0.00" xbr="255.00" ybr="51.20">
+    </box>
+  </image>
+  <image id="706" name="alaska/21415-75336-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="192.00" ytl="198.80" xbr="255.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="707" name="alaska/21415-75338-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="191.00" ytl="191.00" xbr="255.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="708" name="alaska/21415-75340-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="202.40" ytl="17.00" xbr="255.00" ybr="78.50">
+    </box>
+  </image>
+  <image id="709" name="alaska/21415-75341-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="199.50" ytl="91.74" xbr="256.00" ybr="158.90">
+    </box>
+  </image>
+  <image id="710" name="alaska/21415-75343-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="198.72" ytl="161.68" xbr="256.00" ybr="236.68">
+    </box>
+  </image>
+  <image id="711" name="alaska/21415-75346-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="198.42" ytl="11.49" xbr="256.00" ybr="86.49">
+    </box>
+  </image>
+  <image id="712" name="alaska/21419-75346-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="22.00" ytl="0.00" xbr="81.30" ybr="74.40">
+    </box>
+  </image>
+  <image id="713" name="alaska/21421-75346-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="49.00" ytl="0.00" xbr="101.00" ybr="76.90">
+    </box>
+  </image>
+  <image id="714" name="alaska/21423-75346-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="41.00" ytl="0.00" xbr="98.60" ybr="79.80">
+    </box>
+  </image>
+  <image id="715" name="alaska/21425-75346-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="36.20" ybr="68.20">
+    </box>
+  </image>
+  <image id="716" name="alaska/21426-75346-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="212.00" ytl="0.00" xbr="256.00" ybr="67.40">
+    </box>
+  </image>
+  <image id="717" name="alaska/21429-75346-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="123.00" ytl="0.00" xbr="173.30" ybr="63.00">
+    </box>
+  </image>
+  <image id="718" name="alaska/21431-75346-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="132.00" ytl="0.00" xbr="184.10" ybr="58.60">
+    </box>
+  </image>
+  <image id="719" name="alaska/21434-75346-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="145.00" ytl="0.00" xbr="203.20" ybr="69.30">
+    </box>
+  </image>
+  <image id="720" name="alaska/21437-75346-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="38.10" ybr="49.40">
+    </box>
+  </image>
+  <image id="721" name="alaska/21438-75346-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="55.00" ytl="0.00" xbr="114.30" ybr="57.70">
+    </box>
+  </image>
+  <image id="722" name="alaska/21440-75346-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="203.30" ytl="0.00" xbr="255.00" ybr="54.30">
+    </box>
+  </image>
+  <image id="723" name="alaska/21442-75346-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="178.00" ytl="0.00" xbr="234.00" ybr="53.00">
+    </box>
+  </image>
+  <image id="725" name="alaska/21446-75345-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="168.10" ytl="197.00" xbr="238.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="726" name="alaska/21448-75345-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="131.42" ytl="213.81" xbr="164.17" ybr="256.00">
+    </box>
+  </image>
+  <image id="729" name="alaska/21454-75345-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="131.90" ytl="214.70" xbr="172.70" ybr="255.00">
+    </box>
+  </image>
+  <image id="730" name="alaska/21457-75345-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="20.00" ytl="204.90" xbr="88.30" ybr="255.00">
+    </box>
+  </image>
+  <image id="732" name="alaska/21462-75345-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="41.00" ytl="203.00" xbr="116.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="733" name="alaska/21465-75345-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="37.40" ytl="190.20" xbr="91.10" ybr="256.00">
+    </box>
+  </image>
+  <image id="734" name="alaska/21467-75345-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="128.50" ytl="198.70" xbr="170.91" ybr="255.00">
+    </box>
+  </image>
+  <image id="735" name="alaska/21469-75345-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="65.96" ytl="193.00" xbr="121.26" ybr="255.00">
+    </box>
+  </image>
+  <image id="736" name="alaska/21471-75345-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="48.90" ytl="182.10" xbr="99.20" ybr="255.00">
+    </box>
+  </image>
+  <image id="737" name="alaska/21472-75344-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="206.80" ytl="200.60" xbr="255.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="738" name="alaska/21475-75343-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="30.00" ytl="140.00" xbr="92.10" ybr="207.10">
+    </box>
+  </image>
+  <image id="739" name="alaska/21476-75342-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="218.79" ytl="145.32" xbr="256.00" ybr="205.72">
+    </box>
+  </image>
+  <image id="740" name="alaska/21479-75341-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="17.30" ytl="91.40" xbr="87.80" ybr="166.40">
+    </box>
+  </image>
+  <image id="741" name="alaska/21480-75340-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="216.30" ytl="98.45" xbr="256.00" ybr="177.90">
+    </box>
+  </image>
+  <image id="742" name="alaska/21482-75339-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="177.50" ytl="75.30" xbr="243.10" ybr="196.90">
+    </box>
+  </image>
+  <image id="743" name="alaska/21485-75340-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="34.00" ytl="0.00" xbr="89.40" ybr="78.00">
+    </box>
+  </image>
+  <image id="744" name="alaska/21487-75340-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="49.11" ytl="136.75" xbr="103.90" ybr="211.75">
+    </box>
+  </image>
+  <image id="745" name="alaska/21489-75341-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="46.54" ytl="10.79" xbr="91.20" ybr="93.60">
+    </box>
+    <box label="tower" occluded="0" xtl="72.80" ytl="183.63" xbr="120.57" ybr="241.23">
+    </box>
+  </image>
+  <image id="746" name="alaska/21491-75341-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="63.00" ytl="149.00" xbr="124.00" ybr="238.00">
+    </box>
+  </image>
+  <image id="747" name="alaska/21493-75342-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="86.68" ytl="53.51" xbr="161.68" ybr="128.51">
+    </box>
+    <box label="tower" occluded="0" xtl="83.80" ytl="147.29" xbr="145.89" ybr="224.02">
+    </box>
+  </image>
+  <image id="751" name="alaska/21501-75344-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="166.00" ytl="84.00" xbr="241.00" ybr="159.00">
+    </box>
+  </image>
+  <image id="752" name="alaska/21503-75345-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="185.00" ytl="0.00" xbr="255.00" ybr="49.00">
+    </box>
+    <box label="tower" occluded="0" xtl="155.10" ytl="90.02" xbr="230.10" ybr="162.74">
+    </box>
+  </image>
+  <image id="754" name="alaska/21509-75346-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="148.37" ytl="120.35" xbr="223.37" ybr="193.07">
+    </box>
+  </image>
+  <image id="755" name="alaska/21511-75346-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="117.00" ytl="5.12" xbr="191.00" ybr="79.12">
+    </box>
+  </image>
+  <image id="756" name="alaska/21513-75346-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="94.91" ytl="35.26" xbr="136.21" ybr="79.12">
+    </box>
+  </image>
+  <image id="757" name="alaska/21515-75346-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="50.65" ytl="0.00" xbr="103.44" ybr="62.57">
+    </box>
+  </image>
+  <image id="758" name="alaska/21518-75345-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="15.24" ytl="214.78" xbr="61.74" ybr="255.78">
+    </box>
+  </image>
+  <image id="759" name="alaska/21520-75345-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="205.40" ytl="176.10" xbr="255.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="760" name="alaska/21523-75345-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="142.10" ytl="147.60" xbr="186.20" ybr="230.00">
+    </box>
+  </image>
+  <image id="761" name="alaska/21526-75345-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="107.90" ytl="120.00" xbr="162.30" ybr="195.00">
+    </box>
+  </image>
+  <image id="762" name="alaska/21529-75345-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="89.00" xbr="55.80" ybr="164.00">
+    </box>
+  </image>
+  <image id="763" name="alaska/21531-75345-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="179.70" ytl="68.00" xbr="243.00" ybr="151.00">
+    </box>
+  </image>
+  <image id="764" name="alaska/21534-75345-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="77.37" ytl="145.16" xbr="137.40" ybr="220.16">
+    </box>
+  </image>
+  <image id="765" name="alaska/21537-75345-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="78.00" ytl="0.00" xbr="138.00" ybr="67.00">
+    </box>
+  </image>
+  <image id="766" name="alaska/21540-75345-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="59.00" ybr="61.00">
+    </box>
+    <box label="tower" occluded="0" xtl="107.85" ytl="83.57" xbr="166.85" ybr="144.57">
+    </box>
+  </image>
+  <image id="767" name="alaska/21542-75345-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="170.00" ytl="0.00" xbr="226.00" ybr="42.00">
+    </box>
+    <box label="tower" occluded="0" xtl="167.81" ytl="65.38" xbr="226.81" ybr="126.38">
+    </box>
+  </image>
+  <image id="768" name="alaska/21545-75344-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="26.00" ytl="184.00" xbr="84.70" ybr="255.00">
+    </box>
+  </image>
+  <image id="769" name="alaska/21548-75344-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="153.89" xbr="46.39" ybr="228.89">
+    </box>
+  </image>
+  <image id="770" name="alaska/21550-75344-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="192.55" ytl="112.79" xbr="254.55" ybr="187.79">
+    </box>
+  </image>
+  <image id="771" name="alaska/21553-75344-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="166.30" ytl="81.20" xbr="234.00" ybr="159.00">
+    </box>
+  </image>
+  <image id="773" name="alaska/21558-75345-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="74.60" ytl="111.00" xbr="118.70" ybr="183.60">
+    </box>
+  </image>
+  <image id="774" name="alaska/21560-75346-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="173.60" ytl="0.00" xbr="214.50" ybr="73.00">
+    </box>
+  </image>
+  <image id="775" name="alaska/21562-75346-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="215.90" ytl="130.20" xbr="256.00" ybr="211.26">
+    </box>
+  </image>
+  <image id="776" name="alaska/21564-75347-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="162.20" ytl="0.00" xbr="207.80" ybr="56.00">
+    </box>
+  </image>
+  <image id="777" name="alaska/21566-75347-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="59.11" xbr="44.69" ybr="134.11">
+    </box>
+  </image>
+  <image id="778" name="alaska/21567-75347-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="172.30" ytl="183.20" xbr="223.40" ybr="251.10">
+    </box>
+  </image>
+  <image id="779" name="alaska/21569-75348-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="161.60" ytl="57.40" xbr="227.10" ybr="124.50">
+    </box>
+  </image>
+  <image id="780" name="alaska/21572-75348-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="5.10" ytl="121.80" xbr="53.40" ybr="186.10">
+    </box>
+  </image>
+  <image id="781" name="alaska/21574-75348-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="33.45" ytl="192.20" xbr="92.10" ybr="250.82">
+    </box>
+  </image>
+  <image id="783" name="alaska/21579-75349-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="118.10" ytl="51.00" xbr="176.40" ybr="155.50">
+    </box>
+  </image>
+  <image id="784" name="alaska/21581-75349-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="190.94" ytl="152.86" xbr="248.94" ybr="227.86">
+    </box>
+  </image>
+  <image id="786" name="alaska/21585-75350-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="152.10" ytl="1.30" xbr="218.70" ybr="78.80">
+    </box>
+  </image>
+  <image id="787" name="alaska/21587-75350-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="196.72" ytl="73.19" xbr="256.00" ybr="148.19">
+    </box>
+  </image>
+  <image id="788" name="alaska/21590-75350-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="57.35" ytl="150.50" xbr="131.35" ybr="225.50">
+    </box>
+  </image>
+  <image id="789" name="alaska/21592-75350-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="58.00" ytl="193.00" xbr="133.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="790" name="alaska/21594-75351-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="88.08" ybr="78.45">
+    </box>
+  </image>
+  <image id="791" name="alaska/21596-75351-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="179.00" ytl="77.00" xbr="256.00" ybr="172.90">
+    </box>
+  </image>
+  <image id="792" name="alaska/21598-75351-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="161.00" ytl="133.00" xbr="247.50" ybr="228.60">
+    </box>
+  </image>
+  <image id="794" name="alaska/21603-75352-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="118.60" ytl="111.90" xbr="190.24" ybr="194.75">
+    </box>
+    <box label="tower" occluded="0" xtl="34.54" ytl="5.57" xbr="86.60" ybr="98.40">
+    </box>
+  </image>
+  <image id="795" name="alaska/21607-75352-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="17.00" ytl="110.10" xbr="102.80" ybr="234.20">
+    </box>
+  </image>
+  <image id="797" name="alaska/21612-75353-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="178.60" ytl="25.40" xbr="227.80" ybr="107.20">
+    </box>
+  </image>
+  <image id="798" name="alaska/21615-75353-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="81.28" ytl="93.73" xbr="136.08" ybr="181.63">
+    </box>
+  </image>
+  <image id="799" name="alaska/21618-75353-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="39.70" ytl="185.50" xbr="89.70" ybr="255.00">
+    </box>
+  </image>
+  <image id="800" name="alaska/21620-75354-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="171.85" ytl="5.58" xbr="234.10" ybr="110.80">
+    </box>
+  </image>
+  <image id="801" name="alaska/21622-75354-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="193.80" ytl="63.90" xbr="256.00" ybr="167.00">
+    </box>
+  </image>
+  <image id="802" name="alaska/21625-75354-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="28.00" ytl="142.50" xbr="119.80" ybr="235.00">
+    </box>
+  </image>
+  <image id="803" name="alaska/21627-75355-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="102.60" ytl="0.00" xbr="172.50" ybr="74.90">
+    </box>
+  </image>
+  <image id="804" name="alaska/21629-75355-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="174.00" ytl="39.60" xbr="256.00" ybr="141.20">
+    </box>
+  </image>
+  <image id="805" name="alaska/21632-75355-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="107.20" ytl="123.70" xbr="163.00" ybr="200.00">
+    </box>
+  </image>
+  <image id="807" name="alaska/21641-75356-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="133.00" ytl="147.00" xbr="224.80" ybr="246.90">
+    </box>
+  </image>
+  <image id="808" name="alaska/21644-75357-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="80.00" ytl="0.00" xbr="169.10" ybr="83.00">
+    </box>
+  </image>
+  <image id="809" name="alaska/21645-75357-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="91.61" ytl="154.53" xbr="156.17" ybr="245.30">
+    </box>
+    <box label="tower" occluded="0" xtl="189.76" ytl="52.05" xbr="256.00" ybr="133.40">
+    </box>
+  </image>
+  <image id="810" name="alaska/21648-75357-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="111.00" ytl="103.00" xbr="197.10" ybr="189.80">
+    </box>
+  </image>
+  <image id="812" name="alaska/21651-75355-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="77.80" ytl="159.00" xbr="175.00" ybr="247.50">
+    </box>
+  </image>
+  <image id="813" name="alaska/21654-75354-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="90.00" ybr="81.00">
+    </box>
+  </image>
+  <image id="815" name="alaska/21661-75352-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="45.00" ytl="0.00" xbr="120.00" ybr="75.00">
+    </box>
+  </image>
+  <image id="817" name="alaska/21666-75351-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="132.46" xbr="39.96" ybr="207.46">
+    </box>
+  </image>
+  <image id="818" name="alaska/21668-75351-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="183.60" ytl="60.30" xbr="255.00" ybr="167.00">
+    </box>
+  </image>
+  <image id="819" name="alaska/21673-75351-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="26.00" ytl="0.00" xbr="101.00" ybr="63.00">
+    </box>
+  </image>
+  <image id="821" name="alaska/21677-75351-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="80.26" ytl="61.08" xbr="168.10" ybr="166.40">
+    </box>
+  </image>
+  <image id="822" name="alaska/21679-75352-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="83.10" ytl="28.58" xbr="158.79" ybr="119.70">
+    </box>
+  </image>
+  <image id="823" name="alaska/21681-75353-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="60.10" ytl="0.00" xbr="116.08" ybr="71.82">
+    </box>
+  </image>
+  <image id="824" name="alaska/21683-75354-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="189.45" ytl="170.18" xbr="221.18" ybr="232.16">
+    </box>
+  </image>
+  <image id="827" name="alaska/21691-75358-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="34.30" ytl="133.00" xbr="85.00" ybr="206.00">
+    </box>
+  </image>
+  <image id="832" name="alaska/21701-75366-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="1.12" ytl="86.23" xbr="74.80" ybr="169.60">
+    </box>
+  </image>
+  <image id="833" name="alaska/21702-75367-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="55.00" ytl="109.00" xbr="130.00" ybr="184.00">
+    </box>
+  </image>
+  <image id="834" name="alaska/21704-75369-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="116.30" ytl="0.00" xbr="182.88" ybr="88.65">
+    </box>
+  </image>
+  <image id="836" name="alaska/21707-75374-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="183.90" ytl="67.49" xbr="231.20" ybr="145.20">
+    </box>
+  </image>
+  <image id="837" name="alaska/21708-75378-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="138.99" ytl="75.56" xbr="198.30" ybr="169.10">
+    </box>
+  </image>
+  <image id="839" name="alaska/21713-75383-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="39.20" ytl="164.14" xbr="87.30" ybr="242.90">
+    </box>
+  </image>
+  <image id="840" name="alaska/21714-75385-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="181.40" ytl="132.57" xbr="234.50" ybr="207.57">
+    </box>
+  </image>
+  <image id="841" name="alaska/21716-75387-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="67.90" ytl="77.28" xbr="128.10" ybr="166.10">
+    </box>
+  </image>
+  <image id="842" name="alaska/21716-75389-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="30.68" ytl="0.00" xbr="87.20" ybr="48.05">
+    </box>
+  </image>
+  <image id="843" name="alaska/21723-75402-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="1.45" ytl="99.24" xbr="75.50" ybr="202.50">
+    </box>
+  </image>
+  <image id="844" name="alaska/21725-75404-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="7.00" ytl="31.00" xbr="72.50" ybr="126.20">
+    </box>
+  </image>
+  <image id="845" name="alaska/21726-75405-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="156.92" ytl="111.79" xbr="231.92" ybr="186.79">
+    </box>
+  </image>
+  <image id="846" name="alaska/21728-75407-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="102.00" ytl="0.00" xbr="176.00" ybr="60.00">
+    </box>
+  </image>
+  <image id="847" name="alaska/21734-75409-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="83.00" ytl="160.00" xbr="158.00" ybr="235.00">
+    </box>
+  </image>
+  <image id="849" name="alaska/21738-75411-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="1.45" ytl="59.30" xbr="94.20" ybr="146.40">
+    </box>
+  </image>
+  <image id="850" name="alaska/21740-75412-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="134.43" ytl="79.30" xbr="209.43" ybr="154.30">
+    </box>
+  </image>
+  <image id="851" name="alaska/21742-75413-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="98.00" ytl="49.00" xbr="173.00" ybr="124.00">
+    </box>
+  </image>
+  <image id="852" name="alaska/21744-75413-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="105.62" ytl="0.00" xbr="180.62" ybr="74.49">
+    </box>
+  </image>
+  <image id="853" name="alaska/21746-75413-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="105.00" ytl="0.00" xbr="180.00" ybr="47.00">
+    </box>
+  </image>
+  <image id="854" name="alaska/21748-75412-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="119.56" ytl="143.45" xbr="193.56" ybr="218.45">
+    </box>
+  </image>
+  <image id="855" name="alaska/21751-75412-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="45.00" ytl="126.00" xbr="120.00" ybr="201.00">
+    </box>
+  </image>
+  <image id="856" name="alaska/21754-75412-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="37.80" ytl="28.00" xbr="116.00" ybr="124.00">
+    </box>
+  </image>
+  <image id="857" name="alaska/21756-75412-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="156.00" ytl="19.50" xbr="231.00" ybr="105.00">
+    </box>
+  </image>
+  <image id="858" name="alaska/21758-75412-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="127.96" ytl="0.00" xbr="202.96" ybr="42.26">
+    </box>
+  </image>
+  <image id="859" name="alaska/21760-75411-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="29.62" ytl="191.53" xbr="104.62" ybr="248.53">
+    </box>
+  </image>
+  <image id="860" name="alaska/21762-75411-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="214.00" ytl="144.00" xbr="255.00" ybr="219.00">
+    </box>
+  </image>
+  <image id="861" name="alaska/21765-75411-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="61.19" ytl="88.72" xbr="136.19" ybr="163.72">
+    </box>
+  </image>
+  <image id="862" name="alaska/21767-75411-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="183.62" ytl="47.49" xbr="256.00" ybr="122.49">
+    </box>
+  </image>
+  <image id="863" name="alaska/21769-75411-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="149.00" ytl="4.00" xbr="224.00" ybr="79.00">
+    </box>
+  </image>
+  <image id="864" name="alaska/21772-75410-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="106.00" ytl="203.00" xbr="181.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="865" name="alaska/21773-75410-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="196.50" ytl="163.40" xbr="255.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="866" name="alaska/21775-75410-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="149.00" ytl="137.00" xbr="224.00" ybr="212.00">
+    </box>
+  </image>
+  <image id="867" name="alaska/21778-75410-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="134.00" ytl="88.00" xbr="210.60" ybr="173.50">
+    </box>
+  </image>
+  <image id="868" name="alaska/21780-75410-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="104.00" ytl="21.40" xbr="183.00" ybr="115.00">
+    </box>
+  </image>
+  <image id="869" name="alaska/21783-75410-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="47.00" ybr="63.00">
+    </box>
+  </image>
+  <image id="870" name="alaska/21785-75409-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="110.00" ytl="200.00" xbr="185.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="871" name="alaska/21787-75409-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="144.00" ytl="154.00" xbr="219.00" ybr="229.00">
+    </box>
+  </image>
+  <image id="872" name="alaska/21792-75409-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="103.00" ytl="0.00" xbr="178.00" ybr="57.00">
+    </box>
+  </image>
+  <image id="873" name="alaska/21794-75408-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="185.00" ytl="113.00" xbr="255.00" ybr="188.00">
+    </box>
+  </image>
+  <image id="874" name="alaska/21797-75408-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="90.00" ytl="64.00" xbr="165.00" ybr="139.00">
+    </box>
+  </image>
+  <image id="877" name="alaska/21804-75409-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="44.00" ytl="16.00" xbr="148.90" ybr="120.10">
+    </box>
+  </image>
+  <image id="878" name="alaska/21805-75409-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="106.17" ytl="32.30" xbr="194.07" ybr="182.23">
+    </box>
+  </image>
+  <image id="879" name="alaska/21806-75408-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="86.00" ytl="190.00" xbr="161.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="880" name="alaska/21811-75408-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="186.40" ytl="0.00" xbr="255.00" ybr="105.00">
+    </box>
+  </image>
+  <image id="881" name="alaska/21814-75408-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="56.00" ybr="41.00">
+    </box>
+  </image>
+  <image id="882" name="alaska/21817-75407-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="67.00" ytl="88.60" xbr="157.30" ybr="204.00">
+    </box>
+  </image>
+  <image id="883" name="alaska/21819-75407-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="44.80" xbr="109.30" ybr="176.40">
+    </box>
+  </image>
+  <image id="884" name="alaska/21822-75406-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="200.00" ytl="178.20" xbr="256.00" ybr="254.19">
+    </box>
+  </image>
+  <image id="885" name="alaska/21825-75409-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="115.00" ytl="101.00" xbr="221.50" ybr="201.10">
+    </box>
+  </image>
+  <image id="886" name="alaska/21828-75412-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="83.16" ytl="110.44" xbr="158.16" ybr="185.44">
+    </box>
+    <box label="tower" occluded="0" xtl="0.00" ytl="159.28" xbr="61.43" ybr="234.28">
+    </box>
+  </image>
+  <image id="887" name="alaska/21830-75414-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="59.79" ytl="84.23" xbr="134.79" ybr="159.23">
+    </box>
+  </image>
+  <image id="888" name="alaska/21832-75416-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="1.20" xbr="65.67" ybr="76.21">
+    </box>
+  </image>
+  <image id="889" name="alaska/21833-75417-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="176.40" ytl="201.81" xbr="240.40" ybr="256.00">
+    </box>
+  </image>
+  <image id="890" name="alaska/21835-75419-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="89.16" ytl="140.10" xbr="140.60" ybr="197.56">
+    </box>
+  </image>
+  <image id="891" name="alaska/21836-75421-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="201.33" ytl="0.00" xbr="256.00" ybr="56.56">
+    </box>
+  </image>
+  <image id="892" name="alaska/21838-75422-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="39.21" ytl="92.40" xbr="94.70" ybr="158.00">
+    </box>
+  </image>
+  <image id="893" name="alaska/21839-75423-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="208.75" ytl="159.84" xbr="255.44" ybr="234.84">
+    </box>
+    <box label="tower" occluded="0" xtl="96.07" ytl="179.20" xbr="163.70" ybr="237.98">
+    </box>
+  </image>
+  <image id="894" name="alaska/21842-75424-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="2.65" ytl="0.00" xbr="77.65" ybr="48.51">
+    </box>
+  </image>
+  <image id="896" name="alaska/21847-75424-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="159.77" ytl="119.00" xbr="233.77" ybr="194.00">
+    </box>
+  </image>
+  <image id="897" name="alaska/21850-75424-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="30.00" ytl="175.90" xbr="105.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="899" name="alaska/21862-75426-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="79.00" ytl="48.00" xbr="154.00" ybr="123.00">
+    </box>
+  </image>
+  <image id="912" name="alaska/21890-75429-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="227.37" ytl="92.74" xbr="252.82" ybr="139.53">
+    </box>
+  </image>
+  <image id="913" name="alaska/21893-75429-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="16.72" ytl="76.10" xbr="54.10" ybr="135.70">
+    </box>
+  </image>
+  <image id="914" name="alaska/21896-75429-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="31.00" ytl="52.26" xbr="64.80" ybr="115.10">
+    </box>
+  </image>
+  <image id="916" name="alaska/21900-75429-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="85.23" ytl="34.87" xbr="119.73" ybr="100.17">
+    </box>
+  </image>
+  <image id="919" name="alaska/21906-75429-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="198.01" ytl="8.62" xbr="228.96" ybr="65.20">
+    </box>
+  </image>
+  <image id="920" name="alaska/21909-75429-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="17.75" ytl="4.85" xbr="52.86" ybr="54.55">
+    </box>
+  </image>
+  <image id="922" name="alaska/21913-75429-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="115.78" ytl="99.20" xbr="142.10" ybr="147.40">
+    </box>
+    <box label="tower" occluded="0" xtl="11.85" ytl="40.95" xbr="47.30" ybr="115.95">
+    </box>
+  </image>
+  <image id="924" name="alaska/21915-75429-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="141.60" ytl="0.00" xbr="169.90" ybr="51.00">
+    </box>
+  </image>
+  <image id="926" name="alaska/21918-75429-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="53.90" ytl="160.89" xbr="78.04" ybr="223.10">
+    </box>
+  </image>
+  <image id="927" name="alaska/21920-75430-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="87.95" ytl="132.04" xbr="123.40" ybr="199.80">
+    </box>
+    <box label="tower" occluded="0" xtl="232.10" ytl="167.20" xbr="256.00" ybr="232.82">
+    </box>
+  </image>
+  <image id="928" name="alaska/21923-75431-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="119.21" ytl="150.67" xbr="154.70" ybr="224.80">
+    </box>
+  </image>
+  <image id="929" name="alaska/21924-75431-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="143.93" ytl="158.34" xbr="183.00" ybr="234.70">
+    </box>
+  </image>
+  <image id="930" name="alaska/21926-75432-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="126.32" ytl="53.91" xbr="169.00" ybr="142.60">
+    </box>
+  </image>
+  <image id="931" name="alaska/21928-75433-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="160.30" ytl="0.00" xbr="206.00" ybr="69.90">
+    </box>
+  </image>
+  <image id="932" name="alaska/21929-75432-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="188.39" ytl="210.70" xbr="213.00" ybr="256.00">
+    </box>
+  </image>
+  <image id="933" name="alaska/21930-75432-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="147.12" ytl="170.16" xbr="181.58" ybr="230.67">
+    </box>
+  </image>
+  <image id="934" name="alaska/21931-75432-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="194.40" ytl="142.76" xbr="244.74" ybr="221.50">
+    </box>
+  </image>
+  <image id="936" name="alaska/21942-75424-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="20.90" ytl="149.17" xbr="60.94" ybr="221.66">
+    </box>
+  </image>
+  <image id="938" name="alaska/21944-75423-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="113.70" ytl="49.37" xbr="165.49" ybr="118.75">
+    </box>
+  </image>
+  <image id="940" name="alaska/21945-75423-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="71.42" ytl="81.68" xbr="103.70" ybr="130.75">
+    </box>
+  </image>
+  <image id="941" name="alaska/21948-75420-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="101.09" ytl="223.10" xbr="140.50" ybr="256.00">
+    </box>
+  </image>
+  <image id="942" name="alaska/21949-75419-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="154.40" ytl="168.89" xbr="210.40" ybr="242.89">
+    </box>
+  </image>
+  <image id="944" name="alaska/21953-75417-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="90.71" ytl="185.10" xbr="147.30" ybr="236.70">
+    </box>
+  </image>
+  <image id="947" name="alaska/21960-75416-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="127.73" ytl="180.00" xbr="160.05" ybr="235.98">
+    </box>
+  </image>
+  <image id="948" name="alaska/21964-75417-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="126.00" ytl="0.00" xbr="173.90" ybr="55.80">
+    </box>
+  </image>
+  <image id="949" name="alaska/21966-75417-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="163.80" ytl="44.96" xbr="208.83" ybr="100.30">
+    </box>
+  </image>
+  <image id="951" name="alaska/21973-75417-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="159.42" xbr="39.30" ybr="206.99">
+    </box>
+  </image>
+  <image id="952" name="alaska/21975-75417-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="148.00" ytl="203.00" xbr="202.10" ybr="254.00">
+    </box>
+  </image>
+  <image id="953" name="alaska/21979-75418-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="127.90" ytl="19.96" xbr="175.12" ybr="73.70">
+    </box>
+  </image>
+  <image id="954" name="alaska/21982-75418-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="6.74" ytl="63.10" xbr="57.10" ybr="118.09">
+    </box>
+  </image>
+  <image id="955" name="alaska/21985-75418-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="20.12" ytl="113.60" xbr="62.10" ybr="164.25">
+    </box>
+  </image>
+  <image id="956" name="alaska/21988-75418-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="133.93" ytl="183.40" xbr="169.60" ybr="226.25">
+    </box>
+  </image>
+  <image id="957" name="alaska/21991-75418-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="64.36" ytl="228.26" xbr="92.25" ybr="256.00">
+    </box>
+  </image>
+  <image id="959" name="alaska/22000-75419-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="55.15" ytl="205.20" xbr="104.00" ybr="256.00">
+    </box>
+  </image>
+  <image id="960" name="alaska/22002-75419-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="127.40" ytl="143.30" xbr="174.32" ybr="218.00">
+    </box>
+  </image>
+  <image id="961" name="alaska/22006-75420-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="51.03" ytl="45.85" xbr="95.94" ybr="138.17">
+    </box>
+    <box label="tower" occluded="0" xtl="161.70" ytl="0.00" xbr="216.13" ybr="45.30">
+    </box>
+  </image>
+  <image id="962" name="alaska/22008-75420-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="181.44" ytl="20.36" xbr="233.04" ybr="84.10">
+    </box>
+    <box label="tower" occluded="0" xtl="222.30" ytl="106.36" xbr="247.52" ybr="154.70">
+    </box>
+    <box label="tower" occluded="0" xtl="148.96" ytl="0.31" xbr="175.75" ybr="28.69">
+    </box>
+  </image>
+  <image id="963" name="alaska/22010-75420-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="166.00" ytl="83.85" xbr="214.45" ybr="133.30">
+    </box>
+  </image>
+  <image id="964" name="alaska/22011-75421-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="182.08" ytl="17.90" xbr="221.30" ybr="65.50">
+    </box>
+  </image>
+  <image id="965" name="alaska/22013-75422-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="63.21" ytl="50.58" xbr="104.41" ybr="83.87">
+    </box>
+  </image>
+  <image id="966" name="alaska/22015-75423-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="88.23" ytl="171.04" xbr="130.20" ybr="212.40">
+    </box>
+  </image>
+  <image id="967" name="alaska/22018-75425-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="31.87" xbr="37.10" ybr="109.70">
+    </box>
+  </image>
+  <image id="968" name="alaska/22019-75426-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="204.49" ytl="115.23" xbr="256.00" ybr="190.23">
+    </box>
+  </image>
+  <image id="969" name="alaska/22022-75428-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="27.81" ytl="17.18" xbr="102.81" ybr="92.18">
+    </box>
+  </image>
+  <image id="970" name="alaska/22024-75429-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="40.92" ytl="143.47" xbr="115.92" ybr="218.47">
+    </box>
+  </image>
+  <image id="971" name="alaska/22026-75431-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="14.61" ytl="0.00" xbr="89.61" ybr="59.50">
+    </box>
+  </image>
+  <image id="972" name="alaska/22027-75431-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="23.54" ytl="143.19" xbr="86.70" ybr="230.60">
+    </box>
+    <box label="tower" occluded="0" xtl="205.10" ytl="116.96" xbr="245.02" ybr="178.71">
+    </box>
+  </image>
+  <image id="973" name="alaska/22028-75432-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="97.19" ytl="0.93" xbr="171.19" ybr="75.93">
+    </box>
+    <box label="tower" occluded="0" xtl="189.17" ytl="0.00" xbr="256.00" ybr="54.44">
+    </box>
+    <box label="tower" occluded="0" xtl="115.28" ytl="144.72" xbr="153.95" ybr="188.38">
+    </box>
+  </image>
+  <image id="974" name="alaska/22028-75434-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="123.28" ytl="138.60" xbr="197.28" ybr="212.60">
+    </box>
+  </image>
+  <image id="975" name="alaska/22029-75431-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="15.21" ytl="26.91" xbr="73.59" ybr="96.91">
+    </box>
+    <box label="tower" occluded="0" xtl="120.89" ytl="173.41" xbr="197.30" ybr="256.00">
+    </box>
+  </image>
+  <image id="978" name="alaska/22032-75444-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="157.64" ytl="157.80" xbr="202.10" ybr="231.80">
+    </box>
+  </image>
+  <image id="980" name="alaska/22035-75430-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="84.00" ytl="33.96" xbr="169.58" ybr="137.30">
+    </box>
+  </image>
+  <image id="981" name="alaska/22035-75452-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="134.31" ytl="21.01" xbr="203.41" ybr="115.01">
+    </box>
+  </image>
+  <image id="982" name="alaska/22037-75456-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="107.17" ytl="73.45" xbr="175.00" ybr="165.00">
+    </box>
+  </image>
+  <image id="983" name="alaska/22039-75460-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="19.30" ytl="120.30" xbr="95.23" ybr="185.70">
+    </box>
+  </image>
+  <image id="984" name="alaska/22041-75467-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="157.59" ytl="51.03" xbr="220.00" ybr="117.00">
+    </box>
+  </image>
+  <image id="985" name="alaska/22042-75428-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="68.24" ytl="88.02" xbr="153.83" ybr="190.75">
+    </box>
+  </image>
+  <image id="986" name="alaska/22043-75471-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="73.91" ytl="8.78" xbr="145.20" ybr="93.10">
+    </box>
+  </image>
+  <image id="987" name="alaska/22044-75474-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="177.05" ytl="130.81" xbr="256.00" ybr="250.01">
+    </box>
+  </image>
+  <image id="988" name="alaska/22046-75478-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="73.96" ytl="104.62" xbr="129.60" ybr="188.00">
+    </box>
+  </image>
+  <image id="991" name="alaska/22051-75423-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="148.13" ytl="126.03" xbr="222.13" ybr="201.03">
+    </box>
+  </image>
+  <image id="992" name="alaska/22051-75490-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="20.13" ytl="116.68" xbr="98.20" ybr="199.15">
+    </box>
+  </image>
+  <image id="994" name="alaska/22054-75421-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="76.58" xbr="45.60" ybr="132.20">
+    </box>
+  </image>
+  <image id="996" name="alaska/22055-75501-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="166.04" ytl="171.91" xbr="220.40" ybr="245.10">
+    </box>
+  </image>
+  <image id="997" name="alaska/22056-75418-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="168.50" ytl="171.74" xbr="216.35" ybr="223.60">
+    </box>
+  </image>
+  <image id="1001" name="alaska/22059-75416-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="6.12" ytl="104.93" xbr="48.24" ybr="156.77">
+    </box>
+  </image>
+  <image id="1006" name="alaska/22064-75387-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="138.41" ytl="190.97" xbr="213.41" ybr="256.00">
+    </box>
+  </image>
+  <image id="1007" name="alaska/22064-75411-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="115.00" ytl="0.00" xbr="189.00" ybr="57.00">
+    </box>
+  </image>
+  <image id="1008" name="alaska/22064-75516-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="32.00" ytl="0.00" xbr="114.20" ybr="52.60">
+    </box>
+  </image>
+  <image id="1009" name="alaska/22065-75385-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="201.00" ytl="193.00" xbr="255.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="1010" name="alaska/22065-75395-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="58.00" ytl="26.83" xbr="135.20" ybr="124.00">
+    </box>
+  </image>
+  <image id="1012" name="alaska/22066-75398-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="71.00" ytl="198.00" xbr="146.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="1013" name="alaska/22066-75409-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="131.52" ytl="0.00" xbr="200.12" ybr="36.10">
+    </box>
+  </image>
+  <image id="1015" name="alaska/22068-75405-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="215.20" ytl="188.50" xbr="255.00" ybr="256.00">
+    </box>
+  </image>
+  <image id="1017" name="alaska/22069-75380-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="60.71" ytl="77.44" xbr="138.55" ybr="166.21">
+    </box>
+  </image>
+  <image id="1019" name="alaska/22072-75375-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="205.74" ytl="0.00" xbr="256.00" ybr="66.21">
+    </box>
+  </image>
+  <image id="1020" name="alaska/22073-75530-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="129.99" ytl="59.34" xbr="196.25" ybr="161.81">
+    </box>
+  </image>
+  <image id="1021" name="alaska/22076-75369-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="171.87" ytl="0.00" xbr="245.60" ybr="80.00">
+    </box>
+  </image>
+  <image id="1025" name="alaska/22079-75365-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="6.99" ytl="113.04" xbr="80.07" ybr="191.75">
+    </box>
+  </image>
+  <image id="1026" name="alaska/22079-75540-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="176.60" ytl="77.64" xbr="251.58" ybr="166.10">
+    </box>
+  </image>
+  <image id="1027" name="alaska/22082-75545-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="53.62" ytl="54.69" xbr="127.70" ybr="153.70">
+    </box>
+  </image>
+  <image id="1028" name="alaska/22083-75359-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="5.12" ytl="79.25" xbr="79.50" ybr="164.90">
+    </box>
+  </image>
+  <image id="1029" name="alaska/22083-75546-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="165.30" ytl="173.00" xbr="250.25" ybr="256.00">
+    </box>
+  </image>
+  <image id="1030" name="alaska/22084-75357-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="110.46" ytl="35.72" xbr="185.46" ybr="110.72">
+    </box>
+  </image>
+  <image id="1031" name="alaska/22086-75355-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="1.25" ytl="0.00" xbr="47.70" ybr="83.10">
+    </box>
+  </image>
+  <image id="1032" name="alaska/22088-75551-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="129.12" ytl="61.44" xbr="197.10" ybr="125.00">
+    </box>
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="46.30" ybr="44.00">
+    </box>
+  </image>
+  <image id="1033" name="alaska/22095-75353-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="135.10" ytl="0.00" xbr="211.05" ybr="53.40">
+    </box>
+  </image>
+  <image id="1034" name="alaska/22102-75354-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="67.06" ytl="40.18" xbr="141.69" ybr="132.44">
+    </box>
+    <box label="tower" occluded="0" xtl="167.61" ytl="0.00" xbr="242.61" ybr="70.17">
+    </box>
+  </image>
+  <image id="1035" name="alaska/22103-75349-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="192.40" ytl="166.24" xbr="256.00" ybr="255.30">
+    </box>
+  </image>
+  <image id="1036" name="alaska/22103-75355-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="52.58" ytl="115.71" xbr="101.20" ybr="175.60">
+    </box>
+    <box label="tower" occluded="0" xtl="119.99" ytl="2.00" xbr="194.99" ybr="77.00">
+    </box>
+  </image>
+  <image id="1037" name="alaska/22105-75347-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="123.81" ytl="88.19" xbr="199.40" ybr="185.00">
+    </box>
+  </image>
+  <image id="1038" name="alaska/22107-75344-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="184.40" ytl="76.87" xbr="256.00" ybr="165.00">
+    </box>
+  </image>
+  <image id="1040" name="alaska/22110-75341-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="62.07" ytl="13.96" xbr="137.07" ybr="88.96">
+    </box>
+  </image>
+  <image id="1042" name="alaska/22113-75336-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="176.00" ytl="136.41" xbr="250.00" ybr="228.60">
+    </box>
+  </image>
+  <image id="1043" name="alaska/22118-75329-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="153.19" ytl="25.15" xbr="229.40" ybr="117.60">
+    </box>
+  </image>
+  <image id="1044" name="alaska/22119-75328-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="64.75" ytl="46.08" xbr="139.75" ybr="121.08">
+    </box>
+  </image>
+  <image id="1045" name="alaska/22120-75326-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="180.10" ytl="0.00" xbr="254.69" ybr="79.20">
+    </box>
+  </image>
+  <image id="1046" name="alaska/22121-75352-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="80.07" ytl="200.81" xbr="160.37" ybr="256.00">
+    </box>
+  </image>
+  <image id="1047" name="alaska/22124-75320-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="130.01" ytl="16.02" xbr="210.90" ybr="108.20">
+    </box>
+  </image>
+  <image id="1048" name="alaska/22126-75317-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="30.89" ytl="150.58" xbr="109.90" ybr="235.20">
+    </box>
+  </image>
+  <image id="1049" name="alaska/22127-75351-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="115.13" ytl="91.55" xbr="195.10" ybr="184.30">
+    </box>
+  </image>
+  <image id="1050" name="alaska/22128-75314-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="68.83" ytl="50.66" xbr="154.10" ybr="150.60">
+    </box>
+  </image>
+  <image id="1051" name="alaska/22130-75311-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="67.88" ytl="48.90" xbr="146.00" ybr="137.90">
+    </box>
+  </image>
+  <image id="1053" name="alaska/22135-75303-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="84.06" ytl="102.32" xbr="162.80" ybr="192.30">
+    </box>
+  </image>
+  <image id="1054" name="alaska/22137-75300-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="110.21" ytl="1.11" xbr="196.80" ybr="114.50">
+    </box>
+  </image>
+  <image id="1055" name="alaska/22141-75294-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.07" ytl="165.51" xbr="86.60" ybr="256.00">
+    </box>
+  </image>
+  <image id="1056" name="alaska/22144-75289-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="126.89" ytl="55.48" xbr="210.50" ybr="160.40">
+    </box>
+  </image>
+  <image id="1057" name="alaska/22147-75285-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="159.57" xbr="56.50" ybr="256.00">
+    </box>
+  </image>
+  <image id="1058" name="alaska/22149-75282-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="53.64" ytl="0.94" xbr="134.90" ybr="89.60">
+    </box>
+  </image>
+  <image id="1059" name="alaska/22151-75278-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="131.56" ytl="122.74" xbr="208.40" ybr="210.20">
+    </box>
+  </image>
+  <image id="1061" name="alaska/22155-75273-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="34.97" xbr="75.90" ybr="133.10">
+    </box>
+  </image>
+  <image id="1062" name="alaska/22156-75270-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="182.48" ytl="122.34" xbr="256.00" ybr="208.24">
+    </box>
+  </image>
+  <image id="1063" name="alaska/22158-75267-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="149.50" ytl="145.64" xbr="231.10" ybr="235.30">
+    </box>
+  </image>
+  <image id="1064" name="alaska/22160-75265-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="128.35" xbr="69.10" ybr="232.00">
+    </box>
+  </image>
+  <image id="1066" name="alaska/22164-75259-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="44.88" ytl="0.00" xbr="123.90" ybr="81.80">
+    </box>
+  </image>
+  <image id="1067" name="alaska/22165-75339-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="80.75" ytl="157.78" xbr="166.05" ybr="250.49">
+    </box>
+  </image>
+  <image id="1071" name="alaska/22169-75250-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="168.73" ytl="156.75" xbr="243.73" ybr="231.75">
+    </box>
+  </image>
+  <image id="1073" name="alaska/22171-75247-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="203.50" xbr="51.90" ybr="256.00">
+    </box>
+  </image>
+  <image id="1074" name="alaska/22172-75245-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="186.20" xbr="47.50" ybr="256.00">
+    </box>
+  </image>
+  <image id="1075" name="alaska/22173-75243-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="36.62" ytl="0.00" xbr="111.62" ybr="47.27">
+    </box>
+  </image>
+  <image id="1076" name="alaska/22173-75340-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="99.18" ytl="0.00" xbr="174.50" ybr="82.90">
+    </box>
+  </image>
+  <image id="1077" name="alaska/22174-75240-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="69.30" ytl="132.76" xbr="144.30" ybr="207.76">
+    </box>
+  </image>
+  <image id="1078" name="alaska/22175-75238-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="39.44" ytl="123.33" xbr="118.21" ybr="220.52">
+    </box>
+  </image>
+  <image id="1080" name="alaska/22176-75235-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="137.96" ytl="192.04" xbr="210.72" ybr="255.81">
+    </box>
+    <box label="tower" occluded="0" xtl="180.10" ytl="23.66" xbr="249.07" ybr="139.20">
+    </box>
+  </image>
+  <image id="1081" name="alaska/22178-75231-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="124.26" ytl="83.59" xbr="199.26" ybr="158.59">
+    </box>
+  </image>
+  <image id="1082" name="alaska/22180-75341-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="200.20" xbr="68.90" ybr="255.00">
+    </box>
+  </image>
+  <image id="1083" name="alaska/22181-75227-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="33.35" xbr="53.90" ybr="118.60">
+    </box>
+  </image>
+  <image id="1084" name="alaska/22181-75342-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="184.20" ytl="216.00" xbr="255.00" ybr="256.00">
+    </box>
+  </image>
+  <image id="1085" name="alaska/22182-75225-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="41.13" ytl="0.00" xbr="122.70" ybr="71.30">
+    </box>
+  </image>
+  <image id="1086" name="alaska/22184-75221-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="84.39" ytl="47.78" xbr="160.30" ybr="149.90">
+    </box>
+  </image>
+  <image id="1087" name="alaska/22184-75344-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="14.20" xbr="61.00" ybr="86.10">
+    </box>
+  </image>
+  <image id="1088" name="alaska/22185-75219-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="187.00" ytl="0.00" xbr="255.00" ybr="73.00">
+    </box>
+  </image>
+  <image id="1089" name="alaska/22187-75345-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="204.90" xbr="66.90" ybr="255.00">
+    </box>
+  </image>
+  <image id="1090" name="alaska/22188-75215-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="77.80" ybr="89.10">
+    </box>
+  </image>
+  <image id="1092" name="alaska/22189-75347-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="12.26" ytl="0.00" xbr="105.03" ybr="82.22">
+    </box>
+  </image>
+  <image id="1094" name="alaska/22191-75348-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="37.70" ytl="49.77" xbr="112.68" ybr="134.80">
+    </box>
+  </image>
+  <image id="1095" name="alaska/22192-75207-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="181.40" ytl="0.00" xbr="256.00" ybr="67.10">
+    </box>
+  </image>
+  <image id="1096" name="alaska/22193-75349-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="56.26" ytl="105.82" xbr="131.26" ybr="180.82">
+    </box>
+  </image>
+  <image id="1097" name="alaska/22194-75204-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="130.00" ytl="0.00" xbr="205.00" ybr="67.00">
+    </box>
+  </image>
+  <image id="1098" name="alaska/22196-75201-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="82.00" ytl="0.00" xbr="157.00" ybr="45.00">
+    </box>
+  </image>
+  <image id="1099" name="alaska/22197-75198-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="181.40" ytl="112.37" xbr="254.49" ybr="205.77">
+    </box>
+  </image>
+  <image id="1100" name="alaska/22199-75195-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="112.95" ytl="108.74" xbr="194.50" ybr="192.80">
+    </box>
+  </image>
+  <image id="1101" name="alaska/22201-75193-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="72.89" ybr="58.88">
+    </box>
+  </image>
+  <image id="1102" name="alaska/22203-75189-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="148.71" xbr="52.95" ybr="223.71">
+    </box>
+  </image>
+  <image id="1103" name="alaska/22204-75186-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="144.88" ytl="174.48" xbr="225.50" ybr="256.00">
+    </box>
+  </image>
+  <image id="1104" name="alaska/22206-75184-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.57" ytl="59.69" xbr="79.60" ybr="150.30">
+    </box>
+  </image>
+  <image id="1105" name="alaska/22207-75182-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="91.06" ytl="0.00" xbr="160.50" ybr="71.40">
+    </box>
+  </image>
+  <image id="1106" name="alaska/22208-75180-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="81.83" ytl="70.12" xbr="162.80" ybr="159.20">
+    </box>
+  </image>
+  <image id="1107" name="alaska/22209-75178-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="96.96" ytl="87.03" xbr="177.50" ybr="197.90">
+    </box>
+  </image>
+  <image id="1108" name="alaska/22211-75175-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="132.40" ytl="0.00" xbr="213.00" ybr="53.80">
+    </box>
+  </image>
+  <image id="1109" name="alaska/22212-75168-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="135.26" ytl="35.06" xbr="210.90" ybr="126.30">
+    </box>
+  </image>
+  <image id="1110" name="alaska/22213-75160-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="196.90" ytl="18.42" xbr="252.50" ybr="102.70">
+    </box>
+  </image>
+  <image id="1111" name="alaska/22213-75162-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="97.56" ytl="146.30" xbr="161.10" ybr="228.50">
+    </box>
+  </image>
+  <image id="1112" name="alaska/22213-75165-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="4.88" ytl="0.00" xbr="79.88" ybr="73.23">
+    </box>
+  </image>
+  <image id="1113" name="alaska/22214-75153-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="184.90" ytl="183.00" xbr="255.00" ybr="256.00">
+    </box>
+  </image>
+  <image id="1114" name="alaska/22214-75157-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="44.27" ytl="82.12" xbr="126.75" ybr="165.58">
+    </box>
+  </image>
+  <image id="1115" name="alaska/22215-75148-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="153.20" ytl="38.08" xbr="226.31" ybr="125.60">
+    </box>
+  </image>
+  <image id="1116" name="alaska/22215-75151-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="34.39" ytl="13.14" xbr="114.70" ybr="105.30">
+    </box>
+  </image>
+  <image id="1117" name="alaska/22216-75142-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="116.90" ytl="67.36" xbr="188.20" ybr="165.80">
+    </box>
+  </image>
+  <image id="1118" name="alaska/22216-75144-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="32.50" ytl="151.45" xbr="110.30" ybr="250.30">
+    </box>
+  </image>
+  <image id="1119" name="alaska/22217-75134-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="193.56" ytl="43.36" xbr="256.00" ybr="118.36">
+    </box>
+  </image>
+  <image id="1120" name="alaska/22217-75136-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="98.69" ytl="115.48" xbr="173.69" ybr="190.48">
+    </box>
+  </image>
+  <image id="1121" name="alaska/22218-75129-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="128.88" ytl="23.26" xbr="205.10" ybr="112.60">
+    </box>
+  </image>
+  <image id="1122" name="alaska/22218-75132-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="1.25" ytl="123.33" xbr="74.90" ybr="216.70">
+    </box>
+  </image>
+  <image id="1123" name="alaska/22219-75120-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="210.45" ytl="17.13" xbr="256.00" ybr="130.20">
+    </box>
+  </image>
+  <image id="1124" name="alaska/22219-75123-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="103.80" ytl="0.00" xbr="185.30" ybr="113.00">
+    </box>
+  </image>
+  <image id="1125" name="alaska/22219-75126-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="122.82" xbr="50.30" ybr="219.00">
+    </box>
+  </image>
+  <image id="1126" name="alaska/22220-75116-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="81.17" ytl="117.29" xbr="161.60" ybr="215.60">
+    </box>
+  </image>
+  <image id="1127" name="alaska/22222-75111-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="169.60" xbr="39.00" ybr="254.00">
+    </box>
+  </image>
+  <image id="1128" name="alaska/22223-75108-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="78.10" ybr="62.00">
+    </box>
+  </image>
+  <image id="1129" name="alaska/22224-75103-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="73.29" ytl="153.68" xbr="148.29" ybr="256.00">
+    </box>
+  </image>
+  <image id="1130" name="alaska/22225-75099-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="139.09" ytl="86.58" xbr="221.60" ybr="209.00">
+    </box>
+  </image>
+  <image id="1131" name="alaska/22227-75092-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="184.39" ytl="153.50" xbr="252.80" ybr="231.00">
+    </box>
+  </image>
+  <image id="1133" name="alaska/22229-75084-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="107.57" ytl="171.33" xbr="189.80" ybr="256.00">
+    </box>
+  </image>
+  <image id="1135" name="alaska/22230-75072-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="205.80" ytl="71.21" xbr="256.00" ybr="109.40">
+    </box>
+  </image>
+  <image id="1137" name="alaska/22230-75079-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="2.86" ytl="161.09" xbr="60.80" ybr="256.00">
+    </box>
+  </image>
+  <image id="1138" name="alaska/22231-75019-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="88.44" ytl="192.40" xbr="170.30" ybr="256.00">
+    </box>
+  </image>
+  <image id="1139" name="alaska/22231-75024-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="203.00" ytl="131.00" xbr="255.00" ybr="206.00">
+    </box>
+  </image>
+  <image id="1143" name="alaska/22232-75027-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="16.00" ytl="205.00" xbr="102.20" ybr="256.00">
+    </box>
+  </image>
+  <image id="1145" name="alaska/22232-75033-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="142.63" ytl="196.12" xbr="217.63" ybr="256.00">
+    </box>
+  </image>
+  <image id="1147" name="alaska/22232-75060-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="27.27" ytl="4.39" xbr="104.80" ybr="101.20">
+    </box>
+  </image>
+  <image id="1150" name="alaska/22233-75037-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="173.50" xbr="44.95" ybr="247.50">
+    </box>
+  </image>
+  <image id="1151" name="alaska/22233-75041-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="51.20" ytl="149.32" xbr="126.20" ybr="224.32">
+    </box>
+  </image>
+  <image id="1153" name="alaska/22233-75049-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="76.50" ytl="118.87" xbr="151.50" ybr="193.87">
+    </box>
+  </image>
+  <image id="1155" name="alaska/22235-75004-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="123.61" ytl="186.11" xbr="198.61" ybr="256.00">
+    </box>
+  </image>
+  <image id="1159" name="alaska/22242-75002-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="144.00" ytl="19.28" xbr="220.55" ybr="103.60">
+    </box>
+  </image>
+  <image id="1160" name="alaska/22244-75001-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="22.25" ytl="93.89" xbr="69.45" ybr="173.25">
+    </box>
+    <box label="tower" occluded="0" xtl="68.97" ytl="87.08" xbr="135.50" ybr="179.90">
+    </box>
+  </image>
+  <image id="1161" name="alaska/22246-75000-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="33.79" ytl="154.66" xbr="107.79" ybr="229.66">
+    </box>
+  </image>
+  <image id="1165" name="alaska/22250-74999-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="195.00" ytl="44.00" xbr="255.00" ybr="119.00">
+    </box>
+  </image>
+  <image id="1166" name="alaska/22253-74998-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="118.56" ytl="34.24" xbr="198.60" ybr="138.90">
+    </box>
+  </image>
+  <image id="1168" name="alaska/22262-74995-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="17.55" ytl="20.21" xbr="89.40" ybr="102.10">
+    </box>
+  </image>
+  <image id="1170" name="alaska/22268-74993-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="65.00" ytl="0.00" xbr="140.00" ybr="74.00">
+    </box>
+  </image>
+  <image id="1172" name="alaska/22273-74994-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="39.94" ytl="0.00" xbr="114.94" ybr="66.77">
+    </box>
+  </image>
+  <image id="1175" name="alaska/22278-75000-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="57.41" ytl="129.72" xbr="132.41" ybr="204.72">
+    </box>
+  </image>
+  <image id="1176" name="alaska/22280-75003-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="63.17" ytl="36.55" xbr="138.17" ybr="111.55">
+    </box>
+  </image>
+  <image id="1177" name="alaska/22284-75008-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="17.74" ytl="9.31" xbr="92.74" ybr="84.31">
+    </box>
+  </image>
+  <image id="1178" name="alaska/22288-75013-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="19.50" ytl="41.69" xbr="94.50" ybr="116.69">
+    </box>
+  </image>
+  <image id="1182" name="alaska/22381-74742-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="138.48" ytl="0.00" xbr="214.00" ybr="89.90">
+    </box>
+  </image>
+  <image id="1183" name="alaska/22398-74739-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="174.24" ytl="5.57" xbr="251.00" ybr="83.30">
+    </box>
+  </image>
+  <image id="1184" name="alaska/22406-74738-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="92.15" ytl="0.00" xbr="183.30" ybr="90.30">
+    </box>
+  </image>
+  <image id="1185" name="alaska/22418-74734-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="74.91" ytl="9.58" xbr="186.10" ybr="192.20">
+    </box>
+    <box label="tower" occluded="0" xtl="44.86" ytl="0.00" xbr="99.20" ybr="70.77">
+    </box>
+  </image>
+  <image id="1186" name="alaska/22426-74731-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="155.90" ytl="95.60" xbr="243.60" ybr="248.50">
+    </box>
+    <box label="tower" occluded="0" xtl="54.14" ytl="61.44" xbr="112.47" ybr="126.32">
+    </box>
+  </image>
+  <image id="1187" name="alaska/22430-74730-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="130.47" ytl="40.28" xbr="230.00" ybr="181.00">
+    </box>
+  </image>
+  <image id="1188" name="alaska/22435-74729-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="112.46" ytl="140.72" xbr="193.06" ybr="226.28">
+    </box>
+    <box label="tower" occluded="0" xtl="173.00" ytl="70.66" xbr="249.52" ybr="175.12">
+    </box>
+    <box label="tower" occluded="0" xtl="25.01" ytl="14.91" xbr="75.27" ybr="68.73">
+    </box>
+    <box label="tower" occluded="0" xtl="0.00" ytl="0.00" xbr="24.50" ybr="76.70">
+    </box>
+    <box label="tower" occluded="0" xtl="60.07" ytl="112.91" xbr="118.71" ybr="193.37">
+    </box>
+  </image>
+  <image id="1189" name="alaska/22438-74732-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.64" ytl="43.72" xbr="91.20" ybr="161.50">
+    </box>
+  </image>
+  <image id="1190" name="alaska/22439-74733-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="28.21" ytl="85.88" xbr="120.32" ybr="194.56">
+    </box>
+  </image>
+  <image id="1191" name="alaska/22443-74740-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="117.66" ytl="0.00" xbr="206.90" ybr="116.70">
+    </box>
+  </image>
+  <image id="1192" name="alaska/22580-74877-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="22.66" ytl="1.84" xbr="96.66" ybr="75.84">
+    </box>
+  </image>
+  <image id="1194" name="alaska/22585-74883-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="179.66" ytl="158.38" xbr="256.00" ybr="241.50">
+    </box>
+  </image>
+  <image id="1195" name="alaska/22587-74884-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="65.24" ytl="102.01" xbr="140.24" ybr="176.01">
+    </box>
+  </image>
+  <image id="1196" name="alaska/22588-74921-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="180.54" ytl="115.13" xbr="256.00" ybr="227.90">
+    </box>
+  </image>
+  <image id="1197" name="alaska/22589-74885-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="29.00" xbr="55.00" ybr="104.00">
+    </box>
+  </image>
+  <image id="1199" name="alaska/22590-74921-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="87.61" ytl="115.72" xbr="153.53" ybr="178.25">
+    </box>
+    <box label="tower" occluded="0" xtl="117.29" ytl="0.00" xbr="192.29" ybr="49.51">
+    </box>
+    <box label="tower" occluded="0" xtl="165.13" ytl="85.03" xbr="206.30" ybr="146.79">
+    </box>
+    <box label="tower" occluded="0" xtl="200.31" ytl="55.47" xbr="234.37" ybr="119.47">
+    </box>
+  </image>
+  <image id="1200" name="alaska/22591-74887-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="187.00" xbr="63.00" ybr="255.00">
+    </box>
+  </image>
+  <image id="1201" name="alaska/22591-74889-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="62.12" ytl="124.49" xbr="137.12" ybr="199.49">
+    </box>
+  </image>
+  <image id="1202" name="alaska/22591-74891-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="139.37" ytl="121.19" xbr="214.37" ybr="196.19">
+    </box>
+  </image>
+  <image id="1203" name="alaska/22592-74893-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="138.30" xbr="47.00" ybr="233.21">
+    </box>
+  </image>
+  <image id="1204" name="alaska/22592-74895-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="42.90" ytl="83.60" xbr="121.37" ybr="190.71">
+    </box>
+  </image>
+  <image id="1205" name="alaska/22592-74897-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="129.50" ytl="108.50" xbr="210.72" ybr="201.28">
+    </box>
+  </image>
+  <image id="1206" name="alaska/22592-74899-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="195.80" ytl="67.80" xbr="255.90" ybr="159.83">
+    </box>
+  </image>
+  <image id="1207" name="alaska/22592-74920-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="0.00" ytl="60.60" xbr="68.10" ybr="150.01">
+    </box>
+  </image>
+  <image id="1208" name="alaska/22593-74901-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="15.13" ytl="49.14" xbr="89.13" ybr="124.14">
+    </box>
+  </image>
+  <image id="1209" name="alaska/22593-74903-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="102.80" ytl="130.10" xbr="180.32" ybr="212.90">
+    </box>
+  </image>
+  <image id="1212" name="alaska/22594-74909-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="98.00" ytl="126.20" xbr="176.89" ybr="218.54">
+    </box>
+  </image>
+  <image id="1213" name="alaska/22594-74911-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="173.29" ytl="90.92" xbr="250.06" ybr="178.45">
+    </box>
+  </image>
+  <image id="1215" name="alaska/22595-74913-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="3.82" ytl="119.06" xbr="78.82" ybr="194.06">
+    </box>
+  </image>
+  <image id="1216" name="alaska/22595-74915-18.png" width="256" height="256">
+    <box label="tower" occluded="0" xtl="82.00" ytl="60.50" xbr="161.00" ybr="153.90">
+    </box>
+  </image>
+</annotations>
