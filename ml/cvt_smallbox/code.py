@@ -1,7 +1,35 @@
-#!/usr/bin/env python
-import click
-from utils import read_xml, get_segments_root
+from xml.etree import ElementTree as ET
 import logging
+import click
+
+
+def get_segments_root(root, v=False):
+    try:
+        segments = []
+        for i in root.iter('segment'):
+            o = {}
+            for j in i:
+                o[f'{j.tag}'] = j.text
+            segments.append(o)
+        if v:
+            click.echo(click.style('--- segments created :) ', fg='bright_cyan', bold=True))
+        return segments
+    except Exception as e:
+        logging.error(e.__str__())
+
+
+def read_xml(in_file, v=False):
+    """
+    open xml file and return root  iterate file
+    """
+
+    try:
+        tree = ET.parse(in_file)
+        if v:
+            click.echo(click.style('--- xml readed :) ', fg='bright_cyan', bold=True))
+        return tree.getroot()
+    except Exception as e:
+        logging.error(e.__str__())
 
 
 @click.command()
@@ -44,8 +72,17 @@ def process(in_file, toleranci):
 
                         if (a_box / area_imagen) <= toleranci:
                             list_image_err.append(image)
+
+
     except Exception as e:
         logging.error(e.__str__())
-
     else:
-        return print(list_image_err)
+        # save_csv(ouput_file_name, list_image_err,ouput_path)
+        # df = DataFrame(list_image_err)
+        # print version
+        for i in list_image_err:
+            print(f'{i[0]},{i[1]},{i[2]}')
+
+
+if __name__ == '__main__':
+    process()

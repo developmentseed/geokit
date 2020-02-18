@@ -5,16 +5,12 @@ except ImportError:
 setup(
     name='ml scripts',
     version='1.0',
-    description='Python scripts for ',
+    description='Python scripts for ml data cleared ',
     author='developmentseed',
     packages=find_packages(),
-    scripts=[
-        'utils.py',
-    ],
     entry_points={
         'console_scripts': [
-            'juego=cvt_smallbox.command_line:main',
-
+            'cvt_smallbox=cvt_smallbox.command_line:main'
         ],
-    }
+    },
 )
