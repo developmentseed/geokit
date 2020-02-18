@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 import click
-import os
-from utils import read_xml, save_csv, get_segments_root
+from utils import read_xml, get_segments_root
 import logging
 
 
@@ -49,9 +48,4 @@ def process(in_file, toleranci):
         logging.error(e.__str__())
 
     else:
-        # save_csv(ouput_file_name, list_image_err,ouput_path)
         return print(list_image_err)
-
-
-if __name__ == "__main__":
-    process()
