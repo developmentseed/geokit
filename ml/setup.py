@@ -10,7 +10,7 @@ setup(
     packages=find_packages(),
     entry_points={
         'console_scripts': [
-            'cvt_smallbox=cvt_smallbox.command_line:main'
+            'cvat_smallbox=cvat_smallbox.command_line:main'
         ],
     },
 )
