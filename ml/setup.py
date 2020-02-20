@@ -10,8 +10,8 @@ setup(
     packages=find_packages(),
     entry_points={
         'console_scripts': [
-            'cvat_smallbox=ml_script.cvat_smallbox.command_line:main',
-            'cvat_intersectionbox=ml_script.cvat_intersectionbox.command_line:main',
+            'cvat_smallbox=ml_script.cvat_smallbox.__init__:main',
+            'cvat_intersectionbox=ml_script.cvat_intersectionbox.__init__:main',
 
         ],
     },

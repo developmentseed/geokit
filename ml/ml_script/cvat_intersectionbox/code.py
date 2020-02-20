@@ -1,53 +1,12 @@
-from xml.etree import ElementTree as ET
 import pandas as pd
 import logging
 import click
-from shapely.geometry import Polygon
 import itertools
 
-
-def get_segments_root(root, v=False):
-    try:
-        segments = []
-        for i in root.iter('segment'):
-            o = {}
-            for j in i:
-                o[f'{j.tag}'] = j.text
-            segments.append(o)
-        if v:
-            click.echo(click.style('--- segments created :) ', fg='bright_cyan', bold=True))
-        return segments
-    except Exception as e:
-        logging.error(e.__str__())
+from ..utils.code import (get_segments_root, read_xml, make_polygon)
 
 
-def read_xml(in_file, v=False):
-    """
-    open xml file and return root  iterate file
-    """
-
-    try:
-        tree = ET.parse(in_file)
-        if v:
-            click.echo(click.style('--- xml readed :) ', fg='bright_cyan', bold=True))
-        return tree.getroot()
-    except Exception as e:
-        logging.error(e.__str__())
-
-
-def make_polygon(data):
-    try:
-        data = data[1]
-        # rigth
-        bounds = [(data['xtl'], data['ytl']), (data['xbr'], data['ytl']), (data['xtl'], data['ybr']),
-                  (data['xtl'], data['ybr'])]
-        poly = Polygon(bounds)
-        return poly
-    except Exception as e:
-        logging.error(e.__str__())
-
-
-def et2list(root):
+def tree2list(root):
     segments = get_segments_root(root)
     list_image_data = []
     list_image_data_columns = ('url', 'id-image', 'width', 'height', 'xtl', 'xbr', 'ytl', 'ybr', 'x', 'y', 'area')
@@ -95,18 +54,21 @@ def process(in_file, toleranci):
 
     toleranci = toleranci / 100
 
-    list_image_err = [('url', 'area intersection %'), ]
+    list_image_err = [('url', 'id_image', 'area intersection %'), ]
 
     root = read_xml(in_file)
-    df = et2list(root)
+    df = tree2list(root)
     try:
         if not df.empty:
             for i, k in df.groupby('url'):
                 is_report = False
                 err_rep = 0
+                id_image = ''
+
                 if k.__len__() > 1:
                     list_polygon_box = []
                     for j in k.iterrows():
+                        id_image = j[1]['id-image']
                         list_polygon_box.append(make_polygon(j))
                     for j in itertools.combinations(list_polygon_box, 2):
                         interseccion = j[0].intersection(j[1])
@@ -118,14 +80,14 @@ def process(in_file, toleranci):
                                 err_rep = float(interseccion.area / menor.area).__round__(4)
                                 is_report = True
                 if is_report:
-                    list_image_err.append((i, err_rep))
+                    list_image_err.append((i, id_image, err_rep))
 
 
     except Exception as e:
         logging.error(e.__str__())
     else:
         for i in list_image_err:
-            print(f'{i[0]},{i[1]}')
+            print(','.join(map(str, i)))
 
 
 if __name__ == '__main__':
