@@ -50,6 +50,9 @@ switch (action) {
   case 'featurearea':
     require('./src/featurearea')(inputFile);
     break;
+  case 'featuredistance':
+    require('./src/featuredistance')(inputFile);
+    break;
   case 'countbysize':
     require('./src/countbysize')(inputFile, argv.psize);
     break;
@@ -76,6 +79,9 @@ switch (action) {
     break;
   case 'splitbyzoom':
     require('./src/splitbygrid')(inputFile, argv.folder, argv.zoom);
+    break;
+  case 'addattributefc':
+    require('./src/addattributefc')(inputFile, argv.prop);
     break;
   //Python scripts section
   case 'removeactionosm':
