@@ -97,7 +97,7 @@ geokit distance input.geojson
  geokit line2polygon input.geojson > output.geojson
 ```
 
-### Set each feature into a row 
+### Set each feature into a row
 
 - Sets each feature into a row from FeatureCollection.
 
@@ -111,6 +111,12 @@ geokit distance input.geojson
 
 ```
 geokit fc2csv input.geojson > output.csv
+```
+
+### Add on each Feature
+
+```
+geokit addattributefc input.geojson --prop "type=hospital" > output.geojson
 ```
 
 ### Filter features by property
@@ -139,7 +145,7 @@ geokit filterbygeometry input.geojson --geos <geometry_types> > ouput.geojson
 geokit countfeature input.geojson --prop building=* 
 ```
 
-### Get area per each feature into the geojson file
+### Set area on each feature in a geojson file
 
 - Gets the area in km² of each feature (polygon) into a geojson file and it will generate a new geojson file with all features plus an area property.
 
@@ -147,12 +153,19 @@ geokit countfeature input.geojson --prop building=*
 geokit featurearea input.geojson > output.geojson  
 ```
 
+### Set distance in kilometers on each feature in a geojson file
+
+```
+geokit featuredistance input.geojson > output.geojson  
+```
+
+
 ### Count features by area size
 
 - Counts features larger than the given area size in km². Applicable for polygons.
 
 ```
-geokit countbysize input.geojson --psize=1000   
+geokit countbysize input.geojson --psize=1000
 ```
 
 

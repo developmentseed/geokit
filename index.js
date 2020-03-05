@@ -50,6 +50,9 @@ switch (action) {
   case 'featurearea':
     require('./src/featurearea')(inputFile);
     break;
+  case 'featuredistance':
+    require('./src/featuredistance')(inputFile);
+    break;
   case 'countbysize':
     require('./src/countbysize')(inputFile, argv.psize);
     break;
@@ -77,6 +80,9 @@ switch (action) {
   case 'splitbyzoom':
     require('./src/splitbygrid')(inputFile, argv.folder, argv.zoom);
     break;
+  case 'addattributefc':
+    require('./src/addattributefc')(inputFile, argv.prop);
+    break;
   //Python scripts section
   case 'removeactionosm':
     scriptPath = path.join(__dirname, '/python-scripts/remove_acction_obj.py');
@@ -100,7 +106,7 @@ switch (action) {
     break;
   case 'cvat-xml2csv':
     scriptPath = path.join(__dirname, '/python-scripts/cvat-xml2csv.py');
-    cmd = ['python', scriptPath, argv.full ? '--full': '', inputFile];
+    cmd = ['python', scriptPath, argv.full ? '--full' : '', inputFile];
     exec(cmd.join(' '), outputFunction);
     break;
   case 'downsized-imgs':
