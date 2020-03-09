@@ -12,6 +12,7 @@ setup(
         'console_scripts': [
             'cvat_smallbox=ml_script.cvat_smallbox.__init__:main',
             'cvat_intersectionbox=ml_script.cvat_intersectionbox.__init__:main',
+            'rl_schoolspoint=ml_script.rl_schoolspoint.__init__:main',
 
         ],
     },

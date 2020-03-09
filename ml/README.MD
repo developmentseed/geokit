@@ -32,3 +32,15 @@ find the boxes that intersect and are greater than the tolerance, for default to
 ```
  docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit-ml:latest geokit cvat_intersectionbox -i <CVAT_XML> -t <TOLERANCE>  > output.csv
 ``` 
+
+## schools point
+
+find school in [international schools database](https://www.international-schools-database.com)  and get point if exist. 
+
+|COMMAND|ALIAS|DESCRIPTION|
+|---|---|---|
+|city|-c|name of city|
+
+```
+ docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit-ml:latest geokit rl_schoolspoint -c <CITY_NAME> > output.geojson
+``` 

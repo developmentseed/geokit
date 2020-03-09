@@ -1,8 +1,15 @@
+beautifulsoup4==4.8.2
+certifi==2019.11.28
+chardet==3.0.4
 Click==7.0
 funcy==1.14
+idna==2.9
 numpy==1.18.1
 pandas==1.0.1
 python-dateutil==2.8.1
 pytz==2019.3
+requests==2.23.0
 Shapely==1.7.0
 six==1.14.0
+soupsieve==2.0
+urllib3==1.25.8
