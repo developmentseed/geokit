@@ -73,6 +73,14 @@ geokit bbox2fc --bbox="0, 0, 10, 10" > output.geojson
 geokit buffer input.geojson --unit=meters --radius=10000  > output.geojson
 ```
 
+### Feature to square
+
+- Creates features' square for a given radius in meters, in case of Polygon and LineString the script takes the centroid to generate the square
+
+```
+geokit fc2square input.geojson --radius=40  > output.geojson
+```
+
 ### Clip
 
 - Gets only the features that are inside the given boundary and it deletes all features outside the boundary.

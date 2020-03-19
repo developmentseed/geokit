@@ -23,6 +23,9 @@ switch (action) {
   case 'buffer':
     require('./src/buffer')(inputFile, argv.unit, argv.radius);
     break;
+  case 'fc2square':
+    require('./src/fc2square')(inputFile, argv.radius);
+    break;
   case 'clip':
     require('./src/clip')(inputFile, argv._[2]);
     break;
