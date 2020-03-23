@@ -187,6 +187,13 @@ geokit countbysize input.geojson --psize=1000
 geokit difference <file1.geojson>  <file2.geojson> --key=school_code
 ```
 
+### Keep attributes in feature
+
+
+```
+geokit keepattributes <file1.geojson>  --keys="id,power,timestamp" > output.geojson
+```
+
 ### Duplicate objects by an attribute
 
 - Gets the duplicate objects, identified by a unique attribute or primary key.

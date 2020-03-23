@@ -86,6 +86,9 @@ switch (action) {
   case 'addattributefc':
     require('./src/addattributefc')(inputFile, argv.prop);
     break;
+  case 'keepattributes':
+    require('./src/keepattributes')(inputFile, argv.keys);
+    break;
   //Python scripts section
   case 'removeactionosm':
     scriptPath = path.join(__dirname, '/python-scripts/remove_acction_obj.py');
