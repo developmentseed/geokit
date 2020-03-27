@@ -7,7 +7,6 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-
 def toCSV(file):
     tree = etree.parse(file)
     images = tree.findall(".//image")
@@ -19,7 +18,6 @@ def toCSV(file):
         print("%s,%s,%s,%s,%s" % (image.attrib['id'], image.attrib['width'],
                                   image.attrib['height'], '/'.join(imageName[:-1]), imageName[len(imageName)-1]))
 
-
 def toCSVFull(file):
     tree = etree.parse(file)
     images = tree.findall(".//image")
@@ -30,16 +28,21 @@ def toCSVFull(file):
         for box in boxes:
             attributes = box.findall(".//attribute")
             obj = {
-                "id": image.attrib['id'],
-                "width": image.attrib['width'],
-                "height": image.attrib['height'],
-                "path": '/'.join(imageName[:-1]),
-                "image": imageName[len(imageName)-1]
+                "img_id": image.attrib['id'],
+                "img_width": image.attrib['width'],
+                "img_height": image.attrib['height'],
+                "img_path": '/'.join(imageName[:-1]),
+                "img_name": imageName[len(imageName)-1],
+                "box_label": box.attrib['label'],
+                "box_occluded": box.attrib['occluded'],
+                "box_xtl": box.attrib['xtl'],
+                "box_ytl": box.attrib['ytl'],
+                "box_xbr": box.attrib['xbr'],
+                "box_ybr": box.attrib['ybr']
             }
             for attr in attributes:
-                obj[attr.attrib['name']] = attr.text
+                obj["box_attr_" + attr.attrib['name']] = attr.text
             objs.append(obj)
-
     print(','.join(objs[0].keys()))
     for row in objs:
         print(','.join(row.values()))

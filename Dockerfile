@@ -106,6 +106,9 @@ RUN git clone https://github.com/mapbox/mbtiles-extracts.git && cd mbtiles-extra
 RUN apt-get -y install libjpeg-dev libpng-dev
 RUN pip install lycon
 
+# Install csv2geojson
+RUN npm install -g csv2geojson
+
 # Copy geokit to container
 RUN mkdir /geokit
 WORKDIR /geokit
