@@ -194,6 +194,13 @@ geokit difference <file1.geojson>  <file2.geojson> --key=school_code
 geokit keepattributes <file1.geojson>  --keys="id,power,timestamp" > output.geojson
 ```
 
+### Rename key in properties
+
+
+```
+geokit renamekey <file1.geojson>  --key="idBuilding>id" > output.geojson
+```
+
 ### Duplicate objects by an attribute
 
 - Gets the duplicate objects, identified by a unique attribute or primary key.

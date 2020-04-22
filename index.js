@@ -89,6 +89,9 @@ switch (action) {
   case 'keepattributes':
     require('./src/keepattributes')(inputFile, argv.keys);
     break;
+  case 'renamekey':
+    require('./src/renamekey')(inputFile, argv.key);
+    break;
   //Python scripts section
   case 'removeactionosm':
     scriptPath = path.join(__dirname, '/python-scripts/remove_acction_obj.py');
