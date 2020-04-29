@@ -17,7 +17,7 @@ find the boxes with an area smaller than the image, for default tolerance is 1 (
 |tolerance|-t|tolerance to filter|
 
 ```
- docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit-ml:latest geokit cvat_smallbox -i <CVAT_XML> -t <TOLERANCE>  > output.csv
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit-ml:latest cvat_smallbox -i <CVAT_XML> -t <TOLERANCE>  > output.csv
 ```
 
 ## intersection box
@@ -30,7 +30,7 @@ find the boxes that intersect and are greater than the tolerance, for default to
 |tolerance|-t|tolerance to filter|
 
 ```
- docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit-ml:latest geokit cvat_intersectionbox -i <CVAT_XML> -t <TOLERANCE>  > output.csv
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit-ml:latest cvat_intersectionbox -i <CVAT_XML> -t <TOLERANCE>  > output.csv
 ``` 
 
 ## schools point
@@ -42,5 +42,21 @@ find school in [international schools database](https://www.international-school
 |city|-c|name of city|
 
 ```
- docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit-ml:latest geokit rl_schoolspoint -c <CITY_NAME> > output.geojson
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit-ml:latest rl_schoolspoint -c <CITY_NAME> > output.geojson
+``` 
+
+## geo generate id
+
+Addig an <id_label> in the `PROPERTIES` in a geojson file
+
+|COMMAND|ALIAS|DESCRIPTION|
+|---|---|---|
+|input file|-i|path to cvat xml file|
+|label id|-l|label for id|
+|start count|-s|first id|
+|zeros|-z|adds zeros at the beginning of the id|
+
+
+```
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit-ml:latest geo_generateid -i <GEOJSON_PATH> > output.geojson
 ``` 

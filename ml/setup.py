@@ -14,6 +14,8 @@ setup(
             'cvat_intersectionbox=ml_script.cvat_intersectionbox.__init__:main',
             'rl_schoolspoint=ml_script.rl_schoolspoint.__init__:main',
 
+            'geo_generateid=ml_script.geo_generateid.__init__:main',
+
         ],
     },
 )
