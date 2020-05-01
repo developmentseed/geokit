@@ -53,6 +53,9 @@ switch (action) {
   case 'featurearea':
     require('./src/featurearea')(inputFile);
     break;
+  case 'featurebbox':
+    require('./src/featurebbox')(inputFile);
+    break;
   case 'featuredistance':
     require('./src/featuredistance')(inputFile);
     break;
