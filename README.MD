@@ -370,3 +370,13 @@ geojson-pick PROPERTYNAME1 < input.geojson > output.geojson
 ```
 geokit dosm -d ayac.geojson --api=overpass --zoom=16
 ```
+
+
+### [geojson-flatten](https://github.com/tmcw/geojson-flatten)
+
+- Flatten multi geometries into normal geometries
+
+
+```
+geojson-flatten input.geojson > flattened.geojson
+```
