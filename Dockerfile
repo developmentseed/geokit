@@ -44,6 +44,8 @@ RUN npm install -g geojsontoosm
 RUN npm install -g geojson2poly 
 RUN npm install -g geojson-pick
 RUN npm install -g @mapbox/geojson-merge
+# https://github.com/tmcw/geojson-flatten
+RUN npm install -g geojson-flatten
 
 # Install osmconvert and osmfilter
 RUN wget -O - http://m.m.i24.cc/osmconvert.c | cc -x c - -lz -O3 -o osmconvert
