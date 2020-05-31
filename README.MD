@@ -155,10 +155,16 @@ geokit countfeature input.geojson --prop building=*
 
 ### Set area on each feature in a geojson file
 
-- Gets the area in km² of each feature (polygon) into a geojson file and it will generate a new geojson file with all features plus an area property.
+- Gets the area in m² of each feature (polygon) into a geojson file and it will generate a new geojson file with all features plus an area property.
 
 ```
 geokit featurearea input.geojson > output.geojson  
+```
+
+### Set bbox on each feature in a geojson file
+
+```
+geokit featurebbox input.geojson > output.geojson  
 ```
 
 ### Set distance in kilometers on each feature in a geojson file
@@ -192,6 +198,13 @@ geokit difference <file1.geojson>  <file2.geojson> --key=school_code
 
 ```
 geokit keepattributes <file1.geojson>  --keys="id,power,timestamp" > output.geojson
+```
+
+### Rename key in properties
+
+
+```
+geokit renamekey <file1.geojson>  --key="idBuilding>id" > output.geojson
 ```
 
 ### Duplicate objects by an attribute

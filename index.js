@@ -53,6 +53,9 @@ switch (action) {
   case 'featurearea':
     require('./src/featurearea')(inputFile);
     break;
+  case 'featurebbox':
+    require('./src/featurebbox')(inputFile);
+    break;
   case 'featuredistance':
     require('./src/featuredistance')(inputFile);
     break;
@@ -88,6 +91,9 @@ switch (action) {
     break;
   case 'keepattributes':
     require('./src/keepattributes')(inputFile, argv.keys);
+    break;
+  case 'renamekey':
+    require('./src/renamekey')(inputFile, argv.key);
     break;
   //Python scripts section
   case 'removeactionosm':
