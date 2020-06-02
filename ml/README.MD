@@ -47,7 +47,7 @@ docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit-ml:latest rl_schoolsp
 
 ## geo generate id
 
-Addig a key  `<id_label>` in the `PROPERTIES` in a geojson file, the value of `id` can start in `1` or `,start_count.`.
+Addig a key  `<id_label>` in the `PROPERTIES` in a geojson file, the value of `id` can start in `1` or `start_count`.
 
 |COMMAND|ALIAS|REQUIRED|DESCRIPTION|
 |---|---|--|---|
