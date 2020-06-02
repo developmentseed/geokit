@@ -5,8 +5,8 @@ import json
 @click.command()
 @click.option("--in", "-i", "in_file", required=True,
               help="Path to geojson file to be processed.", )
-@click.option("--id_label", "-l", default='id', help="label for id")
-@click.option("--id_start", "-s", default=1, help="first id")
+@click.option("--id_label", "-l", default='id', help="key for id")
+@click.option("--id_start", "-s", default=1, help="value to start id")
 @click.option("--zeros", "-z", default=0,
               help="adds zeros at the beginning of the id")
 def process(in_file, id_label, id_start, zeros):
