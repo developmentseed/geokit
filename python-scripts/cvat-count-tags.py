@@ -56,8 +56,8 @@ for i in range(1, len(sys.argv)):
     num_images += num_images_i
     num_images_with_box += num_images_wbox
 
-print("Total Images: %s" % (num_images))
-print("Total Images with box: %s" % (num_images_with_box))
-
 for key in stats.keys():
     print("%s,%s" % (key, stats[key]))
+
+print("Total Images: %s" % (num_images))
+print("Total Images with box: %s" % (num_images_with_box))
