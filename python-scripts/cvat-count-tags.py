@@ -1,6 +1,5 @@
 # encoding=utf8
 # !/usr/bin/python
-import sys
 import string
 from lxml import etree
 import sys
@@ -22,6 +21,7 @@ except NameError:
 stats = {}
 num_images = 0
 num_images_with_box = 0
+
 
 def count(file):
     tree = etree.parse(file)
@@ -46,18 +46,18 @@ def count(file):
         else:
             stats[box.attrib['label']] = 1
     for image in images:
-        if image.findall(".//attribute"):
+        if image.findall(".//box"):
             num_images_w_box_int += 1
     return num_images_int, num_images_w_box_int
 
 
 for i in range(1, len(sys.argv)):
-    num_images_int, num_images_w_box_int = count(sys.argv[i])
-    num_images += num_images_int
-    num_images_with_box += num_images_w_box_int
+    num_images_i, num_images_wbox = count(sys.argv[i])
+    num_images += num_images_i
+    num_images_with_box += num_images_wbox
 
-print("Total Images:%s" % (num_images))
-print("Total Images with box:%s" % (num_images_with_box))
+print("Total Images: %s" % (num_images))
+print("Total Images with box: %s" % (num_images_with_box))
 
 for key in stats.keys():
     print("%s,%s" % (key, stats[key]))
