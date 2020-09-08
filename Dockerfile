@@ -90,7 +90,7 @@ RUN make && make install
 
 # Install osmconv
 RUN git clone https://github.com/developmentseed/osm-coverage-tiles.git
-RUN cd osm-coverage-tiles && git checkout -b 63ff18169bc7bf9e6ee253f26bc2f4e855d59af6 && npm install && npm link
+RUN cd osm-coverage-tiles && git checkout -b population && npm install && npm link
 
 # Install PIP
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
@@ -108,6 +108,8 @@ RUN pip install lycon
 
 # Install csv2geojson
 RUN npm install -g csv2geojson
+# Install flatten
+RUN npm install -g geojson-flatten 
 
 # Copy geokit to container
 RUN mkdir /geokit
