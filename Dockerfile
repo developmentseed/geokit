@@ -90,7 +90,7 @@ RUN make && make install
 
 # Install osmconv
 RUN git clone https://github.com/developmentseed/osm-coverage-tiles.git
-RUN cd osm-coverage-tiles && git checkout -b population && npm install && npm link
+RUN cd osm-coverage-tiles && git checkout population && npm install && npm link
 
 # Install PIP
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
