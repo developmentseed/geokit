@@ -8,10 +8,9 @@ module.exports = function (file, unit, radius, prop) {
     const geojson = JSON.parse(fs.readFileSync(file).toString());
     let fc = turf.featureCollection([]);
     geojson.features.forEach(function (feature) {
-      prop_value = 1
+      let prop_value = 1
       if (prop && feature['properties'][prop])
         prop_value = feature['properties'][prop]
-      prop_value = feature['properties'][prop] || 1
       let buffered = turf.buffer(feature, radius * prop_value, {
         units: unit
       });
