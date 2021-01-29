@@ -21,7 +21,7 @@ switch (action) {
     require('./src/bbox2fc')(argv.bbox);
     break;
   case 'buffer':
-    require('./src/buffer')(inputFile, argv.unit, argv.radius);
+    require('./src/buffer')(inputFile, argv.unit, argv.radius, argv.prop);
     break;
   case 'fc2square':
     require('./src/fc2square')(inputFile, argv.radius);
