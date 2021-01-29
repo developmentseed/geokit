@@ -93,8 +93,8 @@ RUN git clone https://github.com/developmentseed/osm-coverage-tiles.git
 RUN cd osm-coverage-tiles && git checkout -b 63ff18169bc7bf9e6ee253f26bc2f4e855d59af6 && npm install && npm link
 
 # Install PIP
-RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-RUN python get-pip.py --force-reinstall
+RUN curl https://bootstrap.pypa.io/2.7/get-pip.py --output get-pip.py 
+RUN python get-pip.py
 
 # Install csvkit
 RUN git clone -b 1.0.4 --depth=1 https://github.com/wireservice/csvkit.git && cd csvkit && pip install -r requirements-py2.txt && python setup.py install
@@ -108,6 +108,9 @@ RUN pip install lycon
 
 # Install csv2geojson
 RUN npm install -g csv2geojson
+
+# Install Mapbox cli
+RUN pip install mapboxcli
 
 # Copy geokit to container
 RUN mkdir /geokit
