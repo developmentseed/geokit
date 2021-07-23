@@ -35,17 +35,17 @@ jobs:
       - run:
           name: Build application docker node image
           command: |
-            docker build --cache-from=geokit -t geokit.node Dockerfile.node
+            docker build --cache-from=geokit.node -t geokit.node Dockerfile.node
 
       - run:
           name: Build application docker java image
           command: |
-            docker build --cache-from=geokit -t geokit.java Dockerfile.java
+            docker build --cache-from=geokit.java -t geokit.java Dockerfile.java
 
       - run:
           name: Build application docker python image
           command: |
-            docker build --cache-from=geokit -t geokit.python Dockerfile.python
+            docker build --cache-from=geokit.python -t geokit.python Dockerfile.python
 
       - run:
           name: Save docker node image cache
@@ -91,7 +91,7 @@ jobs:
             docker tag geokit.python developmentseed/geokit:${VERSION_PYTHON}
 
             docker login --username $DOCKER_USER --password $DOCKER_TOKEN
-            
+
             docker push developmentseed/geokit:${VERSION_NODE}
             docker push developmentseed/geokit:${VERSION_JAVA}
             docker push developmentseed/geokit:${VERSION_PYTHON}
