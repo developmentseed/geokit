@@ -51,19 +51,19 @@ jobs:
           name: Save docker node image cache
           command: |
             mkdir -p caches
-            docker save -o caches/geokit.node.tar geokit
+            docker save -o caches/geokit.node.tar geokit.node
 
       - run:
           name: Save docker python image cache
           command: |
             mkdir -p caches
-            docker save -o caches/geokit.python.tar geokit
+            docker save -o caches/geokit.python.tar geokit.python
 
       - run:
           name: Save docker java image cache
           command: |
             mkdir -p caches
-            docker save -o caches/geokit.java.tar geokit
+            docker save -o caches/geokit.java.tar geokit.java
 
       - save_cache:
           key: v1-{{ .Branch }}-{{ epoch }}
