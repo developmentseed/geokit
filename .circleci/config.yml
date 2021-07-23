@@ -35,17 +35,17 @@ jobs:
       - run:
           name: Build application docker node image
           command: |
-            docker build --cache-from=geokit.node -t geokit.node Dockerfile.node
+            docker build --cache-from=geokit.node -t geokit.node /root/project/Dockerfile.node
 
       - run:
           name: Build application docker java image
           command: |
-            docker build --cache-from=geokit.java -t geokit.java Dockerfile.java
+            docker build --cache-from=geokit.java -t geokit.java /root/project/Dockerfile.java
 
       - run:
           name: Build application docker python image
           command: |
-            docker build --cache-from=geokit.python -t geokit.python Dockerfile.python
+            docker build --cache-from=geokit.python -t geokit.python /root/project/Dockerfile.python
 
       - run:
           name: Save docker node image cache
