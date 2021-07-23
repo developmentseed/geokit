@@ -21,7 +21,10 @@ switch (action) {
     require('./src/bbox2fc')(argv.bbox);
     break;
   case 'buffer':
-    require('./src/buffer')(inputFile, argv.unit, argv.radius);
+    require('./src/buffer')(inputFile, argv.unit, argv.radius, argv.prop);
+    break;
+  case 'fc2square':
+    require('./src/fc2square')(inputFile, argv.radius);
     break;
   case 'clip':
     require('./src/clip')(inputFile, argv._[2]);
@@ -50,6 +53,12 @@ switch (action) {
   case 'featurearea':
     require('./src/featurearea')(inputFile);
     break;
+  case 'featurebbox':
+    require('./src/featurebbox')(inputFile);
+    break;
+  case 'featuredistance':
+    require('./src/featuredistance')(inputFile);
+    break;
   case 'countbysize':
     require('./src/countbysize')(inputFile, argv.psize);
     break;
@@ -77,6 +86,15 @@ switch (action) {
   case 'splitbyzoom':
     require('./src/splitbygrid')(inputFile, argv.folder, argv.zoom);
     break;
+  case 'addattributefc':
+    require('./src/addattributefc')(inputFile, argv.prop);
+    break;
+  case 'keepattributes':
+    require('./src/keepattributes')(inputFile, argv.keys);
+    break;
+  case 'renamekey':
+    require('./src/renamekey')(inputFile, argv.key);
+    break;
   //Python scripts section
   case 'removeactionosm':
     scriptPath = path.join(__dirname, '/python-scripts/remove_acction_obj.py');
@@ -100,11 +118,21 @@ switch (action) {
     break;
   case 'cvat-xml2csv':
     scriptPath = path.join(__dirname, '/python-scripts/cvat-xml2csv.py');
-    cmd = ['python', scriptPath, argv.full ? '--full': '', inputFile];
+    cmd = ['python', scriptPath, argv.full ? '--full' : '', inputFile];
     exec(cmd.join(' '), outputFunction);
     break;
   case 'downsized-imgs':
     scriptPath = path.join(__dirname, '/python-scripts/downsized-imgs.py');
+    cmd = ['python', scriptPath, inputFile];
+    exec(cmd.join(' '), outputFunction);
+    break;
+  case 'cvat-npz2xml':
+    scriptPath = path.join(__dirname, '/python-scripts/cvat-npz2xml.py');
+    cmd = ['python', scriptPath, inputFile, argv.imgPath, argv.imgLabel];
+    exec(cmd.join(' '), outputFunction);
+    break;
+  case 'cvat-xml2npz':
+    scriptPath = path.join(__dirname, '/python-scripts/cvat-xml2npz.py');
     cmd = ['python', scriptPath, inputFile];
     exec(cmd.join(' '), outputFunction);
     break;

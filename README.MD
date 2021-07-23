@@ -73,6 +73,14 @@ geokit bbox2fc --bbox="0, 0, 10, 10" > output.geojson
 geokit buffer input.geojson --unit=meters --radius=10000  > output.geojson
 ```
 
+### Feature to square
+
+- Creates features' square for a given radius in meters, in case of Polygon and LineString the script takes the centroid to generate the square
+
+```
+geokit fc2square input.geojson --radius=40  > output.geojson
+```
+
 ### Clip
 
 - Gets only the features that are inside the given boundary and it deletes all features outside the boundary.
@@ -97,7 +105,7 @@ geokit distance input.geojson
  geokit line2polygon input.geojson > output.geojson
 ```
 
-### Set each feature into a row 
+### Set each feature into a row
 
 - Sets each feature into a row from FeatureCollection.
 
@@ -111,6 +119,12 @@ geokit distance input.geojson
 
 ```
 geokit fc2csv input.geojson > output.csv
+```
+
+### Add on each Feature
+
+```
+geokit addattributefc input.geojson --prop "type=hospital" > output.geojson
 ```
 
 ### Filter features by property
@@ -139,20 +153,33 @@ geokit filterbygeometry input.geojson --geos <geometry_types> > ouput.geojson
 geokit countfeature input.geojson --prop building=* 
 ```
 
-### Get area per each feature into the geojson file
+### Set area on each feature in a geojson file
 
-- Gets the area in km² of each feature (polygon) into a geojson file and it will generate a new geojson file with all features plus an area property.
+- Gets the area in m² of each feature (polygon) into a geojson file and it will generate a new geojson file with all features plus an area property.
 
 ```
 geokit featurearea input.geojson > output.geojson  
 ```
+
+### Set bbox on each feature in a geojson file
+
+```
+geokit featurebbox input.geojson > output.geojson  
+```
+
+### Set distance in kilometers on each feature in a geojson file
+
+```
+geokit featuredistance input.geojson > output.geojson  
+```
+
 
 ### Count features by area size
 
 - Counts features larger than the given area size in km². Applicable for polygons.
 
 ```
-geokit countbysize input.geojson --psize=1000   
+geokit countbysize input.geojson --psize=1000
 ```
 
 
@@ -164,6 +191,20 @@ geokit countbysize input.geojson --psize=1000
 
 ```
 geokit difference <file1.geojson>  <file2.geojson> --key=school_code
+```
+
+### Keep attributes in feature
+
+
+```
+geokit keepattributes <file1.geojson>  --keys="id,power,timestamp" > output.geojson
+```
+
+### Rename key in properties
+
+
+```
+geokit renamekey <file1.geojson>  --key="idBuilding>id" > output.geojson
 ```
 
 ### Duplicate objects by an attribute
