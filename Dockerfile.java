@@ -17,5 +17,8 @@ RUN tar -xvzf "$PWD"/package/build/distribution/*.tgz -C "$PWD"/dist/
 RUN ln -s "$PWD"/dist/bin/osmosis /usr/bin/osmosis
 RUN osmosis --version 2>&1 | grep "Osmosis Version"
 
+# install aws
+RUN apt-get install -y awscli
+
 VOLUME /mnt/data
 WORKDIR /mnt/data
