@@ -1,5 +1,4 @@
 FROM openjdk:11
-LABEL maintainer "developmentseed"
 
 RUN apt-get update
 
@@ -11,7 +10,7 @@ RUN apt-get install -y \
 # Installing osmosis
 RUN git clone https://github.com/openstreetmap/osmosis.git
 WORKDIR osmosis
-RUN git checkout 9cfb8a06d9bcc948f34a6c8df31d878903d529fc
+# RUN git checkout 9cfb8a06d9bcc948f34a6c8df31d878903d529fc
 RUN mkdir dist
 RUN ./gradlew assemble
 RUN tar -xvzf "$PWD"/package/build/distribution/*.tgz -C "$PWD"/dist/
