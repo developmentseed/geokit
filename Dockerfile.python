@@ -1,10 +1,11 @@
 FROM lambgeo/lambda-gdal:3.2-python3.8
 
 LABEL maintainer "developmentseed"
+PYTHONIOENCODING="UTF-8"  
 
 ENV PATH=/script:$PATH
 ENV PYTHONPATH  "${PYTHONPATH}:/script"
-COPY /py_scripts /script
+COPY /python-scripts /script
 WORKDIR /script
 
 RUN pip install --no-cache-dir -r requirements.txt

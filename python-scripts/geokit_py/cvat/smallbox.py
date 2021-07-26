@@ -1,14 +1,7 @@
 import logging
-import click
+from geokit_py.utils.code import (get_segments_root, read_xml)
 
-from ..utils.code import (get_segments_root, read_xml)
-
-
-@click.command()
-@click.option("--in", "-i", "in_file", required=True, help="Path to xml cvt file to be processed.", )
-@click.option("--toleranci", "-t", default=1.0,
-              help="toleranci to filter box area, default 1 (1% area of image).")
-def process(in_file, toleranci):
+def smallbox(in_file, toleranci):
     """
     Processes the area of cvt file and filter small boxes
     """
@@ -54,7 +47,3 @@ def process(in_file, toleranci):
         # print version
         for i in list_image_err:
             print(','.join(map(str, i)))
-
-
-if __name__ == '__main__':
-    process()

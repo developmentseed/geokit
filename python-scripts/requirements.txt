@@ -13,7 +13,7 @@ OWSLib
 joblib
 geojson
 mapboxcli
-lycon
 geopy
 pyproj
 pylint
+lxml

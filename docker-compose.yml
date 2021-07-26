@@ -1,17 +1,17 @@
 version: '3'
 services:
-  geokit.js:
-    image: developmentseed/geokit.js:latest
-    build:
-      context: ./
-      dockerfile: Dockerfile.node
-    volumes:
-      - ./:/mnt/data
-    environment:
-      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
-      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+  # geokit.js:
+  #   image: developmentseed/geokit.js:latest
+  #   build:
+  #     context: ./
+  #     dockerfile: Dockerfile.node
+  #   volumes:
+  #     - ./:/mnt/data
+  #   environment:
+  #     AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+  #     AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
   geokit.py:
-    image: developmentseed/geokit.py:latest
+    image: developmentseed/geokit.py:v2
     build:
       context: ./
       dockerfile: Dockerfile.python
