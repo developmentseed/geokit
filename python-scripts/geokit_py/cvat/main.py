@@ -15,7 +15,7 @@ def cli():
 
 @cli.command("intersectionbox")
 @click.option(
-    "--in_file", required=True, type=str, help="Path to xml cvt file to be processed."
+    "--in_file", required=True, type=str, help="Path to xml cvat file to be processed."
 )
 @click.option(
     "--toleranci",
@@ -34,7 +34,7 @@ def run_intersectionbox(in_file, toleranci):
 
 @cli.command("smallbox")
 @click.option(
-    "--in_file", required=True, type=str, help="Path to xml cvt file to be processed."
+    "--in_file", required=True, type=str, help="Path to xml cvat file to be processed."
 )
 @click.option(
     "--toleranci",
@@ -44,7 +44,7 @@ def run_intersectionbox(in_file, toleranci):
 )
 def run_smallbox(in_file, toleranci):
     """
-    Processes the area of cvt file and filter small boxes
+    Processes the area of cvat file and filter small boxes
     """
     from .smallbox import smallbox
 
@@ -57,7 +57,7 @@ def run_smallbox(in_file, toleranci):
     required=True,
     multiple=True,
     type=str,
-    help="Path to xml cvt file to be processed.",
+    help="Path to xml cvat file to be processed.",
 )
 def run_count_tag(xml_file):
     """
@@ -79,19 +79,22 @@ def run_count_tag(xml_file):
 
 @cli.command("xml2csv")
 @click.option(
-    "--xml_file", required=True, type=str, help="Path to xml cvt file to be processed."
+    "--xml_file", required=True, type=str, help="Path to xml cvat file to be processed."
+)
+@click.option(
+    "--csv_file", required=True, type=str, help="Path to csv file  output."
 )
 @click.option("--full", default=False, type=bool, help="full mode")
-def run_xml2csv(xml_file, full):
+def run_xml2csv(xml_file, csv_file, full):
     """
     Convert xml to csv file
     """
     from .xml2csv import to_csv, to_csv_full
 
     if full:
-        to_csv_full(xml_file)
+        to_csv_full(xml_file, csv_file)
     else:
-        to_csv(xml_file)
+        to_csv(xml_file, csv_file)
 
 
 @cli.command("npz2xml")
@@ -135,9 +138,9 @@ def run_downsized_imgs(img_path, output_path):
 
 @cli.command("fix_ordinal_suffixes")
 @click.option(
-    "--xml_input", required=True, type=str, help="Path to xml cvt file to be processed."
+    "--xml_input", required=True, type=str, help="Path to xml cvat file to be processed."
 )
-@click.option("--xml_output", required=True, type=str, help="Path to xml cvt output.")
+@click.option("--xml_output", required=True, type=str, help="Path to xml cvat output.")
 def run_fix_ordinal_suffixes(xml_input, xml_output):
     """An Awesome doc."""
     from .fix_ordinal_suffixes import fix_ordinal_suffixes

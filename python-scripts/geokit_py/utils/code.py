@@ -5,6 +5,7 @@ from xml.etree import ElementTree as ET
 
 import click
 from shapely.geometry import Polygon
+from smart_open import open
 
 
 def get_segments_root(root, v=False):
@@ -33,7 +34,8 @@ def read_xml(in_file, v=False):
     """
 
     try:
-        tree = ET.parse(in_file)
+        with open(in_file, encoding="utf8") as file:
+            tree = ET.parse(file)
         if v:
             click.echo(click.style("--- xml readed :) ", fg="bright_cyan", bold=True))
         return tree.getroot()

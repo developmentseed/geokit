@@ -1,6 +1,7 @@
 """cvat.fix_ordinal_suffixes: Skeleton of a function."""
 
 from lxml import etree
+from smart_open import open
 
 
 def ordinal(n):
@@ -13,7 +14,8 @@ def ordinal(n):
 
 def fix_ordinal_suffixes(xml_input, xml_output):
     """An Awesome doc."""
-    tree = etree.parse(xml_input)
+    with open(xml_input, encoding="utf8") as file:
+        tree = etree.parse(file)
     addr_streets = tree.findall(".//tag[@k='addr:street']")
 
     for addr_street in addr_streets:
@@ -27,7 +29,7 @@ def fix_ordinal_suffixes(xml_input, xml_output):
                 while i < len(new_name) and new_name[i].isdigit():
                     i += 1
                 num_bef = new_name[start:i]
-                if new_name[start + i : i + 1].isspace():
+                if new_name[start + i: i + 1].isspace():
                     num_aft = ordinal(int(num_bef))
                     new_name = new_name.replace(num_bef, num_aft)
 
@@ -37,9 +39,7 @@ def fix_ordinal_suffixes(xml_input, xml_output):
                     parent.attrib["action"] = "modify"
                 break
         print(f"- {old_name} > {new_name}")
-
-    xml = "<?xml version='1.0' encoding='UTF-8'?>\n" + etree.tostring(
-        tree, encoding="utf8"
-    ).replace('"', "'")
-    new_file = open(xml_output, "w")
-    new_file.write(xml)
+    xml_tree = etree.tostring(tree, encoding='utf8', pretty_print=True).decode("utf8").replace('"', "'")
+    with open(xml_output, "wb") as new_file:
+        new_file.write(b"<?xml version='1.0' encoding='UTF-8'?>\n")
+        new_file.write(bytes(xml_tree.encode("utf8")))

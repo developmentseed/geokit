@@ -1,32 +1,39 @@
 """cvat.xml2csv: Skeleton of a function."""
 
 from lxml import etree
+from smart_open import open
+import csv
+
+image_name = lambda image: image.attrib["name"].split("/")
 
 
-def to_csv(file):
+def to_csv(xml_file, csv_file):
     """An Awesome doc."""
-    tree = etree.parse(file)
+    with open(xml_file, encoding="utf8") as file:
+        tree = etree.parse(file)
     images = tree.findall(".//image")
-    num_imagesPRE = len(images)
-    boxes = tree.findall(".//box")
-    print("id,width,height,path,image")
-    for image in images:
-        image_name = image.attrib["name"].split("/")
-        print(
-            "%s,%s,%s,%s,%s"
-            % (
+    with open(csv_file, "w", encoding="UTF8", newline="") as f:
+        data = [
+            [
                 image.attrib["id"],
                 image.attrib["width"],
                 image.attrib["height"],
-                "/".join(image_name[:-1]),
-                image_name[len(image_name) - 1],
-            )
-        )
+                "/".join(image_name(image)[:-1]),
+                image_name(image)[len(image_name(image)) - 1],
+            ]
+            for image in images
+        ]
+
+        writer = csv.writer(f)
+        writer.writerow(["id", "width", "height", "path", "image"])
+        writer.writerows(data)
 
 
-def to_csv_full(file):
+def to_csv_full(in_file, csv_file):
     """An Awesome doc."""
-    tree = etree.parse(file)
+    with open(in_file, encoding="utf8") as file:
+        tree = etree.parse(file)
+
     images = tree.findall(".//image")
     objs = []
     for image in images:
@@ -50,6 +57,10 @@ def to_csv_full(file):
             for attr in attributes:
                 obj["box_attr_" + attr.attrib["name"]] = attr.text
             objs.append(obj)
-    print(",".join(objs[0].keys()))
-    for row in objs:
-        print(",".join(row.values()))
+    with open(csv_file, "w", encoding="UTF8", newline="") as f:
+        header = objs[0].keys()
+        data = [list(row.values()) for row in objs]
+
+        writer = csv.writer(f)
+        writer.writerow(header)
+        writer.writerows(data)
