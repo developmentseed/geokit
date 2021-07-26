@@ -1,3 +1,9 @@
+"""
+Script for find school in international schools database and get point if exist.
+
+Author: @developmentseed
+"""
+
 import click
 
 
@@ -11,7 +17,7 @@ import click
 )
 def main(city):
     """
-    Removes the objects with action=delete in a osm file.
+    Script for find school in international schools database and get point if exist.
     """
     from .code import process
 

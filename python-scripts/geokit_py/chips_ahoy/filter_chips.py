@@ -3,16 +3,17 @@ Author: @developmentseed
 """
 
 import json
+
+import affine
+import shapely
 from geojson import Feature
 from geojson import FeatureCollection as fc
-from smart_open import open
-import shapely
 from shapely.geometry import Point, box, mapping, shape
-import affine
+from smart_open import open
 
 
 def pixel2geo_point(feature):
-    """return Point from pixel"""
+    """return Point from pixel."""
     geom = shape(feature["geometry"])
     pointScale = feature["properties"]["pointScale"]
     pxbox = 0, 0, pointScale["x"], pointScale["y"]
@@ -29,7 +30,7 @@ def pixel2geo_point(feature):
 
 
 def center_tile(feature):
-    """Return feature center """
+    """Return feature center."""
     geom = shape(feature["geometry"])
     point = geom.centroid
     new_feature = Feature(properties=feature["properties"], geometry=mapping(point))
@@ -37,7 +38,7 @@ def center_tile(feature):
 
 
 def filter_chips(geojson_file, geojson_output):
-    """Run scrip"""
+    """Run scrip."""
     with open(geojson_file, encoding="utf8") as gfile:
         features = json.load(gfile).get("features", [])
     features_yes = [
@@ -89,4 +90,3 @@ def filter_chips(geojson_file, geojson_output):
 
     print(f"yes_tile => {len(features_yes)}")
     print(f"no_tile => {len(features_no)}")
-

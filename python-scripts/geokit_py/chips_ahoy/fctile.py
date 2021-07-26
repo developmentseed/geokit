@@ -5,8 +5,8 @@ Author: @developmentseed
 """
 import json
 import logging
-from uuid import uuid1
 from itertools import islice
+from uuid import uuid1
 
 import mercantile
 from geojson import FeatureCollection as fc
@@ -50,7 +50,7 @@ def fctile(geojson_file, zoom, url_map_service, geojson_output, chuck):
     if chuck:
         for k, i in enumerate(list(chunk(new_features, chuck))):
             with open(
-                    geojson_output.replace(".geojson", f"_{k}.geojson"), "w"
+                geojson_output.replace(".geojson", f"_{k}.geojson"), "w"
             ) as out_geo:
                 out_geo.write(
                     json.dumps(fc(i), ensure_ascii=False).encode("utf8").decode()
