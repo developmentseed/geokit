@@ -1,11 +1,7 @@
 from lxml import etree
-import sys
-
-stats = {}
-num_images = 0
 
 
-def count(file):
+def count_xml_tags(file, stats):
     tree = etree.parse(file)
     images = tree.findall(".//image")
     boxes = tree.findall(".//box")
@@ -26,12 +22,3 @@ def count(file):
         else:
             stats[box.attrib['label']] = 1
     return len(images)
-
-
-for i in range(1, len(sys.argv)):
-    num = count(sys.argv[i])
-    num_images = num_images + num
-
-print("Total Images:%s" % (num_images))
-for key in stats.keys():
-    print("%s,%s" % (key, stats[key]))
