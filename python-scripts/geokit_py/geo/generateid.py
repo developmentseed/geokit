@@ -2,8 +2,9 @@
 
 import json
 from uuid import uuid1
-from smart_open import open
+
 from geojson.feature import FeatureCollection as fc
+from smart_open import open
 
 
 def generateid(in_file, id_label, id_start, zeros, variation, output_file):

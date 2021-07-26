@@ -29,7 +29,7 @@ def fix_ordinal_suffixes(xml_input, xml_output):
                 while i < len(new_name) and new_name[i].isdigit():
                     i += 1
                 num_bef = new_name[start:i]
-                if new_name[start + i: i + 1].isspace():
+                if new_name[start + i : i + 1].isspace():
                     num_aft = ordinal(int(num_bef))
                     new_name = new_name.replace(num_bef, num_aft)
 
@@ -39,7 +39,11 @@ def fix_ordinal_suffixes(xml_input, xml_output):
                     parent.attrib["action"] = "modify"
                 break
         print(f"- {old_name} > {new_name}")
-    xml_tree = etree.tostring(tree, encoding='utf8', pretty_print=True).decode("utf8").replace('"', "'")
+    xml_tree = (
+        etree.tostring(tree, encoding="utf8", pretty_print=True)
+        .decode("utf8")
+        .replace('"', "'")
+    )
     with open(xml_output, "wb") as new_file:
         new_file.write(b"<?xml version='1.0' encoding='UTF-8'?>\n")
         new_file.write(bytes(xml_tree.encode("utf8")))

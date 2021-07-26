@@ -81,9 +81,7 @@ def run_count_tag(xml_file):
 @click.option(
     "--xml_file", required=True, type=str, help="Path to xml cvat file to be processed."
 )
-@click.option(
-    "--csv_file", required=True, type=str, help="Path to csv file  output."
-)
+@click.option("--csv_file", required=True, type=str, help="Path to csv file  output.")
 @click.option("--full", default=False, type=bool, help="full mode")
 def run_xml2csv(xml_file, csv_file, full):
     """
@@ -138,7 +136,10 @@ def run_downsized_imgs(img_path, output_path):
 
 @cli.command("fix_ordinal_suffixes")
 @click.option(
-    "--xml_input", required=True, type=str, help="Path to xml cvat file to be processed."
+    "--xml_input",
+    required=True,
+    type=str,
+    help="Path to xml cvat file to be processed.",
 )
 @click.option("--xml_output", required=True, type=str, help="Path to xml cvat output.")
 def run_fix_ordinal_suffixes(xml_input, xml_output):

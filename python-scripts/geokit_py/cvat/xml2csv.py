@@ -1,10 +1,14 @@
 """cvat.xml2csv: Skeleton of a function."""
 
-from lxml import etree
-from smart_open import open
 import csv
 
-image_name = lambda image: image.attrib["name"].split("/")
+from lxml import etree
+from smart_open import open
+
+
+def image_name(image):
+    """Split image name."""
+    return image.attrib["name"].split("/")
 
 
 def to_csv(xml_file, csv_file):
