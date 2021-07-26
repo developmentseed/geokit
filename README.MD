@@ -298,6 +298,55 @@ Functionalities outside Geokit into a Docker image.
 ```
 geojson-merge input1.geojson input2.geojson > output.geojson
 ```
+
+### [osmtogeojson](https://github.com/tyrasd/osmtogeojson)
+
+- Converts osm file to geojson format.
+
+```
+osmtogeojson input.osm > output.geojson
+```
+
+### [geojsontoosm](https://github.com/tyrasd/geojsontoosm)
+
+- Converts geojson file to osm format.
+
+```
+geojsontoosm input.geojson > output.osm
+```
+
+### [geojson2poly](https://www.npmjs.com/package/geojson2poly)
+
+- Converts geojson polygons to OpenStreetMap (OSM) poly format file.
+
+```
+geojson2poly input.geojson output.poly
+```
+
+### [geojson-pick](https://www.npmjs.com/package/geojson-pick)
+
+- Removes all but specified properties from features in a geojson FeatureCollection.
+
+```
+geojson-pick PROPERTYNAME1 < input.geojson > output.geojson
+```
+
+### [geojsplit](https://github.com/woodb/geojsplit)
+
+- Splits up a GeoJSON file into smaller GeoJSON files.
+
+```
+geojsplit --geometry-count 1000 --suffix-length 1 --output-directory output_files/ input.geojson
+```
+
+### [dosm](https://github.com/Rub21/dosm)
+
+- Download OpenStreetMap data for a polygon
+
+```
+geokit dosm -d ayac.geojson --api=overpass --zoom=16
+```
+
 # XMl to CSV ([CVAT](https://github.com/opencv/cvat)'s xml dump file) 
 
 - XML to CSV  only for [CVAT](https://github.com/opencv/cvat) dump files
@@ -341,45 +390,4 @@ It will return a file with the same `xml` file name with `npz` extension.
 
 ```
 docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:latest geokit cvat-count-tags imput.xml
-```
-
-### [osmtogeojson](https://github.com/tyrasd/osmtogeojson)
-
-- Converts osm file to geojson format.
-
-```
-osmtogeojson input.osm > output.geojson
-```
-
-### [geojsontoosm](https://github.com/tyrasd/geojsontoosm)
-
-- Converts geojson file to osm format.
-
-```
-    geojsontoosm input.geojson > output.osm
-```
-
-### [geojson2poly](https://www.npmjs.com/package/geojson2poly)
-
-- Converts geojson polygons to OpenStreetMap (OSM) poly format file.
-
-```
-geojson2poly input.geojson output.poly
-```
-
-### [geojson-pick](https://www.npmjs.com/package/geojson-pick)
-
-- Removes all but specified properties from features in a geojson FeatureCollection.
-
-```
-geojson-pick PROPERTYNAME1 < input.geojson > output.geojson
-```
-
-### [dosm](https://github.com/Rub21/dosm)
-
-- Download OpenStreetMap data for a polygon
-
-
-```
-geokit dosm -d ayac.geojson --api=overpass --zoom=16
 ```
