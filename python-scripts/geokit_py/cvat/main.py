@@ -1,8 +1,14 @@
+"""
+Script for cvat module
+Author: @developmentseed
+"""
+
 import click
 
 
 @click.group(chain=True)
 def cli():
+    """An Awesome doc."""
     click.echo(click.style("========= CVAT =============", fg="green"))
     pass
 
@@ -101,10 +107,10 @@ def run_npz2xml(npz_file, img_path, img_label):
     npz2xml(npz_file, img_path, img_label)
 
 
-@cli.command("npz2xml")
+@cli.command("xml2npz")
 @click.option("--xml_file", required=True, type=str, help="cvat xml dump file")
 @click.option("--npz_file", required=True, type=str, help="npz file")
-def run_npz2xml(xml_file, npz_file):
+def run_xml2npz(xml_file, npz_file):
     """
     NPZ file to XML cvat imput format
     """
@@ -133,7 +139,7 @@ def run_downsized_imgs(img_path, output_path):
 )
 @click.option("--xml_output", required=True, type=str, help="Path to xml cvt output.")
 def run_fix_ordinal_suffixes(xml_input, xml_output):
-    """ """
+    """An Awesome doc."""
     from .fix_ordinal_suffixes import fix_ordinal_suffixes
 
     fix_ordinal_suffixes(xml_input, xml_output)

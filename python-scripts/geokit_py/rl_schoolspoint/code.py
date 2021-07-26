@@ -1,20 +1,14 @@
-import click
-import requests
-from bs4 import BeautifulSoup
+"""rl_schoolspoint.process: Skeleton of a function."""
+
 import logging
 
+import requests
+from bs4 import BeautifulSoup
 
-@click.command()
-@click.option(
-    "--city",
-    "-c",
-    "city",
-    required=True,
-    help="Name of city.",
-)
+
 def process(city):
     """
-    Get points of schools from https://www.international-schools-database.com
+    Get points of schools from https://www.international-schools-database.com.
     """
     URL = f"https://www.international-schools-database.com/in/{city}"
     try:
@@ -47,7 +41,3 @@ def process(city):
     else:
         data = {"type": "FeatureCollection", "features": features}
         print(data)
-
-
-if __name__ == "__main__":
-    process()

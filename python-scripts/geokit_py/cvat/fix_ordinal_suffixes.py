@@ -1,7 +1,10 @@
+"""cvat.fix_ordinal_suffixes: Skeleton of a function."""
+
 from lxml import etree
 
 
 def ordinal(n):
+    """ordinal."""
     if 10 <= n % 100 < 20:
         return str(n) + "th"
     else:
@@ -9,6 +12,7 @@ def ordinal(n):
 
 
 def fix_ordinal_suffixes(xml_input, xml_output):
+    """An Awesome doc."""
     tree = etree.parse(xml_input)
     addr_streets = tree.findall(".//tag[@k='addr:street']")
 

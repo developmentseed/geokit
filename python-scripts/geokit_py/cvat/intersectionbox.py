@@ -1,11 +1,14 @@
-import pandas as pd
-import logging
-import itertools
+"""cvat.intersectionbox: Skeleton of a function."""
 
-from geokit_py.utils.code import get_segments_root, read_xml, make_polygon
+import itertools
+import logging
+
+import pandas as pd
+from geokit_py.utils.code import get_segments_root, make_polygon, read_xml
 
 
 def tree2list(root):
+    """An Awesome doc."""
     segments = get_segments_root(root)
     list_image_data = []
     list_image_data_columns = (
@@ -63,7 +66,7 @@ def tree2list(root):
 
 def intersectionbox(in_file, toleranci):
     """
-    Processes the area of cvt file and filter small boxes
+    Processes the area of cvt file and filter small boxes.
     """
     if 0.0 <= toleranci >= 100.0:
         return logging.error("The toleranci has error ")

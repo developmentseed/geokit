@@ -1,11 +1,14 @@
+"""geo.generateid: Skeleton of a function."""
+
 import json
 from uuid import uuid1
+
 from geojson.feature import FeatureCollection as fc
 
 
 def generateid(in_file, id_label, id_start, zeros, variation, output_file):
     """
-    Add an id in the <properties> in a geojson file
+    Add an id in the <properties> in a geojson file.
     """
     json_data = json.load(open(in_file, "r")).get("features", [])
 

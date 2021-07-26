@@ -1,10 +1,14 @@
-import numpy as np
+"""cvat.npz2xml: Skeleton of a function."""
+
 import xml.etree.ElementTree as ET
-from xml.etree import ElementTree
 from xml.dom import minidom
+
+import numpy as np
 
 
 def npz2xml(npzFile, imgFolder, imgLabel):
+    """An Awesome doc."""
+
     root = ET.Element("annotations")
     version = ET.SubElement(root, "version")
     version.text = str("1.1")
@@ -34,6 +38,8 @@ def npz2xml(npzFile, imgFolder, imgLabel):
 
 
 def prettify(elem):
-    rough_string = ElementTree.tostring(elem, "utf-8")
+    """An Awesome doc."""
+
+    rough_string = ET.tostring(elem, "utf-8")
     reparsed = minidom.parseString(rough_string)
     return reparsed.toprettyxml(indent="  ")

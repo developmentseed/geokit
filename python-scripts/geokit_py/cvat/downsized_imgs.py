@@ -1,10 +1,14 @@
-import sys
-import lycon
+"""cvat.downsized_imgs: Skeleton of a function."""
+
 import glob
 import os
 
+import lycon
+
 
 def downsized_imgs(inputDir, outputDir):
+    """An Awesome doc."""
+
     os.makedirs(outputDir, exist_ok=True)
 
     for file in glob.glob(f"{inputDir}/*.jpg"):

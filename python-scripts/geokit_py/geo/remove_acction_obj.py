@@ -1,7 +1,10 @@
+"""geo.remove_action_obj: Skeleton of a function."""
+
 from lxml import etree
 
 
 def remove_action_obj(input_osm, output_osm):
+    """An Awesome doc."""
     tree = etree.parse(input_osm)
     nodes = tree.findall(".//node")
     ways = tree.findall(".//way")

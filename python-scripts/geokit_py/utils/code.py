@@ -1,12 +1,15 @@
-from xml.etree import ElementTree as ET
-from shapely.geometry import Polygon
-import click
+"""utils.code: Skeleton of a function."""
+
 import logging
+from xml.etree import ElementTree as ET
+
+import click
+from shapely.geometry import Polygon
 
 
 def get_segments_root(root, v=False):
     """
-    return segments from root obj
+    return segments from root obj.
     """
     try:
         segments = []
@@ -26,7 +29,7 @@ def get_segments_root(root, v=False):
 
 def read_xml(in_file, v=False):
     """
-    open xml file and return root  iterate file
+    Open xml file and return root  iterate file.
     """
 
     try:
@@ -40,7 +43,7 @@ def read_xml(in_file, v=False):
 
 def make_polygon(data):
     """
-    return a polygon from dataframe
+    Return a polygon from dataframe.
     """
     try:
         data = data[1]

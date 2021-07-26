@@ -1,9 +1,14 @@
+"""
+Script for geo module
+Author: @developmentseed
+"""
+
 import click
-from .generateid import generateid
 
 
 @click.group(chain=True)
 def cli():
+    """An Awesome doc."""
     click.echo(click.style("========= GEO =============", fg="green"))
     pass
 
@@ -32,6 +37,8 @@ def run_generate_id(in_file, id_label, id_start, zeros, variation, output_file):
     Addig a key <id_label> in the PROPERTIES in a geojson file, the value of id can start in 1 or start_count.
 
     """
+    from .generateid import generateid
+
     generateid(in_file, id_label, id_start, zeros, variation, output_file)
 
 

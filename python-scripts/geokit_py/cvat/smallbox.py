@@ -1,10 +1,13 @@
+"""cvat.smallbox: Skeleton of a function."""
+
 import logging
+
 from geokit_py.utils.code import get_segments_root, read_xml
 
 
 def smallbox(in_file, toleranci):
     """
-    Processes the area of cvt file and filter small boxes
+    Processes the area of cvt file and filter small boxes.
     """
     # vars
     # function_name = 'SMALLBOX'

@@ -1,7 +1,11 @@
+"""cvat.count_tags: Skeleton of a function."""
+
 from lxml import etree
 
 
 def count_xml_tags(file, stats):
+    """An Awesome doc."""
+
     tree = etree.parse(file)
     images = tree.findall(".//image")
     boxes = tree.findall(".//box")

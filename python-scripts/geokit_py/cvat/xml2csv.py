@@ -1,7 +1,10 @@
+"""cvat.xml2csv: Skeleton of a function."""
+
 from lxml import etree
 
 
 def to_csv(file):
+    """An Awesome doc."""
     tree = etree.parse(file)
     images = tree.findall(".//image")
     num_imagesPRE = len(images)
@@ -22,6 +25,7 @@ def to_csv(file):
 
 
 def to_csv_full(file):
+    """An Awesome doc."""
     tree = etree.parse(file)
     images = tree.findall(".//image")
     objs = []

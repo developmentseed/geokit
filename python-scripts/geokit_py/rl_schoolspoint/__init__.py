@@ -1,4 +1,1 @@
-def main():
-    from .code import process
-
-    process()
+"""rl schools point."""

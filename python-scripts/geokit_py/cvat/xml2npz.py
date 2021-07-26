@@ -1,8 +1,12 @@
-from lxml import etree
+"""cvat.xml2npz: Skeleton of a function."""
+
 from os import path
+
+from lxml import etree
 
 
 def getTiles(file):
+    """An Awesome doc."""
     tree = etree.parse(file)
     images = tree.findall(".//image")
     tiles = {}
