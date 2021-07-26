@@ -139,7 +139,5 @@ def run_fix_ordinal_suffixes(xml_input, xml_output):
     fix_ordinal_suffixes(xml_input, xml_output)
 
 
-
-
 if __name__ == "__main__":
     cli()
