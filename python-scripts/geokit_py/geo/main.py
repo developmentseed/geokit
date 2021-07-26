@@ -9,7 +9,7 @@ import click
 @click.group(chain=True)
 def cli():
     """An Awesome doc."""
-    click.echo(click.style("========= GEO =============", fg="green"))
+    # click.echo(click.style("========= GEO =============", fg="green"))
     pass
 
 

@@ -1,0 +1,1 @@
+"""chips_ahoy module."""

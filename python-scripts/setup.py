@@ -27,6 +27,7 @@ setup(
     extras_require=extra_reqs,
     entry_points={
         "console_scripts": [
+            "chips_ahoy=geokit_py.chips_ahoy.main:cli",
             "cvat=geokit_py.cvat.main:cli",
             "geo=geokit_py.geo.main:cli",
             "rl_schoolspoint=geokit_py.rl_schoolspoint.main:main",
