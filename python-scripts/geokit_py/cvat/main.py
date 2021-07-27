@@ -18,18 +18,19 @@ def cli():
     "--in_file", required=True, type=str, help="Path to xml cvat file to be processed."
 )
 @click.option(
-    "--toleranci",
+    "--tolerance",
     default=70.0,
     type=float,
-    help="toleranci to filter box area, default 70 (70% area of image, max area is 100%).",
+    help="tolerance to filter box area, default 70 (70% area of image, max area is 100%).",
 )
-def run_intersectionbox(in_file, toleranci):
+def run_intersectionbox(in_file, tolerance):
     """
-    validate if tag include in tiles_error
+    find the boxes that intersect and are greater than the tolerance,
+     for default tolerance is 70 (70% of the area of the small intersection box)
     """
     from .intersectionbox import intersectionbox
 
-    intersectionbox(in_file, toleranci)
+    intersectionbox(in_file, tolerance)
 
 
 @cli.command("smallbox")
@@ -37,18 +38,18 @@ def run_intersectionbox(in_file, toleranci):
     "--in_file", required=True, type=str, help="Path to xml cvat file to be processed."
 )
 @click.option(
-    "--toleranci",
+    "--tolerance",
     default=1.0,
     type=float,
-    help="toleranci to filter box area, default 1 (1% image).",
+    help="tolerance to filter box area, default 1 (1% image).",
 )
-def run_smallbox(in_file, toleranci):
+def run_smallbox(in_file, tolerance):
     """
-    Processes the area of cvat file and filter small boxes
+    find the boxes with an area smaller than the image, for default tolerance is 1 (1% of area image).
     """
     from .smallbox import smallbox
 
-    smallbox(in_file, toleranci)
+    smallbox(in_file, tolerance)
 
 
 @cli.command("count_tag")

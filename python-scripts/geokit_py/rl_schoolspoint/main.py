@@ -10,8 +10,6 @@ import click
 @click.command()
 @click.option(
     "--city",
-    "-c",
-    "city",
     required=True,
     help="Name of city.",
 )

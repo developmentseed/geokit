@@ -64,14 +64,14 @@ def tree2list(root):
         return pd.DataFrame(list_image_data, columns=list_image_data_columns)
 
 
-def intersectionbox(in_file, toleranci):
+def intersectionbox(in_file, tolerance):
     """
     Processes the area of cvt file and filter small boxes.
     """
-    if 0.0 <= toleranci >= 100.0:
-        return logging.error("The toleranci has error ")
+    if 0.0 <= tolerance >= 100.0:
+        return logging.error("The tolerance has error ")
 
-    toleranci = toleranci / 100
+    tolerance = tolerance / 100
 
     list_image_err = [
         ("url", "id_image", "area intersection %"),
@@ -98,7 +98,7 @@ def intersectionbox(in_file, toleranci):
                             if j[0].area <= j[1].area:
                                 menor, mayor = j
                             if (
-                                float(interseccion.area / menor.area) >= toleranci
+                                float(interseccion.area / menor.area) >= tolerance
                                 and not is_report
                             ):
                                 err_rep = float(

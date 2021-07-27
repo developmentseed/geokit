@@ -5,7 +5,7 @@ import logging
 from geokit_py.utils.code import get_segments_root, read_xml
 
 
-def smallbox(in_file, toleranci):
+def smallbox(in_file, tolerance):
     """
     Processes the area of cvt file and filter small boxes.
     """
@@ -13,7 +13,7 @@ def smallbox(in_file, toleranci):
     # function_name = 'SMALLBOX'
     # path = os.path.dirname(in_file)
     # file_name = os.path.basename(in_file)
-    toleranci = toleranci / 100
+    tolerance = tolerance / 100
     # ouput_file_name = f'{file_name.lower().replace(".xml", "")}_{function_name}_OUTPUT.csv'
     list_image_err = [
         [
@@ -47,7 +47,7 @@ def smallbox(in_file, toleranci):
                         a_box = float(x * y).__round__(3)
                         image.append(a_box)
 
-                        if (a_box / area_imagen) <= toleranci:
+                        if (a_box / area_imagen) <= tolerance:
                             list_image_err.append(image)
 
     except Exception as e:
