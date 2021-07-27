@@ -41,9 +41,74 @@ docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python chips_ahoy fil
 
 # cvat module
 
-## Small box
+## count tags
 
-find the boxes with an area smaller than the image, for default tolerance is 1 (1% of area image)
+Get the total of tagged boxes according to their classification.
+
+| COMMAND     | REQUIRED | DESCRIPTION           |
+| ----------- | -------- | --------------------- |
+| --xml_file  | yes     | path to cvat xml file |
+
+```
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python cvat count_tag --xml_file <CVAT_XML> 
+```
+
+## downsized images
+
+Downsize the images from big size to 512x512. Supports only jpg files.
+
+| COMMAND     | REQUIRED | DESCRIPTION           |
+| ----------- | -------- | --------------------- |
+| --img_path   | yes     | path to images folder |
+| --output_path | yes    |  path to the output images folder  |
+
+```
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python cvat downsized_imgs --img_path <IMG_FOLDER> --output_path <OUTPUT_FOLDER>
+```
+
+## fix ordinal suffixes
+
+Fix ordinal suffixes of xml file.
+
+| COMMAND     | REQUIRED | DESCRIPTION           |
+| ----------- | -------- | --------------------- |
+| --xml_input  | yes     | path to xml file |
+| --xml_output | yes     | path to the output xml file   |
+
+```
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python cvat fix_ordinal_suffixes --xml_input <INPUT_XML> --xml_output <OUTPUT_XML> 
+```
+
+## intersection box 
+
+Find the boxes that intersect and are greater than the tolerance, for default tolerance is 70 (70% of the area of the small intersection box).
+
+| COMMAND     | REQUIRED | DESCRIPTION           |
+| ----------- | -------- | --------------------- |
+| --in_file   | yes      | path to cvat xml file |
+| --tolerance | no       | tolerance to filter   |
+
+```
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python cvat intersectionbox --in_file <CVAT_XML> --tolerance <TOLERANCE>  > output.csv
+```
+
+## npz to xml 
+
+Convert npz to xml format.
+
+| COMMAND     | REQUIRED | DESCRIPTION           |
+| ----------- | -------- | --------------------- |
+| --npz_file  | yes      | path to labelMaker npz file |
+| --img_path  | yes      | path of the images in CVAT   |
+| --img_label | yes      | label image eg : tower   |
+
+```
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python cvat npz2xml --npz_file <NPZ> --img_path <IMG_PATH> --img_label <IMG_LABEL>  
+```
+
+## Small box 
+
+Find the boxes with an area smaller than the image, for default tolerance is 1 (1% of area image).
 
 | COMMAND     | REQUIRED | DESCRIPTION           |
 | ----------- | -------- | --------------------- |
@@ -54,17 +119,31 @@ find the boxes with an area smaller than the image, for default tolerance is 1 (
 docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python cvat smallbox --in_file <CVAT_XML> --tolerance <TOLERANCE>  > output.csv
 ```
 
-## intersection box
+## xml to csv 
 
-find the boxes that intersect and are greater than the tolerance, for default tolerance is 70 (70% of the area of the small intersection box)
+Convert xml to csv format.
 
 | COMMAND     | REQUIRED | DESCRIPTION           |
 | ----------- | -------- | --------------------- |
-| --in_file   | yes      | path to cvat xml file |
-| --tolerance | no       | tolerance to filter   |
+| --xml_file  | yes      | path to cvat xml file |
+| --csv_file  | yes      | path to csv file   |
+| --full      | no       | use True for obtaining all the attributes of the xml   |
 
 ```
-docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python cvat intersectionbox --in_file <CVAT_XML> --tolerance <TOLERANCE>  > output.csv
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python cvat xml2csv --xml_file <CVAT_XML> --csv_file <CSV> --full <FULL>
+```
+
+## xml to npz 
+
+Convert to xml to npz format.
+
+| COMMAND     | REQUIRED | DESCRIPTION           |
+| ----------- | -------- | --------------------- |
+| --xml_file  | yes      | path to cvat xml file |
+| --npz_file  | yes      | path to npz file   |
+
+```
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python cvat xml2npz --xml_file <CVAT_XML> --npz_file <NPZ>
 ```
 
 # rl_schoolspoint module
@@ -98,7 +177,7 @@ this script can work with `aws - s3` uri.
 | --output_file | yes      | Path to geojson output file                                                                       |
 
 ```
-docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python  geo generateid --in_file <GEOJSON_PATH> --id_label <NEW_ID> --id_start 100 --zeros 5  --output_file S3://an-awesome-bucket-name/file.geojson
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python  geo generate_id --in_file <GEOJSON_PATH> --id_label <NEW_ID> --id_start 100 --zeros 5  --output_file S3://an-awesome-bucket-name/file.geojson
 ```
 
 ## osm file to new osm file

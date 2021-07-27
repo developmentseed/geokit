@@ -13,7 +13,7 @@ def ordinal(n):
 
 
 def fix_ordinal_suffixes(xml_input, xml_output):
-    """An Awesome doc."""
+    "Fix ordinal suffixes of xml file."
     with open(xml_input, encoding="utf8") as file:
         tree = etree.parse(file)
     addr_streets = tree.findall(".//tag[@k='addr:street']")
