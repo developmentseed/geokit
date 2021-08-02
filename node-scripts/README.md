@@ -1,7 +1,6 @@
-# Geokit
+# Geokit-node
 
 Geokit-node is a command-line interface (CLI) tool written in node. Geokit is installed with docker, due several functionalities from other repositories like [awesome-geojson](https://github.com/tmcw/awesome-geojson) were incorporated to Geokit functionalities.
-
 
 
 - **Building from repo**
@@ -12,7 +11,6 @@ docker-compose build
 alias geokit='docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:node.latest geokit'
 ```
 
-
 - **Building from [docker-hub](https://hub.docker.com/r/developmentseed/geokit)**
 
 ```
@@ -20,7 +18,6 @@ alias geokit='docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:node.la
 ```
 
 # Install for development mode
-
 
 ```
 docker-compose run geokit
@@ -167,7 +164,6 @@ geokit featurebbox input.geojson > output.geojson
 geokit featuredistance input.geojson > output.geojson  
 ```
 
-
 ### Count features by area size
 
 - Counts features larger than the given area size in km². Applicable for polygons.
@@ -175,7 +171,6 @@ geokit featuredistance input.geojson > output.geojson
 ```
 geokit countbysize input.geojson --psize=1000
 ```
-
 
 ### Difference between two geojson files according to an attribute
 
@@ -189,13 +184,11 @@ geokit difference <file1.geojson>  <file2.geojson> --key=school_code
 
 ### Keep attributes in feature
 
-
 ```
 geokit keepattributes <file1.geojson>  --keys="id,power,timestamp" > output.geojson
 ```
 
 ### Rename key in properties
-
 
 ```
 geokit renamekey <file1.geojson>  --key="idBuilding>id" > output.geojson
@@ -204,7 +197,6 @@ geokit renamekey <file1.geojson>  --key="idBuilding>id" > output.geojson
 ### Duplicate objects by an attribute
 
 - Gets the duplicate objects, identified by a unique attribute or primary key.
-
 
 ```
 geokit duplicatefeatures <file1.geojson> --key=id
@@ -217,7 +209,6 @@ geokit duplicatefeatures <file1.geojson> --key=id
 ```
 geokit point2tile <file.geojson> --zoom=17 --buffer=0.2 --copyattrs=true > tiles.geojson
 ```
-
 
 ### Tile Cover
 
@@ -254,23 +245,6 @@ From: https://github.com/mapbox/tile-cover
 ```
  geokit centroid input.geojson > output.geojson
 
-```
-
-### Remove objects with action=delete
-
-- Removes the objects with action=delete in a osm file.
-
-```
- geokit removeactionosm input.osm output.osm
-
-```
-
-### OSM file to new OSM file
-
-- Removes some attributes of each feature such as: `user`,  `version`, `timestamp`, `changeset` and `uid`. So it returns a new OSM file without these attributes. 
-
-```
- geokit osm2new input.osm output.osm
 ```
 
 ### Split a file according to zoom level
