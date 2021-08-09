@@ -216,7 +216,7 @@ Script to add tag `_where` and fields by location `(mode_filter)`. work with aws
 | --geojson_in_features    | yes      | Path to geojson features. |
 | --tags_polygon           | no       | Fields in geojson_in_polygon to add features. |
 | --mode_filter            | yes      | Filtering mode:<br/> -include : geometry of feature <br/> -include__centroid: centroid geometry of feature  |
-| --mode_output            | yes      | Output mode |
+| --mode_output            | yes      | Output mode:<br/> -merged: all features in one file. <br/> -by_location: features in two files, inside and outside.  <br/> -by_polygon_tag: features in multiple files, outside and other by tag. |
 | --geojson_out_features    | yes      | Path to geojson features output. |
 
 
