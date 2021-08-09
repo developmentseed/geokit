@@ -119,7 +119,7 @@ def run_features_in_polygons(
     geojson_out_features,
 ):
     """
-    Script to add tag '_where' and fields bby location (mode_filter).
+    Script to add tag '_where' and fields by location (mode_filter).
     """
     from .features_in_polygons import features_in_polygons
 

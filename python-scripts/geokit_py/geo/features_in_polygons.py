@@ -66,8 +66,7 @@ def features_in_polygons(
 ):
     """Script for add tag in feature (included).
     mode_filter: [include, include__centroid]
-    mode_filter: [normal , where and tags_polygon]
-
+    mode_output: [merged, by_location, by_polygon_tag]
     """
 
     with open(geojson_in_polygon, encoding="utf8") as gfile:

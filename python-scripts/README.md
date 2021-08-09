@@ -205,3 +205,21 @@ Removes the objects with `action=delete` in a osm file.
 ```
 docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python geo removeactionosm --input_osm <INPUT_OSM> --output_osm <OUTPUT_OSM>
 ```
+
+## Features in polygons
+
+Script to add tag `_where` and fields by location `(mode_filter)`. work with aws uri. 
+
+| COMMAND         | REQUIRED |DESCRIPTION                           |
+| --------------- | -------- | -------------------------------------|
+| --geojson_in_polygon     | yes      | Path to geojson polygons.  |
+| --geojson_in_features    | yes      | Path to geojson features. |
+| --tags_polygon           | no       | Fields in geojson_in_polygon to add features. |
+| --mode_filter            | yes      | Filtering mode:<br/> -include : geometry of feature <br/> -include__centroid: centroid geometry of feature  |
+| --mode_output            | yes      | Output mode |
+| --geojson_out_features    | yes      | Path to geojson features output. |
+
+
+```
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python geo features_in_polygons --geojson_in_polygon <INPUT_GEOJSON>  --geojson_in_features <INPUT_GEOJSON> --tags_polygon tag_1 --tags_polygon tags_2 --mode_filter include --mode_output by_polygon_tag --geojson_out_features <OUTPUT_GEOJSON>
+```
