@@ -131,7 +131,7 @@ def features_in_polygons(
                 "w",
             ) as out_geo:
                 out_geo.write(
-                    json.dumps(fc(data_outside), ensure_ascii=False)
+                    json.dumps(fc(data_inside), ensure_ascii=False)
                     .encode("utf8")
                     .decode()
                 )
