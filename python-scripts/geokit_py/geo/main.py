@@ -100,8 +100,8 @@ def run_removeactionosm(input_osm, output_osm):
 @click.option(
     "--mode_output",
     required=True,
-    default="normal",
-    type=click.Choice(["normal", "where", "tags_polygon"], case_sensitive=True),
+    default="merged",
+    type=click.Choice(["merged", "by_location", "by_polygon_tag"], case_sensitive=True),
     help="mode of file output.",
 )
 @click.option(

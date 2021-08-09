@@ -57,12 +57,12 @@ def filter_include(polygon_features, features, tags_polygon, mode_filter):
 
 
 def features_in_polygons(
-        geojson_in_polygon: str,
-        geojson_in_features: str,
-        tags_polygon: list,
-        mode_filter: str,
-        mode_output: str,
-        geojson_out_features: str,
+    geojson_in_polygon: str,
+    geojson_in_features: str,
+    tags_polygon: list,
+    mode_filter: str,
+    mode_output: str,
+    geojson_out_features: str,
 ):
     """Script for add tag in feature (included).
     mode_filter: [include, include__centroid]
@@ -102,56 +102,73 @@ def features_in_polygons(
     print(f"Total  : {len(features_filter)} features")
     print("====== STATS ==========")
 
-    if mode_output == "normal":
+    if mode_output == "merged":
         with open(geojson_out_features, "w") as out_geo:
             out_geo.write(
                 json.dumps(fc(features_filter), ensure_ascii=False)
-                    .encode("utf8")
-                    .decode()
+                .encode("utf8")
+                .decode()
             )
+    else:
+        # save outside
+        data_outside = [
+            i for i in features_filter if i["properties"]["_where"] == "outside"
+        ]
+        with open(
+            geojson_out_features.replace(".geojson", f"__where__outside.geojson"), "w"
+        ) as out_geo:
+            out_geo.write(
+                json.dumps(fc(data_outside), ensure_ascii=False).encode("utf8").decode()
+            )
+        print(f"_where: outside  => {len(data_outside)} features")
 
-    if mode_output == "where":
-        for val in ["inside", "outside"]:
-            data = [i for i in features_filter if i["properties"]["_where"] == val]
-            print(f"_where: {val}  => {len(data)} features")
-
+        if mode_output == "by_location":
+            data_inside = [
+                i for i in features_filter if i["properties"]["_where"] == "inside"
+            ]
             with open(
-                    geojson_out_features.replace(".geojson", f"__where__{val}.geojson"), "w"
+                geojson_out_features.replace(".geojson", f"__where__inside.geojson"),
+                "w",
             ) as out_geo:
                 out_geo.write(
-                    json.dumps(fc(data), ensure_ascii=False).encode("utf8").decode()
+                    json.dumps(fc(data_outside), ensure_ascii=False)
+                    .encode("utf8")
+                    .decode()
                 )
+            print(f"_where: inside  => {len(data_inside)} features")
 
-    if mode_output == "tags_polygon":
-        if not tags_polygon:
-            raise Exception(
-                "incongruity,  mode_output=tags_polygon, need tags_polygon"
-            )
-        for tag_polygon in tags_polygon:
-            value_tags = list(
-                dict.fromkeys(
-                    [
-                        i["properties"].get("tag_polygon")
+        if mode_output == "by_polygon_tag":
+            if not tags_polygon:
+                raise Exception(
+                    "incongruity, need tags_polygon to save in this mode_output"
+                )
+            for tag_polygon in tags_polygon:
+                value_tags = list(
+                    dict.fromkeys(
+                        [
+                            i["properties"].get(tag_polygon)
+                            for i in features_filter
+                            if i["properties"]["_where"] == "inside"
+                            and i["properties"].get(tag_polygon, False)
+                        ]
+                    )
+                )
+                for val in value_tags:
+                    data = [
+                        i
                         for i in features_filter
                         if i["properties"]["_where"] == "inside"
-                           and i["properties"].get(tag_polygon, False)
+                        and i["properties"].get(tag_polygon, "") == val
                     ]
-                )
-            )
-            for val in value_tags:
-                data = [
-                    i
-                    for i in features_filter
-                    if i["properties"]["_where"] == "inside"
-                       and i["properties"].get(tag_polygon, "") == val
-                ]
-                print(f"{tag_polygon}: {val}  => {len(data)} features")
-                with open(
+                    print(f"{tag_polygon}: {val}  => {len(data)} features")
+                    with open(
                         geojson_out_features.replace(
                             ".geojson", f"__{tag_polygon}__{val}.geojson"
                         ),
                         "w",
-                ) as out_geo:
-                    out_geo.write(
-                        json.dumps(fc(data), ensure_ascii=False).encode("utf8").decode()
-                    )
+                    ) as out_geo:
+                        out_geo.write(
+                            json.dumps(fc(data), ensure_ascii=False)
+                            .encode("utf8")
+                            .decode()
+                        )
