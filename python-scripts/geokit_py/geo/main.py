@@ -69,5 +69,79 @@ def run_removeactionosm(input_osm, output_osm):
     remove_action_obj(input_osm, output_osm)
 
 
-if __name__ == "__main__":
-    cli()
+@cli.command("features_in_polygons")
+@click.option(
+    "--geojson_in_polygon", required=True, type=str, help="Path to geojson polygons."
+)
+@click.option(
+    "--geojson_in_features", required=True, type=str, help="Path to geojson features."
+)
+@click.option(
+    "--tags_polygon",
+    required=False,
+    type=str,
+    default=[],
+    multiple=True,
+    help="fields geojson_in_polygon to add features.",
+)
+@click.option(
+    "--mode_filter",
+    required=True,
+    default="include__centroid",
+    type=click.Choice(
+        [
+            "include",
+            "include__centroid",
+            # intersect range
+            "intersect__1",
+            "intersect__10",
+            "intersect__20",
+            "intersect__30",
+            "intersect__40",
+            "intersect__50",
+            "intersect__60",
+            "intersect__70",
+            "intersect__80",
+            "intersect__90",
+        ],
+        case_sensitive=True,
+    ),
+    help="mode of filter.",
+)
+@click.option(
+    "--mode_output",
+    required=True,
+    default="merged",
+    type=click.Choice(["merged", "by_location", "by_polygon_tag"], case_sensitive=True),
+    help="mode of file output.",
+)
+@click.option(
+    "--geojson_out_features",
+    required=True,
+    type=str,
+    help="Path to geojson features output.",
+)
+def run_features_in_polygons(
+        geojson_in_polygon,
+        geojson_in_features,
+        tags_polygon,
+        mode_filter,
+        mode_output,
+        geojson_out_features,
+):
+    """
+    Script to add tag '_where' and fields by location (mode_filter).
+    """
+    from .features_in_polygons import features_in_polygons
+
+    features_in_polygons(
+        geojson_in_polygon,
+        geojson_in_features,
+        tags_polygon,
+        mode_filter,
+        mode_output,
+        geojson_out_features,
+    )
+
+    if __name__ == "__main__":
+        cli()
