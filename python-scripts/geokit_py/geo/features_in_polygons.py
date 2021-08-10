@@ -20,6 +20,7 @@ def get_centerid(feature):
 def set_shape_feature(features_):
     def set_shape(feature):
         feature["geo"] = shape(feature["geometry"])
+        feature["area"] = feature["geo"].area
         return feature
 
     new_features = Parallel(n_jobs=-1)(
@@ -52,6 +53,35 @@ def filter_include(polygon_features, features, tags_polygon, mode_filter):
             polygon_features, feature, tags_polygon, mode_filter
         )
         for feature in tqdm(features, desc=f"filter mode : include ")
+    )
+    return new_feature_includes
+
+
+def filter_intersects(polygon_features, features, tags_polygon, mode_filter):
+    def filter_intersect_feature(
+        polygon_features_, feature, tags_polygon_, intersects_range_
+    ):
+        feature_geo = feature.get("geo")
+        for p_f in polygon_features_:
+            if p_f["geo"].intersects(feature_geo) or p_f["geo"].contains(feature_geo):
+                intersect_feature = p_f["geo"].intersection(feature_geo).area
+                p_area = int((intersect_feature / feature["area"]) * 100)
+                if p_area >= intersects_range_ or p_f["geo"].contains(feature_geo):
+                    feature["properties"]["_where"] = "inside"
+                    prop_polygon = p_f["properties"]
+                    for t_p in tags_polygon_:
+                        feature["properties"][t_p] = prop_polygon.get(t_p, "")
+                    return feature
+        return feature
+
+    intersects_range = int(mode_filter.split("__")[1])
+    new_feature_includes = Parallel(n_jobs=-1)(
+        delayed(filter_intersect_feature)(
+            polygon_features, feature, tags_polygon, intersects_range
+        )
+        for feature in tqdm(
+            features, desc=f"filter mode : intersects  {intersects_range}"
+        )
     )
     return new_feature_includes
 
@@ -90,11 +120,16 @@ def features_in_polygons(
         features_filter = filter_include(
             polygon_features, features, tags_polygon, mode_filter
         )
+    elif "intersect" in mode_filter:
+        features_filter = filter_intersects(
+            polygon_features, features, tags_polygon, mode_filter
+        )
 
     # remove geo field
     for i in features_filter:
-        if "geo" in i.keys():
-            del i["geo"]
+        for j in ["geo", "area"]:
+            if j in i.keys():
+                del i[j]
 
     # output - modes
     print("================")

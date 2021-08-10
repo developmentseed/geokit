@@ -92,6 +92,17 @@ def run_removeactionosm(input_osm, output_osm):
         [
             "include",
             "include__centroid",
+            # intersect range
+            "intersect__1",
+            "intersect__10",
+            "intersect__20",
+            "intersect__30",
+            "intersect__40",
+            "intersect__50",
+            "intersect__60",
+            "intersect__70",
+            "intersect__80",
+            "intersect__90",
         ],
         case_sensitive=True,
     ),
@@ -111,12 +122,12 @@ def run_removeactionosm(input_osm, output_osm):
     help="Path to geojson features output.",
 )
 def run_features_in_polygons(
-    geojson_in_polygon,
-    geojson_in_features,
-    tags_polygon,
-    mode_filter,
-    mode_output,
-    geojson_out_features,
+        geojson_in_polygon,
+        geojson_in_features,
+        tags_polygon,
+        mode_filter,
+        mode_output,
+        geojson_out_features,
 ):
     """
     Script to add tag '_where' and fields by location (mode_filter).
