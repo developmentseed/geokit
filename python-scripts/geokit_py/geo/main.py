@@ -168,7 +168,7 @@ def run_addattributefc(
         geojson_out,
 ):
     """
-    Script to add tag '_where' and fields by location (mode_filter).
+    Add tags in each feature
     """
     from .addattributefc import add_attribute_fc
 
