@@ -143,5 +143,41 @@ def run_features_in_polygons(
         geojson_out_features,
     )
 
-    if __name__ == "__main__":
-        cli()
+
+@cli.command("addattributefc")
+@click.option(
+    "--geojson_input", required=True, type=str, help="Path to geojson to process."
+)
+@click.option(
+    "--tags_polygon",
+    required=True,
+    type=str,
+    default=[],
+    multiple=True,
+    help="props add features in format: key=value",
+)
+@click.option(
+    "--geojson_out",
+    required=True,
+    type=str,
+    help="Path to geojson features output.",
+)
+def run_addattributefc(
+        geojson_input,
+        tags_polygon,
+        geojson_out,
+):
+    """
+    Script to add tag '_where' and fields by location (mode_filter).
+    """
+    from .addattributefc import add_attribute_fc
+
+    add_attribute_fc(
+        geojson_input,
+        tags_polygon,
+        geojson_out,
+    )
+
+
+if __name__ == "__main__":
+    cli()
