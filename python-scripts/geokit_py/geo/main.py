@@ -13,6 +13,11 @@ def cli():
     pass
 
 
+# =========================================
+# ============== GENERATE ID ==============
+# =========================================
+
+
 @cli.command("generate_id")
 @click.option(
     "--in_file",
@@ -40,6 +45,11 @@ def run_generate_id(in_file, id_label, id_start, zeros, variation, output_file):
     generateid(in_file, id_label, id_start, zeros, variation, output_file)
 
 
+# =========================================
+# ============== OSM 2 NEW  ==============
+# =========================================
+
+
 @cli.command("osm2new")
 @click.option(
     "--input_osm", required=True, type=str, help="Path to osm file to be processed."
@@ -55,6 +65,11 @@ def run_osm2new(input_osm, output_osm):
     osm2new(input_osm, output_osm)
 
 
+# =================================================
+# ============== REMOVE ACTIONS OSM  ==============
+# =================================================
+
+
 @cli.command("removeactionosm")
 @click.option(
     "--input_osm", required=True, type=str, help="Path to osm file to be processed."
@@ -67,6 +82,11 @@ def run_removeactionosm(input_osm, output_osm):
     from .remove_acction_obj import remove_action_obj
 
     remove_action_obj(input_osm, output_osm)
+
+
+# ==================================================
+# ============== FEATURES IN POLYGONS ==============
+# ===================================================
 
 
 @cli.command("features_in_polygons")
@@ -122,15 +142,15 @@ def run_removeactionosm(input_osm, output_osm):
     help="Path to geojson features output.",
 )
 def run_features_in_polygons(
-        geojson_in_polygon,
-        geojson_in_features,
-        tags_polygon,
-        mode_filter,
-        mode_output,
-        geojson_out_features,
+    geojson_in_polygon,
+    geojson_in_features,
+    tags_polygon,
+    mode_filter,
+    mode_output,
+    geojson_out_features,
 ):
     """
-    Script to add tag '_where' and fields by location (mode_filter).
+    Script to add tag '_where' and fields by location (mode_filter). this script can work with aws - s3 uri.
     """
     from .features_in_polygons import features_in_polygons
 
@@ -144,12 +164,17 @@ def run_features_in_polygons(
     )
 
 
+# ===============================================
+# ============== ADD ATTRIBUTES FC ==============
+# ===============================================
+
+
 @cli.command("addattributefc")
 @click.option(
     "--geojson_input", required=True, type=str, help="Path to geojson to process."
 )
 @click.option(
-    "--tags_polygon",
+    "--tags",
     required=True,
     type=str,
     default=[],
@@ -163,18 +188,58 @@ def run_features_in_polygons(
     help="Path to geojson features output.",
 )
 def run_addattributefc(
-        geojson_input,
-        tags_polygon,
-        geojson_out,
+    geojson_input,
+    tags,
+    geojson_out,
 ):
     """
-    Add tags in each feature
+    Add tags in each feature, this script can work with aws - s3 uri.
     """
     from .addattributefc import add_attribute_fc
 
     add_attribute_fc(
         geojson_input,
-        tags_polygon,
+        tags,
+        geojson_out,
+    )
+
+
+# ===============================================
+# ============== KEEP ATTRIBUTES  ===============
+# ================================================
+
+
+@cli.command("keepattributes")
+@click.option(
+    "--geojson_input", required=True, type=str, help="Path to geojson to process."
+)
+@click.option(
+    "--keys",
+    required=True,
+    type=str,
+    default=[],
+    multiple=True,
+    help="keys to keep",
+)
+@click.option(
+    "--geojson_out",
+    required=True,
+    type=str,
+    help="Path to geojson features output.",
+)
+def run_keepattributes(
+    geojson_input,
+    keys,
+    geojson_out,
+):
+    """
+    Add tags in each feature, this script can work with aws - s3 uri.
+    """
+    from .keepattributes import keep_attributes
+
+    keep_attributes(
+        geojson_input,
+        keys,
         geojson_out,
     )
 
