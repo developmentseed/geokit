@@ -66,8 +66,6 @@ def osm2new(input_osm, output_osm):
         for member in members:
             if member.attrib["ref"] in dict:
                 member.attrib["ref"] = str(dict[member.attrib["ref"]])
-    xml = "<?xml version='1.0' encoding='UTF-8'?>\n" + etree.tostring(
-        tree, encoding="utf8"
-    )
+    xml = b"<?xml version='1.0' encoding='UTF-8'?>\n" + etree.tostring(tree, pretty_print=True, encoding="utf8")
     new_file = open(output_osm, "w")
-    new_file.write(xml)
+    new_file.write(xml.decode("utf8"))

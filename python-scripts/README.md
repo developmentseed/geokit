@@ -223,3 +223,49 @@ Script to add tag `_where` and fields by location `(mode_filter)`. work with aws
 ```
 docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python geo features_in_polygons --geojson_in_polygon <INPUT_GEOJSON>  --geojson_in_features <INPUT_GEOJSON> --tags_polygon tag_1 --tags_polygon tags_2 --mode_filter include --mode_output by_polygon_tag --geojson_out_features <OUTPUT_GEOJSON>
 ```
+
+## Add attributes geojson
+
+Script to add tag in each feature. work with aws uri. 
+
+| COMMAND         | REQUIRED |DESCRIPTION                           |
+| --------------- | -------- | -------------------------------------|
+| --geojson_input     | yes      | Path to geojson polygons.  |
+| --tags    | yes      | Props add features in format: `key=value` |
+| --geojson_out           | yes       | Path to geojson features output.|
+
+
+```
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python geo addattributefc --geojson_input <INPUT_GEOJSON>  --tags key1=value1 --tags key2=value2 --tags_polygon tag_1 --tags_polygon tags_2 --geojson_out <OUTPUT_GEOJSON>
+```
+
+
+## Keep attributes geojson
+
+Script to keep keys (properties) in each feature. work with aws uri. 
+
+| COMMAND         | REQUIRED |DESCRIPTION                           |
+| --------------- | -------- | -------------------------------------|
+| --geojson_input     | yes      | Path to geojson polygons.  |
+| --keys    | yes      | Keys to keep, multiple|
+| --geojson_out           | yes       | Path to geojson features output.|
+
+
+```
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python geo keepattributes --geojson_input <INPUT_GEOJSON>  --keys field1 --keys field2 --keys field3 --geojson_out <OUTPUT_GEOJSON>
+```
+
+## geojson to CSV
+
+Script to convert geojson to csv, if `osm_download_link` adds an osm_download_link column per each feature and each link downloads the feature in JOSM.. work with aws uri. 
+
+| COMMAND         | REQUIRED |DESCRIPTION                           |
+| --------------- | -------- | -------------------------------------|
+| --geojson_input     | yes      | Path to geojson polygons.  |
+| --osm_download_link    | no      | add osm_download_link|
+| --csv_out           | yes       | Path to csv output.|
+
+
+```
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python geo fc2csv --geojson_input <INPUT_GEOJSON>  --osm_download_link --csv_out <OUTPUT_CSV>
+```

@@ -142,12 +142,12 @@ def run_removeactionosm(input_osm, output_osm):
     help="Path to geojson features output.",
 )
 def run_features_in_polygons(
-    geojson_in_polygon,
-    geojson_in_features,
-    tags_polygon,
-    mode_filter,
-    mode_output,
-    geojson_out_features,
+        geojson_in_polygon,
+        geojson_in_features,
+        tags_polygon,
+        mode_filter,
+        mode_output,
+        geojson_out_features,
 ):
     """
     Script to add tag '_where' and fields by location (mode_filter). this script can work with aws - s3 uri.
@@ -188,9 +188,9 @@ def run_features_in_polygons(
     help="Path to geojson features output.",
 )
 def run_addattributefc(
-    geojson_input,
-    tags,
-    geojson_out,
+        geojson_input,
+        tags,
+        geojson_out,
 ):
     """
     Add tags in each feature, this script can work with aws - s3 uri.
@@ -228,12 +228,12 @@ def run_addattributefc(
     help="Path to geojson features output.",
 )
 def run_keepattributes(
-    geojson_input,
-    keys,
-    geojson_out,
+        geojson_input,
+        keys,
+        geojson_out,
 ):
     """
-    Add tags in each feature, this script can work with aws - s3 uri.
+    Keep only keys add, remove others, this script can work with aws - s3 uri.
     """
     from .keepattributes import keep_attributes
 
@@ -241,6 +241,44 @@ def run_keepattributes(
         geojson_input,
         keys,
         geojson_out,
+    )
+
+
+# ===============================================
+# ============== FC 2 CSV   =====================
+# ================================================
+
+@cli.command("fc2csv")
+@click.option(
+    "--geojson_input", required=True, type=str, help="Path to geojson to process."
+)
+@click.option(
+    "--osm_download_link",
+    required=False,
+    is_flag=True,
+    default=False,
+    help="add osm_download_link",
+)
+@click.option(
+    "--csv_out",
+    required=True,
+    type=str,
+    help="Path to csv output.",
+)
+def run_fc2csv(
+        geojson_input,
+        osm_download_link,
+        csv_out,
+):
+    """
+    Convert geojson to csv, this script can work with aws - s3 uri.
+    """
+    from .fc2csv import fc2csv
+
+    fc2csv(
+        geojson_input,
+        osm_download_link,
+        csv_out,
     )
 
 
