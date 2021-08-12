@@ -248,6 +248,7 @@ def run_keepattributes(
 # ============== FC 2 CSV   =====================
 # ================================================
 
+
 @cli.command("fc2csv")
 @click.option(
     "--geojson_input", required=True, type=str, help="Path to geojson to process."
@@ -286,12 +287,16 @@ def run_fc2csv(
 # ============== DIFFERENCE =====================
 # ================================================
 
+
 @cli.command("difference")
 @click.option(
     "--geojson_input", required=True, type=str, help="Path to geojson to process."
 )
 @click.option(
-    "--geojson_dif", required=True, type=str, help="Path to geojson difference to process."
+    "--geojson_dif",
+    required=True,
+    type=str,
+    help="Path to geojson difference to process.",
 )
 @click.option(
     "--key",
@@ -308,6 +313,32 @@ def run_difference(geojson_input, geojson_dif, key, geojson_output):
     from .difference_by_tag import difference_by_tag
 
     difference_by_tag(geojson_input, geojson_dif, key, geojson_output)
+
+
+# ===============================================
+# ============== DUPLICATES BY TAG ==============
+# ================================================
+
+
+@cli.command("duplicatefeatures")
+@click.option(
+    "--geojson_input", required=True, type=str, help="Path to geojson to process."
+)
+@click.option(
+    "--key",
+    required=True,
+    help="key to filter.",
+)
+@click.option(
+    "--geojson_output", required=True, type=str, help="Path to geojson output."
+)
+def run_difference(geojson_input, key, geojson_output):
+    """
+    Gets the duplicate objects, identified by a unique attribute or primary key. this script can work with aws - s3 uri.
+    """
+    from .duplicatefeatures_by_tag import duplicate_features_by_tag
+
+    duplicate_features_by_tag(geojson_input, key, geojson_output)
 
 
 if __name__ == "__main__":
