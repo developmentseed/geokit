@@ -341,5 +341,45 @@ def run_difference(geojson_input, key, geojson_output):
     duplicate_features_by_tag(geojson_input, key, geojson_output)
 
 
+# ===============================================
+# ============== FILTER PROP GEOMETRY============
+# ===============================================
+
+
+@cli.command("duplicatefeatures")
+@click.option(
+    "--geojson_input", required=True, type=str, help="Path to geojson to process."
+)
+@click.option(
+    "--props",
+    required=True,
+    help="props to filter. key=value or key=*",
+)
+@click.option(
+    "--mode_filter",
+    required=False,
+    default="by_properties",
+    type=click.Choice(["by_properties", "by_properties_strict", "by_geometry"], case_sensitive=True),
+    help="mode filter.",
+)
+@click.option(
+    "--mode_output",
+    required=False,
+    default="merged",
+    type=click.Choice(["merged", "by_props", "by_geometry"], case_sensitive=True),
+    help="mode of file output.",
+)
+@click.option(
+    "--geojson_output", required=True, type=str, help="Path to geojson output."
+)
+def run_difference(geojson_input, props, mode_filter, mode_output, geojson_output):
+    """
+    Filters features by given property/geometry and it will generate a new geojson file with the filtered features. This script can work with aws - s3 uri.
+    """
+    from .filter_by_props_geometry import filter_by
+
+    filter_by(geojson_input, props, mode_filter, mode_output, geojson_output, False)
+
+
 if __name__ == "__main__":
     cli()
