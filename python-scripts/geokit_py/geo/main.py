@@ -332,7 +332,7 @@ def run_difference(geojson_input, geojson_dif, key, geojson_output):
 @click.option(
     "--geojson_output", required=True, type=str, help="Path to geojson output."
 )
-def run_difference(geojson_input, key, geojson_output):
+def run_duplicatefeatures(geojson_input, key, geojson_output):
     """
     Gets the duplicate objects, identified by a unique attribute or primary key. this script can work with aws - s3 uri.
     """
@@ -346,7 +346,7 @@ def run_difference(geojson_input, key, geojson_output):
 # ===============================================
 
 
-@cli.command("duplicatefeatures")
+@cli.command("fc_filter")
 @click.option(
     "--geojson_input", required=True, type=str, help="Path to geojson to process."
 )
@@ -372,7 +372,7 @@ def run_difference(geojson_input, key, geojson_output):
 @click.option(
     "--geojson_output", required=True, type=str, help="Path to geojson output."
 )
-def run_difference(geojson_input, props, mode_filter, mode_output, geojson_output):
+def run_filter_by(geojson_input, props, mode_filter, mode_output, geojson_output):
     """
     Filters features by given property/geometry and it will generate a new geojson file with the filtered features. This script can work with aws - s3 uri.
     """
