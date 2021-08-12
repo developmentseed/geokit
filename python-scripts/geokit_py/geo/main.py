@@ -351,17 +351,17 @@ def run_duplicatefeatures(geojson_input, key, geojson_output):
     "--geojson_input", required=True, type=str, help="Path to geojson to process."
 )
 @click.option(
-    "--props",
-    required=True,
-    multiple=True,
-    help="props to filter. key=value or key=*",
-)
-@click.option(
     "--mode_filter",
     required=False,
     default="by_properties",
     type=click.Choice(["by_properties", "by_properties_strict", "by_geometry"], case_sensitive=True),
-    help="mode filter.",
+    help="Mode filter.",
+)
+@click.option(
+    "--props",
+    required=True,
+    multiple=True,
+    help="Props/Geometry to filter. key=value or key=*.",
 )
 @click.option(
     "--mode_output",
