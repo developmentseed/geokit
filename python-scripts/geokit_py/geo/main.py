@@ -353,6 +353,7 @@ def run_duplicatefeatures(geojson_input, key, geojson_output):
 @click.option(
     "--props",
     required=True,
+    multiple=True,
     help="props to filter. key=value or key=*",
 )
 @click.option(
