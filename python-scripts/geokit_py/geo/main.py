@@ -58,7 +58,7 @@ def run_generate_id(in_file, id_label, id_start, zeros, variation, output_file):
 def run_osm2new(input_osm, output_osm):
     """
     Removes some attributes of each feature such as: user, version, timestamp, changeset and uid.
-    So it returns a new OSM file without these attributes.
+    So it returns a new OSM file without these attributes, this script can work with aws - s3 uri.
     """
     from .osm2new import osm2new
 
@@ -280,6 +280,34 @@ def run_fc2csv(
         osm_download_link,
         csv_out,
     )
+
+
+# ===============================================
+# ============== DIFFERENCE =====================
+# ================================================
+
+@cli.command("difference")
+@click.option(
+    "--geojson_input", required=True, type=str, help="Path to geojson to process."
+)
+@click.option(
+    "--geojson_dif", required=True, type=str, help="Path to geojson difference to process."
+)
+@click.option(
+    "--key",
+    required=True,
+    help="Could be any of attribute, which is in both files.",
+)
+@click.option(
+    "--geojson_output", required=True, type=str, help="Path to geojson output."
+)
+def run_difference(geojson_input, geojson_dif, key, geojson_output):
+    """
+    Gets the difference of the objects between two geojson files according to a common attribute, this script can work with aws - s3 uri.
+    """
+    from .difference_by_tag import difference_by_tag
+
+    difference_by_tag(geojson_input, geojson_dif, key, geojson_output)
 
 
 if __name__ == "__main__":

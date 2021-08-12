@@ -2,13 +2,16 @@
 
 from lxml import etree
 from tqdm import tqdm
+from smart_open import open
 
 attribs = ["user", "version", "timestamp", "changeset", "uid"]
 
 
 def osm2new(input_osm, output_osm):
     """An Awesome doc."""
-    tree = etree.parse(input_osm)
+    with open(input_osm, "r") as sfile:
+        tree = etree.parse(sfile)
+
     nodes = tree.findall(".//node")
     ways = tree.findall(".//way")
     relations = tree.findall(".//relation")
@@ -51,5 +54,5 @@ def osm2new(input_osm, output_osm):
                 member.attrib["ref"] = str(dict[member.attrib["ref"]])
 
     xml = b"<?xml version='1.0' encoding='UTF-8'?>\n" + etree.tostring(tree, pretty_print=True, encoding="utf8")
-    new_file = open(output_osm, "w")
-    new_file.write(xml.decode("utf8"))
+    with open(output_osm, "w") as sfile_out:
+        sfile_out.write(xml.decode("utf8"))
