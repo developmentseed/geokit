@@ -22,14 +22,16 @@ def cli():
 @click.option(
     "--in_file",
     required=True,
+    type=str,
     help="Path to geojson file to be processed.",
 )
-@click.option("--id_label", default="id", help="key for id")
-@click.option("--id_start", default=1, type=int, help="value to start id")
-@click.option("--zeros", default=0, help="adds zeros at the beginning of the id")
+@click.option("--id_label", default="id", type=str, required=False, help="key for id")
+@click.option("--id_start", default=1, type=int, required=False, help="value to start id")
+@click.option("--zeros", default=0, type=int, required=False, help="adds zeros at the beginning of the id")
 @click.option(
     "--variation",
     default="NUMBER",
+    required=False,
     type=click.Choice(["NUMBER", "UUID"], case_sensitive=False),
     help="type of id (number or uuid)",
 )
@@ -38,7 +40,7 @@ def cli():
 )
 def run_generate_id(in_file, id_label, id_start, zeros, variation, output_file):
     """
-    Addig a key <id_label> in the PROPERTIES in a geojson file, the value of id can start in 1 or start_count.
+    Addig a key <id_label> in the PROPERTIES in a geojson file, the value of id can start in 1 or start_count. This script can work with `aws - s3` uri.
     """
     from .generateid import generateid
 
@@ -107,7 +109,6 @@ def run_removeactionosm(input_osm, output_osm):
 @click.option(
     "--mode_filter",
     required=True,
-    default="include__centroid",
     type=click.Choice(
         [
             "include",
@@ -126,12 +127,11 @@ def run_removeactionosm(input_osm, output_osm):
         ],
         case_sensitive=True,
     ),
-    help="mode of filter.",
+    help="mode of filter, default: include__centroid",
 )
 @click.option(
     "--mode_output",
     required=True,
-    default="merged",
     type=click.Choice(["merged", "by_location", "by_polygon_tag"], case_sensitive=True),
     help="mode of file output.",
 )
@@ -177,7 +177,6 @@ def run_features_in_polygons(
     "--tags",
     required=True,
     type=str,
-    default=[],
     multiple=True,
     help="props add features in format: key=value",
 )
@@ -342,7 +341,7 @@ def run_duplicatefeatures(geojson_input, key, geojson_output):
 
 
 # ===============================================
-# ============== FILTER PROP GEOMETRY============
+# ============== FILTER PROP / GEOMETRY ==========
 # ===============================================
 
 
@@ -352,8 +351,7 @@ def run_duplicatefeatures(geojson_input, key, geojson_output):
 )
 @click.option(
     "--mode_filter",
-    required=False,
-    default="by_properties",
+    required=True,
     type=click.Choice(
         ["by_properties", "by_properties_strict", "by_geometry"], case_sensitive=True
     ),
@@ -397,7 +395,7 @@ def run_filter_by(geojson_input, props, mode_filter, mode_output, geojson_output
     "--size",
     required=True,
     type=int,
-    help="size of geometries per split file.",
+    help="Size of geometries per split file.",
 )
 @click.option(
     "--geojson_output", required=True, type=str, help="Path to geojson output."

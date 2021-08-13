@@ -21,6 +21,7 @@ def cli():
     "--tolerance",
     default=70.0,
     type=float,
+    required=False,
     help="tolerance to filter box area, default 70 (70% area of image, max area is 100%).",
 )
 def run_intersectionbox(in_file, tolerance):
@@ -41,6 +42,7 @@ def run_intersectionbox(in_file, tolerance):
     "--tolerance",
     default=1.0,
     type=float,
+    required=False,
     help="tolerance to filter box area, default 1 (1% image).",
 )
 def run_smallbox(in_file, tolerance):
