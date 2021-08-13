@@ -142,12 +142,12 @@ def run_removeactionosm(input_osm, output_osm):
     help="Path to geojson features output.",
 )
 def run_features_in_polygons(
-        geojson_in_polygon,
-        geojson_in_features,
-        tags_polygon,
-        mode_filter,
-        mode_output,
-        geojson_out_features,
+    geojson_in_polygon,
+    geojson_in_features,
+    tags_polygon,
+    mode_filter,
+    mode_output,
+    geojson_out_features,
 ):
     """
     Script to add tag '_where' and fields by location (mode_filter). this script can work with aws - s3 uri.
@@ -188,9 +188,9 @@ def run_features_in_polygons(
     help="Path to geojson features output.",
 )
 def run_addattributefc(
-        geojson_input,
-        tags,
-        geojson_out,
+    geojson_input,
+    tags,
+    geojson_out,
 ):
     """
     Add tags in each feature, this script can work with aws - s3 uri.
@@ -228,9 +228,9 @@ def run_addattributefc(
     help="Path to geojson features output.",
 )
 def run_keepattributes(
-        geojson_input,
-        keys,
-        geojson_out,
+    geojson_input,
+    keys,
+    geojson_out,
 ):
     """
     Keep only keys add, remove others, this script can work with aws - s3 uri.
@@ -267,9 +267,9 @@ def run_keepattributes(
     help="Path to csv output.",
 )
 def run_fc2csv(
-        geojson_input,
-        osm_download_link,
-        csv_out,
+    geojson_input,
+    osm_download_link,
+    csv_out,
 ):
     """
     Convert geojson to csv, this script can work with aws - s3 uri.
@@ -354,7 +354,9 @@ def run_duplicatefeatures(geojson_input, key, geojson_output):
     "--mode_filter",
     required=False,
     default="by_properties",
-    type=click.Choice(["by_properties", "by_properties_strict", "by_geometry"], case_sensitive=True),
+    type=click.Choice(
+        ["by_properties", "by_properties_strict", "by_geometry"], case_sensitive=True
+    ),
     help="Mode filter.",
 )
 @click.option(
@@ -380,6 +382,33 @@ def run_filter_by(geojson_input, props, mode_filter, mode_output, geojson_output
     from .filter_by_props_geometry import filter_by
 
     filter_by(geojson_input, props, mode_filter, mode_output, geojson_output, False)
+
+
+# ===============================================
+# ============== SPLIT GEOJSON ==================
+# ===============================================
+
+
+@cli.command("fc_split")
+@click.option(
+    "--geojson_input", required=True, type=str, help="Path to geojson to process."
+)
+@click.option(
+    "--size",
+    required=True,
+    type=int,
+    help="size of geometries per split file.",
+)
+@click.option(
+    "--geojson_output", required=True, type=str, help="Path to geojson output."
+)
+def run_filter_by(geojson_input, size, geojson_output):
+    """
+    Splits up a GeoJSON file into smaller GeoJSON files. This script can work with aws - s3 uri.
+    """
+    from .fc_split import fc_split
+
+    fc_split(geojson_input, size, geojson_output, False)
 
 
 if __name__ == "__main__":
