@@ -1,0 +1,83 @@
+FROM ubuntu:18.04
+
+RUN apt-get update && apt-get -y upgrade
+
+RUN apt-get install -y \
+    git \
+    gcc \
+    g++ \
+    make \
+    build-essential \
+    linux-headers-generic \
+    libgl1-mesa-dev \
+    libgl1-mesa-glx \
+    libpcap-dev \
+    pigz \
+    wget \
+    vim \
+    htop \
+    lvm2 \
+    moreutils \
+    curl
+
+# install node and npm modules
+RUN curl -fsSL https://deb.nodesource.com/setup_9.x | bash -
+RUN apt install -y nodejs
+RUN npm --version
+RUN npm install mbtiles-extracts -g --unsafe
+RUN npm install json-stream-reduce @turf/area
+
+# install mason and npm modules
+WORKDIR /mason
+RUN curl -sSfL https://github.com/mapbox/mason/archive/v0.23.0.tar.gz | tar -z --extract --strip-components=1 --exclude="*md" --exclude="test*" --directory=./
+RUN ln -s /mason/mason /usr/local/bin/mason
+RUN mason install osmium-tool 1.11.0
+RUN mason link osmium-tool 1.11.0
+RUN mason install tippecanoe 1.32.10
+RUN mason link tippecanoe 1.32.10
+ENV PATH=$PATH:/mason/mason_packages/.link/bin/
+ENV LC_ALL=en_US.UTF-8
+
+# Other node libraries from https://github.com/node-geojson
+RUN npm install -g osmtogeojson
+RUN npm install -g geojsontoosm
+RUN npm install -g geojson2poly
+RUN npm install -g geojson-pick
+RUN npm install -g @mapbox/geojson-merge
+RUN npm install -g csv2geojson
+
+# Install Libosmium
+RUN apt-get install -y cmake libblkid-dev e2fslibs-dev libboost-all-dev libaudit-dev libbz2-dev
+RUN git clone https://github.com/mapbox/protozero
+RUN cd protozero && mkdir build && cd build && cmake .. && make && make install
+RUN git clone https://github.com/osmcode/libosmium
+RUN cd libosmium && mkdir build && cd build && cmake .. && make && make install
+
+# Install osmconvert and osmfilter
+RUN wget -O - http://m.m.i24.cc/osmconvert.c | cc -x c - -lz -O3 -o osmconvert
+RUN cp osmconvert /usr/bin/osmconvert
+RUN wget -O - http://m.m.i24.cc/osmfilter.c |cc -x c - -O3 -o osmfilter
+RUN cp osmfilter /usr/bin/osmfilter
+
+# Install mbtiles extractor
+RUN git clone https://github.com/mapbox/mbtiles-extracts.git && cd mbtiles-extracts && npm link
+
+# # # Install osm-obj-counter
+# RUN git clone https://github.com/developmentseed/osm-obj-counter.git && cd osm-obj-counter && npm install --no-audit && npm link --no-audit
+
+# Install osmconv
+RUN git clone https://github.com/developmentseed/osm-coverage-tiles.git
+RUN cd osm-coverage-tiles && npm install --no-audit && npm link
+
+# install aws
+ENV TZ=America/New_York
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN apt-get install -y tzdata awscli
+
+# Copy geokit to container
+RUN mkdir /geokit
+ADD node-scripts /geokit
+WORKDIR /geokit
+RUN rm -rf node_modules/ && npm install && npm link
+VOLUME /mnt/data
+WORKDIR /mnt/data
