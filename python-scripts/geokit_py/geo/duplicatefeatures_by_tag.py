@@ -1,11 +1,11 @@
 """geo.duplicate_features_by_tag: Skeleton of a function."""
 
+import collections
 import json
 
 from geojson.feature import FeatureCollection as fc
 from smart_open import open
 from tqdm import tqdm
-import collections
 
 
 def duplicate_features_by_tag(geojson_input, key, geojson_output):

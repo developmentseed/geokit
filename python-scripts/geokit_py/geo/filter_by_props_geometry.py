@@ -4,12 +4,14 @@ import json
 
 from geojson.feature import FeatureCollection as fc
 from smart_open import open
-from tqdm import tqdm
-import collections
 
 
 def filter_props(features, props_filter, is_strict):
+    """Filter by props (feturecollection)."""
+
     def filter_props_feature(feature_, props_filter_, is_strict_):
+        """Filter by geometry (feature)."""
+
         feature_props = feature_.get("properties", {})
         flags = []
         for i in props_filter_:
@@ -38,6 +40,7 @@ def filter_props(features, props_filter, is_strict):
 
 
 def filter_geometry(features, props_filter):
+    """Filter by geometry."""
     new_feature_includes = []
     for feature in features:
         feature_type = str(feature["geometry"].get("type"))
@@ -56,7 +59,7 @@ def filter_by(geojson_input, props, mode_filter, mode_output, geojson_output, is
     if mode_filter == "by_geometry":
         for prop in props:
             if "=" in prop:
-                raise Exception(f"In geometry mode = not necessary")
+                raise Exception("In geometry mode = not necessary")
             if prop not in [
                 "Point",
                 "LineString",
@@ -66,8 +69,8 @@ def filter_by(geojson_input, props, mode_filter, mode_output, geojson_output, is
                 "MultiPolygon",
             ]:
                 raise Exception(
-                    f"The geometry its no valid, the options are : \n"
-                    f" Point, LineString, Polygon, MultiPoint, MultiLineString and MultiPolygon"
+                    "The geometry its no valid, the options are : \n"
+                    " Point, LineString, Polygon, MultiPoint, MultiLineString and MultiPolygon"
                 )
         features_filter = filter_geometry(json_data, props)
 

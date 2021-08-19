@@ -26,8 +26,16 @@ def cli():
     help="Path to geojson file to be processed.",
 )
 @click.option("--id_label", default="id", type=str, required=False, help="key for id")
-@click.option("--id_start", default=1, type=int, required=False, help="value to start id")
-@click.option("--zeros", default=0, type=int, required=False, help="adds zeros at the beginning of the id")
+@click.option(
+    "--id_start", default=1, type=int, required=False, help="value to start id"
+)
+@click.option(
+    "--zeros",
+    default=0,
+    type=int,
+    required=False,
+    help="adds zeros at the beginning of the id",
+)
 @click.option(
     "--variation",
     default="NUMBER",
@@ -400,7 +408,7 @@ def run_filter_by(geojson_input, props, mode_filter, mode_output, geojson_output
 @click.option(
     "--geojson_output", required=True, type=str, help="Path to geojson output."
 )
-def run_filter_by(geojson_input, size, geojson_output):
+def run_fc_split(geojson_input, size, geojson_output):
     """
     Splits up a GeoJSON file into smaller GeoJSON files. This script can work with aws - s3 uri.
     """

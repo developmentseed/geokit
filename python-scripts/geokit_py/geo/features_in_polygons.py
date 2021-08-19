@@ -1,12 +1,11 @@
 """geo.features_in_polygons: Skeleton of a function."""
 
 import json
-from uuid import uuid1
 
-from geojson.feature import FeatureCollection as fc, Feature
-from smart_open import open
-from shapely.geometry import geo, Point, shape
+from geojson.feature import FeatureCollection as fc
 from joblib import Parallel, delayed
+from shapely.geometry import shape
+from smart_open import open
 from tqdm import tqdm
 
 
@@ -18,21 +17,27 @@ def get_centerid(feature):
 
 
 def set_shape_feature(features_):
+    """Add shape in geo field (featurecollection)"""
+
     def set_shape(feature):
+        """Add shape in geo field (feature)"""
         feature["geo"] = shape(feature["geometry"])
         feature["area"] = feature["geo"].area
         return feature
 
     new_features = Parallel(n_jobs=-1)(
         delayed(set_shape)(feature)
-        for feature in tqdm(features_, desc=f"Setting 'geo' field")
+        for feature in tqdm(features_, desc="Setting 'geo' field")
     )
 
     return new_features
 
 
 def filter_include(polygon_features, features, tags_polygon, mode_filter):
+    """Filter include (featurecollection)"""
+
     def filter_include_feature(polygon_features_, feature, tags_polygon_, mode_filter_):
+        """Filter feature (feature)"""
         for p_f in polygon_features_:
             feature_geo = (
                 feature["geo"].centroid
@@ -52,15 +57,18 @@ def filter_include(polygon_features, features, tags_polygon, mode_filter):
         delayed(filter_include_feature)(
             polygon_features, feature, tags_polygon, mode_filter
         )
-        for feature in tqdm(features, desc=f"filter mode : include ")
+        for feature in tqdm(features, desc="filter mode : include ")
     )
     return new_feature_includes
 
 
 def filter_intersects(polygon_features, features, tags_polygon, mode_filter):
+    """Filter intersects (featurecollection)"""
+
     def filter_intersect_feature(
         polygon_features_, feature, tags_polygon_, intersects_range_
     ):
+        """Filter intersects (feature)"""
         feature_geo = feature.get("geo")
         for p_f in polygon_features_:
             if p_f["geo"].intersects(feature_geo) or p_f["geo"].contains(feature_geo):
@@ -149,7 +157,7 @@ def features_in_polygons(
             i for i in features_filter if i["properties"]["_where"] == "outside"
         ]
         with open(
-            geojson_out_features.replace(".geojson", f"__where__outside.geojson"), "w"
+            geojson_out_features.replace(".geojson", "__where__outside.geojson"), "w"
         ) as out_geo:
             out_geo.write(
                 json.dumps(fc(data_outside), ensure_ascii=False).encode("utf8").decode()
@@ -161,7 +169,7 @@ def features_in_polygons(
                 i for i in features_filter if i["properties"]["_where"] == "inside"
             ]
             with open(
-                geojson_out_features.replace(".geojson", f"__where__inside.geojson"),
+                geojson_out_features.replace(".geojson", "__where__inside.geojson"),
                 "w",
             ) as out_geo:
                 out_geo.write(

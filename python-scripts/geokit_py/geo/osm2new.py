@@ -1,8 +1,8 @@
 """geo.osm2new: Skeleton of a function."""
 
 from lxml import etree
-from tqdm import tqdm
 from smart_open import open
+from tqdm import tqdm
 
 attribs = ["user", "version", "timestamp", "changeset", "uid"]
 
@@ -17,7 +17,7 @@ def osm2new(input_osm, output_osm):
     relations = tree.findall(".//relation")
     dict = {}
     index = -5000
-    for node in tqdm(nodes, desc=f"Process nodes"):
+    for node in tqdm(nodes, desc="Process nodes"):
         index = index - 1
         dict[node.attrib["id"]] = index
         node.attrib["id"] = str(index)
@@ -26,7 +26,7 @@ def osm2new(input_osm, output_osm):
             if at in node.attrib:
                 del node.attrib[at]
 
-    for way in tqdm(ways, desc=f"Process ways"):
+    for way in tqdm(ways, desc="Process ways"):
         index = index - 1
         dict[way.attrib["id"]] = index
         way.attrib["id"] = str(index)
@@ -39,7 +39,7 @@ def osm2new(input_osm, output_osm):
             if nd.attrib["ref"] in dict:
                 nd.attrib["ref"] = str(dict[nd.attrib["ref"]])
 
-    for relation in tqdm(relations, desc=f"Process relations"):
+    for relation in tqdm(relations, desc="Process relations"):
         index = index - 1
         dict[relation.attrib["id"]] = index
         relation.attrib["id"] = str(index)
@@ -53,6 +53,8 @@ def osm2new(input_osm, output_osm):
             if member.attrib["ref"] in dict:
                 member.attrib["ref"] = str(dict[member.attrib["ref"]])
 
-    xml = b"<?xml version='1.0' encoding='UTF-8'?>\n" + etree.tostring(tree, pretty_print=True, encoding="utf8")
+    xml = b"<?xml version='1.0' encoding='UTF-8'?>\n" + etree.tostring(
+        tree, pretty_print=True, encoding="utf8"
+    )
     with open(output_osm, "w") as sfile_out:
         sfile_out.write(xml.decode("utf8"))

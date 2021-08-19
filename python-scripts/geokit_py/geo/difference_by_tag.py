@@ -26,7 +26,7 @@ def difference_by_tag(geojson_input, geojson_dif, key, geojson_output):
     feature_obj = list(dict.fromkeys([i for i in feature_obj if i]))
     features_out = []
 
-    for feature in tqdm(json_data, desc=f"Filter  geojson_input "):
+    for feature in tqdm(json_data, desc="Filter  geojson_input "):
         if not feature["properties"].get(key) in feature_obj:
             features_out.append(feature)
 
