@@ -37,13 +37,14 @@ def cli():
 @click.option(
     "--geojson_output",
     help="Original geojson with the attributes: tile, url",
+    required=True,
     type=str,
-    default="data/output.geojson",
 )
 @click.option(
     "--chuck",
     help="chuck size",
     type=int,
+    required=False,
     default=0,
 )
 def run_fctile(geojson_file, zoom, url_map_service, geojson_output, chuck):
@@ -64,7 +65,7 @@ def run_fctile(geojson_file, zoom, url_map_service, geojson_output, chuck):
     "--geojson_output",
     help="Geojson separate in no , yes (tile - point)",
     type=str,
-    default="data/supertiles.geojson",
+    required=True,
 )
 def run_filter_chips(geojson_file, geojson_output):
     """Script separate schools in yes - no"""
