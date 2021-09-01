@@ -21,7 +21,7 @@ RUN apt-get install -y \
     curl
 
 # install node and npm modules
-RUN curl -fsSL https://deb.nodesource.com/setup_9.x | bash -
+RUN curl -fsSL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt install -y nodejs
 RUN npm --version
 RUN npm install mbtiles-extracts -g --unsafe

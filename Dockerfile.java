@@ -1,4 +1,4 @@
-FROM openjdk:11
+FROM openjdk:11.0.10-buster
 
 RUN apt-get update
 
