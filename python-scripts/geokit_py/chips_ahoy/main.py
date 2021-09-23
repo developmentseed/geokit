@@ -66,7 +66,7 @@ def run_fctile(geojson_file, zoom, url_map_service, geojson_output, chuck):
     help="Clean chips-ahoy fields",
     required=False,
     default=False,
-    is_flag=True
+    is_flag=True,
 )
 @click.option(
     "--geojson_output",
