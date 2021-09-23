@@ -62,16 +62,23 @@ def run_fctile(geojson_file, zoom, url_map_service, geojson_output, chuck):
     type=str,
 )
 @click.option(
+    "--clean_fields",
+    help="Flag option - for cleaning chips-ahoy fields",
+    required=False,
+    default=False,
+    is_flag=True,
+)
+@click.option(
     "--geojson_output",
     help="Geojson separate in no , yes (tile - point)",
     type=str,
     required=True,
 )
-def run_filter_chips(geojson_file, geojson_output):
+def run_filter_chips(geojson_file, clean_fields, geojson_output):
     """Script separate schools in yes - no"""
     from .filter_chips import filter_chips
 
-    filter_chips(geojson_file, geojson_output)
+    filter_chips(geojson_file, clean_fields, geojson_output)
 
 
 if __name__ == "__main__":

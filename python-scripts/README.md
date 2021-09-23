@@ -34,9 +34,10 @@ Script to separate features tagged as `yes` and  `no` in polygons(tiles) and poi
 | ---------------- | -------- | ------------------------------------------- |
 | --geojson_file   | yes      | path to geojson file                        |
 | --geojson_output | yes      | Geojson separated in no, yes (tile - point) |
+| --clean_fields   | no       | Flag option - for cleaning chips-ahoy fields|
 
 ```
-docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python.latest chips_ahoy filter_chips --geojson_file <INPUT_GEOJSON> --geojson_output <OUTPUT_GEOJSON>
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python.latest chips_ahoy filter_chips --geojson_file <INPUT_GEOJSON> --geojson_output <OUTPUT_GEOJSON> --clean_fields
 ```
 
 # cvat module

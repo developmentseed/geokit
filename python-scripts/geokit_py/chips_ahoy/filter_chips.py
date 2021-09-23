@@ -37,34 +37,52 @@ def center_tile(feature):
     return new_feature
 
 
-def filter_chips(geojson_file, geojson_output):
+def clean_feature(features, clean_fields):
+    """remove unnecesary fields of featurecollection"""
+
+    if clean_fields:
+        remove_fields = ["pointScale", "sizeImage", "__reviewed"]
+        for feature in features:
+            prop_feature = feature.get("properties")
+            prop_feature_fields = prop_feature.keys()
+            for field in remove_fields:
+                if field in prop_feature_fields:
+                    del prop_feature[field]
+
+    return features
+
+
+def filter_chips(geojson_file, clean_fields, geojson_output):
     """Run scrip."""
     with open(geojson_file, encoding="utf8") as gfile:
         features = json.load(gfile).get("features", [])
     features_yes = [
         dict(feature)
         for feature in features
-        if feature["properties"].get("_has_school") == "yes"
+        if feature["properties"].get("dc_has_pattern_school") == "yes"
     ]
     features_no = [
         dict(feature)
         for feature in features
-        if feature["properties"].get("_has_school") == "no"
+        if feature["properties"].get("dc_has_pattern_school") == "no"
     ]
     features_no_point = [
         center_tile(feature)
         for feature in features
-        if feature["properties"].get("_has_school") == "no"
+        if feature["properties"].get("dc_has_pattern_school") == "no"
     ]
     features_yes_point = [
         pixel2geo_point(feature)
         for feature in features_yes
         if feature["properties"].get("pointScale")
     ]
+    # save files
     geojson_output_yes_point = geojson_output.replace(".geojson", "__yes_point.geojson")
     with open(geojson_output_yes_point, "w") as out_geo:
         out_geo.write(
-            json.dumps(fc(features_yes_point), ensure_ascii=False)
+            json.dumps(
+                fc(clean_feature(features_yes_point, clean_fields)), ensure_ascii=False
+            )
             .encode("utf8")
             .decode()
         )
@@ -72,18 +90,26 @@ def filter_chips(geojson_file, geojson_output):
     geojson_output_yes = geojson_output.replace(".geojson", "__yes_tile.geojson")
     with open(geojson_output_yes, "w") as out_geo:
         out_geo.write(
-            json.dumps(fc(features_yes), ensure_ascii=False).encode("utf8").decode()
+            json.dumps(
+                fc(clean_feature(features_yes, clean_fields)), ensure_ascii=False
+            )
+            .encode("utf8")
+            .decode()
         )
 
     geojson_output_no = geojson_output.replace(".geojson", "__no_tile.geojson")
     with open(geojson_output_no, "w") as out_geo:
         out_geo.write(
-            json.dumps(fc(features_no), ensure_ascii=False).encode("utf8").decode()
+            json.dumps(fc(clean_feature(features_no, clean_fields)), ensure_ascii=False)
+            .encode("utf8")
+            .decode()
         )
     geojson_output_no_point = geojson_output.replace(".geojson", "__no_point.geojson")
     with open(geojson_output_no_point, "w") as out_geo:
         out_geo.write(
-            json.dumps(fc(features_no_point), ensure_ascii=False)
+            json.dumps(
+                fc(clean_feature(features_no_point, clean_fields)), ensure_ascii=False
+            )
             .encode("utf8")
             .decode()
         )
