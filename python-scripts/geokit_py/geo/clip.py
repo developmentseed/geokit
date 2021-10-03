@@ -1,10 +1,13 @@
+"""geo.clip: Skeleton of a function."""
+
+import json
+
 import geopandas as gpd
 from smart_open import open
-import json
 
 
 def clip(geojson_input, geojson_boundary, geojson_output):
-    """Script to clip features"""
+    """Script to clip features."""
     features_inp = json.load(open(geojson_input)).get("features")
     data = gpd.GeoDataFrame.from_features(features_inp)
 

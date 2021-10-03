@@ -351,3 +351,18 @@ Script to clip features. This script can work with aws - s3 uri.
 docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python.latest geo clip --geojson_input  <INPUT_GEOJSON> --geojson_boundary  <BOUNDARY_GEOJSON> --geojson_output  <OUTPUT_GEOJSON>
 
 ```
+
+
+## merge features
+
+Script to merge multiple features. This script can work with aws - s3 uri.
+
+| COMMAND          | REQUIRED |MULTIPLE |DESCRIPTION                  |
+| ---------------- | -------- |  -------- |---------------------------|
+| --geojson_input  | yes      |  yes      |Path to geojson to process.  |
+| --geojson_output | yes      |  no      |Path to geojson output.|
+
+
+```
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python.latest geo merge_fc --geojson_inputs <INPUT_GEOJSON>  --geojson_inputs <INPUT_GEOJSON>   --geojson_inputs <INPUT_GEOJSON>  --geojson_output <OUTPUT_GEOJSON>
+```

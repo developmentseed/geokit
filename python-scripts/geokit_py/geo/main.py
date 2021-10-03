@@ -426,11 +426,26 @@ def run_fc_split(geojson_input, size, geojson_output):
 @click.option("--geojson_input", help="geojson input", type=str)
 @click.option("--geojson_boundary", help="geojson boundary", type=str)
 @click.option("--geojson_output", help="geojson output", type=str)
-def clip(geojson_input, geojson_boundary, geojson_output):
-    """Script to clip features"""
+def run_clip(geojson_input, geojson_boundary, geojson_output):
+    """Script to clip features."""
     from .clip import clip
 
     clip(geojson_input, geojson_boundary, geojson_output)
+
+
+# ===============================================
+# ============== MERGE GEOJSON ==================
+# ===============================================
+
+
+@cli.command("merge_fc")
+@click.option("--geojson_inputs", help="geojson input", type=str, multiple=True)
+@click.option("--geojson_output", help="geojson output", type=str)
+def run_merge_fc(geojson_inputs, geojson_output):
+    """Script to merge multiple featurecollections."""
+    from .merge_fc import merge_features
+
+    merge_features(geojson_inputs, geojson_output)
 
 
 if __name__ == "__main__":
