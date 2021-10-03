@@ -417,5 +417,21 @@ def run_fc_split(geojson_input, size, geojson_output):
     fc_split(geojson_input, size, geojson_output, False)
 
 
+# ===============================================
+# ============== CLIP GEOJSON ==================
+# ===============================================
+
+
+@cli.command("clip")
+@click.option("--geojson_input", help="geojson input", type=str)
+@click.option("--geojson_boundary", help="geojson boundary", type=str)
+@click.option("--geojson_output", help="geojson output", type=str)
+def clip(geojson_input, geojson_boundary, geojson_output):
+    """Script to clip features"""
+    from .clip import clip
+
+    clip(geojson_input, geojson_boundary, geojson_output)
+
+
 if __name__ == "__main__":
     cli()

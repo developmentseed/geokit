@@ -335,3 +335,19 @@ Splits up a GeoJSON file into smaller GeoJSON files. This script can work with a
 ```
 docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python.latest geo fc_split --geojson_input <INPUT_GEOJSON>  --size 1000  --geojson_output <OUTPUT_GEOJSON>
 ```
+
+## clip features
+
+Script to clip features. This script can work with aws - s3 uri.
+
+| COMMAND          | REQUIRED |DESCRIPTION                  |
+| ---------------- | -------- | ---------------------------|
+| --geojson_input  | yes      | Path to geojson to process.  |
+| --geojson_boundary | yes    | Path to geojson boundary. |
+| --geojson_output | yes      | Path to geojson output.|
+
+
+```
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python.latest geo clip --geojson_input  <INPUT_GEOJSON> --geojson_boundary  <BOUNDARY_GEOJSON> --geojson_output  <OUTPUT_GEOJSON>
+
+```
