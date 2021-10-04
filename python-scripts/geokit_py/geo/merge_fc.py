@@ -1,7 +1,8 @@
 """geo.merge_fc: Skeleton of a function."""
+import json
+
 from geojson.feature import FeatureCollection as fc
 from smart_open import open
-import json
 
 
 def merge_features(geojson_inputs, geojson_output):
