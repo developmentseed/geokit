@@ -19,3 +19,5 @@ pyproj
 pylint
 lxml
 lycon
+rtree
+pygeos
