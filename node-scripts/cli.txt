@@ -1,42 +1,28 @@
 Commands:
-- area             Gets the total area in km2 of the all polygons that there are in a geojson file.
-- bbox             Gets the bbox of a geojson file.
-- bbox2fc          Converts a bbox to FeatureCollection.
-- buffer           Creates buffer in LineString features for a given radius.
-- clip             Gets only the features that are inside the given boundary and it deletes all features outside the boundary'
-- distance         Gets the total distance in km of LineString and MultiLineString features that there are in a geojson file'
-- line2polygon     Changes the type of geometry from LineString to Polygon.
-- fc2frows         Sets each feature into a row from FeatureCollection.
-- fc2csv           Adds an osm_download_link column per each feature and each link downloads the feature in JOSM'
-- filterbyprop     Filters features by given property.
-- filterbygeometry Filters features by given one or many geometry types.
-- countfeature     Gets the total number of features that exist inside the a geojson file.
-- featurearea      Gets the area in hectares of each feature (polygon) into a geojson file.
-- countbysize      Counts features larger than the given area size in hectares.
-- point2tile       Create geojson of the tiles which cover the collections of points.
-- difference       Filter the difference between two files: <File1.geojson> - <file2.geojson> --key==school_code.
-- duplicatefeatures  Check if duplicate objects by an attribute.
-- point2tile       Pass a geojson with points and get the nearest tiles to this point in a geojson file.                
-- tilecover        Pass a polygon and get the tiles which cover all the polygon at a certain zoom.
-- deletenulls      Deletes the attributes that have a null value.
-- jsonlines2geojson     Gets a geojson file from json file.
-- centroid         Gets the centroid of the features.
-- removeactionosm  Removes the objects with action=delete in a osm file.
-- osm2new          Removes some attributes of each feature such as: `user`,  `version`, `timestamp`, `changeset` and `uid`. So it returns a new OSM file without these attributes.
-- fixordinal       Fixes ordinal suffixes of the addresses.
-- addrandomid      Adds a random id per each feature.
-- fixospoints      Fixes points.
-- cvat-xml2csv     Convert CVAT xml dump file to csv.
-- cvat-count-tags  Counts the number of images and tags in a CVAT's xml dump file 
-- downsized-imgs  Downsized jpg files to 512X512 
-- cvat-npz2xml    Convert npz file to xml format for CVAT imput.
+- area              Gets the total area in km² of Polygon and MultiPolygon features that there are in a GeoJSON file.
+- featurearea       Gets the area in ha of each feature (polygon) into a GeoJSON file and it will generate a new GeoJSON file with all features plus an area property.
+- countfeature      Gets the total number of features that exist inside the GeoJSON file.
+- distance          Gets the total distance in km of LineString and MultiLineString features that there are in a GeoJSON file.
+- featuredistance   Adds the distance as an attribute; it contains the length in kilometers that has each feature in a GeoJSON file.
+- bbox2fc           Converts a bounding box to FeatureCollection.
+- bbox              Gets the bounding box of a FeatureCollection.
+- buffer            Creates buffer in LineString features for a given radius. 
+- line2polygon      Changes the type of geometry from LineString to Polygon.
+- fc2square         Creates features square for a given radius in meters, in case of Polygon and LineString the script takes the centroid to generate the square.
+- featurebbox       Gets the bbox of each feature in a GeoJSON file and add it as a attribute.
+- renamekey         Changes a key name in each features in the GeoJSON file.
+- deletenulls       Deletes the attributes that have a null value.
+- centroid          Gets the centroid of the features.
+- point2tile        Pass a GeoJSON file with points and gets the nearest tiles to this points.
+- tilecover         Pass a polygon and gets the tiles which cover all the polygon at a certain zoom level. 
+- splitbyzoom       Divides the features in a GeoJSON file according to a given zoom level (works for zoom <= 15), and it will generate GeoJSON files into a folder.
+- fc2frows          Sets each feature into a row from FeatureCollection.
+- jsonlines2geojson Gets a GeoJSON file from JSON file.
 
 Also you can use these commands
 
-- geojson-merge    Merges multiple geojson files into one FeatureCollection.
-- osmtogeojson     Converts osm file to geojson format.
-- geojsontoosm     Converts geojson file to osm format.
-- geojson2poly     Converts geojson polygons to OpenStreetMap (OSM) poly format file.
-- geojson-pick     Removes all but specified properties from features in a geojson FeatureCollection.
+- geojsontoosm     Converts GeoJSON file to osm format.
+- osmtogeojson     Converts OSM file to GeoJSON format.
+- geojson2poly     Converts GeoJSON polygons to OpenStreetMap (OSM) poly format file.
 
 More details, visit our web page with all documentation --> http://devseed.com/geokit-doc-seed
