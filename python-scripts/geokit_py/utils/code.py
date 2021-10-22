@@ -92,5 +92,5 @@ def get_list_files_folder(folder_path, recursive, prefix):
     # local folder
     folder_path = "/".join([i for i in folder_path.split("/") if i])
     if recursive:
-        list(glob.glob(f"/{folder_path}/**/*{prefix}"))
-    return list(glob.glob(f"/{folder_path}/*{prefix}"))
+        list(glob.glob(f"{folder_path}/**/*{prefix}"))
+    return list(glob.glob(f"{folder_path}/*{prefix}"))
