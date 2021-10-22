@@ -72,13 +72,6 @@ geokit buffer input.geojson --unit=meters --radius=10000  > output.geojson
 geokit fc2square input.geojson --radius=40  > output.geojson
 ```
 
-### Clip
-
-- Gets only the features that are inside the given boundary and it deletes all features outside the boundary.
-
-```
-geokit clip input.geojson boundary.geojson > output.geojson
-```
 
 ### Distance
 
@@ -259,13 +252,6 @@ From: https://github.com/mapbox/tile-cover
 
 Functionalities outside Geokit into a Docker image.
 
-### [geojson-merge](https://github.com/mapbox/geojson-merge)
-
-- Merges multiple geojson files into one FeatureCollection.
-
-```
-geojson-merge input1.geojson input2.geojson > output.geojson
-```
 
 ### [osmtogeojson](https://github.com/tyrasd/osmtogeojson)
 

@@ -417,5 +417,50 @@ def run_fc_split(geojson_input, size, geojson_output):
     fc_split(geojson_input, size, geojson_output, False)
 
 
+# ===============================================
+# ============== CLIP GEOJSON ==================
+# ===============================================
+
+
+@cli.command("clip")
+@click.option("--geojson_input", help="geojson input", type=str)
+@click.option("--geojson_boundary", help="geojson boundary", type=str)
+@click.option("--geojson_output", help="geojson output", type=str)
+def run_clip(geojson_input, geojson_boundary, geojson_output):
+    """Script to clip features."""
+    from .clip import clip
+
+    clip(geojson_input, geojson_boundary, geojson_output)
+
+
+# ===============================================
+# ============== MERGE GEOJSON ==================
+# ===============================================
+
+
+@cli.command("merge_fc")
+@click.option(
+    "--geojson_inputs", help="geojson input", type=str, required=False, multiple=True
+)
+@click.option(
+    "--folder_path",
+    help="folder geojson path",
+    type=str,
+    required=False,
+)
+@click.option(
+    "--recursive",
+    help="flag search under folders",
+    is_flag=True,
+    default=False,
+)
+@click.option("--geojson_output", help="geojson output", type=str)
+def run_merge_fc(geojson_inputs, folder_path, recursive, geojson_output):
+    """Script to merge multiple featurecollections."""
+    from .merge_fc import merge_features
+
+    merge_features(geojson_inputs, folder_path, recursive, geojson_output)
+
+
 if __name__ == "__main__":
     cli()

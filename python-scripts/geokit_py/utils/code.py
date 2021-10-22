@@ -1,8 +1,10 @@
 """utils.code: Skeleton of a function."""
 
+import glob
 import logging
 from xml.etree import ElementTree as ET
 
+import boto3
 import click
 from shapely.geometry import Polygon
 from smart_open import open
@@ -60,3 +62,35 @@ def make_polygon(data):
         return poly
     except Exception as e:
         logging.error(e.__str__())
+
+
+def get_list_files_folder(folder_path, recursive, prefix):
+    """return files from folder"""
+    if not folder_path:
+        return []
+    if "s3://" in folder_path:
+        bucket = folder_path.replace("s3://", "").split("/")[0]
+        folder = f'{"/".join([i for i in folder_path.replace("s3://", "").split("/")[1:] if i])}/'.replace(
+            "//", "/"
+        )
+        s3 = boto3.resource("s3")
+        s3_bucket = s3.Bucket(bucket)
+        if recursive:
+            files_in_s3 = [
+                f.key
+                for f in s3_bucket.objects.filter(Prefix=folder).all()
+                if prefix in f.key
+            ]
+        else:
+            files_in_s3 = [
+                f.key
+                for f in s3_bucket.objects.filter(Prefix=folder).all()
+                if prefix in f.key and "/" not in f.key.replace(folder, "")
+            ]
+
+        return [f"s3://{bucket}/{file}" for file in files_in_s3]
+    # local folder
+    folder_path = "/".join([i for i in folder_path.split("/") if i])
+    if recursive:
+        list(glob.glob(f"{folder_path}/**/*{prefix}"))
+    return list(glob.glob(f"{folder_path}/*{prefix}"))
