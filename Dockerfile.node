@@ -43,6 +43,7 @@ RUN npm install -g osmtogeojson
 RUN npm install -g geojsontoosm
 RUN npm install -g geojson2poly
 RUN npm install -g geojson-pick
+RUN npm install -g @mapbox/geojson-merge
 RUN npm install -g csv2geojson
 
 # Install Libosmium
