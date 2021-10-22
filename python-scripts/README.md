@@ -360,7 +360,7 @@ Script to merge multiple features. This script can work with aws - s3 uri.
 | COMMAND          | REQUIRED |MULTIPLE |DESCRIPTION                  |
 | ---------------- | -------- |  -------- |---------------------------|
 | --geojson_input  | no      |  yes      |Path to geojson to process.  |
-| --folder_path  | mo      |  no      |Path to folders with geojson files.  |
+| --folder_path  | no      |  no      |Path to folders with geojson files.  |
 | --recursive  | no      |  no      |Flag to search under folder_path, default: False |
 | --geojson_output | yes      |  no      |Path to geojson output.|
 
