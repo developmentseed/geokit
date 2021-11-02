@@ -51,7 +51,7 @@ def cli():
     "--is_super_tile",
     help="flag add neighbors tiles ",
     required=False,
-    default=True,
+    default=False,
     is_flag=True,
 )
 def run_fctile(
