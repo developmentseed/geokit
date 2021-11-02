@@ -47,11 +47,20 @@ def cli():
     required=False,
     default=0,
 )
-def run_fctile(geojson_file, zoom, url_map_service, geojson_output, chuck):
+@click.option(
+    "--is_super_tile",
+    help="flag add neighbors tiles ",
+    required=False,
+    default=False,
+    is_flag=True,
+)
+def run_fctile(
+    geojson_file, zoom, url_map_service, geojson_output, chuck, is_super_tile
+):
     """Script for add tile and url-tiles."""
     from .fctile import fctile
 
-    fctile(geojson_file, zoom, url_map_service, geojson_output, chuck)
+    fctile(geojson_file, zoom, url_map_service, geojson_output, chuck, is_super_tile)
 
 
 @cli.command("filter_chips")

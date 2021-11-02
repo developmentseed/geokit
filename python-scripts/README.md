@@ -21,7 +21,7 @@ Script to add tiles and url-tiles to each features in a geojson file.
 | --url_map_service | yes      | tile map service url                              |
 | --geojson_output  | yes      | original geojson with the attributes: tile, url   |
 | --chuck           | no       | chuck size, default 0                             |
-
+| --is_super_tile   | no       | Flag add neighbors tiles, default False           |
 ```
 docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python.latest chips_ahoy fctile --geojson_file <INPUT_GEOJSON> --zoom <ZOOM> --url_map_service <URL_MAP_SERVICE> --geojson_output <OUTPUT_GEOJSON> --chuck <CHUCK_SIZE>
 ```

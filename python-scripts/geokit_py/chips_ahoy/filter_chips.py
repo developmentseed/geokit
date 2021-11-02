@@ -41,7 +41,7 @@ def clean_feature(features, clean_fields):
     """remove unnecesary fields of featurecollection"""
 
     if clean_fields:
-        remove_fields = ["pointScale", "sizeImage", "__reviewed"]
+        remove_fields = ["pointScale", "sizeImage", "__reviewed", "tiles_neighbors"]
         for feature in features:
             prop_feature = feature.get("properties")
             prop_feature_fields = prop_feature.keys()
