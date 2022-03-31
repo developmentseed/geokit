@@ -1,17 +1,21 @@
-from geojson.feature import FeatureCollection as fc
+"""geo.deletenulls: Skeleton of a function."""
+
 import json
 from copy import deepcopy
 
+from geojson.feature import FeatureCollection as fc
+
+
 def delete_null_values(geojson_input, geojson_output, delete_feat):
     """Script to delete the attributes that have a null value."""
-    with open (geojson_input, encoding="utf8") as gfile:
-        features_ = json.load(gfile).get("features",[])
+    with open(geojson_input, encoding="utf8") as gfile:
+        features_ = json.load(gfile).get("features", [])
         features_temp = deepcopy(features_)
 
-        crit_evaluar = [None, {}, [], '']
+        crit_evaluar = [None, {}, [], ""]
         for i, element in enumerate(features_):
             properties = element["properties"]
-            for k,v in properties.items():
+            for k, v in properties.items():
                 if v in crit_evaluar:
                     if delete_feat:
                         features_[i] = None
@@ -28,5 +32,7 @@ def delete_null_values(geojson_input, geojson_output, delete_feat):
     else:
         with open(geojson_output, "w") as out_geo:
             out_geo.write(
-                json.dumps(fc(features_temp), ensure_ascii=False).encode("utf8").decode()
+                json.dumps(fc(features_temp), ensure_ascii=False)
+                .encode("utf8")
+                .decode()
             )

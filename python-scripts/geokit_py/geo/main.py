@@ -5,6 +5,9 @@ Author: @developmentseed
 
 import click
 
+from .distance import MEASUREMENT_D
+from .featurearea import MEASUREMENT
+
 
 @click.group(chain=True)
 def cli():
@@ -466,7 +469,6 @@ def run_merge_fc(geojson_inputs, folder_path, recursive, geojson_output):
 # ============== GET DISTANCE PER EACH FEATURE==============
 # ===============================================
 
-from .distance import MEASUREMENT
 
 @cli.command("distance")
 @click.option(
@@ -475,7 +477,7 @@ from .distance import MEASUREMENT
 @click.option(
     "--unit_measurement",
     required=True,
-    type=click.Choice(list(MEASUREMENT.keys()), case_sensitive=True),
+    type=click.Choice(list(MEASUREMENT_D.keys()), case_sensitive=True),
     help="Unit of distance measurement",
 )
 @click.option(
@@ -500,9 +502,11 @@ def run_get_distance(
         geojson_output,
     )
 
+
 # ===============================================
 # ============== RENAME KEY ==============
 # ===============================================
+
 
 @cli.command("renamekey")
 @click.option(
@@ -544,9 +548,11 @@ def run_renamekey(
         geojson_output,
     )
 
+
 # ===============================================
 # ============== DELETE NULLS ==============
 # ===============================================
+
 
 @cli.command("deletenulls")
 @click.option(
@@ -564,7 +570,6 @@ def run_renamekey(
     default=False,
     help="Delete those features that have an attribute with a null value",
 )
-
 def run_deletenulls(
     geojson_input,
     geojson_output,
@@ -581,10 +586,11 @@ def run_deletenulls(
         delete_feat,
     )
 
+
 # ===============================================
 # ============== GET AREA PER EACH FEATURE ==============
 # ===============================================
-from .featurearea import MEASUREMENT
+
 
 @cli.command("featurearea")
 @click.option(
@@ -602,7 +608,6 @@ from .featurearea import MEASUREMENT
     type=str,
     help="Path to geojson features output.",
 )
-
 def run_featurearea(
     geojson_input,
     unit_measurement,
@@ -618,6 +623,7 @@ def run_featurearea(
         unit_measurement,
         geojson_output,
     )
+
 
 if __name__ == "__main__":
     cli()
