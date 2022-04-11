@@ -513,16 +513,10 @@ def run_get_distance(
     "--geojson_input", required=True, type=str, help="Path to geojson to process."
 )
 @click.option(
-    "--old_key",
+    "--props",
     required=True,
-    type=str,
-    help="Old key for rename",
-)
-@click.option(
-    "--new_key",
-    required=True,
-    type=str,
-    help="New name for the key",
+    multiple=True,
+    help="Attributes to rename in the format: old_key=new_key",
 )
 @click.option(
     "--geojson_output",
@@ -532,19 +526,17 @@ def run_get_distance(
 )
 def run_renamekey(
     geojson_input,
-    old_key,
-    new_key,
+    props,
     geojson_output,
 ):
     """
-    Script to rename a key of the features
+    Script to rename one or more keys of the features
     """
     from .renamekey import rename_key
 
     rename_key(
         geojson_input,
-        old_key,
-        new_key,
+        props,
         geojson_output,
     )
 
@@ -567,6 +559,7 @@ def run_renamekey(
 @click.option(
     "--delete_feat",
     required=False,
+    is_flag=True,
     default=False,
     help="Delete those features that have an attribute with a null value",
 )

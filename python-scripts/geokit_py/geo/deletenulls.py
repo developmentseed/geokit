@@ -15,7 +15,9 @@ def delete_null_values(geojson_input, geojson_output, delete_feat):
         crit_evaluar = [None, {}, [], ""]
         for i, element in enumerate(features_):
             properties = element["properties"]
-            for k, v in properties.items():
+            print(list(properties.items()))
+            print(properties.items())
+            for k, v in list(properties.items()):
                 if v in crit_evaluar:
                     if delete_feat:
                         features_[i] = None

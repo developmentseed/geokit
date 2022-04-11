@@ -24,7 +24,7 @@ def get_distance(geojson_input, unit_measurement, geojson_output):
         feature["geom"] = shape(feature.get("geometry", {}))
 
     for feature in features:
-        if ("LineString" or "MultiLineString") in feature["geom"].geom_type:
+        if "LineString" in feature["geom"].geom_type:
             distance = (
                 f"distance_{MEASUREMENT_D.get(unit_measurement).get('unit_measur')}"
             )
