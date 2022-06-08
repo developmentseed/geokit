@@ -21,27 +21,20 @@ def get_distance(geojson_input, unit_measurement, geojson_output):
     distance_total = 0
 
     for feature in features:
-        feature["geom"] = shape(feature.get("geometry", {}))
-
-    for feature in features:
-        if "LineString" in feature["geom"].geom_type:
+        geom = shape(feature.get("geometry", {}))
+        if "LineString" in geom.geom_type:
             distance = (
                 f"distance_{MEASUREMENT_D.get(unit_measurement).get('unit_measur')}"
             )
-            distance_base = round(geod.geometry_length(feature["geom"]), 3)
-            feature["properties"][distance] = round(
+            distance_base = round(geod.geometry_length(geom), 3)
+            distance_num = round(
                 distance_base / MEASUREMENT_D.get(unit_measurement).get("divisor"), 3
             )
-            distance_total += round(
-                distance_base / MEASUREMENT_D.get(unit_measurement).get("divisor"), 3
-            )
-
-    for feature in features:
-        if "geom" in feature.keys():
-            del feature["geom"]
+            feature["properties"][distance] = distance_num
+            distance_total += distance_num
 
     print(
-        f"Total distance: {round(distance_total,3)} {MEASUREMENT_D.get(unit_measurement).get('unit_measur')}"
+        f"Total distance: {round(distance_total, 3)} {MEASUREMENT_D.get(unit_measurement).get('unit_measur')}"
     )
     with open(geojson_output, "w") as out_geo:
         out_geo.write(

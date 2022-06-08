@@ -15,30 +15,25 @@ MEASUREMENT = {
 
 def get_feature_area(geojson_input, unit_measurement, geojson_output):
     """Script to get the area of each polygon feature."""
+
     with open(geojson_input, encoding="utf8") as gfile:
         features = json.load(gfile).get("features", [])
     geod = Geod(ellps="WGS84")
     area_total = 0
 
     for feature in features:
-        feature["geom"] = shape(feature.get("geometry", {}))
-    for feature in features:
-        if "Polygon" in feature["geom"].geom_type:
+        geom = shape(feature.get("geometry", {}))
+        if "Polygon" in geom.geom_type:
             area = f"area_{MEASUREMENT.get(unit_measurement).get('unit_measur')}"
-            area_base = round(geod.geometry_area_perimeter(feature["geom"])[0], 3)
-            feature["properties"][area] = round(
+            area_base = round(geod.geometry_area_perimeter(geom)[0], 3)
+            area_num = round(
                 area_base / MEASUREMENT.get(unit_measurement).get("divisor"), 3
             )
-            area_total += round(
-                area_base / MEASUREMENT.get(unit_measurement).get("divisor"), 3
-            )
-
-    for feature in features:
-        if "geom" in feature.keys():
-            del feature["geom"]
+            feature["properties"][area] = area_num
+            area_total += area_num
 
     print(
-        f"Area total: {round(area_total,3)} {MEASUREMENT.get(unit_measurement).get('unit_measur')}"
+        f"Area total: {round(area_total, 3)} {MEASUREMENT.get(unit_measurement).get('unit_measur')}"
     )
     with open(geojson_output, "w") as out_geo:
         out_geo.write(
