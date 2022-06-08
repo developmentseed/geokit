@@ -6,6 +6,7 @@ from geojson.feature import FeatureCollection as fc
 
 def delete_null_values(geojson_input, geojson_output, delete_feat):
     """Script to delete the attributes that have a null value."""
+
     with open(geojson_input, encoding="utf8") as gfile:
         features_ = json.load(gfile).get("features", [])
 
