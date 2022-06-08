@@ -1,6 +1,7 @@
 """geo.deletenulls: Skeleton of a function."""
 
 import json
+
 from geojson.feature import FeatureCollection as fc
 
 
