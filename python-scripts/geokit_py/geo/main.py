@@ -5,6 +5,9 @@ Author: @developmentseed
 
 import click
 
+from .distance import MEASUREMENT_D
+from .featurearea import MEASUREMENT
+
 
 @click.group(chain=True)
 def cli():
@@ -460,6 +463,159 @@ def run_merge_fc(geojson_inputs, folder_path, recursive, geojson_output):
     from .merge_fc import merge_features
 
     merge_features(geojson_inputs, folder_path, recursive, geojson_output)
+
+
+# ===============================================
+# ============== GET DISTANCE PER EACH FEATURE==============
+# ===============================================
+
+
+@cli.command("distance")
+@click.option(
+    "--geojson_input", required=True, type=str, help="Path to geojson to process."
+)
+@click.option(
+    "--unit_measurement",
+    required=True,
+    type=click.Choice(list(MEASUREMENT_D.keys()), case_sensitive=True),
+    help="Unit of distance measurement",
+)
+@click.option(
+    "--geojson_output",
+    required=True,
+    type=str,
+    help="Path to geojson features output.",
+)
+def run_get_distance(
+    geojson_input,
+    unit_measurement,
+    geojson_output,
+):
+    """
+    Get the distance of each LineString and MultiLineString.
+    """
+    from .distance import get_distance
+
+    get_distance(
+        geojson_input,
+        unit_measurement,
+        geojson_output,
+    )
+
+
+# ===============================================
+# ============== RENAME KEY ==============
+# ===============================================
+
+
+@cli.command("renamekey")
+@click.option(
+    "--geojson_input", required=True, type=str, help="Path to geojson to process."
+)
+@click.option(
+    "--props",
+    required=True,
+    multiple=True,
+    help="Attributes to rename in the format: old_key=new_key",
+)
+@click.option(
+    "--geojson_output",
+    required=True,
+    type=str,
+    help="Path to geojson features output.",
+)
+def run_renamekey(
+    geojson_input,
+    props,
+    geojson_output,
+):
+    """
+    Script to rename one or more keys of the features
+    """
+    from .renamekey import rename_key
+
+    rename_key(
+        geojson_input,
+        props,
+        geojson_output,
+    )
+
+
+# ===============================================
+# ============== DELETE NULLS ==============
+# ===============================================
+
+
+@cli.command("deletenulls")
+@click.option(
+    "--geojson_input", required=True, type=str, help="Path to geojson to process."
+)
+@click.option(
+    "--geojson_output",
+    required=True,
+    type=str,
+    help="Path to geojson features output.",
+)
+@click.option(
+    "--delete_feat",
+    required=False,
+    is_flag=True,
+    default=False,
+    help="Delete those features that have an attribute with a null value",
+)
+def run_deletenulls(
+    geojson_input,
+    geojson_output,
+    delete_feat,
+):
+    """
+    Script to delete the attributes that have a null value.
+    """
+    from .deletenulls import delete_null_values
+
+    delete_null_values(
+        geojson_input,
+        geojson_output,
+        delete_feat,
+    )
+
+
+# ===============================================
+# ============== GET AREA PER EACH FEATURE ==============
+# ===============================================
+
+
+@cli.command("featurearea")
+@click.option(
+    "--geojson_input", required=True, type=str, help="Path to geojson to process."
+)
+@click.option(
+    "--unit_measurement",
+    required=True,
+    type=click.Choice(list(MEASUREMENT.keys()), case_sensitive=True),
+    help="Unit of area measurement",
+)
+@click.option(
+    "--geojson_output",
+    required=True,
+    type=str,
+    help="Path to geojson features output.",
+)
+def run_featurearea(
+    geojson_input,
+    unit_measurement,
+    geojson_output,
+):
+    """
+    Script to get the area of each polygon feature.
+    """
+    from .featurearea import get_feature_area
+
+    get_feature_area(
+        geojson_input,
+        unit_measurement,
+        geojson_output,
+    )
 
 
 if __name__ == "__main__":

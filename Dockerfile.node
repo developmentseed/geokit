@@ -48,9 +48,9 @@ RUN npm install -g csv2geojson
 
 # Install Libosmium
 RUN apt-get install -y cmake libblkid-dev e2fslibs-dev libboost-all-dev libaudit-dev libbz2-dev
-RUN git clone https://github.com/mapbox/protozero
+RUN git clone  --depth 1 --branch v1.7.0 https://github.com/mapbox/protozero.git
 RUN cd protozero && mkdir build && cd build && cmake .. && make && make install
-RUN git clone https://github.com/osmcode/libosmium
+RUN git clone  --depth 1 --branch v2.17.1 https://github.com/osmcode/libosmium.git
 RUN cd libosmium && mkdir build && cd build && cmake .. && make && make install
 
 # Install osmconvert and osmfilter

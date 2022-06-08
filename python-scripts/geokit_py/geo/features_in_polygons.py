@@ -115,10 +115,6 @@ def features_in_polygons(
     polygon_features = set_shape_feature(polygon_features_)
     features = set_shape_feature(features_)
 
-    # check polygon_features its polygon
-    if not all(["Polygon" in g["geo"].geom_type for g in polygon_features]):
-        raise Exception("have a geojson in polygon it's not a polygon")
-    #  all features are outside
     for i in features:
         i["properties"]["_where"] = "outside"
 
