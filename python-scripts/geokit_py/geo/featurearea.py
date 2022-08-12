@@ -25,7 +25,7 @@ def get_feature_area(geojson_input, unit_measurement, geojson_output):
         geom = shape(feature.get("geometry", {}))
         if "Polygon" in geom.geom_type:
             area = f"area_{MEASUREMENT.get(unit_measurement).get('unit_measur')}"
-            area_base = round(geod.geometry_area_perimeter(geom)[0], 3)
+            area_base = abs(round(geod.geometry_area_perimeter(geom)[0], 3))
             area_num = round(
                 area_base / MEASUREMENT.get(unit_measurement).get("divisor"), 3
             )
