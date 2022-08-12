@@ -26,7 +26,7 @@ def get_distance(geojson_input, unit_measurement, geojson_output):
             distance = (
                 f"distance_{MEASUREMENT_D.get(unit_measurement).get('unit_measur')}"
             )
-            distance_base = round(geod.geometry_length(geom), 3)
+            distance_base = abs(round(geod.geometry_length(geom), 3))
             distance_num = round(
                 distance_base / MEASUREMENT_D.get(unit_measurement).get("divisor"), 3
             )
