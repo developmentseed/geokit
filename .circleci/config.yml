@@ -45,7 +45,7 @@ jobs:
       - deploy:
           name: Push api Docker <<parameters.docker_image>> image
           command: |
-            if [ "${CIRCLE_BRANCH}" == "<<parameters.docker_image>>-${PRODUCTION_BRANCH}" ]; then
+            if [ "${CIRCLE_BRANCH}" == "<<parameters.docker_image>>-${PRODUCTION_BRANCH}" ] || [[ "${CIRCLE_BRANCH}" == *"develop"*  ]] ; then
               VERSION=<<parameters.docker_image>>.latest
             else
               VERSION=<<parameters.docker_image>>."${CIRCLE_BRANCH}"
@@ -66,6 +66,7 @@ workflows:
             branches:
               only:
                 - /python-.*/
+                - develop
   build_node:
     jobs:
       - geokit:
@@ -74,6 +75,7 @@ workflows:
             branches:
               only:
                 - /node-.*/
+                - develop
   build_java:
     jobs:
       - geokit:
@@ -82,3 +84,4 @@ workflows:
             branches:
               only:
                 - /java-.*/
+                - develop
