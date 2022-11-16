@@ -45,10 +45,10 @@ jobs:
       - deploy:
           name: Push api Docker <<parameters.docker_image>> image
           command: |
-            if [ "${CIRCLE_BRANCH}" == "<<parameters.docker_image>>-${PRODUCTION_BRANCH}" ] || [[ "${CIRCLE_BRANCH}" == *"develop"*  ]] ; then
+            if [[ "${CIRCLE_BRANCH}" == *"develop"*  ]] ; then
               VERSION=<<parameters.docker_image>>.latest
             else
-              VERSION=<<parameters.docker_image>>."${CIRCLE_BRANCH}"
+              VERSION=<<parameters.docker_image>>."${CIRCLE_BRANCH/<<parameters.docker_image>>-/""}"
             fi
 
             docker tag geokit.<<parameters.docker_image>> developmentseed/geokit:${VERSION}
