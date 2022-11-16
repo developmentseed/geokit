@@ -1,103 +1,84 @@
-version: 2
+version: 2.1
+
 jobs:
   geokit:
     docker:
       - image: docker:17.05.0-ce-git
+
+    parameters:
+      docker_image:
+        type: string
+
     environment:
       - PRODUCTION_BRANCH: develop
+
     steps:
       - checkout
       - setup_remote_docker
-
       - restore_cache:
           keys:
             - v1-{{ .Branch }}
           paths:
-            - caches/geokit.node.tar
-            - caches/geokit.python.tar
-            - caches/geokit.java.tar
+            - caches/geokit.<<parameters.docker_image>>.tar
 
       - run:
-          name: Load docker node image cache
+          name: Load docker <<parameters.docker_image>> image cache
           command: |
-            docker load -i caches/geokit.node.tar || true
+            docker load -i caches/geokit.<<parameters.docker_image>>.tar || true
 
       - run:
-          name: Load docker python image cache
+          name: Build application docker <<parameters.docker_image>> image
           command: |
-            docker load -i caches/geokit.python.tar || true
+            docker build --cache-from=geokit.<<parameters.docker_image>> -t geokit.<<parameters.docker_image>> -f Dockerfile.<<parameters.docker_image>> .
 
       - run:
-          name: Load docker java image cache
-          command: |
-            docker load -i caches/geokit.java.tar || true
- 
-      - run:
-          name: Build application docker node image
-          command: |
-            docker build --cache-from=geokit.node -t geokit.node -f Dockerfile.node .
-
-      - run:
-          name: Build application docker java image
-          command: |
-            docker build --cache-from=geokit.java -t geokit.java -f Dockerfile.java .
-
-      - run:
-          name: Build application docker python image
-          command: |
-            docker build --cache-from=geokit.python -t geokit.python -f Dockerfile.python .
-
-      - run:
-          name: Save docker node image cache
+          name: Save docker image <<parameters.docker_image>> cache
           command: |
             mkdir -p caches
-            docker save -o caches/geokit.node.tar geokit.node
-
-      - run:
-          name: Save docker python image cache
-          command: |
-            mkdir -p caches
-            docker save -o caches/geokit.python.tar geokit.python
-
-      - run:
-          name: Save docker java image cache
-          command: |
-            mkdir -p caches
-            docker save -o caches/geokit.java.tar geokit.java
+            docker save -o caches/geokit.<<parameters.docker_image>>.tar geokit.<<parameters.docker_image>>
 
       - save_cache:
           key: v1-{{ .Branch }}-{{ epoch }}
           paths:
-            - caches/geokit.node.tar
-            - caches/geokit.python.tar
-            - caches/geokit.java.tar
+            - caches/geokit.<<parameters.docker_image>>.tar
 
       - deploy:
-          name: Push api Docker image
+          name: Push api Docker <<parameters.docker_image>> image
           command: |
-            if [ "${CIRCLE_BRANCH}" == "${PRODUCTION_BRANCH}" ]; then
-              VERSION_NODE=node.latest
-              VERSION_JAVA=java.latest
-              VERSION_PYTHON=python.latest
-
+            if [ "${CIRCLE_BRANCH}" == "<<parameters.docker_image>>-${PRODUCTION_BRANCH}" ]; then
+              VERSION=<<parameters.docker_image>>.latest
             else
-              VERSION_NODE=node."${CIRCLE_BRANCH}"
-              VERSION_JAVA=java."${CIRCLE_BRANCH}"
-              VERSION_PYTHON=python."${CIRCLE_BRANCH}"
+              VERSION=<<parameters.docker_image>>."${CIRCLE_BRANCH}"
             fi
 
-            docker tag geokit.node developmentseed/geokit:${VERSION_NODE}
-            docker tag geokit.java developmentseed/geokit:${VERSION_JAVA}
-            docker tag geokit.python developmentseed/geokit:${VERSION_PYTHON}
+            docker tag geokit.<<parameters.docker_image>> developmentseed/geokit:${VERSION}
 
             docker login --username $DOCKER_USER --password $DOCKER_TOKEN
 
-            docker push developmentseed/geokit:${VERSION_NODE}
-            docker push developmentseed/geokit:${VERSION_JAVA}
-            docker push developmentseed/geokit:${VERSION_PYTHON}
+            docker push developmentseed/geokit:${VERSION}
 
 workflows:
-  version: 2
-  build_and_push:
+  build_python:
     jobs:
-      - geokit
+      - geokit:
+          docker_image: python
+          filters:
+            branches:
+              only:
+                - /python-.*/
+  build_node:
+    jobs:
+      - geokit:
+          docker_image: node
+          filters:
+            branches:
+              only:
+                - /node-.*/
+  build_java:
+    jobs:
+      - geokit:
+          docker_image: java
+          filters:
+            branches:
+              only:
+                - /java-.*/
