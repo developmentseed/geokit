@@ -3,10 +3,11 @@ import itertools
 import json
 
 from geojson.feature import FeatureCollection as fc
-from geokit_py.utils.code import get_list_files_folder
 from joblib import Parallel, delayed
 from smart_open import open
 from tqdm import tqdm
+
+from geokit_py.utils.code import get_list_files_folder
 
 
 def fetch_features(geojson_paths):

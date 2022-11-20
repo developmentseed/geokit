@@ -119,6 +119,7 @@ def run_xml2npz(xml_file, npz_file):
     NPZ file to XML cvat imput format
     """
     import numpy as np
+
     from .xml2npz import getTiles
 
     tiles = getTiles(xml_file)
