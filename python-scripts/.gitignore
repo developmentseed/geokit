@@ -3,3 +3,4 @@ dist/
 ml.egg-info/
 .idea/
 *.pyc
+*.egg-info/

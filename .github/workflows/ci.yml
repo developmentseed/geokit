@@ -30,4 +30,5 @@ jobs:
       - name: run pre-commit
         run: |
           cd python-scripts/
+          pre-commit autoupdate
           pre-commit run --all-files
