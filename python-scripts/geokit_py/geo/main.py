@@ -618,5 +618,22 @@ def run_featurearea(
     )
 
 
+# ===============================================
+# ============== GENERATE POLY FILE =============
+# ===============================================
+
+
+@cli.command("fc2poly")
+@click.option("--geojson_file", help="Path to geojson file", required=True, type=str)
+@click.option("--poly_file", help="Output poly path", required=True, type=str)
+def run_fc2poly(geojson_file, poly_file):
+    """
+    Script to generate poly file from features.
+    """
+    from .fc2poly import fc2poly
+
+    fc2poly(geojson_file, poly_file)
+
+
 if __name__ == "__main__":
     cli()
