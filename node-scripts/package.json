@@ -23,7 +23,7 @@
     "underscore": "^1.9.1"
   },
   "devDependencies": {
-    "eslint": "^4.12.0",
+    "eslint": "^8.43.0",
     "log-interceptor": "^1.0.1",
     "prettier": "^1.11.1",
     "tap-spec": "^5.0.0",
