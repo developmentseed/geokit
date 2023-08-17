@@ -21,3 +21,4 @@ lxml
 lycon
 rtree
 pygeos
+vt2geojson

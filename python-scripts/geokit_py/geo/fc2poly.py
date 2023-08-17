@@ -1,6 +1,9 @@
+"""geo.fc2poly: Skeleton of a function."""
+
 import json
-from shapely.geometry import box
+
 import geopandas as gpd
+from shapely.geometry import box
 
 
 def fc2poly(geojson_file, poly_file):

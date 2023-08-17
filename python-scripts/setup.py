@@ -37,6 +37,7 @@ setup(
             "chips_ahoy=geokit_py.chips_ahoy.main:cli",
             "cvat=geokit_py.cvat.main:cli",
             "geo=geokit_py.geo.main:cli",
+            "mapillary=geokit_py.mapillary.main:cli",
             "rl_schoolspoint=geokit_py.rl_schoolspoint.main:main",
         ],
     },
