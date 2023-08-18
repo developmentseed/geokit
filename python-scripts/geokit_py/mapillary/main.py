@@ -5,6 +5,8 @@ Author: @developmentseed
 
 import click
 
+from geokit_py.utils.map_utils import validate_geojson_file
+
 
 @click.group(chain=True)
 def cli():
@@ -96,6 +98,38 @@ def run_get_mapillary_points(
         output_file_point,
         output_file_sequence,
     )
+
+
+# ============================================
+# ========== CREATE CUSTOM SEQUENCES =========
+# ============================================
+@cli.command("create_custom_sequences")
+@click.option("--geojson_points", help="geojson_points", required=True)
+@click.option(
+    "--output_file_sequence",
+    help="Path for custom sequence file",
+    default="data/sequences.geojson",
+    type=click.Path(),
+)
+def run_create_custom_sequences(
+    geojson_points,
+    output_file_sequence,
+):
+    """
+    Script to add Mapillary's URLs to review the images of the sequences
+    """
+    from .create_custom_sequences import create_custom_sequences
+
+    if validate_geojson_file(geojson_points):
+        print("Validations passed. Proceed with processing")
+        print("===================================================")
+        create_custom_sequences(
+            geojson_points,
+            output_file_sequence,
+        )
+    else:
+        print("Validation failed. Please correct the input")
+        print("===================================================")
 
 
 # =========================================

@@ -1,3 +1,5 @@
+"""utils.map_utils: Skeleton of a function."""
+
 import json
 import os
 import random
@@ -7,7 +9,7 @@ import mercantile
 import requests
 from geojson import FeatureCollection
 from joblib import Parallel, delayed
-from shapely.geometry import Point, shape
+from shapely.geometry import shape
 from smart_open import open
 from tqdm import tqdm
 from vt2geojson.tools import vt_bytes_to_geojson
@@ -239,3 +241,30 @@ def geom_data(features):
         delayed(geom_data_feat)(feature) for feature in tqdm(features, desc="geom data")
     )
     return new_features
+
+
+def validate_geojson_file(file_path):
+    """Function to validate the file, if it exists, and if it is geojson file
+
+    Args:
+        file_path: File path
+
+    Returns:
+        Bool: Return true if both validation criteria are met
+    """
+    expected_extension = ".geojson"
+    file_name = os.path.basename(file_path)
+
+    if not file_name.lower().endswith(expected_extension):
+        print("=================WARNING===========================")
+        print("Enter an input file with the '.geojson' extension")
+        print("===================================================")
+        return False
+
+    if not os.path.exists(file_path):
+        print("=================WARNING===========================")
+        print("Enter an input file that exists")
+        print("===================================================")
+        return False
+
+    return True

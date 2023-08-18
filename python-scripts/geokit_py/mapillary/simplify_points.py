@@ -1,14 +1,15 @@
-import click
-import random
-from geokit_py.utils.map_utils import read_geojson, write_geojson, geom_data
+"""mapillary.simplify_points: Skeleton of a function."""
 
 from copy import deepcopy
-from shapely.geometry import Point
 
 import pyproj
+from shapely.geometry import Point
+
+from geokit_py.utils.map_utils import geom_data, read_geojson, write_geojson
 
 
 def transform_projection(point, src_proj, dst_proj):
+    """transform projection of a point"""
     transformer = pyproj.Transformer.from_proj(src_proj, dst_proj, always_xy=True)
     x, y = transformer.transform(point[0], point[1])
     p = Point(x, y)
@@ -27,6 +28,7 @@ def distance(point1, point2):
 
 
 def simplify_points(input_points, points_distance, output_points):
+    """simplify points of sequences"""
     features = read_geojson(input_points)
     features = geom_data(features)
     sequences = {}
