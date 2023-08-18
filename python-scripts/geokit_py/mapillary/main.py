@@ -98,5 +98,36 @@ def run_get_mapillary_points(
     )
 
 
+# =========================================
+# ========== SIMPLIFY POINTS =========
+# =========================================
+@cli.command("simplify_points")
+@click.option(
+    "--input_points",
+    default="",
+    type=str,
+    required=True,
+    help="Pathfile for geojson input (points)",
+)
+@click.option(
+    "--points_distance",
+    required=True,
+    help="distance applied for simplifying",
+)
+@click.option(
+    "--output_points",
+    default="",
+    type=str,
+    help="Pathfile for geojson output (points)",
+)
+def run_simplify_points(input_points, points_distance, output_points):
+    """
+    Script to simplify points in a sequence according to a given distance
+    """
+    from .simplify_points import simplify_points
+
+    simplify_points(input_points, points_distance, output_points)
+
+
 if __name__ == "__main__":
     cli()

@@ -2,10 +2,9 @@
 
 import json
 
-import click
 from shapely.geometry import shape
 
-from geokit_py.mapillary.utils import (
+from geokit_py.utils.map_utils import (
     build_mapillary_sequence,
     get_mapillary_points_bbox,
     write_geojson,
