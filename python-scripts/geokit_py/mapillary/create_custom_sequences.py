@@ -1,12 +1,8 @@
 """mapillary.create_custom_sequences: Skeleton of a function."""
 
 import json
-import click
 
-from geokit_py.utils.map_utils import (
-    build_mapillary_sequence,
-    write_geojson,
-)
+from geokit_py.utils.map_utils import build_mapillary_sequence, write_geojson
 
 
 def create_custom_sequences(geojson_points, output_file_sequence):

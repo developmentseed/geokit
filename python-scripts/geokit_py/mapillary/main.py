@@ -104,7 +104,11 @@ def run_get_mapillary_points(
 # ========== CREATE CUSTOM SEQUENCES =========
 # ============================================
 @cli.command("create_custom_sequences")
-@click.option("--geojson_points", help="geojson_points", required=True)
+@click.option(
+    "--geojson_points",
+    help="geojson_points",
+    required=True,
+)
 @click.option(
     "--output_file_sequence",
     help="Path for custom sequence file",
@@ -127,6 +131,38 @@ def run_create_custom_sequences(
             geojson_points,
             output_file_sequence,
         )
+    else:
+        print("Validation failed. Please correct the input")
+        print("===================================================")
+
+
+# ============================================
+# =========== MERGE SEQUENCES ================
+# ============================================
+@cli.command("merge_sequences")
+@click.option(
+    "--geojson_input",
+    help="Pathfile for geojson input",
+    type=str,
+)
+@click.option(
+    "--geojson_output",
+    help="Pathfile for geojson output",
+    type=str,
+)
+def run_merge_sequences(
+    geojson_input,
+    geojson_output,
+):
+    """
+    Script to merge sequences and removes duplicate features
+    """
+    from .merge_sequences import merge_sequences
+
+    if validate_geojson_file(geojson_input):
+        print("Validations passed. Proceed with processing")
+        print("===================================================")
+        merge_sequences(geojson_input, geojson_output)
     else:
         print("Validation failed. Please correct the input")
         print("===================================================")
