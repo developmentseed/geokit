@@ -22,29 +22,23 @@ def cli():
 
 @cli.command("get_mapillary_points")
 @click.option(
-    "--bbox",
-    default="-83.2263319287,42.3489816308,-83.2230326577,42.3507715447",
-    required=False,
-    help="bbox",
-)
-@click.option(
-    "--geojson_boundaries",
-    default="",
-    required=False,
-    help="geojson_boundaries",
+    "--input_aoi",
+    type=str,
+    required=True,
+    help="Path to geojson file of boundaries or bbox in the format 'xMin, yMin, xMax, yMax'",
 )
 @click.option(
     "--field_name",
-    default="",
+    type=str,
     required=False,
-    help="a field name from geojson boundaries",
+    help="A field name from boundaries in the geojson file of boundaries",
 )
 @click.option(
     "--timestamp_from",
     default=0,
     type=int,
     required=False,
-    help="timestamp_from value in milliseconds",
+    help="Timestamp to filter images. Value in milliseconds",
 )
 @click.option(
     "--only_pano",
@@ -52,30 +46,28 @@ def cli():
     type=bool,
     required=False,
     is_flag=True,
-    help="get only pano images",
+    help="Flag to get only pano images",
 )
 @click.option(
     "--organization_ids",
-    default="",
     type=str,
     required=False,
-    help="organization id filter",
+    help="Organization id to filter images",
 )
 @click.option(
     "--output_file_point",
-    default="data/points.geojson",
     type=click.Path(),
+    required=True,
     help="Pathfile for geojson point file",
 )
 @click.option(
     "--output_file_sequence",
-    default="data/sequences.geojson",
     type=click.Path(),
+    required=True,
     help="Pathfile for geojson sequence file",
 )
 def run_get_mapillary_points(
-    bbox,
-    geojson_boundaries,
+    input_aoi,
     field_name,
     timestamp_from,
     only_pano,
@@ -84,20 +76,38 @@ def run_get_mapillary_points(
     output_file_sequence,
 ):
     """
-    Script to get points and sequence for a bbox from mapillary
+    Script to get points and sequence for a bbox or boundaries from mapillary
     """
     from .get_mapillary_points import get_mapillary_points
 
-    get_mapillary_points(
-        bbox,
-        geojson_boundaries,
-        field_name,
-        timestamp_from,
-        only_pano,
-        organization_ids,
-        output_file_point,
-        output_file_sequence,
-    )
+    def get_aoi_type(input_aoi_):
+        if len(input_aoi_.split(",")) == 4:
+            return input_aoi_, "", True
+        if ".geojson" in input_aoi_:
+            return "", input_aoi_, True
+        return "", "", False
+
+    bbox, geojson_boundaries, estate = get_aoi_type(input_aoi)
+
+    if estate:
+        get_mapillary_points(
+            bbox,
+            geojson_boundaries,
+            field_name,
+            timestamp_from,
+            only_pano,
+            organization_ids,
+            output_file_point,
+            output_file_sequence,
+        )
+    else:
+        print("=============================================")
+        print(
+            "Provide the input_aoi in the correct format:\n"
+            "- Geojson file of boundaries or\n "
+            "- Bbox in the format 'xMin, yMin, xMax, yMax'\n"
+        )
+        print("=============================================")
 
 
 # ============================================
@@ -174,7 +184,6 @@ def run_merge_sequences(
 @cli.command("simplify_points")
 @click.option(
     "--input_points",
-    default="",
     type=str,
     required=True,
     help="Pathfile for geojson input (points)",
@@ -182,11 +191,10 @@ def run_merge_sequences(
 @click.option(
     "--points_distance",
     required=True,
-    help="distance applied for simplifying",
+    help="Distance in meters applied for simplifying",
 )
 @click.option(
     "--output_points",
-    default="",
     type=str,
     help="Pathfile for geojson output (points)",
 )
@@ -196,7 +204,13 @@ def run_simplify_points(input_points, points_distance, output_points):
     """
     from .simplify_points import simplify_points
 
-    simplify_points(input_points, points_distance, output_points)
+    if validate_geojson_file(input_points):
+        print("Validations passed. Proceed with processing")
+        print("===================================================")
+        simplify_points(input_points, points_distance, output_points)
+    else:
+        print("Validation failed. Please correct the input")
+        print("===================================================")
 
 
 if __name__ == "__main__":
