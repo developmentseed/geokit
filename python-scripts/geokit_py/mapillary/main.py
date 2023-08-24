@@ -177,6 +177,41 @@ def run_merge_sequences(
         print("Validation failed. Please correct the input")
         print("===================================================")
 
+# =========================================
+# ========== SIMPLIFY SEQUENCES =========
+# =========================================
+
+@cli.command("simplify_sequence")
+@click.option(
+    "--geojson_input",
+    type=str,
+    required=True,
+    help="Pathfile for geojson input",
+)
+@click.option(
+    "--buffer",
+    type=float,
+    required=True,
+    help="Input the buffer size",
+)
+@click.option(
+    "--geojson_out",
+    type=str,
+    help="Output geojso file")
+
+def run_simplify_sequence(geojson_input, buffer, geojson_out):
+    """
+    Script to simplify sequences by buffer
+    """
+    from .simplify_sequence import simplify_sequence
+
+    if validate_geojson_file(geojson_input):
+        print("Validations passed. Proceed with processing")
+        print("===================================================")
+        simplify_sequence(geojson_input, buffer, geojson_out)
+    else:
+        print("Validation failed. Please correct the input")
+        print("===================================================")
 
 # =========================================
 # ========== SIMPLIFY POINTS =========
