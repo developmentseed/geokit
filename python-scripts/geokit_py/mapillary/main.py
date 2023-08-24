@@ -177,9 +177,11 @@ def run_merge_sequences(
         print("Validation failed. Please correct the input")
         print("===================================================")
 
+
 # =========================================
 # ========== SIMPLIFY SEQUENCES =========
 # =========================================
+
 
 @cli.command("simplify_sequence")
 @click.option(
@@ -194,11 +196,7 @@ def run_merge_sequences(
     required=True,
     help="Input the buffer size",
 )
-@click.option(
-    "--geojson_out",
-    type=str,
-    help="Output geojso file")
-
+@click.option("--geojson_out", type=str, help="Output geojso file")
 def run_simplify_sequence(geojson_input, buffer, geojson_out):
     """
     Script to simplify sequences by buffer
@@ -212,6 +210,7 @@ def run_simplify_sequence(geojson_input, buffer, geojson_out):
     else:
         print("Validation failed. Please correct the input")
         print("===================================================")
+
 
 # =========================================
 # ========== SIMPLIFY POINTS =========
@@ -246,6 +245,60 @@ def run_simplify_points(input_points, points_distance, output_points):
     else:
         print("Validation failed. Please correct the input")
         print("===================================================")
+
+
+# =========================================
+# ========== CLIP MAPILLARY PANO ==========
+# =========================================
+
+
+@cli.command("clip_mapillary_pano")
+@click.option(
+    "--input_file_points",
+    type=click.Path(),
+    required=True,
+    help="Input geojson file of Mapillary points",
+)
+@click.option(
+    "--image_clip_size",
+    type=int,
+    default=1024,
+    help="Image size for each image to be clipped",
+)
+@click.option(
+    "--output_images_path",
+    type=click.Path(),
+    help="Output images path",
+)
+@click.option(
+    "--output_file_points",
+    type=click.Path(),
+    help="Output points for images that were processed",
+)
+@click.option(
+    "--cube_sides",
+    default="right,left",
+    help="Sides of the image to save",
+)
+def run_clip_mapillary_pano(
+    input_file_points,
+    output_file_points,
+    output_images_path,
+    image_clip_size,
+    cube_sides,
+):
+    """
+    Script to convert 360 images to simple sides images
+    """
+    from .clip_mapillary_pano import clip_mapillary_pano
+
+    clip_mapillary_pano(
+        input_file_points,
+        output_file_points,
+        output_images_path,
+        image_clip_size,
+        cube_sides,
+    )
 
 
 if __name__ == "__main__":

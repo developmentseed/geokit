@@ -1,9 +1,11 @@
-import click
+"""mapillary.simplify_sequence: Skeleton of a function."""
 import json
-from tqdm import tqdm
+
 from geojson.feature import FeatureCollection as fc
 from joblib import Parallel, delayed
-from shapely.geometry import shape, mapping
+from shapely.geometry import mapping, shape
+from tqdm import tqdm
+
 
 def is_include(geom_a, geom_b):
     """Determines if two polygons are included
@@ -68,7 +70,7 @@ def find_intersection_override(features):
         if not is_exclude:
             area = geom_feature.area
 
-            for feat_menor in features[idx_ + 1:]:
+            for feat_menor in features[idx_ + 1 :]:
                 feat_menor_id = feat_menor.get("id")
                 # only intersetcs previus filter
                 if feat_menor_id not in ids_intersect:
@@ -117,15 +119,14 @@ def remove_include(features):
         """
         geom_feat = feature_["geom"]
         is_include_ = any(
-            [is_include(other_feat["geom"], geom_feat)
-             for other_feat in features_]
+            [is_include(other_feat["geom"], geom_feat) for other_feat in features_]
         )
         if not is_include_:
             return feature_
         return None
 
     new_features = Parallel(n_jobs=-1, prefer="threads")(
-        delayed(filter_include)(features[idx + 1:], features[idx])
+        delayed(filter_include)(features[idx + 1 :], features[idx])
         for idx in tqdm(list(range(len(features))), desc="remove includes")
     )
     return [i for i in new_features if i]
@@ -205,4 +206,3 @@ def simplify_sequence(geojson_input, buffer, geojson_out):
     print("===================")
     for k, v in stats.items():
         print(f"{k} : {v}")
-
