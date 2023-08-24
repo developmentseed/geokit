@@ -268,3 +268,13 @@ def validate_geojson_file(file_path):
         return False
 
     return True
+
+
+def create_folder(geojson_output):
+    """Function to create folder, if it is not exists
+
+    Args:
+        geojson_output: output path
+    """
+    folder_name = os.path.basename(os.path.dirname(geojson_output))
+    os.makedirs(folder_name, exist_ok=True)

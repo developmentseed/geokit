@@ -1,11 +1,13 @@
 """mapillary.merge_sequences: Skeleton of a function."""
 
 import json
-from tqdm import tqdm
+
 from geojson.feature import FeatureCollection as fc
 from joblib import Parallel, delayed
-from shapely.geometry import shape, MultiLineString, mapping
-from geokit_py.utils.map_utils import read_geojson, write_geojson, check_geometry
+from shapely.geometry import MultiLineString, mapping, shape
+from tqdm import tqdm
+
+from geokit_py.utils.map_utils import check_geometry, read_geojson
 
 
 def get_duplicates(list_):
