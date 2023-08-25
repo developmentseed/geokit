@@ -1,6 +1,7 @@
-import click
-from geokit_py.utils.utils_images import process_image
+"""mapillary.clip_mapillary_pano: Skeleton of a function."""
+
 from geokit_py.utils.map_utils import read_geojson, write_geojson
+from geokit_py.utils.utils_images import process_image
 
 
 def clip_mapillary_pano(

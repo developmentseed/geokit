@@ -1,12 +1,15 @@
-import requests
-from joblib import Parallel, delayed
-from tqdm import tqdm
+"""utils.utils_images: Skeleton of a function."""
+
+import glob
 import os
 from pathlib import Path
-import glob
+
 import cv2
+import requests
+from joblib import Parallel, delayed
 from PIL import Image
 from smart_open import open
+from tqdm import tqdm
 
 access_token = os.environ.get("MAPILLARY_ACCESS_TOKEN")
 
@@ -157,7 +160,7 @@ def process_image(features, output_images_path, image_clip_size, cube_sides):
             feature, output_images_path, image_clip_size, cube_sides
         )
         for feature in tqdm(
-            features, desc=f"Processing images for...", total=len(features)
+            features, desc="Processing images for...", total=len(features)
         )
     )
     return results

@@ -186,7 +186,7 @@ def run_merge_sequences(
 @cli.command("simplify_sequence")
 @click.option(
     "--geojson_input",
-    type=str,
+    type=click.Path(exists=True, file_okay=True, dir_okay=False),
     required=True,
     help="Pathfile for geojson input",
 )
@@ -196,20 +196,18 @@ def run_merge_sequences(
     required=True,
     help="Input the buffer size",
 )
-@click.option("--geojson_out", type=str, help="Output geojso file")
+@click.option(
+    "--geojson_out",
+    type=click.Path(),
+    help="Output geojson file",
+)
 def run_simplify_sequence(geojson_input, buffer, geojson_out):
     """
     Script to simplify sequences by buffer
     """
     from .simplify_sequence import simplify_sequence
 
-    if validate_geojson_file(geojson_input):
-        print("Validations passed. Proceed with processing")
-        print("===================================================")
-        simplify_sequence(geojson_input, buffer, geojson_out)
-    else:
-        print("Validation failed. Please correct the input")
-        print("===================================================")
+    simplify_sequence(geojson_input, buffer, geojson_out)
 
 
 # =========================================
@@ -218,7 +216,7 @@ def run_simplify_sequence(geojson_input, buffer, geojson_out):
 @cli.command("simplify_points")
 @click.option(
     "--input_points",
-    type=str,
+    type=click.Path(exists=True, file_okay=True, dir_okay=False),
     required=True,
     help="Pathfile for geojson input (points)",
 )
@@ -229,7 +227,7 @@ def run_simplify_sequence(geojson_input, buffer, geojson_out):
 )
 @click.option(
     "--output_points",
-    type=str,
+    type=click.Path(),
     help="Pathfile for geojson output (points)",
 )
 def run_simplify_points(input_points, points_distance, output_points):
@@ -238,13 +236,7 @@ def run_simplify_points(input_points, points_distance, output_points):
     """
     from .simplify_points import simplify_points
 
-    if validate_geojson_file(input_points):
-        print("Validations passed. Proceed with processing")
-        print("===================================================")
-        simplify_points(input_points, points_distance, output_points)
-    else:
-        print("Validation failed. Please correct the input")
-        print("===================================================")
+    simplify_points(input_points, points_distance, output_points)
 
 
 # =========================================
@@ -255,7 +247,7 @@ def run_simplify_points(input_points, points_distance, output_points):
 @cli.command("clip_mapillary_pano")
 @click.option(
     "--input_file_points",
-    type=click.Path(),
+    type=click.Path(exists=True, file_okay=True, dir_okay=False),
     required=True,
     help="Input geojson file of Mapillary points",
 )
