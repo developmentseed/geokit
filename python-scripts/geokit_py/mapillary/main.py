@@ -5,7 +5,7 @@ Author: @developmentseed
 
 import click
 
-from geokit_py.utils.map_utils import create_folder, validate_geojson_file
+from geokit_py.utils.map_utils import validate_output_path
 
 
 @click.group(chain=True)
@@ -118,7 +118,7 @@ def run_get_mapillary_points(
     "--geojson_points",
     help="geojson_points",
     required=True,
-    type=click.Path(exists=True, file_okay=True, dir_okay=False, readable=True),
+    type=click.Path(exists=True, file_okay=True, dir_okay=False),
 )
 @click.option(
     "--output_file_sequence",
@@ -135,14 +135,8 @@ def run_create_custom_sequences(
     """
     from .create_custom_sequences import create_custom_sequences
 
-    if validate_geojson_file(geojson_points):
-        print("Validations passed. Proceed with processing")
-        print("===================================================")
-        create_folder(output_file_sequence)
+    if validate_output_path(output_file_sequence):
         create_custom_sequences(geojson_points, output_file_sequence)
-    else:
-        print("Validation failed. Please correct the input")
-        print("===================================================")
 
 
 # ============================================
@@ -153,7 +147,7 @@ def run_create_custom_sequences(
     "--geojson_input",
     help="Pathfile for geojson input",
     required=True,
-    type=click.Path(),
+    type=click.Path(exists=True, file_okay=True, dir_okay=False),
 )
 @click.option(
     "--geojson_output",
@@ -170,14 +164,8 @@ def run_merge_sequences(
     """
     from .merge_sequences import merge_sequences
 
-    if validate_geojson_file(geojson_input):
-        print("Validations passed. Proceed with processing")
-        print("===================================================")
-        create_folder(geojson_output)
+    if validate_output_path(geojson_output):
         merge_sequences(geojson_input, geojson_output)
-    else:
-        print("Validation failed. Please correct the input")
-        print("===================================================")
 
 
 # ============================================
@@ -188,13 +176,13 @@ def run_merge_sequences(
     "--geojson_polygons",
     help="Pathfile for geojson input (polygons)",
     required=True,
-    type=click.Path(),
+    type=click.Path(exists=True, file_okay=True, dir_okay=False),
 )
 @click.option(
     "--geojson_points",
     help="Pathfile for geojson input (points)",
     required=True,
-    type=click.Path(),
+    type=click.Path(exists=True, file_okay=True, dir_okay=False),
 )
 @click.option(
     "--geojson_output",
@@ -212,15 +200,8 @@ def run_match_point_sequences(
     """
     from .match_point_sequences import match_point_sequences
 
-    if validate_geojson_file(geojson_polygons):
-        if validate_geojson_file(geojson_points):
-            print("Validations passed. Proceed with processing")
-            print("===================================================")
-            create_folder(geojson_output)
-            match_point_sequences(geojson_polygons, geojson_points, geojson_output)
-    else:
-        print("Validation failed. Please correct the input")
-        print("===================================================")
+    if validate_output_path(geojson_output):
+        match_point_sequences(geojson_polygons, geojson_points, geojson_output)
 
 
 # =========================================
@@ -249,13 +230,7 @@ def run_simplify_points(input_points, points_distance, output_points):
     """
     from .simplify_points import simplify_points
 
-    if validate_geojson_file(input_points):
-        print("Validations passed. Proceed with processing")
-        print("===================================================")
-        simplify_points(input_points, points_distance, output_points)
-    else:
-        print("Validation failed. Please correct the input")
-        print("===================================================")
+    simplify_points(input_points, points_distance, output_points)
 
 
 if __name__ == "__main__":

@@ -1,11 +1,13 @@
 """mapillary.match_point_sequences: Skeleton of a function."""
 
 import json
-from tqdm import tqdm
+import logging
+
 from geojson.feature import FeatureCollection as fc
 from joblib import Parallel, delayed
+from tqdm import tqdm
+
 from geokit_py.utils.map_utils import geom_data
-import logging
 
 logger = logging.getLogger("__name__")
 

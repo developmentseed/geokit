@@ -243,38 +243,21 @@ def geom_data(features):
     return new_features
 
 
-def validate_geojson_file(file_path):
-    """Function to validate the file, if it exists, and if it is geojson file
-
+def validate_output_path(file_path):
+    """Function to validate the file, if it is geojson file, and create the folder if it doesn't exist
     Args:
         file_path: File path
-
     Returns:
-        Bool: Return true if both validation criteria are met
+        Bool: Return True if both validations were successful.
     """
     expected_extension = ".geojson"
-    file_name = os.path.basename(file_path)
-
-    if not file_name.lower().endswith(expected_extension):
-        print("=================WARNING===========================")
-        print("Enter an input file with the '.geojson' extension")
-        print("===================================================")
+    if not file_path.lower().endswith(expected_extension):
+        print("Error: Enter output file with geojson extension")
         return False
 
-    if not os.path.exists(file_path):
-        print("=================WARNING===========================")
-        print("Enter an input file that exists")
-        print("===================================================")
-        return False
+    folder_path = os.path.dirname(file_path)
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
+        print(f"Created folder: {folder_path}")
 
     return True
-
-
-def create_folder(geojson_output):
-    """Function to create folder, if it is not exists
-
-    Args:
-        geojson_output: output path
-    """
-    folder_name = os.path.basename(os.path.dirname(geojson_output))
-    os.makedirs(folder_name, exist_ok=True)
