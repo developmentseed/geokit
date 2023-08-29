@@ -240,22 +240,16 @@ def run_simplify_points(input_points, points_distance, output_points):
 
 
 # =========================================
-# ========== CLIP MAPILLARY PANO ==========
+# ======= DOWNLOAD MAPILLARY IMAGES =======
 # =========================================
 
 
-@cli.command("clip_mapillary_pano")
+@cli.command("download_mapillary_imgs")
 @click.option(
     "--input_file_points",
     type=click.Path(exists=True, file_okay=True, dir_okay=False),
     required=True,
     help="Input geojson file of Mapillary points",
-)
-@click.option(
-    "--image_clip_size",
-    type=int,
-    default=1024,
-    help="Image size for each image to be clipped",
 )
 @click.option(
     "--output_images_path",
@@ -267,29 +261,20 @@ def run_simplify_points(input_points, points_distance, output_points):
     type=click.Path(),
     help="Output points for images that were processed",
 )
-@click.option(
-    "--cube_sides",
-    default="right,left",
-    help="Sides of the image to save",
-)
-def run_clip_mapillary_pano(
+def run_download_mapillary_imgs(
     input_file_points,
-    output_file_points,
     output_images_path,
-    image_clip_size,
-    cube_sides,
+    output_file_points,
 ):
     """
-    Script to convert 360 images to simple sides images
+    Script to download Mapillary images
     """
-    from .clip_mapillary_pano import clip_mapillary_pano
+    from .download_mapillary_imgs import download_mapillary_imgs
 
-    clip_mapillary_pano(
+    download_mapillary_imgs(
         input_file_points,
-        output_file_points,
         output_images_path,
-        image_clip_size,
-        cube_sides,
+        output_file_points,
     )
 
 
