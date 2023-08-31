@@ -205,12 +205,44 @@ def run_match_point_sequences(
 
 
 # =========================================
+# ========== SIMPLIFY SEQUENCES =========
+# =========================================
+
+
+@cli.command("simplify_sequence")
+@click.option(
+    "--geojson_input",
+    type=click.Path(exists=True, file_okay=True, dir_okay=False),
+    required=True,
+    help="Pathfile for geojson input",
+)
+@click.option(
+    "--buffer",
+    type=float,
+    required=True,
+    help="Input the buffer size",
+)
+@click.option(
+    "--geojson_out",
+    type=click.Path(),
+    help="Output geojson file",
+)
+def run_simplify_sequence(geojson_input, buffer, geojson_out):
+    """
+    Script to simplify sequences by buffer
+    """
+    from .simplify_sequence import simplify_sequence
+
+    simplify_sequence(geojson_input, buffer, geojson_out)
+
+
+# =========================================
 # ========== SIMPLIFY POINTS =========
 # =========================================
 @cli.command("simplify_points")
 @click.option(
     "--input_points",
-    type=str,
+    type=click.Path(exists=True, file_okay=True, dir_okay=False),
     required=True,
     help="Pathfile for geojson input (points)",
 )
@@ -221,7 +253,7 @@ def run_match_point_sequences(
 )
 @click.option(
     "--output_points",
-    type=str,
+    type=click.Path(),
     help="Pathfile for geojson output (points)",
 )
 def run_simplify_points(input_points, points_distance, output_points):
@@ -231,6 +263,45 @@ def run_simplify_points(input_points, points_distance, output_points):
     from .simplify_points import simplify_points
 
     simplify_points(input_points, points_distance, output_points)
+
+
+# =========================================
+# ======= DOWNLOAD MAPILLARY IMAGES =======
+# =========================================
+
+
+@cli.command("download_mapillary_imgs")
+@click.option(
+    "--input_file_points",
+    type=click.Path(exists=True, file_okay=True, dir_okay=False),
+    required=True,
+    help="Input geojson file of Mapillary points",
+)
+@click.option(
+    "--output_images_path",
+    type=click.Path(),
+    help="Output images path",
+)
+@click.option(
+    "--output_file_points",
+    type=click.Path(),
+    help="Output points for images that were processed",
+)
+def run_download_mapillary_imgs(
+    input_file_points,
+    output_images_path,
+    output_file_points,
+):
+    """
+    Script to download Mapillary images
+    """
+    from .download_mapillary_imgs import download_mapillary_imgs
+
+    download_mapillary_imgs(
+        input_file_points,
+        output_images_path,
+        output_file_points,
+    )
 
 
 if __name__ == "__main__":

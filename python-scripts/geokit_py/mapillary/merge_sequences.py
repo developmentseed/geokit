@@ -1,7 +1,7 @@
 """mapillary.merge_sequences: Skeleton of a function."""
 
 import json
-
+from tqdm import tqdm
 from geojson.feature import FeatureCollection as fc
 from joblib import Parallel, delayed
 from shapely.geometry import MultiLineString, mapping, shape
