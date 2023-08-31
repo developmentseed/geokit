@@ -368,3 +368,23 @@ Script to merge multiple features. This script can work with aws - s3 uri.
 ```
 docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python.latest geo merge_fc --geojson_inputs <INPUT_GEOJSON>  --geojson_inputs <INPUT_GEOJSON>   --geojson_inputs <INPUT_GEOJSON>  --folder_path <FOLDER_S3> --recursive --geojson_output <OUTPUT_GEOJSON>
 ```
+
+
+# Mapillary module
+
+## get mapillary points
+
+## create custom sequences
+
+## merge sequences
+
+## simplify sequences
+
+## match point sequences
+
+## simplify points
+
+## download images
+
+
+
