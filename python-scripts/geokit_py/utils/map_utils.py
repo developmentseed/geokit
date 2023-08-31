@@ -251,11 +251,18 @@ def validate_output_path(file_path):
         Bool: Return True if both validations were successful.
     """
     expected_extension = ".geojson"
-    if not file_path.lower().endswith(expected_extension):
+
+    file_name = os.path.basename(file_path)
+
+    if "/" not in file_path:
+        file_path = os.path.join(os.getcwd(), file_name)
+
+    if not file_name.lower().endswith(expected_extension):
         print("Error: Enter output file with geojson extension")
         return False
 
     folder_path = os.path.dirname(file_path)
+
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
         print(f"Created folder: {folder_path}")
