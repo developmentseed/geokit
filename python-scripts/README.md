@@ -407,7 +407,7 @@ docker run --rm -v ${PWD}:/mnt/data -e MAPILLARY_ACCESS_TOKEN=${MAPILLARY_ACCESS
 ```
 
 ## create custom sequences
-It adds URLs to review the images of the sequences.
+Script to add URLs to review the images of the sequences.
 
 | COMMAND                 | REQUIRED | DESCRIPTION                                              |
 | -----------------       | -------- | -------------------------------------------------        |
@@ -416,7 +416,7 @@ It adds URLs to review the images of the sequences.
 
 
 ```
-docker run --rm -v ${PWD}:/mnt/data -e MAPILLARY_ACCESS_TOKEN=$MAPILLARY_ACCESS_TOKEN -it developmentseed geokit:python.latest mapillary create_custom_sequences --geojson_points <INPUT_GEOJSON> --output_file_sequence <OUTPUT_GEOJSON>
+docker run --rm -v ${PWD}:/mnt/data -e MAPILLARY_ACCESS_TOKEN=$MAPILLARY_ACCESS_TOKEN -it developmentseed/geokit:python.latest mapillary create_custom_sequences --geojson_points <INPUT_GEOJSON> --output_file_sequence <OUTPUT_GEOJSON>
 ```
 
 In Mapillary, many sequences have a frontal view (road) of street-view imagery. These sequences are not useful for us when we want to label the facade building or lots, so we can remove them.
@@ -427,7 +427,7 @@ In order to delete unnecessary sequences, it is necessary to have the generated 
 2. An [app](https://filter_sequences.surge.sh/) that allows us to load GeoJSON files and view random images of a sequence, it allows us to delete sequences by marking with a check.
 
 ## merge sequences
-It merges sequences and removes duplicate values.
+Script to merge sequences and removes duplicate values.
 
 | COMMAND                 | REQUIRED | DESCRIPTION                                              |
 | -----------------       | -------- | -------------------------------------------------        |
@@ -435,7 +435,7 @@ It merges sequences and removes duplicate values.
 | --geojson_output        | no       | merge sequence file path                                 |
 
 ```
-docker run --rm -v ${PWD}:/mnt/data -e MAPILLARY_ACCESS_TOKEN=$MAPILLARY_ACCESS_TOKEN -it developmentseed geokit:python.latest mapillary merge_sequences --geojson_input <INPUT_GEOJSON> --geojson_output <OUTPUT_GEOJSON>
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python.latest mapillary merge_sequences --geojson_input <INPUT_GEOJSON> --geojson_output <OUTPUT_GEOJSON>
 ```
 
 ## simplify sequences
@@ -457,7 +457,7 @@ docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python.latest mapilla
 ```
 
 ## match point sequences
-It filters points inside polygons.
+Script to filter points inside polygons.
 
 | COMMAND                 | REQUIRED | DESCRIPTION                                              |
 | -----------------       | -------- | -------------------------------------------------        |
@@ -466,7 +466,7 @@ It filters points inside polygons.
 | --geojson_output        | no       | filter check file path (points)                          |
 
 ```
-docker run --rm -v ${PWD}:/mnt/data -e MAPILLARY_ACCESS_TOKEN=$MAPILLARY_ACCESS_TOKEN -it developmentseed geokit:python.latest mapillary match_point_sequences --geojson_polygons <INPUT_GEOJSON> --geojson_points <INPUT_GEOJSON> --geojson_output <OUTPUT_GEOJSON>
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python.latest mapillary match_point_sequences --geojson_polygons <INPUT_GEOJSON> --geojson_points <INPUT_GEOJSON> --geojson_output <OUTPUT_GEOJSON>
 ```
 
 ## simplify points
@@ -488,7 +488,8 @@ docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python.latest mapilla
 ```
 
 ## download images
-It downloads the Mapillary images
+Script to download the Mapillary images and obtain output points with the images URL.
+
 | COMMAND                 | REQUIRED | DESCRIPTION                                              |
 | -----------------       | -------- | -------------------------------------------------        |
 | --input_file_points     | yes      | Mapillary points file path                               | 
@@ -496,7 +497,7 @@ It downloads the Mapillary images
 | --output_file_points    | no       | output points for images                                 |
 
 ```
-docker run --rm -v ${PWD}:/mnt/data -e MAPILLARY_ACCESS_TOKEN=$MAPILLARY_ACCESS_TOKEN -it developmentseed geokit:python.latest mapillary download_mapillary_imgs --input_file_points <INPUT_GEOJSON> --output_images_path <OUTPUT_IMAGES PATH> --output_file_points <OUTPUT_GEOJSON>
+docker run --rm -v ${PWD}:/mnt/data -e MAPILLARY_ACCESS_TOKEN=$MAPILLARY_ACCESS_TOKEN -it developmentseed/geokit:python.latest mapillary download_mapillary_imgs --input_file_points <INPUT_GEOJSON> --output_images_path <OUTPUT_IMAGES PATH> --output_file_points <OUTPUT_GEOJSON>
 ```
 
 

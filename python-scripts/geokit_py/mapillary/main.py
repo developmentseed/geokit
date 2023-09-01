@@ -319,7 +319,7 @@ def run_download_mapillary_imgs(
     output_file_points,
 ):
     """
-    Script to download Mapillary images
+    Script to download the Mapillary images and obtain output points with the images URL.
     """
     from .download_mapillary_imgs import download_mapillary_imgs
 
