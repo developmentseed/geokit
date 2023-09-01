@@ -371,8 +371,40 @@ docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python.latest geo mer
 
 
 # Mapillary module
+Useful scripts to get data from [Mapillary](https://www.mapillary.com/app/).
+
+You can export you mapillary token by:
+
+```
+export MAPILLARY_ACCESS_TOKEN="MLY|..."
+```
 
 ## get mapillary points
+Script to get points and sequence for a bbox or boundaries from mapillary.
+
+| COMMAND                | REQUIRED | DESCRIPTION                                                                       |
+|------------------------|-------|-----------------------------------------------------------------------------------|
+| --input_aoi            | yes   | Path to geojson file of boundaries or bbox in the format 'xMin, yMin, xMax, yMax' |
+| --field_name           | no    | A field name from the GeoJSON boundaries                                          |
+| --timestamp_from(*)    | no    | Timestamp to filter images. Value in milliseconds                                 |
+| --only_pano            | no    | Filter only panoramic image                                                       |
+| --organization_ids(**) | no    | Filter by organization id from Mapillary                                          |
+| --output_file_point    | no    | Pathfile for geojson point file                                                   |
+| --output_file_sequence | no   | Pathfile for geojson sequence file                                                |
+
+( * ) Convert the human date to timestamp (milliseconds) [here](https://www.epochconverter.com/). 
+( ** ) Download a short area in order to recognize the organization id, then check out if the organization id belongs to the required organization `https://graph.mapillary.com/$ORGANIZATION_ID?access_token=$TOKEN&fields=name`.
+
+```
+docker run --rm -v ${PWD}:/mnt/data -e MAPILLARY_ACCESS_TOKEN=${MAPILLARY_ACCESS_TOKEN} -it developmentseed/geokit:python.latest mapillary \
+    get_mapillary_points \
+    --input_aoi=<INPUT_GEOJSON> \
+    --field_name=area \
+    --timestamp_from=1651366800000 \
+    --organization_ids=1805883732926354 \
+    --output_file_point=<OUTPUT_GEOJSON_POINTS> \
+    --output_file_sequence=<OUTPUT_GEOJSON_SEQUENCES>
+```
 
 ## create custom sequences
 It adds URLs to review the images of the sequences.
@@ -407,6 +439,22 @@ docker run --rm -v ${PWD}:/mnt/data -e MAPILLARY_ACCESS_TOKEN=$MAPILLARY_ACCESS_
 ```
 
 ## simplify sequences
+Script to simplify mapillary sequences by buffer.
+
+| COMMAND       | REQUIRED | DESCRIPTION                 |
+| ------------- |----------|-----------------------------|
+| --geojson_input     | yes      | Pathfile for geojson input  |
+| --buffer    | yes      | Buffer size for simplifying |
+| --geojson_out    | no       | Pathfile for geojson output |
+
+
+```
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python.latest mapillary \
+    simplify_sequence \
+    --geojson_input=<INPUT_GEOJSON> \
+    --buffer=0.000015 \
+    --geojson_out=<OUTPUT_GEOJSON>
+```
 
 ## match point sequences
 It filters points inside polygons.
@@ -422,6 +470,22 @@ docker run --rm -v ${PWD}:/mnt/data -e MAPILLARY_ACCESS_TOKEN=$MAPILLARY_ACCESS_
 ```
 
 ## simplify points
+Script to simplify points in a mapillary sequence according to a given distance in meters.
+
+| COMMAND       | REQUIRED | DESCRIPTION                                                                                       |
+| ------------- |----------| ------------------------------------------------------------------------------------------------- |
+| --input_points     | yes      | Pathfile for geojson input (points)                                                                              |
+| --points_distance    | yes      | Distance in meters applied for simplifying                                                                    |
+| --output_points    | no       | Pathfile for geojson output (points)                            |
+
+
+```
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python.latest mapillary \
+    simplify_points \
+    --input_points=<INPUT_GEOJSON> \
+    --points_distance=4 \
+    --output_points=<OUTPUT_GEOJSON>
+```
 
 ## download images
 It downloads the Mapillary images
