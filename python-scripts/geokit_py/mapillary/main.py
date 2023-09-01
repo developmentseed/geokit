@@ -56,14 +56,16 @@ def cli():
 )
 @click.option(
     "--output_file_point",
+    default="data/mapillary_points.geojson",
     type=click.Path(),
-    required=True,
+    required=False,
     help="Pathfile for geojson point file",
 )
 @click.option(
     "--output_file_sequence",
+    default="data/mapillary_sequence.geojson",
     type=click.Path(),
-    required=True,
+    required=False,
     help="Pathfile for geojson sequence file",
 )
 def run_get_mapillary_points(
@@ -90,16 +92,17 @@ def run_get_mapillary_points(
     bbox, geojson_boundaries, estate = get_aoi_type(input_aoi)
 
     if estate:
-        get_mapillary_points(
-            bbox,
-            geojson_boundaries,
-            field_name,
-            timestamp_from,
-            only_pano,
-            organization_ids,
-            output_file_point,
-            output_file_sequence,
-        )
+        if validate_output_path(output_file_point) and validate_output_path(output_file_sequence):
+            get_mapillary_points(
+                bbox,
+                geojson_boundaries,
+                field_name,
+                timestamp_from,
+                only_pano,
+                organization_ids,
+                output_file_point,
+                output_file_sequence,
+            )
     else:
         print("=============================================")
         print(
@@ -224,7 +227,9 @@ def run_match_point_sequences(
 )
 @click.option(
     "--geojson_out",
+    default="data/mapillary_simplify_sequence.geojson",
     type=click.Path(),
+    required=False,
     help="Output geojson file",
 )
 def run_simplify_sequence(geojson_input, buffer, geojson_out):
@@ -233,7 +238,8 @@ def run_simplify_sequence(geojson_input, buffer, geojson_out):
     """
     from .simplify_sequence import simplify_sequence
 
-    simplify_sequence(geojson_input, buffer, geojson_out)
+    if validate_output_path(geojson_out):
+        simplify_sequence(geojson_input, buffer, geojson_out)
 
 
 # =========================================
@@ -253,7 +259,9 @@ def run_simplify_sequence(geojson_input, buffer, geojson_out):
 )
 @click.option(
     "--output_points",
+    default="data/mapillary_simplify_points.geojson",
     type=click.Path(),
+    required=False,
     help="Pathfile for geojson output (points)",
 )
 def run_simplify_points(input_points, points_distance, output_points):
@@ -262,7 +270,8 @@ def run_simplify_points(input_points, points_distance, output_points):
     """
     from .simplify_points import simplify_points
 
-    simplify_points(input_points, points_distance, output_points)
+    if validate_output_path(output_points):
+        simplify_points(input_points, points_distance, output_points)
 
 
 # =========================================
