@@ -92,7 +92,9 @@ def run_get_mapillary_points(
     bbox, geojson_boundaries, estate = get_aoi_type(input_aoi)
 
     if estate:
-        if validate_output_path(output_file_point) and validate_output_path(output_file_sequence):
+        if validate_output_path(output_file_point) and validate_output_path(
+            output_file_sequence
+        ):
             get_mapillary_points(
                 bbox,
                 geojson_boundaries,
@@ -116,18 +118,21 @@ def run_get_mapillary_points(
 # ============================================
 # ========== CREATE CUSTOM SEQUENCES =========
 # ============================================
+
+
 @cli.command("create_custom_sequences")
 @click.option(
     "--geojson_points",
-    help="geojson_points",
-    required=True,
     type=click.Path(exists=True, file_okay=True, dir_okay=False),
+    required=True,
+    help="geojson_points",
 )
 @click.option(
     "--output_file_sequence",
-    help="Path for custom sequence file",
-    default="data/custome_sequences.geojson",
+    default="data/mapillary_custome_sequences.geojson",
     type=click.Path(),
+    required=False,
+    help="Path for custom sequence file",
 )
 def run_create_custom_sequences(
     geojson_points,
@@ -145,18 +150,21 @@ def run_create_custom_sequences(
 # ============================================
 # =========== MERGE SEQUENCES ================
 # ============================================
+
+
 @cli.command("merge_sequences")
 @click.option(
     "--geojson_input",
-    help="Pathfile for geojson input",
-    required=True,
     type=click.Path(exists=True, file_okay=True, dir_okay=False),
+    required=True,
+    help="Pathfile for geojson input",
 )
 @click.option(
     "--geojson_output",
-    help="Pathfile for geojson output",
-    default="data/merge_sequences.geojson",
+    default="data/mapillary_merge_sequences.geojson",
     type=click.Path(),
+    required=False,
+    help="Pathfile for geojson output",
 )
 def run_merge_sequences(
     geojson_input,
@@ -174,24 +182,27 @@ def run_merge_sequences(
 # ============================================
 # =========== MATCH POINT SEQUENCES ==========
 # ============================================
+
+
 @cli.command("match_point_sequences")
 @click.option(
     "--geojson_polygons",
-    help="Pathfile for geojson input (polygons)",
-    required=True,
     type=click.Path(exists=True, file_okay=True, dir_okay=False),
+    required=True,
+    help="Pathfile for geojson input (polygons)",
 )
 @click.option(
     "--geojson_points",
-    help="Pathfile for geojson input (points)",
-    required=True,
     type=click.Path(exists=True, file_okay=True, dir_okay=False),
+    required=True,
+    help="Pathfile for geojson input (points)",
 )
 @click.option(
     "--geojson_output",
-    help="Pathfile for geojson output (points)",
-    default="data/match_point_sequences.geojson",
+    default="data/mapillary_match_point_sequences.geojson",
     type=click.Path(),
+    required=False,
+    help="Pathfile for geojson output (points)",
 )
 def run_match_point_sequences(
     geojson_polygons,
@@ -245,6 +256,8 @@ def run_simplify_sequence(geojson_input, buffer, geojson_out):
 # =========================================
 # ========== SIMPLIFY POINTS =========
 # =========================================
+
+
 @cli.command("simplify_points")
 @click.option(
     "--input_points",
@@ -288,13 +301,17 @@ def run_simplify_points(input_points, points_distance, output_points):
 )
 @click.option(
     "--output_images_path",
-    type=click.Path(),
+    default="data/mapillary_images",
+    type=click.Path(file_okay=False, dir_okay=True),
+    required=False,
     help="Output images path",
 )
 @click.option(
     "--output_file_points",
+    default="data/mapillary_points_imgs_url.geojson",
     type=click.Path(),
-    help="Output points for images that were processed",
+    required=False,
+    help="Output points of images with URLs",
 )
 def run_download_mapillary_imgs(
     input_file_points,
@@ -306,11 +323,12 @@ def run_download_mapillary_imgs(
     """
     from .download_mapillary_imgs import download_mapillary_imgs
 
-    download_mapillary_imgs(
-        input_file_points,
-        output_images_path,
-        output_file_points,
-    )
+    if validate_output_path(output_file_points):
+        download_mapillary_imgs(
+            input_file_points,
+            output_images_path,
+            output_file_points,
+        )
 
 
 if __name__ == "__main__":
