@@ -1,15 +1,15 @@
 version: '3'
 services:
-  geokit.js:
-    image: developmentseed/geokit:node.latest
-    build:
-      context: .
-      dockerfile: Dockerfile.node
-    volumes:
-      - ./:/mnt
-    environment:
-      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
-      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+  # geokit.js:
+  #   image: developmentseed/geokit:node.latest
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.node
+  #   volumes:
+  #     - ./:/mnt
+  #   environment:
+  #     AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+  #     AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
   geokit.py:
     image: developmentseed/geokit:python.latest
     build:
@@ -18,15 +18,16 @@ services:
     volumes:
       - ./:/mnt
     environment:
+      MAPILLARY_ACCESS_TOKEN: ${MAPILLARY_ACCESS_TOKEN}
       AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
       AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
-  geokit.java:
-    image: developmentseed/geokit:java.latest
-    build:
-      context: ./
-      dockerfile: Dockerfile.java
-    volumes:
-      - ./:/mnt
-    environment:
-      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
-      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+  # geokit.java:
+  #   image: developmentseed/geokit:java.latest
+  #   build:
+  #     context: ./
+  #     dockerfile: Dockerfile.java
+  #   volumes:
+  #     - ./:/mnt
+  #   environment:
+  #     AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+  #     AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}

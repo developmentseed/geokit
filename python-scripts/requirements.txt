@@ -21,3 +21,7 @@ lxml
 lycon
 rtree
 pygeos
+vt2geojson
+opencv-python
+lensfunpy
+psutil

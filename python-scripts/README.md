@@ -368,3 +368,136 @@ Script to merge multiple features. This script can work with aws - s3 uri.
 ```
 docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python.latest geo merge_fc --geojson_inputs <INPUT_GEOJSON>  --geojson_inputs <INPUT_GEOJSON>   --geojson_inputs <INPUT_GEOJSON>  --folder_path <FOLDER_S3> --recursive --geojson_output <OUTPUT_GEOJSON>
 ```
+
+
+# Mapillary module
+Useful scripts to get data from [Mapillary](https://www.mapillary.com/app/).
+
+You can export you mapillary token by:
+
+```
+export MAPILLARY_ACCESS_TOKEN="MLY|..."
+```
+
+## get mapillary points
+Script to get points and sequence for a bbox or boundaries from mapillary.
+
+| COMMAND                | REQUIRED | DESCRIPTION                                                                       |
+|------------------------|-------|-----------------------------------------------------------------------------------|
+| --input_aoi            | yes   | Path to geojson file of boundaries or bbox in the format 'xMin, yMin, xMax, yMax' |
+| --field_name           | no    | A field name from the GeoJSON boundaries                                          |
+| --timestamp_from(*)    | no    | Timestamp to filter images. Value in milliseconds                                 |
+| --only_pano            | no    | Filter only panoramic image                                                       |
+| --organization_ids(**) | no    | Filter by organization id from Mapillary                                          |
+| --output_file_point    | no    | Pathfile for geojson point file                                                   |
+| --output_file_sequence | no   | Pathfile for geojson sequence file                                                |
+
+( * ) Convert the human date to timestamp (milliseconds) [here](https://www.epochconverter.com/). 
+( ** ) Download a short area in order to recognize the organization id, then check out if the organization id belongs to the required organization `https://graph.mapillary.com/$ORGANIZATION_ID?access_token=$TOKEN&fields=name`.
+
+```
+docker run --rm -v ${PWD}:/mnt/data -e MAPILLARY_ACCESS_TOKEN=${MAPILLARY_ACCESS_TOKEN} -it developmentseed/geokit:python.latest mapillary \
+    get_mapillary_points \
+    --input_aoi=<INPUT_GEOJSON> \
+    --field_name=area \
+    --timestamp_from=1651366800000 \
+    --organization_ids=1805883732926354 \
+    --output_file_point=<OUTPUT_GEOJSON_POINTS> \
+    --output_file_sequence=<OUTPUT_GEOJSON_SEQUENCES>
+```
+
+## create custom sequences
+Script to add URLs to review the images of the sequences.
+
+| COMMAND                 | REQUIRED | DESCRIPTION                                              |
+| -----------------       | -------- | -------------------------------------------------        |
+| --geojson_points        | yes      | point file path                                          |
+| --output_file_sequence  | no       | custom sequence file path                                |
+
+
+```
+docker run --rm -v ${PWD}:/mnt/data -e MAPILLARY_ACCESS_TOKEN=$MAPILLARY_ACCESS_TOKEN -it developmentseed/geokit:python.latest mapillary create_custom_sequences --geojson_points <INPUT_GEOJSON> --output_file_sequence <OUTPUT_GEOJSON>
+```
+
+In Mapillary, many sequences have a frontal view (road) of street-view imagery. These sequences are not useful for us when we want to label the facade building or lots, so we can remove them.
+
+In order to delete unnecessary sequences, it is necessary to have the generated custom sequence files and upload them to the tool. We have 2 tools that help us to do it:
+1. A plugin in JOSM to be able to see an image of a sequence and to be able to delete it if necessary (download it from s3://ds-data-projects/JOSM/osm-obj-info.jar). 
+
+2. An [app](https://filter_sequences.surge.sh/) that allows us to load GeoJSON files and view random images of a sequence, it allows us to delete sequences by marking with a check.
+
+## merge sequences
+Script to merge sequences and removes duplicate values.
+
+| COMMAND                 | REQUIRED | DESCRIPTION                                              |
+| -----------------       | -------- | -------------------------------------------------        |
+| --geojson_input         | yes      | checked sequence file path                               |
+| --geojson_output        | no       | merge sequence file path                                 |
+
+```
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python.latest mapillary merge_sequences --geojson_input <INPUT_GEOJSON> --geojson_output <OUTPUT_GEOJSON>
+```
+
+## simplify sequences
+Script to simplify mapillary sequences by buffer.
+
+| COMMAND       | REQUIRED | DESCRIPTION                 |
+| ------------- |----------|-----------------------------|
+| --geojson_input     | yes      | Pathfile for geojson input  |
+| --buffer    | yes      | Buffer size for simplifying |
+| --geojson_out    | no       | Pathfile for geojson output |
+
+
+```
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python.latest mapillary \
+    simplify_sequence \
+    --geojson_input=<INPUT_GEOJSON> \
+    --buffer=0.000015 \
+    --geojson_out=<OUTPUT_GEOJSON>
+```
+
+## match point sequences
+Script to filter points inside polygons.
+
+| COMMAND                 | REQUIRED | DESCRIPTION                                              |
+| -----------------       | -------- | -------------------------------------------------        |
+| --geojson_polygons      | yes      | filter buffer file path (polygons)                       |
+| --geojson_points        | yes      | points file path (points)                                |
+| --geojson_output        | no       | filter check file path (points)                          |
+
+```
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python.latest mapillary match_point_sequences --geojson_polygons <INPUT_GEOJSON> --geojson_points <INPUT_GEOJSON> --geojson_output <OUTPUT_GEOJSON>
+```
+
+## simplify points
+Script to simplify points in a mapillary sequence according to a given distance in meters.
+
+| COMMAND       | REQUIRED | DESCRIPTION                                                                                       |
+| ------------- |----------| ------------------------------------------------------------------------------------------------- |
+| --input_points     | yes      | Pathfile for geojson input (points)                                                                              |
+| --points_distance    | yes      | Distance in meters applied for simplifying                                                                    |
+| --output_points    | no       | Pathfile for geojson output (points)                            |
+
+
+```
+docker run --rm -v ${PWD}:/mnt/data developmentseed/geokit:python.latest mapillary \
+    simplify_points \
+    --input_points=<INPUT_GEOJSON> \
+    --points_distance=4 \
+    --output_points=<OUTPUT_GEOJSON>
+```
+
+## download images
+Script to download the Mapillary images and obtain output points with the images URL.
+
+| COMMAND                 | REQUIRED | DESCRIPTION                                              |
+| -----------------       | -------- | -------------------------------------------------        |
+| --input_file_points     | yes      | Mapillary points file path                               | 
+| --output_images_path    | no       | output images path                                       |
+| --output_file_points    | no       | output points for images                                 |
+
+```
+docker run --rm -v ${PWD}:/mnt/data -e MAPILLARY_ACCESS_TOKEN=$MAPILLARY_ACCESS_TOKEN -it developmentseed/geokit:python.latest mapillary download_mapillary_imgs --input_file_points <INPUT_GEOJSON> --output_images_path <OUTPUT_IMAGES PATH> --output_file_points <OUTPUT_GEOJSON>
+```
+
+
