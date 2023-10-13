@@ -5,7 +5,7 @@ from geojson.feature import FeatureCollection as fc
 from joblib import Parallel, delayed
 from shapely.geometry import mapping, shape
 from tqdm import tqdm
-
+from copy import deepcopy
 
 def is_include(geom_a, geom_b):
     """Determines if two polygons are included
@@ -31,6 +31,8 @@ def shp_data(features, buffer):
             feature_ (dict): feature object
         """
         geom_shape = shape(feature_["geometry"])
+        if not geom_shape.is_valid:
+            geom_shape = geom_shape.buffer(0)
 
         shp_buff = geom_shape.buffer(buffer_)
         feature_["geom"] = shp_buff
@@ -197,10 +199,19 @@ def simplify_sequence(geojson_input, buffer, geojson_out):
     for i in data_compile:
         if "geom" in i.keys():
             geom = i["geom"]
+            del i["geom"]
             if "Polygon" in geom.geom_type:
-                i["geometry"] = mapping(i["geom"])
-                del i["geom"]
+                i["geometry"] = mapping(geom)
                 data_filter.append(i)
+            else:
+                print(geom.geom_type)
+            if "GeometryCollection" == geom.geom_type:
+                for geom_gc in geom.geoms:
+                    if "Polygon" in geom_gc.geom_type:
+                        ii = deepcopy(i)
+                        ii["geometry"] = mapping(geom_gc)
+                        data_filter.append(ii)
+
     stats["features filtered "] = len(data_filter)
     json.dump(fc(data_filter), open(geojson_out, "w"))
     print("===================")
