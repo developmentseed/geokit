@@ -203,8 +203,6 @@ def simplify_sequence(geojson_input, buffer, geojson_out):
             if "Polygon" in geom.geom_type:
                 i["geometry"] = mapping(geom)
                 data_filter.append(i)
-            else:
-                print(geom.geom_type)
             if "GeometryCollection" == geom.geom_type:
                 for geom_gc in geom.geoms:
                     if "Polygon" in geom_gc.geom_type:
