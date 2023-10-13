@@ -1,11 +1,12 @@
 """mapillary.simplify_sequence: Skeleton of a function."""
 import json
+from copy import deepcopy
 
 from geojson.feature import FeatureCollection as fc
 from joblib import Parallel, delayed
 from shapely.geometry import mapping, shape
 from tqdm import tqdm
-from copy import deepcopy
+
 
 def is_include(geom_a, geom_b):
     """Determines if two polygons are included
