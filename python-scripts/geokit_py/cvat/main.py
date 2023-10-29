@@ -4,6 +4,7 @@ Author: @developmentseed
 """
 
 import click
+from pprint import pprint
 
 
 @click.group(chain=True)
@@ -70,14 +71,17 @@ def run_count_tag(xml_file):
 
     stats = {}
     num_images = 0
+    num_images_box = 0
 
     for i in list(xml_file):
-        num = count_xml_tags(i, stats)
+        num, num_box = count_xml_tags(i, stats)
         num_images += num
+        num_images_box += num_box
 
     print(f"Total Images: {num_images}")
-    for key in stats.keys():
-        print(f"{key},\t {stats[key]}")
+    print(f"Total Features: {num_images_box}")
+    print("=" * 20)
+    pprint(stats, indent=2)
 
 
 @cli.command("xml2csv")
